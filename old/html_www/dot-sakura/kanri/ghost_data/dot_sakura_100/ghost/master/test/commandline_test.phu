@@ -1,0 +1,28 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: commandline_test.phu,v 1.1 2004/11/15 10:31:58 cvs Exp $
+ *   DOTスクリプト テスト：コマンドライン実行用
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+  // SJIS出力フィルタ
+  define('STDERR_ENCODING'  ,'SJIS-win');
+  mb_http_output('SJIS-win');
+  ob_start('mb_output_handler');
+
+  // テストユニット登録
+  include('./setup.plu');
+
+  //---------------------------------------------------------------------------
+  // テスト実行
+  $startTime =dot_Util::getMicroTime();
+  $result = PHPUnit::run($suite);
+  $endTime =dot_Util::getMicroTime();
+  echo $result->toString();
+  printf("\n\n TEST実行時間 [%.2f]秒\n" ,$endTime -$startTime);
+
+?>

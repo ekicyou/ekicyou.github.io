@@ -1,0 +1,13 @@
+origin.x,14
+origin.y,11
+
+windowpos.x,0
+windowpos.y,0
+
+wordwrappoint.x,-30
+wordwrappoint.y,0
+
+
+onlinemarker.x,3
+sstpmarker.x,10
+sstpmessage.x,20

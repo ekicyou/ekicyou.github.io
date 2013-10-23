@@ -1,0 +1,44 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: test.phu,v 1.6 2004/04/25 16:25:00 cvs Exp $
+ *   DOTスクリプト テストユニット
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+  // SJIS出力フィルタ
+  define('STDERR_ENCODING'  ,'SJIS-win');
+  mb_http_output('SJIS-win');
+  ob_start('mb_output_handler');
+
+  // インクルードパスの設定
+  require_once('../define.plu');
+  $include_path_list[] =realpath(GHOST_DIR ."/test/phpunit");
+  set_include_path(implode (";" ,$include_path_list));
+
+  // インクルード
+  require_once('PHPUnit.php');
+  require_once('autoload.plu');
+  require_once('errorhandler.plu');
+
+
+  //---------------------------------------------------------------------------
+  // テストユニット登録
+  $suite = new PHPUnit_TestSuite();
+
+  include('./testListDot.plu');
+  include('./testListSakura.plu');
+
+
+  //---------------------------------------------------------------------------
+  // テスト実行
+  $startTime =dot_Util::getMicroTime();
+  $result = PHPUnit::run($suite);
+  $endTime =dot_Util::getMicroTime();
+  echo $result->toString();
+  printf("\n\n TEST実行時間 [%.2f]秒\n" ,$endTime -$startTime);
+
+?>

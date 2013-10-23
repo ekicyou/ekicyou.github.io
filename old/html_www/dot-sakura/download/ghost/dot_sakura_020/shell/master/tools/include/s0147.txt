@@ -1,0 +1,15 @@
+//=====================================================================
+// @alias                147
+// @surfacetable.type    Ç§Ç…Ç„Ç§ägí£ÇQ(ÇPÇRÇOÅ`)
+// @surfacetable.comment Ç§Ç…Ç„Ç§ÅF ß ß
+//=====================================================================
+surface5093
+{
+animation0.interval,always
+animation0.pattern0,overlay,5093,200,0,0
+animation0.pattern1,overlay,5095,200,0,0
+animation0.pattern2,overlay,5096,200,0,0
+animation0.pattern3,overlay,5097,200,0,0
+animation0.pattern4,overlay,5098,200,0,0
+animation0.pattern5,overlay,5099,200,0,0
+}

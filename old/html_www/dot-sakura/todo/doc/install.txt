@@ -1,0 +1,434 @@
+[影舞のインストール方法]
+
+ここでは、影舞のインストール方法について記述します。
+
+影舞が動作するためには、Webサーバと Ruby が必要ですが、それらのインストール方法
+などについては、ここでは基本的に解説しません。また、Webサーバの設定についての記
+述については、 Apache をベースにしていますので、利用する環境に応じて適時読み替
+えてください。
+
+--------------------------------------------------------------------------------
+[目次]
+
+* 影舞 0.7 からの移行の注意点]
+* Quick Start
+* install_ja.rb を用いたインストール
+* GD, GDChart を用いたグラフの作成
+* mod_ruby の利用
+* PostgreSQL の利用
+* MySQL の使用
+* SQL Server の利用
+* メールインタフェースの設定
+* 手動でのインストール例
+
+--------------------------------------------------------------------------------
+[影舞 0.7 からの移行の注意点]
+
+影舞 0.7 から移行する場合には、0.8 を 0.7 と同じディレクトリにインストールしな
+いほうがよいでしょう。同じディレクトリにインストールすると、データの移行ができ
+なくなります。
+
+0.7 のインストールされたディレクトリの名前を変更しておくか、 0.7 とは別のディレ
+クトリに 0.8 をインストールしてください。
+
+--------------------------------------------------------------------------------
+[Quick Start]
+
+ここでは、影舞をとりあえず動作させて試すための方法を記述します。
+
+ 1. 影舞のアーカイブを Web アクセス可能な場所に、展開する。
+   
+      $ cd /home/fukuoka/public_html
+      $ tar xfvz kagemai-0.8.2.tar.gz
+      $ mv kagemai-0.8.2 kagemai
+    
+ 2. guest.cgi がある場所に、Web サーバが書き込めるように適切にパーミッションを
+    変更する。
+    4で、Web サーバによって kagemai.conf という設定ファイルが作成されます。
+    su_exec などが有効になっていれば、必要ないかもしれません。
+
+ 3. html/guest.cgi に Web ブラウザからアクセスする。
+    http:/www.example.net/~fukuoka/kagemai/html/guest.cgi など。
+    *.cgi ファイルが CGI プログラムとして扱われない場合には、 .htaccess などを
+    設定してください。
+   
+      $ cat html/.htaccess
+      Options +ExecCGI
+      AddHandler cgi-script .cgi
+    
+ 4. "管理" -> "全体の設定変更" で、以下の部分を適当に変更する。
+   
+     home_url   サイトのトップなど                
+    project_dir プロジェクトのデータを保存する場所
+   
+ 5. project_dir で指定したディレクトリが存在しないなら、 Web サーバがそのディレ
+    クトリを作成できるようにパーミッションを変更しておく。
+    あるいは、そのディレクトリをあらかじめ作成し、 Web サーバが書き込み権限を持
+    つようにパーミッションを設定する。
+    su_exec などが有効になっていれば、必要ないかもしれません。
+
+ 6. "管理" -> "プロジェクトの作成" で、プロジェクトを作成してみる。
+
+ 7. user.cgi, admin.cgi などに、必要に応じてアクセス制限をかける。
+    html/dot.htaccess を参考にしてください。
+   
+      $ cat html/.htaccess
+      <Files "*.conf*">
+        deny from all
+      </Files>
+       
+      <Files user.cgi>
+        AuthName      Kagemai-User
+        AuthType      Basic
+        AuthUserFile  /etc/kagemai/user.passwd
+        Require       valid-user
+      </Files>
+       
+      <Files admin.cgi>
+        AuthName      Kagemai-Administrator
+        AuthType      Basic
+        AuthUserFile  /etc/kagemai/admin.passwd
+        Require       valid-user
+      </Files>
+    
+
+--------------------------------------------------------------------------------
+[install_ja.rb を用いたインストール]
+
+ここでは、install_ja.rb を用いたインストールについて説明します。
+
+ 1. kagemai グループの作成
+    Web ブラウザからの利用の他に、メールでのデータの受付を行う場合には、影舞の
+    データへのアクセス用のグループを作成しておきます。
+   
+      # groupadd kagemai
+    
+    そして、とりあえず Web サーバのユーザ(例えば apache)を作成したグループに追
+    加します。
+   
+      # gpasswd -a apache kagemai
+    
+ 2. install_ja.rb の編集
+    instann_ja.rb 内の、以下の変数を必要に応じて編集してください。
+   
+       $user    データ用ディレクトリのユーザのID。                          
+      $group    データ用ディレクトリのグループのID。                        
+     $root_dir  影舞のライブラリ、リソースなどのディレクトリ                
+     $html_dir  Web からアクセス可能な、CGI スクリプトなどを置くディレクトリ
+     $data_dir  プロジェクトのデータを保存するディレクトリ                  
+    $passwd_dir .htaccess での認証用のパスワードを置くディレクトリ          
+   
+    $user, $gorup は指定する必要がなければ、それぞれコメントアウトしてください
+    。
+    $user を指定して、$group を指定しない場合には、データ用ディレクトリと、そこ
+    に置かれるファイルのパーミッションは、それぞれ、0755, 0644 になります。それ
+    以外では、ディレクトリは 02775, ファイルは 0664 になります。
+
+ 3. install_ja.rb の実行
+    編集が終わったら、install_ja.rb を実行します。（必要なら root になって。）
+   
+      # ruby install_ja.rb
+    
+ 4. 動作の確認
+    guest.cgi にアクセスして、正しく表示されるか確認します。
+    正しく表示されるようであれば、 "管理" -> "プロジェクトの作成" で、プロジェ
+    クトを作成してみます。プロジェクトが作成できるなら、そのプロジェクトでレポ
+    ートを投稿してみます。
+
+--------------------------------------------------------------------------------
+[GD, GDChart を用いたグラフの作成]
+
+GD と GDChart をインストールすれば、このページのようにサマリのグラフを表示でき
+ます。グラフが必要なければ、以下の設定を行う必要はありません。
+
+以下の説明でインストールするライブラリは、 http://www.daifukuya.com/archive/
+kagemai/lib/ にも置いてあります。影舞の動作確認に使用したバージョンが置いてあり
+ますが、各ライブラリは最新のものでは無いかもしれません。
+
+ 1. GD を入れる必要に応じて、http://www.boutell.com/gd/ からダウンロードしてイ
+    ンストールします。
+    PNG と TrueType フォントを有効にするためには、libpng, zlib, FreeType があら
+    かじめインストールされている必要があります。(少なくとも、GD 2.0.15 では
+    configure スクリプトを走らせれば、それぞれのライブラリを使用できるかどうか
+    表示されます。)
+   
+      $ tar xfvz gd-2.0.15.tar.gz
+      $ cd gd-2.0.15
+      $ CFLAGS="-g -O2 -DJISX0208" ./configure
+      ...(snip)...
+      ** Configuration summary for gd 2.0.15:
+    
+       Support for PNG library:          yes
+       Support for JPEG library:         yes
+       Support for Freetype 2.x library: yes
+       Support for Xpm library:          yes
+      ...(snip)...
+      $ make
+      $ sudo make install
+    
+ 2. Ruby/GD を入れる
+    http://raa.ruby-lang.org/list.rhtml?name=ruby-gd からダウンロードしてインス
+    トールします。
+    --with-ttf, --with-freetype を configure 時に指定する必要があります。
+   
+      $ tar xfvz ruby-GD-0.7.4.tar.gz
+      $ cd ruby-GD-0.7.4
+      $ ruby extconf.rb --with-ttf --with-freetype
+      $ make
+      $ sudo make install
+    
+    GD を -DJISX0208 つきでコンパイルしていない場合には、「全体の設定」で
+    gd_charset を UTF-8 に設定してください。 -DJISX0208 つきでコンパイルした場
+    合には、gd_charset は EUC-JP にしておいてください。
+ 3. Ruby/GDChart を入れる
+    http://sourceforge.jp/projects/ruby-gdchart/ からダウンロードしてインストー
+    ルします。(Ruby/GDChart は GDChart の拡張ライブラリですが、 GDChart は Ruby
+    /GDChart のアーカイブに含まれています。)
+   
+      $ tar xfvz ruby-gdchart-0.0.9-beta.tar.gz 
+      $ cd ruby-gdchart-0.0.9-beta
+      $ ruby extconf.rb
+      $ make
+      $ sudo make install
+    
+ 4. enable_gdchart, gd_font, gd_charset の設定
+    影舞の全体の設定で、enable-gdchart オプションを true に設定します。そして、
+    gd-font に、日本語の TrueType フォントのパスを指定します。
+    また、GD が -DJISX0208 オプションつきでコンパイルされていない場合は、
+    gd_chasert を UTF-8 に設定してください。
+ 5. 動作の確認
+    レポートが１つ以上投稿されているプロジェクトの統計ページを開いて、グラフが
+    表示されることを確認します。
+    統計ページはキャッシュされるため、レポートやリプライの投稿を行うか、プロジ
+    ェクトディレクトリの cache/cache.pstore ファイルを削除しないと変更が反映さ
+    れないかもしれません。
+
+--------------------------------------------------------------------------------
+[mod_ruby の利用]
+
+影舞 0.8.0 以降から、mod_ruby で動作させることが可能になりました。 dot.htaccess
+を参考に、guest.cgi, user.cgi, admin.cgi がそれぞれ、 mod_ruby で起動するように
+設定してください。
+
+*.cgi の拡張子をたとえば、.rbx に変更する場合には、例えば以下のようにしてくださ
+い。
+
+ 1. guest.cgi, user.cgi, admin.cgi をそれぞれ *.rbx としてコピー。
+   
+      $ cp -p guest.cgi guest.rbx
+      $ cp -p user.cgi user.rbx
+      $ cp -p admin.cgi admin.rbx
+    
+ 2. admin.cgi にアクセスして、"全体の設定" から以下の項目を変更する。
+   
+      guest_mode_cgi : guest.rbx
+      user_mode_cgi  : user.rbx
+      admin_mode_cgi : admin.rbx
+    
+ 3. guest.rbx でアクセスしてみる。
+
+--------------------------------------------------------------------------------
+[PostgreSQL の利用]
+
+ここでは、 PostgreSQL を用いてデータ保存を行うために必要な設定について説明しま
+す。ただし、PostgreSQL 自体のインストールについては説明しません。また、
+PostgreSQL を用いたデータの保存を行わない場合には、以下の設定は必要ありません。
+
+ 1. Ruby/Postgres を入れる
+    http://www.postgresql.jp/interfaces/ruby/index-ja.htmlからダウンロードして
+    、インストールします。
+   
+       $ tar xfvz ruby-postgres-0.7.1.tar.gz   
+       $ cd ruby-postgres-0.7.1
+       $ ruby extconf.rb
+       $ make
+       $ su
+       # make install
+    
+ 2. Ruby/DBI を入れる
+    http://rubyforge.org/projects/ruby-dbi/からダウンロードしてインストールしま
+    す。
+   
+      $ tar xfvz ruby-dbi-all-0.0.23.tar.gz
+      $ cd ruby-dbi-all
+      $ ruby setup.rb config --with=dbi,dbd_pg,dbd_mysql
+      $ ruby setup.rb setup
+      $ su
+      # ruby setup.rb install
+    
+ 3. PostgreSQL に影舞用のアカウントを作成する。
+    作成するアカウントは、データベースが作成可能である必要があります。
+   
+      $ createuser kagemai
+      Shall the new user be allowed to create databases? (y/n) y
+      Shall the new user be allowed to create more new users? (y/n) n
+      CREATE USER
+    
+ 4. "全体の設定の変更" で、enable_postgres を true にする。
+    また、以下の項目を設定する。
+   
+                  PostgreSQL が動作しているホスト名。Unix ドメインソケットを利 
+    postgres_host 用している場合には、PostgreSQL で設定したディレクトリを指定。
+                  デフォルトは、/tmp。                                         
+    postgres_port TCP で接続する場合のポート番号                               
+    postgres_user PostgreSQL アカウントのユーザ名                              
+    postgres_pass PostgreSQL アカウントのパスワード                            
+   
+ 5. プロジェクトの作成で、データの保存形式として、Kagemai::PostgresStore が選択
+    可能になっていることを確認する。
+
+ 6. データの保存形式として Kagemai::PostgresStore を選んでプロジェクトを作成し
+    てみる。
+
+--------------------------------------------------------------------------------
+[MySQL の使用]
+
+ここでは、MySQL を用いてデータ保存を行うために必要な設定について説明します。
+
+MySQL を用いたデータ保存では、PostgreSQL の場合と違い、あらかじめデータベースを
+１つ作成しておいて、それを利用します。
+
+ 1. MySQL/Ruby、もしくは、Ruby/MySQL を入れる
+    http://tmtm.org/mysql/ からダウンロードして、インストールします。
+ 2. PostgreSQL 用の設定と同じように Ruby/DBI を入れる。
+ 3. MySQL に影舞用のデータベースを作成する。
+   
+      $ mysql -u root -p
+      mysql> create database kagemai;
+    
+ 4. MySQL に影舞用のユーザを作成する。
+    影舞用のデータベースにアクセスできるユーザーを作成します。
+   
+      mysql> grant all to on kagemai.* to kagemai@localhost;
+    
+    必要に応じて、パスワードも設定してください。
+ 5. "全体の設定の変更" で、enable_mysql を true にする。
+    また、以下の項目を設定する。
+   
+     mysql_host  MySQLが動作しているホスト名。デフォルトは、'localhost'。
+     mysql_port  MySQLのポート番号。デフォルトは 3306。                  
+     mysql_user  MySQLのユーザ名                                         
+     mysql_pass  MySQLのパスワード                                       
+    mysql_dbname MySQLの影舞用のデータベース名                           
+   
+ 6. プロジェクトの作成で、データの保存形式として、Kagemai::MySQLStore が選択可
+    能になっていることを確認する。
+ 7. データの保存形式として Kagemai::MySQLStore を選んでプロジェクトを作成してみ
+    る。
+
+--------------------------------------------------------------------------------
+[SQL Server の利用]
+
+SQL Server を利用するには以下の設定を行う必要があります。
+
+ 1. SQL Server に影舞用のユーザを作成する。このユーザは create database 権限が
+    必要。
+ 2. 影舞を実行するマシンの ODBC 設定で、システム DNS に SQL Server を設定する。
+ 3. 全体の設定で enable_mssql を true にする。
+ 4. mssql_dns にシステム DNS に設定した名前を入れる。
+ 5. mssql_user と mssql_pass に SQL Server のユーザ名とパスワードを入れる。
+ 6. プロジェクトの作成で、Kagemai::MSSQLStore が選択可能になっていることを確認
+    する。
+ 7. データの保存形式として Kagemai::MSSQLStore を選んでプロジェクトを作成してみ
+    る。
+
+--------------------------------------------------------------------------------
+[メールインタフェースの設定]
+
+メールインタフェースを使用するには、まず、mailif.rb 中の kagemai_root,
+config_file, $LOGFILE の３つの変数が適切に設定されている必要があります。
+(install_ja.rb でインストールした場合には、インストールした時点で自動的に適切な
+値に設定されます。)
+
+プロジェクトを作成すると、そのプロジェクト用に、 sendmail などで使用可能な
+include ファイルが作成されます。これは、例えば以下のような内容になっています。
+
+  $ cat /var/lib/kagemai/project/test/include
+  "|/usr/bin/ruby /usr/local/kagemai/bin/mailif.rb test"
+
+ここで、'test' はプロジェクトの ID です。
+
+sendmail であれば、このファイルを呼び出すように /etc/aliases を編集して、 /etc/
+aliases.db を更新します。
+
+  # grep 'test-bugs' /etc/aliases
+  test-bugs: :include:/var/lib/kagemai/project/test/include
+  # /usr/bin/newaliases
+
+include はデフォルトでは group writable なディレクトリに置かれます。必要に応じ
+て別のディレクトリに移動させて使用してください。
+
+デフォルトのメールテンプレートでは、投稿されたレポートに対応した BTS 上の URL
+が挿入されますが、正しい URL を入れるためには、"全体の設定の変更" で、 base_url
+を適切に設定してください。base_url は、guest.cgi がある場所までの URL です。例
+えば、guest.cgi が 'http://www.example.net/kagemai/guest.cgi' にある場合には、
+base_url は 'http://www.example.net/kagemai/' に設定します。
+
+また、投稿されたメールが新規のレポートなのか、既存のレポートへのリプライなのか
+は、そのメールの 'Subject', 'In-Reply-To' ヘッダを用いて自動的に判定されます。
+
+--------------------------------------------------------------------------------
+[手動でのインストール例]
+
+ここでは、すべての設定を手動で行った場合のインストール例を示します。
+
+ 1. インストールするディレクトリの決定
+   
+      影舞のライブラリなど : /usr/local/kagemai
+      CGI スクリプトなど   : /var/www/html/kagemai
+      データ用ディレクトリ : /var/lib/kagemai
+    
+    また、/var/www/html/kagemai に置かれたファイルは、 http://www.example.net/
+    kagemai/ という URL でアクセス可能であるとします。
+ 2. ディレクトリの作成と、ファイルのコピー
+   
+      $ tar xfvz kagemai-0.8.2.tar.gz
+      $ cd kagemai-0.8.2
+    
+      $ su
+      # mkdir /usr/local/kagemai
+      # mkdir /var/www/html/kagemai
+      # mkdir /var/lib/kagemai
+      # mkdir /var/lib/kagemai/project
+    
+      # cp -pr bin /usr/local/kagemai
+      # cp -pr lib /usr/local/kagemai
+      # cp -pr resource /usr/local/kagemai
+      # cp -p html/* /var/www/html/kagemai
+    
+ 3. ファイル中のパスの編集
+    以下のファイルの、(a) 先頭の ruby のパス, (b) kagemai_root, (c) config_file
+    を修正する。
+     * /usr/local/kagemai/bin/convert.rb
+     * /usr/local/kagemai/bin/mailif.rb
+     * /usr/local/kagemai/bin/migrate.rb
+     * /var/www/html/kagemai/guest.cgi
+     * /var/www/html/kagemai/user.cgi
+     * /var/www/html/kagemai/admin.cgi
+    ここでは、kagemai_root は、'/usr/local/kagemai' に、 config_file は、'/var/
+    www/html/kagemai/kagemai.conf' とする。
+    また、mailif.rb 中の $LOGFILE を、'/var/lib/kagemai/mailif.log' にする。
+
+ 4. kagemai グループの追加とパーミッションの設定
+   
+      # groupadd kagemai
+      # cd /var/lib
+      # chgrp -R kagemai kagemai
+      # chmod -R 02770 kagemai
+    
+    また、apache を kagemai group に追加します。
+   
+      # gpasswd -a apache kagemai
+    
+ 5. 全体の設定で以下の変数を修正
+   
+      project_dir : /var/lib/kagemai
+      base_url    : http://www.example.net/kagemai/
+    
+
+以上。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
+Bug Tracking System 影舞
+Copyright(C) 2002-2005 FUKUOKA Tomoyuki. All Rights Reserved.
+$Id: install.txt,v 1.1.1.1.2.1 2005/01/15 08:13:11 fukuoka Exp $

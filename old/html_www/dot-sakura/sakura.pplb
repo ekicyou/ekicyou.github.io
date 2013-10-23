@@ -1,0 +1,50 @@
+<?php
+  require_once("HTML/templateUty.pplb");
+  unset($bb);
+
+//---------------------------------------------------------------------
+// ■さくら・吹き出しの表示内容
+  $bb[SHELL_SAKURA] ="06";
+  unset($T, $BUF_TALK);
+  $T[] =array(MSG=>"四月一日は中止となりました。");
+  $T[] =array();
+  $T[] =array(MARK=>TRUE  ,MSG=>"総合案内所"      ,SUBMES=>"このサイトについて" ,LINK=>"explain.html" );
+  $T[] =array(MARK=>TRUE  ,MSG=>"中央コンコース"  ,SUBMES=>"ダウンロード"       ,LINK=>"#download"    );
+  $T[] =array(MARK=>TRUE  ,MSG=>"伝言板"                                        ,LINK=>"#dengon"      );
+  $T[] =array(MARK=>TRUE  ,MSG=>"さくらでGO!!"                                  ,KOUJI=>TRUE          );
+  $T[] =array(MARK=>TRUE  ,MSG=>"忘れ物預かり所"  ,SUBMES=>"フィードバック"     ,LINK=>"http://www.nanican.net/dot-sakura/todo/guest.cgi?project=dot_sakura&action=top");
+  $T[] =array(MARK=>TRUE  ,MSG=>"駅長の業務日誌"                                ,LINK=>"http://d.hatena.ne.jp/dot_station/");
+  $T[] =array(MARK=>TRUE  ,MSG=>"接続案内"        ,SUBMES=>"LINK"               ,LINK=>"#link"        );
+  $BUF_TALK[TALK] =$T;
+  $bb[TALK_SAKURA ] =TmplUty::getText("SAKURA.tmpl" ,$BUF_TALK);
+
+
+//---------------------------------------------------------------------
+// ■うにゅう・吹き出しの表示内容
+  $bb[SHELL_UNYUU] ="10";
+  unset($T, $BUF_TALK);
+  $T[] =array(MSG=>"ツッコミにくいな、さくら。");
+  $T[] =array();
+  $T[] =array(MSG=>"‥‥このサイト、Google Chromeで確認しとるんや。");
+  $T[] =array(MSG=>"ほかで変な出方しとったらすまんなー。");
+  $BUF_TALK[TALK] =$T;
+  $bb[TALK_UNYUU  ] =TmplUty::getText("SAKURA.tmpl" ,$BUF_TALK);
+
+
+//---------------------------------------------------------------------
+// ■‥‥駅長の一言(^^;
+  $buf[TALK_STATION_MASTER] ="あ、軽く復旧しました。";
+
+
+//---------------------------------------------------------------------
+// ■カウンター表示など
+  include("./counter.pplb");
+  $bb[COUNT][TODAY    ] =$today;
+  $bb[COUNT][YESTERDAY] =$yesterday;
+  $bb[COUNT][TOTAL    ] =$total;
+
+
+//---------------------------------------------------------------------
+  // ベーステンプレート
+  $buf[SAKURA] =TmplUty::getText("SAKURA.tmpl" ,$bb);
+?>

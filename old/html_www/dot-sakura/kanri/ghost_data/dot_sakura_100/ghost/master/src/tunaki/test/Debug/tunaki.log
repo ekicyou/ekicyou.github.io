@@ -1,0 +1,1162 @@
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:19:44.358979
+
+■Request
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+■Response
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■REPORT
+(DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
+(DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
+(DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
+(DEBUG)子プロセス起動処理: 開始
+(DEBUG)子プロセス起動処理: 完了
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(SYSTEM)システム起動処理: 完了
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:19:44.405854
+
+■Response
+.
+
+■STDERR
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:19:45.905854
+
+■Response
+TESTDATA.
+
+■STDERR
+TESTDATA.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:19:45.015229
+
+■Request
+TEST_REQUEST 1.0
+OK?
+
+■Response
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(SYSTEM)システム終了処理: ****
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:19:45.108979
+
+■Request
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+■Response
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス解放処理: 開始
+(DEBUG)パイプクローズ＆読み捨て処理: STDIN出力パイプClose
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDOUT 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDERR 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)子プロセス解放処理: 子プロセスの終了確認
+(DEBUG)子プロセス解放処理: 完了
+(DEBUG)ログファイル: クローズ
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:32.424750
+
+■Request
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+■Response
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■REPORT
+(DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
+(DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
+(DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
+(DEBUG)子プロセス起動処理: 開始
+(DEBUG)子プロセス起動処理: 完了
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(SYSTEM)システム起動処理: 完了
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:32.487250
+
+■Response
+.
+
+■STDERR
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:32.987250
+
+■Response
+TESTDATA.
+
+■STDERR
+TESTDATA.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:32.081000
+
+■Request
+TEST_REQUEST 1.0
+OK?
+
+■Response
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(SYSTEM)システム終了処理: ****
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:32.190375
+
+■Request
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+■Response
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス解放処理: 開始
+(DEBUG)パイプクローズ＆読み捨て処理: STDIN出力パイプClose
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDOUT 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDERR 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)子プロセス解放処理: 子プロセスの終了確認
+(DEBUG)子プロセス解放処理: 完了
+(DEBUG)ログファイル: クローズ
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:34.268500
+
+■Request
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+■Response
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■REPORT
+(DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
+(DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
+(DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
+(DEBUG)子プロセス起動処理: 開始
+(DEBUG)子プロセス起動処理: 完了
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(SYSTEM)システム起動処理: 完了
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:34.315375
+
+■Response
+.
+
+■STDERR
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:34.831000
+
+■Response
+TESTDATA.
+
+■STDERR
+TESTDATA.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:34.924750
+
+■Request
+TEST_REQUEST 1.0
+OK?
+
+■Response
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(SYSTEM)システム終了処理: ****
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:34.034125
+
+■Request
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+■Response
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス解放処理: 開始
+(DEBUG)パイプクローズ＆読み捨て処理: STDIN出力パイプClose
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDOUT 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDERR 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)子プロセス解放処理: 子プロセスの終了確認
+(DEBUG)子プロセス解放処理: 完了
+(DEBUG)ログファイル: クローズ
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:38.409125
+
+■Request
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+■Response
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■REPORT
+(DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
+(DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
+(DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
+(DEBUG)子プロセス起動処理: 開始
+(DEBUG)子プロセス起動処理: 完了
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(SYSTEM)システム起動処理: 完了
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:38.456000
+
+■Response
+.
+
+■STDERR
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:38.971625
+
+■Response
+TESTDATA.
+
+■STDERR
+TESTDATA.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:38.065375
+
+■Request
+TEST_REQUEST 1.0
+OK?
+
+■Response
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(SYSTEM)システム終了処理: ****
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:38.174750
+
+■Request
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+■Response
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス解放処理: 開始
+(DEBUG)パイプクローズ＆読み捨て処理: STDIN出力パイプClose
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDOUT 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDERR 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)子プロセス解放処理: 子プロセスの終了確認
+(DEBUG)子プロセス解放処理: 完了
+(DEBUG)ログファイル: クローズ
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:39.143500
+
+■Request
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+■Response
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■REPORT
+(DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
+(DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
+(DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
+(DEBUG)子プロセス起動処理: 開始
+(DEBUG)子プロセス起動処理: 完了
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(SYSTEM)システム起動処理: 完了
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:39.190375
+
+■Response
+.
+
+■STDERR
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:40.690375
+
+■Response
+TESTDATA.
+
+■STDERR
+TESTDATA.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:40.799750
+
+■Request
+TEST_REQUEST 1.0
+OK?
+
+■Response
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(SYSTEM)システム終了処理: ****
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:40.893500
+
+■Request
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+■Response
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス解放処理: 開始
+(DEBUG)パイプクローズ＆読み捨て処理: STDIN出力パイプClose
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDOUT 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDERR 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)子プロセス解放処理: 子プロセスの終了確認
+(DEBUG)子プロセス解放処理: 完了
+(DEBUG)ログファイル: クローズ
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:41.721625
+
+■Request
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+■Response
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■REPORT
+(DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
+(DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
+(DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
+(DEBUG)子プロセス起動処理: 開始
+(DEBUG)子プロセス起動処理: 完了
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(SYSTEM)システム起動処理: 完了
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:41.768500
+
+■Response
+.
+
+■STDERR
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:42.268500
+
+■Response
+TESTDATA.
+
+■STDERR
+TESTDATA.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:42.377875
+
+■Request
+TEST_REQUEST 1.0
+OK?
+
+■Response
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(SYSTEM)システム終了処理: ****
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:42.471625
+
+■Request
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+■Response
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス解放処理: 開始
+(DEBUG)パイプクローズ＆読み捨て処理: STDIN出力パイプClose
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDOUT 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDERR 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)子プロセス解放処理: 子プロセスの終了確認
+(DEBUG)子プロセス解放処理: 完了
+(DEBUG)ログファイル: クローズ
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:43.534125
+
+■Request
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+■Response
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+■REPORT
+(DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
+(DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
+(DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
+(DEBUG)子プロセス起動処理: 開始
+(DEBUG)子プロセス起動処理: 完了
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[194]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+]
+(SYSTEM)システム起動処理: 完了
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:43.581000
+
+■Response
+.
+
+■STDERR
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:43.096625
+
+■Response
+TESTDATA.
+
+■STDERR
+TESTDATA.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[8]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TESTDATA]
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:43.190375
+
+■Request
+TEST_REQUEST 1.0
+OK?
+
+■Response
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[25]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[TEST_REQUEST 1.0
+OK?
+
+]
+(SYSTEM)システム終了処理: ****
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[.
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[3]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[.
+]
+
+-----------------------------------------------------------------------
+DATE: 2004/04/02 00:22:44.299750
+
+■Request
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+■Response
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+■REPORT
+(DEBUG)子プロセス STDOUT 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDOUT 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス STDERR 読込処理: 読込処理[65]byte
+(DEBUG)子プロセス STDERR 読込処理: 読込データ[UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+]
+(DEBUG)子プロセス解放処理: 開始
+(DEBUG)パイプクローズ＆読み捨て処理: STDIN出力パイプClose
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDOUT 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)パイプ残量確認: パイプの読み取りに失敗: ENO(109) パイプは終了しました。
+
+(DEBUG)子プロセス STDERR 読込処理: 読込完了の為、ハンドルクローズし終了
+(DEBUG)子プロセス解放処理: 子プロセスの終了確認
+(DEBUG)子プロセス解放処理: 完了
+(DEBUG)ログファイル: クローズ
+

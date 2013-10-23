@@ -1,0 +1,21 @@
+//=====================================================================
+// @alias                232
+// @surfacetable.type    ネタサーフェス(２００～)
+// @surfacetable.comment さくら：投げキック!
+//=====================================================================
+surface5047
+{
+collision0,74,64,142,89,Head
+collision1,79,115,133,146,Face
+collision2,88,197,131,229,Bust
+collision3,100,150,113,160,Mouse
+collision4,68,318,155,337,Apron
+
+point.kinoko.centerx,105
+point.kinoko.centery,66
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5182,80,69,108
+animation0.pattern1,overlay,5183,80,69,108
+animation0.pattern2,overlay,-1,80,0,0
+}

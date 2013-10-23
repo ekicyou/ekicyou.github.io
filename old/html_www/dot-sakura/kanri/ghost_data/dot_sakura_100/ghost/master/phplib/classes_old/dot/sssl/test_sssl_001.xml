@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sssl xmlns="http://www.nanika.to/xml/2004/sssl" xml:lang="ja" lang="ja">
+  <seq>
+    <section>
+      <char use="0" surface="5" />
+      <char use="1" surface="11" />
+      <text>ようこそ、<text begin="0.4s" />SSSLの世界へ！</text>
+    </section>
+    <section begin="0.8s" nl="1.5">
+      <char use="0" surface="0" />
+      <text>これは、SSSLのサンプルだよ。</text>
+    </section>
+    <section begin="0.8s" nl="1.5">
+      <char use="1" surface="10" />
+      <text>ま、\w8こんな感じやね。</text>
+    </section>
+  </seq>
+</sssl>

@@ -1,0 +1,40 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: notfound.plu,v 1.7 2004/08/27 01:46:09 cvs Exp $
+ *   SHIORIパーサ：未対応イベントパーサ
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * SHIORIパーサ：未対応イベントパーサ
+ *
+ * @package  dot_shiori_2x_NotFound
+ * @since    PHP 5.0.1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.7 $
+ */
+class dot_shiori_NotFound extends dot_event{
+
+  // {{{ createRequest()
+  /**
+   * SHIORIコマンドを解析し、リクエストを作成する。
+   *
+   * @param string $lines SHIORIリクエスト
+   */
+  static public function createRequest($lines){
+    # SHIORI/2.x系のリクエストは全部、「4xx ぼけ！こんなリクエストは知らん！」
+    # 応答で返してしまう(^^;
+
+
+
+
+
+  }
+
+  // }}}
+}
+?>

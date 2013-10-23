@@ -1,0 +1,26 @@
+//=====================================================================
+// @alias                702
+// @surfacetable.type    浴衣サーフェスセット
+// @surfacetable.comment さくら：浴衣：驚き
+//=====================================================================
+surface5394
+{
+collision0,74,64,142,89,Head
+collision1,79,115,133,146,Face
+collision2,92,156,99,161,Mouse
+collision3,90,195,127,221,Bust
+
+point.kinoko.centerx,109
+point.kinoko.centery,63
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5403,40,70,110
+animation0.pattern1,overlay,5404,40,70,110
+animation0.pattern2,overlay,-1,40,0,0
+
+animation1.interval,talk,4
+animation1.pattern0,overlay,5405,50,89,148
+animation1.pattern1,overlay,-1,50,89,148
+animation1.pattern2,overlay,5405,200,89,148
+animation1.pattern3,overlay,-1,200,89,148
+}

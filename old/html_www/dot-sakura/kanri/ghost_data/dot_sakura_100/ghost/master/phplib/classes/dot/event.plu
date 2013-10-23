@@ -1,0 +1,39 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: event.plu,v 1.6 2004/08/24 09:52:40 cvs Exp $
+ *   EVENT解析ベースクラス
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * イベント解析クラス。
+ * SHIORIイベントを解析し、リクエストオブジェクトを生成します。
+ * Dotスクリプトの全てのイベントはこのクラスの子となります。
+ *
+ * 栞DLLモジュールとSHIORIプロトコルに関する詳細
+ * @see http://sakura.mikage.to/shiori.html
+ *
+ * Interface of shiori module and PHP
+ *
+ * @package  dot.Event
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.6 $
+ */
+abstract class dot_Event extends SafeObject{
+
+
+
+
+
+
+
+
+
+  // }}}
+}
+?>

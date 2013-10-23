@@ -1,0 +1,70 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: citem.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   SSSL キャッシュITEM
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * SSSL Cacheアイテム
+ *
+ * @package  dot_sssl_Citem
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_sssl_Citem extends SafeObject{
+  // {{{ properties
+  /**
+   * イベントID
+   * @var int
+   */
+  public $eventId;
+
+
+  /**
+   * URL
+   * @var string
+   */
+  public $url;
+
+
+  /**
+   * キャッシュ
+   * @var dot_SSSL
+   */
+  public $sssl;
+
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param  void
+   */
+  public function __construct($eventId ,$url ,dot_SSSL $sssl) {
+    $this->url     =$url;
+    $this->eventId =$eventId;
+    $this->sssl    =$sssl;
+  }
+
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+  }
+
+
+  // }}}
+}
+?>

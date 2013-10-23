@@ -1,0 +1,6 @@
+/* ´ÉÍýÍÑ¥¹¥¿¥¤¥ë¥·¡¼¥È */
+.KANRI_TITLE_A { color: #0000FF; font-size: 12px; font-weight: bold; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; font-family: "£Í£Ó £Ð¥´¥·¥Ã¥¯", "Osaka"; background-color: #FFCC00; white-space: nowrap; vertical-align: middle; filter: Alpha(Opacity=100, FinishOpacity=1, Style=1, StartX=50, StartY=0, FinishX=600, FinishY=0)}
+.KANRI_TITLE_B { color: #FFFFFF; font-size: 12px; font-weight: bold; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; font-family: "£Í£Ó £Ð¥´¥·¥Ã¥¯", "Osaka"; background-color: #000066; white-space: nowrap ; vertical-align: middle}
+.KANRI_TITLE_C { color: #000000; font-size: 12px; font-weight: normal; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; font-family: "£Í£Ó £Ð¥´¥·¥Ã¥¯", "Osaka"; background-color: #DDDDDD; white-space: nowrap ; vertical-align: middle}
+.INDEX_TITLE_A { filter: Alpha(Opacity=100, FinishOpacity=20, Style=1, StartX=0, StartY=0, FinishX=500, FinishY=0); background-color: #9999BB; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px}
+.INDEX_TITLE_C { filter: Alpha(Opacity=20, FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=500, FinishY=0); background-color: #9999BB; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px}

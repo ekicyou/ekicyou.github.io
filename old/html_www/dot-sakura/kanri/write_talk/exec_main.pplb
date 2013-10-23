@@ -1,0 +1,77 @@
+<?php
+//====================================================================
+// ログ取り込み
+//====================================================================
+function job1($conn, &$err){
+  if(! job1_log_clear ($conn, $err, "/ghost/master/talk/")) return FALSE;
+  if(! job1_log_output($conn, $err, "/ghost/master/talk/")) return FALSE;
+  return TRUE;
+}
+
+
+//====================================================================
+// データファイルを削除する
+//====================================================================
+function job1_log_clear($conn ,&$err ,$dirBase ){
+  $dirBase =GHOST_TALK_DIR .$dirBase;
+  $d = dir($dirBase);
+  while (false !== ($entry = $d->read())) {
+    if($entry=="dummy.txt") continue;
+    $rPath =$d->path.$entry;
+    if(! is_file($rPath)) continue;
+    unlink($rPath);
+  }
+  $d->close();
+  return TRUE;
+}
+
+
+//====================================================================
+// ファイル出力
+//====================================================================
+function job1_log_output($conn ,&$err ,$dirBase ){
+  $dirBase =GHOST_TALK_DIR .$dirBase;
+
+  unset($T,$F,$W);
+  $T[] ="DOT_TALK";
+  $F[] ="ID";
+  $F[] ="EVENT_NAMES";
+  $F[] ="SCRIPT";
+  $F[] ="NOTE";
+  $W[] ="GHOST_ID=" .GHOST_ID_DEF;
+
+  $TT =implode(","      ,$T);
+  $FF =implode(","      ,$F);
+  $WW =implode(" and "  ,$W);
+  if($WW!="") $WW =" where $WW";
+  $GG ="";
+  $OO =" order by ID";
+  $sql ="select $FF from $TT$WW$GG$OO";
+echo "SQL: $sql<br>\n";
+  if(! is_array($rec =DButil::query($conn, $sql))){
+    // クエリーの失敗
+    $err->addError("トーク出力", "ＤＢアクセスに失敗しました。");
+    return FALSE;
+  }
+  if(count($rec)==0)  return TRUE;
+
+  $fname =$dirBase ."talk_data.txt.euc";
+echo "OUTPUT: [$fname]<br>\n";
+  $fp =fopen($fname ,"wb");
+  if(! $fp){
+    $err->addError("トーク出力", "ファイルがオープンできませんでした。");
+    return FALSE;
+  }
+
+  foreach($rec as $x){
+    $line ="{$x[EVENT_NAMES]} : {$x[SCRIPT]}\n\n";
+    if($x[NOTE]!="")  $line ="#NOTE: {$x[NOTE]}\n$line";
+    fwrite($fp, $line);
+  }
+  fclose($fp);
+  chmod($fname ,0666);
+  return TRUE;
+}
+
+
+?>

@@ -1,0 +1,34 @@
+<?php
+  require_once("local/dot/db.pplb");
+  require_once("local/dot/EditItem.pplb");
+  require_once("HTML/ErrorSSTP.pplb");
+  require_once("HTML/string.pplb");
+  require_once("HTML/uty.pplb");
+  require_once("HTML/templateUty.pplb");
+
+
+  $err =new ErrorSSTP("スクリプト送信");
+
+
+//====================================================================
+// 定義設定
+//====================================================================
+  //                    種別名        属性    付加属性
+  $FT[GHOST    ] =array("ゴースト名"  , TEXT, MAX=>32);
+  $FT[SCRIPT   ] =array("スクリプト"  , TBOX, ROWS=>16);
+
+  $buf[TITLE] ="DOT-STATION　管理メニュー";
+  $buf[SCRIPT_NAME] =$_SERVER[SCRIPT_NAME];
+
+
+
+//====================================================================
+// DB接続
+//====================================================================
+  $conn =logonDB();
+
+
+//####################################################################
+// 更新処理本体　　＊＊ここまで＊＊
+//####################################################################
+?>

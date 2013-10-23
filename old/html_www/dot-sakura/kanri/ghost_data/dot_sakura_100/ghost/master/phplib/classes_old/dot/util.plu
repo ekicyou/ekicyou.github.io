@@ -1,0 +1,52 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: util.plu,v 1.1 2004/08/10 10:08:24 cvs Exp $
+ *   Utilクラス
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * Utilクラス。
+ * 汎用的に使える関数群をスタティック関数として提供します。
+ *
+ * @package  dot_Util
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_Util{
+  // {{{ dot_Util::getMicroTime()
+  /**
+   * Unix epoch (1970年1月1日 00:00:00)からの通算秒をfloat値で返す。
+   *
+   * @param void
+   * @return float $rc Unix epoch (1970年1月1日 00:00:00)からの通算秒
+   */
+  public static function getMicroTime(){
+    list($usec, $sec) = explode(" ",microtime());
+    return ((float)$sec + (float)$usec);
+  }
+
+
+
+  // }}}
+  // {{{ dot_Util::echoErr()
+  /**
+   * 標準エラー出力にエコー。SJIS-winエンコーディングに変換。
+   *
+   * @param string $str
+   */
+  public static function echoErr($str){
+    $str =mb_convert_encoding($str ,"SJIS-win");
+    fwrite(STDERR , $str) ;
+  }
+
+
+
+  // }}}
+}
+?>

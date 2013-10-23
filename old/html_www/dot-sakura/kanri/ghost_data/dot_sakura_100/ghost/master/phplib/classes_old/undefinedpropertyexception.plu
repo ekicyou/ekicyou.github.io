@@ -1,0 +1,39 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: undefinedpropertyexception.plu,v 1.1 2004/08/10 10:08:24 cvs Exp $
+ *   存在しないプロパティへのアクセスに例外発行
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 定義されていないプロパティの呼び出し
+ *
+ * @package  UndefinedPropertyException
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class UndefinedPropertyException extends BaseException {
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param string
+   */
+  public function __construct(SafeObject $object ,$propertyName){
+    $mes ="";
+    if($object instanceOf SafeObject){
+      $className =get_class($object);
+      $mes ="クラス[$className]には、プロパティ[$propertyName]は存在しません。";
+    }
+    parent::__construct($mes);
+  }
+
+
+  // }}}
+}
+?>

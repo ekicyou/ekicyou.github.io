@@ -1,0 +1,41 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: AllTests.plu,v 1.2 2004/11/15 10:54:45 cvs Exp $
+ *   DOTスクリプト ユニットテスト
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+if (!defined('PHPUnit2_MAIN_METHOD')) {
+  define('PHPUnit2_MAIN_METHOD', 'AllTests::main');
+}
+
+require_once 'PHPUnit2/Framework/TestSuite.php';
+require_once 'PHPUnit2/TextUI/TestRunner.php';
+
+/**
+ * @author      Dot-Station Mastor
+ * @copyright   Copyright 2004 Dot-Station.
+ * @license     http://www.php.net/license/3_0.txt The PHP License, Version 3.0
+ * @category    Testing
+ * @package     DOT Sclipt
+ * @subpackage  Tests
+ */
+class AllTests {
+  public static function main() {
+    PHPUnit2_TextUI_TestRunner::run(self::suite());
+  }
+
+  public static function suite() {
+    $suite = new PHPUnit2_Framework_TestSuite('どっとスクリプト');
+
+    // サブディレクトリーの登録
+    $suite->addTest(dot_AllTests::suite());
+    return $suite;
+  }
+}
+
+?>

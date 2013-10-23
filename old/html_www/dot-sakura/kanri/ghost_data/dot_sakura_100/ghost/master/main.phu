@@ -1,0 +1,29 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: main.phu,v 1.6 2004/04/25 16:25:00 cvs Exp $
+ *   メインルーチン呼び出し
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+  // 定数定義
+  define('STDERR_ENCODING'  ,'UTF-8');
+  require_once('./define.plu');
+
+  // インクルードパスの設定
+  set_include_path(implode (";" ,$include_path_list));
+
+  // インクルード
+  require_once('autoload.plu');
+  require_once('errorhandler.plu');
+
+  //---------------------------------------------------------------------------
+  // メインプロセスの起動
+  $className =AI_ENGINE;
+  $main =new dot_Main(new $className());
+  $main->run();
+
+?>
