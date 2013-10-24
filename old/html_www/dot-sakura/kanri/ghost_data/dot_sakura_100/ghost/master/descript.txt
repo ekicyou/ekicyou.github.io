@@ -1,0 +1,11 @@
+name,ÅDÇ≥Ç≠ÇÁ
+id,dot-sakura
+type,ghost
+craftman,StationMastor
+craftmanw,âwí∑
+craftmanurl,http://www.nanican.net/dot-sakura/
+
+sakura.name,ÅDÇ≥Ç≠ÇÁ
+kero.name,Ç§Ç…Ç„Ç§
+
+shiori,tunaki.dll

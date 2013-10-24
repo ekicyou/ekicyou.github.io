@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<TITLE>{tval TITLE}</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#666666" leftmargin="7" topmargin="4" marginwidth="7" marginheight="4" link="#886655" vlink="#666666" alink="#553333">
+<!--{each ITEMS}-->
+
+    <table width="640" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+        <td align="center" class="iwd12">
+          <font color="red"><b>{tval ITEMS/FIELD}</b><br>
+          {tval ITEMS/MESSAGE}</font>
+        </td>
+      </tr>
+    </table>
+    <br>
+<!--{/each}-->
+<br>
+<table width="680" border="0" cellspacing="0" cellpadding="0">
+<FORM>
+  <tr>
+    <td align="center">
+      <input type="button" name="return" value="戻　る" onClick="history.go(-1)">
+    </td>
+  </tr>
+</FORM>
+</table>
+</BODY>
+</HTML>
+

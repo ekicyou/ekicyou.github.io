@@ -1,0 +1,38 @@
+<!--{def TEMPLATE_COMMENT}-->
+<html>
+<head>
+<title>さくら表示テンプレート</title>
+<meta http-equiv="Content-Type" content="text/html;">
+</head>
+<body bgcolor="#ffffff">
+<!--{/def}-->
+
+<!-- ■リンク START■ -->
+        <table id="link" summary="t" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>&nbsp;&nbsp;</td>
+            <td>
+              <div class='sz16px b'>・接続案内　～LINK～</div>
+              <table summary="t" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>&nbsp;&nbsp;</td>
+                  <td>
+<!--{each LINK}-->
+                    <a href="{rval LINK/URL}" target="_blank">
+                      <img src="{rval LINK/BANNER}" alt="{tval LINK/NAME}" width="200" height="40"  class="border_zero" />
+                      {tval LINK/NAME}
+                    </a>
+                    <br /><span class="vz12px">　　{tval LINK/MES}</span>
+                    <br />&nbsp;<br />
+<!--{/each}-->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+<!-- ■リンク END■ -->
+<!--{def TEMPLATE_COMMENT}-->
+</body>
+</html>
+<!--{/def}-->

@@ -1,0 +1,2 @@
+\shell\master\Thumbs.db
+\shell\master\Thumbs.bak

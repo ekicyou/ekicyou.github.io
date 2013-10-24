@@ -1,0 +1,55 @@
+-
+���̃S�[�X�g�ؘ͉a���J���`�[������̃v���O���}�u����AI�u�ؘa���v��g�p���Ă��܂��B 
+
+Copyright (C) 2001-2002 Kawari development team 
+
+�ؘa���p�b�P�[�W��̃t�@�C��(shiori.dll)��ȉ��̃��C�Z���X�ōĔz�z���Ă��܂��B 
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met: 
+
+1. Redistributions of source code must retain the above copyright notice, 
+this list of conditions and the following disclaimer. 
+Redistributions in binary form must reproduce the above copyright 
+notice, this list of conditions and the following disclaimer in the 
+documentation and/or other materials provided with the distribution. 
+3. The name of the author may not be used to endorse or promote products 
+derived from this software without specific prior written permission. 
+
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED 
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO 
+EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+OF THE POSSIBILITY OF SUCH DAMAGE. 
+-- 
+
+���Ȃ肢�������Ŗ�킩���|��(^_^;)
+
+����ȉ��̏��������������Ȃ�΁A�\�[�X����уo�C�i���̍Ĕz�z�Ǝg�p��
+�����C���̗L���ɂ�����炸������܂��B
+
+1. �\�[�X�R�[�h�̍Ĕz�z�́A��L�̒��쌠�f���A���̏���ƈȉ��̖Ɛӎ����̃��X�g
+�@ ��ۗL�����邱�ƁB
+2�D�o�C�i���̃t�H�[���̍Ĕz�z�́A������܂��͋��ɔz�z����鑼�̑f�ނɂ����āA
+�@ ��L�̒��쌠�f���A���̏���ƈȉ��̖Ɛӎ����̃��X�g��ۗL�����邱�ƁB
+3. ��҂̖��O�́A���m�Ȏ��O�̏��ʂł̋��Ȃ��ł��̃\�t�g�E�F�A����h������
+�@ ���i�̐����A�܂��͔̔����i���邽�߂ɗp���Ă͂Ȃ�Ȃ��B
+
+�Ɛӎ���
+�@�{�\�t�g�E�F�A�́h���̂܂܂̎p�h�Œ񋟂���@���炩�Ɏ����ꂽ�A�܂��͌��O��
+�ۏ؂́A���p���p����ѓ���ړI�ւ̓K���ɑ΂��錾�O�̕ۏ؂�܂݁A�܂������
+�����Ɍ��炸�A���݂��Ȃ��B���Ƃ��ȉ��̂悤�ȑ��Q�̉\�����������Ă�����
+���Ă�A�ǂ̂悤�Ȍ`�ɂ��낱�̃\�t�g�E�F�A�̗��p���甭���������ɂ����āA
+���̒��쌠�҂́A(��֐��i��T�[�r�X�̒��B;���p���A�f�[�^�A���邢�͗��v�̑���;
+���邢�͉c�Ƃ̒��f��܂ށA�܂�����炾���Ɍ��炸)���ړI�ɁA�ԐړI�ɁA��R�ɁA
+���ʂɁA������A���邢�́A�K�R�I�ɐ����Ă��܂������Q�ɑ΂��ӔC�͂Ȃ��A
+�����Ȃ�ӔC���_��ł�_��̗L���ɌW��炸�����ȐӔC�͂Ȃ��A�܂�(�ߎ����邢��
+���̑���܂�)�s�@�s�ׂɑ΂��Ă�ӔC�͂Ȃ��B
+
+������http://www.freebsd.org/ja/copyright/�ɗL��܂��B�i����Ƃ܂Ƃ�Ȗ󕶂�j

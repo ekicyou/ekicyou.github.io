@@ -1,0 +1,228 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: response.plu,v 1.6 2004/08/18 01:56:23 cvs Exp $
+ *   Responsオブジェクト
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * SHIORI Responseを管理する
+ *
+ * 栞DLLモジュールとSHIORIプロトコルに関する詳細
+ * @see http://futaba.mikage.to/shiori.html
+ *
+ * Interface of shiori module and PHP
+ * @package  dot.Response
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.6 $
+ */
+class dot_Response extends SafeObject{
+
+  // {{{ status code http://futaba.mikage.to/shiori.html#statuscode
+
+  //2xx - 処理完了
+  /**
+   * 正常に終了した。
+   */
+  const RESULT_OK                    ='200 OK';
+
+  /**
+   * 正常に終了したが、返すべきデータがない。
+   */
+  const RESULT_NO_CONTENT            ='204 No Content';
+
+
+  //3xx - 処理完了、追加アクション要求
+  /**
+   * TEACH リクエストを受けたが、情報が足りない。
+   */
+  const RESULT_NOT_ENOUGHT           ='311 Not Enought';
+
+  /**
+   * TEACH リクエスト内の最も新しいヘッダが解釈不能。
+   */
+  const RESULT_ADVICE                ='312 Advice';
+
+
+  //4xx - リクエストエラー
+  /**
+   * リクエスト不備。
+   */
+  const RESULT_BAD_REQUEST           ='400 Bad Request';
+
+
+  //5xx - サーバエラー
+  /**
+   * サーバ内でエラーが発生した。
+   */
+  const RESULT_INTERNAL_SERVER_ERROR ='500 Internal Server Error';
+
+
+
+  // }}}
+  // {{{ properties
+
+  /**
+   * ステータスコード
+   * @var string statusCode
+   */
+  public $statusCode =NULL;
+
+
+  /**
+   * ステータスバージョン
+   * @var string version
+   */
+  public $version =NULL;
+
+
+  /**
+   * レスポンス値
+   * @var string[][] params
+   */
+  public $params =array();
+
+
+  /**
+   * レスポンスがセットされればTRUE
+   * @var bool isCompleted
+   */
+  public $isCompleted =FALSE;
+
+
+
+  /**
+   * 終了処理を行うイベント一覧
+   * @var class dot_event[] doneEvent
+   */
+  public $doneEvent =array();
+
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param  void
+   */
+  public function __construct(){
+  }
+
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+  }
+
+
+
+  // }}}
+  // {{{ set
+  /**
+   * 栞レスポンスを設定する
+   *
+   * @param  class dot_Event  $event    イベントクラス
+   * @param  string           $status   ステータスコード
+   * @param  string           $version  ステータスコード
+   * @param  string[][]       $params   戻り値
+   */
+  public function set(dot_Event $event ,$status ,$version ,$params=NULL){
+    $this->addDoneEvent($event);
+    $this->statusCode   =$status;
+    $this->version      =$version;
+    if(is_array($params)) $this->params =$params;
+    $this->isCompleted  =TRUE;
+
+    return TRUE;
+  }
+
+
+
+  // }}}
+  // {{{ addParam
+  /**
+   * レスポンスパラメータを追加する
+   *
+   * @param  string $key   KEY
+   * @param  string $value 値
+   */
+  public function addParam($key ,$value){
+    $this->params[$key][] =$value;
+  }
+
+
+
+  // }}}
+  // {{{ addDoneEvent
+  /**
+   * イベント終了時処理を設定する
+   *
+   * @param  class dot_Event  $event  イベントクラス
+   */
+  public function addDoneEvent(dot_Event $event){
+    $this->doneEvent[] =$event;
+  }
+
+
+
+  // }}}
+  // {{{ output
+  /**
+   * レスポンスを出力する
+   *
+   */
+  public function output(){
+    // 出力
+    echo $this;
+    fflush(STDERR);
+    flush();
+
+    // 終了イベント処理
+    foreach($this->doneEvent as $event){
+      $event->OnDoneRequest();
+    }
+  }
+
+
+
+  // }}}
+  // {{{ __toString
+  /**
+   * 文字列を作成する
+   *
+   * @param void
+   */
+  public function __toString(){
+    // パラメータが何も設定されていなければ内部エラー
+    if($this->statusCode==NULL){
+      $this->statusCode =dot_Response::RESULT_INTERNAL_SERVER_ERROR;
+      $this->version ="SHIORI/3.0";
+    }
+
+    // 出力
+    $rc ="{$this->version} {$this->statusCode}\r\n";
+    $rc .="Charset: UTF-8\r\n";
+    if(is_array($this->params)) foreach($this->params as $k=>$v){
+      if(is_array($v)) foreach($v as $param){
+        $rc .="$k: $param\r\n";
+      }
+    }
+    $rc .="\r\n";
+    return $rc;
+  }
+
+
+
+  // }}}
+}
+?>

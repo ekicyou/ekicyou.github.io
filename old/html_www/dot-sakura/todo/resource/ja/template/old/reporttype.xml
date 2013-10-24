@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+
+<ReportType id="old" name="Old-Kagemai">
+  <description>
+    影舞 0.7 までとほぼ同じ項目の BTS です。
+    0.7 までのプロジェクトの移行用です。
+  </description>
+
+  <string id="email" name="送信者"
+          use_cookie="true" email_check="true"  
+          delete="false"
+          show_header="true" show_header_line="true">
+    送信者のメールアドレスを入力してください。
+  </string>
+
+  <string id="title" name="タイトル"
+          report_attr="true" allow_guest="true" delete="false" list_item="true">
+    この報告の概要を簡潔・明瞭に書いてください。
+    「動きません」「わかりません」「質問です」などの題名は不適切です。
+  </string>
+
+  <select id="status" name="状態" default="提案" 
+          report_attr="true" 
+          delete="false"
+          list_item="true"
+          show_topics="true"
+          show_header="true"
+          close_by="保留,完了,却下">
+    <choice id="提案" sdesc="提案されているもの">新しく投稿されたバグたちです</choice>
+    <choice id="受付済み" sdesc="受け付けたもの">受付済みのバグたちです</choice>
+    <choice id="修正済" sdesc="修正されたもの">修正されたバグたちです</choice>
+    <choice id="保留" sdesc="保留中のもの">保留されているバグたちです</choice>
+    <choice id="完了" sdesc="完了したもの" show_topics="false">完了したバグたちです</choice>
+    <choice id="却下" sdesc="却下したもの" show_topics="false">却下したバグたちです</choice>
+    この報告の現在の処理状況を選択してください。
+  </select>
+
+  <select id="priority" name="優先度" default="普通" 
+          report_attr="true" 
+          delete="false"
+          list_item="true"
+          show_topics="false"
+          show_header="true">
+    <choice id="緊急" sdesc=""></choice>
+    <choice id="重要" sdesc=""></choice>
+    <choice id="普通" sdesc=""></choice>
+    <choice id="低" sdesc="" show_topics="false"></choice>
+    この報告の現在の優先度を選択してください。
+  </select>
+
+  <multiselect id="categories" name="カテゴリ" default="" 
+	       report_attr="true" 
+	       delete="false"
+	       show_topics="false"
+	       show_header="false"
+               allow_guest="true"
+               checkbox="true">
+    <choice id="カテゴリ１" sdesc=""></choice>
+    <choice id="カテゴリ２" sdesc=""></choice>
+  </select>
+
+  <text id="body" name="内容" delete="false">
+    簡潔・明瞭にどうぞ。余分な引用や挨拶はいりません。
+  </text>
+
+  <file id="attachment" name="添付ファイル" default="">
+    ファイル名とファイルの種類を指定してください。日本語のファイル名はやめておいた方が無難です。
+  </file>
+</ReportType>

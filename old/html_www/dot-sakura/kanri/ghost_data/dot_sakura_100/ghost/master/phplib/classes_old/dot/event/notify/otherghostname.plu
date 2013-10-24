@@ -1,0 +1,22 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: otherghostname.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   SHIORI/2.x 系イベントの為、キャンセル応答
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * SHIORI/2.x 系イベントの為、キャンセル応答
+ *
+ * @package  dot_event_NOTIFY_OtherGhostName
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_event_NOTIFY_OtherGhostName extends dot_event_SHIORI2x{
+}
+?>

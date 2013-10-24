@@ -1,0 +1,65 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: character.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   <sssl>タグ
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * <sssl>タグ
+ *
+ * @package  dot_sssl_tag_CHARACTER
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_sssl_tag_CHARACTER extends dot_sssl_basetag{
+  // {{{ properties
+
+
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param void
+   */
+  public function __construct($tag,$attributes){
+    parent::__construct($tag,$attributes);
+  }
+
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+    parent::__destruct();
+  }
+
+
+
+  // }}}
+  // {{{ add_sssl
+  /**
+   * dot_SSSL オブジェクトを追加する。
+   *
+   * @param class dot_SSSL $sssl dot_SSSLオブジェクト
+   */
+  public function add_sssl(dot_SSSL $sssl){
+    parent::add_sssl($sssl);
+  }
+
+
+  // }}}
+}
+//-----------------------------------------------------------------------------
+?>

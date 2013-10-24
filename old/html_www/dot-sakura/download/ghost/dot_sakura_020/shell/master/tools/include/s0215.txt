@@ -1,0 +1,21 @@
+//=====================================================================
+// @alias                215
+// @surfacetable.type    ÉlÉ^ÉTÅ[ÉtÉFÉX(ÇQÇOÇOÅ`)
+// @surfacetable.comment Ç§Ç…Ç„Ç§ÅFÇ’ÇµÇ„Å`ÅiÇ§Ç…Ç„Ç§Åj
+//=====================================================================
+surface5083
+{
+animation0.interval,runonce
+animation0.pattern0,overlay,5204,50,155,250
+animation0.pattern1,overlay,5204,50,155,245
+animation0.pattern2,overlay,5204,50,155,240
+animation0.pattern3,overlay,5204,50,155,235
+animation0.pattern4,overlay,5204,50,155,230
+animation0.pattern5,overlay,5204,50,155,225
+animation0.pattern6,overlay,5204,50,155,220
+animation0.pattern7,overlay,5204,50,155,218
+animation0.pattern8,overlay,5204,50,155,216
+animation0.pattern9,overlay,5204,50,155,214
+animation0.pattern10,overlay,5204,50,155,212
+animation0.pattern11,overlay,-1
+}

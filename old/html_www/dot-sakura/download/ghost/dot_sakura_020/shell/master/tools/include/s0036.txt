@@ -1,0 +1,20 @@
+//=====================================================================
+// @alias                36
+// @surfacetable.type    Ç≥Ç≠ÇÁägí£ÇP(ÇRÇOÅ`)
+// @surfacetable.comment Ç≥Ç≠ÇÁÅFÇ≠Ç©ÇüÅ`ÅdÅd
+//=====================================================================
+surface5109
+{
+collision0,120,68,187,113,Head
+collision1,109,118,160,155,Face
+collision2,95,196,155,230,Bust
+collision3,117,160,135,168,Mouse
+collision4,83,315,161,337,Apron
+
+point.kinoko.centerx,105
+point.kinoko.centery,66
+
+animation0.interval,always
+animation0.pattern0,overlay,5195,2000,115,152
+animation0.pattern1,overlay,-1,2000
+}

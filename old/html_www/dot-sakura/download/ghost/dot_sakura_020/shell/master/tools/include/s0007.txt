@@ -1,0 +1,33 @@
+//=====================================================================
+// @alias                7
+// @surfacetable.type    さくら・うにゅう基本サーフェス
+// @surfacetable.comment さくら：怒り
+//=====================================================================
+surface5007
+{
+collision0,75,72,135,106,Head
+collision1,75,132,139,162,Face
+collision2,83,196,131,222,Bust
+collision3,97,163,116,170,Mouse
+collision4,68,318,155,337,Apron1
+
+point.kinoko.centerx,105
+point.kinoko.centery,80
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5145,40,70,123
+animation0.pattern1,overlay,5146,40,70,123
+animation0.pattern2,overlay,-1,40,0,0
+
+animation1.interval,talk,4
+animation1.pattern0,overlay,5161,160,96,161
+animation1.pattern1,overlay,-1,100,0,0
+animation1.pattern2,overlay,5161,160,96,161
+animation1.pattern3,overlay,-1,160,0,0
+
+animation2.interval,always
+animation2.pattern0,overlay,5212,150,120,68
+animation2.pattern1,overlay,5212,150,123,70
+animation2.pattern2,overlay,5212,150,123,68
+animation2.pattern3,overlay,5212,150,120,70
+}

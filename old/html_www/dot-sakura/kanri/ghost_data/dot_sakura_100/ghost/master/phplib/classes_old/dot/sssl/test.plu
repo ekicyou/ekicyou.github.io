@@ -1,0 +1,55 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: test.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   TESTUNIT
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+class dot_sssl_Test extends PHPUnit_TestCase {
+
+  // {{{ __construct
+  function __construct($name) {
+    parent::__construct($name);
+  }
+
+
+
+  // }}}
+  // {{{ __construct
+  function setUp() {
+  }
+
+
+
+  // }}}
+  // {{{ testParser
+  function testParser() {
+    $files =array(
+                'SSSLだけ',
+                'LINK無しセット',
+              );
+    foreach($files as $k=>$v){
+      unset($x);
+      $file      =sprintf('test_sssl_%03d.xml' ,$k);
+      $x['BASENAME'] =$file;
+      $x['FILE'    ] =realpath(dirname(__FILE__) .'/' .$file);
+      $x['NAME'    ] =$v;
+      $files[$k] =$x;
+    }
+
+    foreach($files as $v){
+      $sssl =dot_sssl_Parser::parseFile($v['FILE']);
+//      echo $sssl->toXML();
+//      echo "\n";
+    }
+  }
+
+
+
+  // }}}
+}
+?>

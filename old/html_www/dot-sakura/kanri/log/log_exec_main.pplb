@@ -1,0 +1,128 @@
+<?php
+//====================================================================
+// ログ削除
+//====================================================================
+function job2($conn, &$err){
+  $sql ="DELETE from BOTTLE_LOG";
+  if(! DButil::execute($conn, $sql)){
+    $err->addError("ログ削除", "ログの削除処理に失敗しました。");
+    return;
+  }
+  return TRUE;
+}
+
+//====================================================================
+// ゴーストチャンネルエリアスデータ読込
+//====================================================================
+function job3($conn, &$err){
+  $aliasText =file(dirname(__FILE__) ."/alias.txt");
+  foreach($aliasText as $line){
+    $line =trim(mb_convert_encoding($line ,mb_internal_encoding() ,"SJIS-win"));
+    list($GHOST_OR_CHANNEL, $GHOST_CLASS) =explode("=" ,$line);
+    $GLOBALS['BOTTLE_GHOST_CLASS'][$GHOST_OR_CHANNEL] =$GHOST_CLASS;
+  }
+  echo "<pre>";
+  print_r($GLOBALS['BOTTLE_GHOST_CLASS']);
+  echo "</pre>";
+  return TRUE;
+}
+
+//====================================================================
+// ログ取り込み
+//====================================================================
+function job1($conn, &$err){
+  $fname =dirname(__FILE__) ."/bottleall.txt";
+  $fp =fopen($fname, "r");
+  $line =fgets($fp, 30000); // １行目は空読み
+  $cnt=0;
+  while($line =fgets($fp, 30000)){
+    if(! job1_exec($conn, $err, $line)) break;
+    $cnt++;
+    if( ($cnt % 100  )==0)  echo "*";
+    if( ($cnt % 10000)==0)  echo ":$cnt<br>\n";
+    flush();
+  }
+  fclose($fp);
+}
+function job1_exec($conn, &$err, $line){
+  set_time_limit(30);
+  flush();
+  unset($x);
+
+  // ■取り込み
+  $line =mb_convert_encoding($line, mb_internal_encoding(),"SJIS");
+  $x[LOGDATE ]="";
+  $x[MID     ]="";
+  $x[CHANNEL ]="";
+  $x[GHOST   ]="";
+  $x[SENDS   ]="";
+  $x[VOTES   ]="";
+  $x[AGREES  ]="";
+  $x[SCRIPT  ]="";
+  list(
+    $x[LOGDATE ],
+    $x[MID     ],
+    $x[CHANNEL ],
+    $x[GHOST   ],
+    $x[SENDS   ],
+    $x[VOTES   ],
+    $x[AGREES  ],
+    $x[SCRIPT  ],
+    $x[0       ],
+    $x[1       ],
+    $x[2       ],
+    $x[3       ],
+    $x[4       ],
+    $x[5       ],
+    $x[6       ],
+    $x[7       ],
+    $x[8       ],
+    $x[9       ]) =explode("\t", $line);
+
+  for($ii=0; $ii<10; $ii++){
+    $x[SCRIPT].=$x[$ii];
+    unset($x[$ii]);
+  }
+  $d1 =substr($x[LOGDATE], 0, 4);
+  $d2 =substr($x[LOGDATE], 4, 2);
+  $d3 =substr($x[LOGDATE], 6, 2);
+  $d4 =substr($x[LOGDATE], 8, 2);
+  $d5 =substr($x[LOGDATE],10, 2);
+  $d6 =substr($x[LOGDATE],12, 2);
+
+  // ゴーストエイリアス
+  $GHOST   =$x[GHOST   ];
+  $CHANNEL =$x[CHANNEL ];
+  $GHOST_CLASS =$GHOST;
+  if($GHOST!=""){
+    if(isset($GLOBALS['BOTTLE_GHOST_CLASS'][$GHOST])){
+      $GHOST_CLASS =$GLOBALS['BOTTLE_GHOST_CLASS'][$GHOST];
+    }
+  }
+  else{
+    $GHOST_CLASS =$CHANNEL;
+    if(isset($GLOBALS['BOTTLE_GHOST_CLASS'][$CHANNEL])){
+      $GHOST_CLASS =$GLOBALS['BOTTLE_GHOST_CLASS'][$CHANNEL];
+    }
+  }
+  if($GHOST_CLASS == ""){
+    echo "<br>GHOST NOT FOUND CHANNEL[$CHANNEL] \n";
+  }
+
+
+  // ログ登録
+  $x[LOGDATE      ] ="'$d1/$d2/$d3 $d4:$d5:$d6'";
+  $x[MID          ] =DButil::_strdb($x[MID     ]);
+  $x[CHANNEL      ] =DButil::_strdb($x[CHANNEL ]);
+  $x[GHOST        ] =DButil::_strdb($x[GHOST   ]);
+  $x[GHOST_CLASS  ] =DButil::_strdb($GHOST_CLASS);
+  $x[SCRIPT       ] =DButil::_strdb($x[SCRIPT  ]);
+  $x[SENDS        ] +=0;
+  $x[VOTES        ] +=0;
+  $x[AGREES       ] +=0;
+  $table ="BOTTLE_LOG";
+  $rc =DButil::insert($conn, $table, $x);
+
+  return ! $err->isError();
+}
+?>
