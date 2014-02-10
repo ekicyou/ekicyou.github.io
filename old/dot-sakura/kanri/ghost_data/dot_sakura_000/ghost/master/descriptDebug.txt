@@ -5,7 +5,7 @@ id,dot_sakura
 type,ghost
 craftman,dot-station
 craftmanw,どっとステーション駅長
-craftmanurl,http://www.nanican.net/dot-sakura/
+craftmanurl,http://ekicyou.github.io/old/dot-sakura/
 
 sakura.name,さくら
 kero.name,うにゅう

@@ -67,7 +67,7 @@ URL.kero : "何か。の略歴"$(chr 1)"http://a1.st/nob/sakura/"$(chr 1)"http://a1.st
 
 #本体ポータルサイト：本体・情報サイト・「華和梨」関係==========================
 
-URL.portal : ".さくらStation"$(chr 1)"http://www.nanican.net/dot-sakura/"$(chr 1)"http://www.nanican.net/dot-sakura/images/banner.png"$(chr 2)
+URL.portal : ".さくらStation"$(chr 1)"http://ekicyou.github.io/old/dot-sakura/"$(chr 1)"http://ekicyou.github.io/old/dot-sakura/images/banner.png"$(chr 2)
 URL.portal : "-"$(chr 2)
 URL.portal : "OpenKEEPS"$(chr 1)"http://keeps.sourceforge.jp"$(chr 1)"http://keeps.sourceforge.jp/banner.png"$(chr 2)
 URL.portal : "-"$(chr 2)

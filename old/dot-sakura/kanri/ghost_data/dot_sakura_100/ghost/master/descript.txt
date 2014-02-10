@@ -3,7 +3,7 @@ id,dot-sakura
 type,ghost
 craftman,StationMastor
 craftmanw,âwí∑
-craftmanurl,http://www.nanican.net/dot-sakura/
+craftmanurl,http://ekicyou.github.io/old/dot-sakura/
 
 sakura.name,ÅDÇ≥Ç≠ÇÁ
 kero.name,Ç§Ç…Ç„Ç§

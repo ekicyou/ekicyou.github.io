@@ -12,7 +12,7 @@
   $T[] =array(MARK=>TRUE  ,MSG=>"中央コンコース"  ,SUBMES=>"ダウンロード"       ,LINK=>"#download"    );
   $T[] =array(MARK=>TRUE  ,MSG=>"伝言板"                                        ,LINK=>"#dengon"      );
   $T[] =array(MARK=>TRUE  ,MSG=>"さくらでGO!!"                                  ,KOUJI=>TRUE          );
-  $T[] =array(MARK=>TRUE  ,MSG=>"忘れ物預かり所"  ,SUBMES=>"フィードバック"     ,LINK=>"http://www.nanican.net/dot-sakura/todo/guest.cgi?project=dot_sakura&action=top");
+  $T[] =array(MARK=>TRUE  ,MSG=>"忘れ物預かり所"  ,SUBMES=>"フィードバック"     ,LINK=>"http://ekicyou.github.io/old/dot-sakura/todo/guest.cgi?project=dot_sakura&action=top");
   $T[] =array(MARK=>TRUE  ,MSG=>"駅長の業務日誌"                                ,LINK=>"http://d.hatena.ne.jp/dot_station/");
   $T[] =array(MARK=>TRUE  ,MSG=>"接続案内"        ,SUBMES=>"LINK"               ,LINK=>"#link"        );
   $BUF_TALK[TALK] =$T;
