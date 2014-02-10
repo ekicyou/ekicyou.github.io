@@ -1,0 +1,15 @@
+//=====================================================================
+// @alias                220
+// @surfacetable.type    ネタサーフェス(２００～)
+// @surfacetable.comment さくら：まんき～ダンス
+//=====================================================================
+surface5219
+{
+animation0.interval,always
+animation0.pattern0,base,5220,50
+animation0.pattern1,base,5221,90
+animation0.pattern2,base,5219,250
+animation0.pattern3,base,5222,50
+animation0.pattern4,base,5223,90
+animation0.pattern5,base,5219,250
+}

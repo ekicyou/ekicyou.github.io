@@ -1,0 +1,25 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: autoload.plu,v 1.5 2004/11/15 10:31:58 cvs Exp $
+ *   クラス自動読み込み
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+function __autoload($className){
+  global $class_path_list;
+  $className =strtolower(str_replace("_" ,"/" ,$className));
+  foreach($class_path_list as $dirName){
+    $include_file ="$dirName/$className.plu";
+    if(is_file($include_file)){
+      include_once($include_file);
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+
+?>

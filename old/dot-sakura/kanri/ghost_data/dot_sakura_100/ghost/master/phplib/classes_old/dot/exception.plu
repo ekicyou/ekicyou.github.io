@@ -1,0 +1,34 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: exception.plu,v 1.1 2004/08/10 10:08:24 cvs Exp $
+ *   Exception:dotEngine共有
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 例外：dotEngine共有
+ *
+ * @package  dot_Exception
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_Exception extends BaseException {
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param string
+   */
+  public function __construct($mes){
+    parent::__construct($mes);
+  }
+
+
+  // }}}
+}
+?>

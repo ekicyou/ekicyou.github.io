@@ -1,0 +1,33 @@
+//=====================================================================
+// @alias                401
+// @surfacetable.type    寝間着サーフェスセット
+// @surfacetable.comment 寝間着さくら：エロ面
+//=====================================================================
+surface5298
+{
+collision0,74,64,142,89,Head
+collision1,79,115,133,146,Face
+collision2,103,155,110,160,Mouse
+
+point.kinoko.centerx,105
+point.kinoko.centery,68
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5316,50,70,118
+animation0.pattern1,overlay,5317,50,70,118
+animation0.pattern2,overlay,-1,40,0,0
+
+animation1.interval,sometimes
+animation1.pattern0,overlay,5316,50,70,118
+animation1.pattern1,overlay,5317,200,70,118
+animation1.pattern2,overlay,-1,40,0,0
+
+animation2.interval,sometimes
+animation2.pattern0,alternativestart,(0,1)
+
+animation3.interval,talk,4
+animation3.pattern0,overlay,5318,100,102,152
+animation3.pattern1,overlay,-1,100,0,0
+animation3.pattern2,overlay,5318,160,102,152
+animation3.pattern3,overlay,-1,160,0,0
+}

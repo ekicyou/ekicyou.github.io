@@ -1,0 +1,95 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: ai.plu,v 1.1 2004/08/10 10:08:24 cvs Exp $
+ *   AIインターフェース
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * ＡＩ／リソース管理インターフェース
+ * イベント処理より必要に応じて情報を取り出すために呼び出されます
+ *
+ * @package  dot.AI
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+interface dot_AI{
+
+  // {{{ delaydInit
+  /**
+   * 遅延初期化処理
+   *
+   * @param void
+   */
+  public function delaydInit();
+
+
+
+  // }}}
+  // {{{ get
+  /**
+   * GET通知に対する応答
+   *
+   * @param string[][]  $Params パラメータリスト
+   * @return string[][] $rc     パラメータリスト
+   */
+  public function get($eventName ,$Params=NULL);
+
+
+
+  // }}}
+  // {{{ notify
+  /**
+   * NOTIFY通知に対する応答
+   *
+   * @param string[][]  $Params パラメータリスト
+   * @return string[][] $rc     パラメータリスト
+   */
+  public function notify($eventName ,$Params=NULL);
+
+
+
+  // }}}
+  // {{{ begin
+  /**
+   * トランザクション開始
+   *
+   * @param void
+   * @return void
+   */
+  public function begin();
+
+
+
+  // }}}
+  // {{{ commit
+  /**
+   * コミット
+   *
+   * @param void
+   * @return void
+   */
+  public function commit();
+
+
+
+  // }}}
+  // {{{ rollback
+  /**
+   * ロールバック
+   *
+   * @param void
+   * @return void
+   */
+  public function rollback();
+
+
+
+  // }}}
+}
+?>

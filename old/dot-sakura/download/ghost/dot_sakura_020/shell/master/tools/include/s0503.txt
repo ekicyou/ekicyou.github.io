@@ -1,0 +1,20 @@
+//=====================================================================
+// @alias                503
+// @surfacetable.type    すくみずサーフェスセット
+// @surfacetable.comment さくら：すくみず：不安
+//=====================================================================
+surface5356
+{
+collision0,74,64,142,89,Head
+collision1,79,115,133,146,Face
+collision2,97,196,121,227,Bust
+collision3,92,156,99,161,Mouse
+
+point.kinoko.centerx,109
+point.kinoko.centery,63
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5382,40,60,118
+animation0.pattern1,overlay,5383,40,60,118
+animation0.pattern2,overlay,-1,40,0,0
+}

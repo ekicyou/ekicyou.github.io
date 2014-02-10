@@ -1,0 +1,144 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: execevent.plu,v 1.1 2004/08/10 10:08:24 cvs Exp $
+ *   EVENT発行クラス
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * イベント発行クラス。
+ * SHIORIイベントなどを受け取り、適切なイベントに処理を引き渡します。
+ * 処理を引き渡したイベントが処理をキャンセルした場合、
+ * 第２候補・第３候補‥‥と処理を受け渡します。
+ *
+ * @package  dot.ExecEvent
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_ExecEvent extends SafeObject{
+  // {{{ createFromSHIORI()
+  /**
+   * SHIORIトークンを元にオブジェクトを作成する。
+   * @see
+   * @param  interface dot_AI $ai    AIインターフェース
+   * @param  string[][]       $lines SHIORIリクエスト
+   * @return void
+   */
+  static public function createFromSHIORI(dot_AI $ai ,$lines){
+    $req =dot_Request::createFromSHIORI($lines);
+
+    // 解析不可能[NotShioriRequest]
+    if(!($req instanceOf dot_Request)){
+      $req =new dot_Request('NotShioriRequest');
+    }
+
+    return new dot_ExecEvent($ai ,$req);
+  }
+
+
+
+  // }}}
+  // {{{ properties
+  /**
+   * AIインターフェース
+   * @var interface dot_AI
+   */
+  public $ai;
+
+  /**
+   * リクエスト情報
+   * @var class dot_Request
+   */
+  public $req;
+
+  /**
+   * レスポンス情報
+   * @var class dot_Response
+   */
+  public $res;
+
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param interface dot_AI   $ai  ＡＩオブジェクト
+   * @param class dot_Request  $req リクエストオブジェクト
+   * @param class dot_Response $res レスポンスオブジェクト
+   */
+  public function __construct(dot_AI $ai ,dot_Request $req ,dot_Response $res=NULL){
+    if($res==NULL)  $res =new dot_Response();
+    $this->ai  =$ai;
+    $this->req =$req;
+    $this->res =$res;
+  }
+
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+  }
+
+
+
+  // }}}
+  // {{{ exec
+  /**
+   * イベント実行。適切なイベントハンドラにイベントを処理させ、結果を返す。
+   *
+   * @param  void
+   * @return class dot_Response $rc リザルトオブジェクト
+   */
+  public final function exec(){
+    $this->ai->begin();
+    $eventNames[] =$this->req->eventName;
+    $eventNames[] ="NotFound";
+    $baseNames =$GLOBALS['DOT_SCRIPT']['EVENT_CALL_LIST'];
+    foreach($eventNames as $eventName){
+      foreach($baseNames as $baseName){
+        $classNames[] ="{$baseName}_{$eventName}";
+      }
+    }
+
+    foreach($classNames as $className){
+      if($this->execImpl($className))  break;
+    }
+
+    $this->ai->commit();
+
+    return $this->res;
+  }
+
+
+
+  // }}}
+  // {{{ exec
+  /**
+   * イベント実行の本体。内部メソッド。
+   *
+   * @param  void
+   * @return class dot_Response $rc リザルトオブジェクト
+   */
+  private final function execImpl($className){
+    if(! classExists($className)) return FALSE;
+    $event =new $className($this->ai ,$this->req ,$this->res);
+    $event->OnRequest();
+    return $this->res->isCompleted; // 完了フラグ
+  }
+
+
+
+  // }}}
+}
+?>

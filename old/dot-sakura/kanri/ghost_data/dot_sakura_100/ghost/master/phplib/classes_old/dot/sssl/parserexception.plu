@@ -1,0 +1,22 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: parserexception.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   Exception:SSSL パーサ
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 例外：XML/SSSLパーサ
+ *
+ * @package  dot_sssl_PerserException
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_sssl_ParserException extends dot_Exception {
+}
+?>

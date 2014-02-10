@@ -1,0 +1,3 @@
+type,balloon
+name,ボトル（でふぉ改）
+directory,bottle

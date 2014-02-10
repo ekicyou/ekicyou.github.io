@@ -1,0 +1,112 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: sssl.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   <sssl>タグ
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * <sssl>タグ
+ *
+ * @package  dot_sssl_tag_SSSL
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_sssl_tag_SSSL extends dot_sssl_basetag{
+  // {{{ properties
+  /**
+   * id別要素
+   * @var dot_SSSL[] id_list
+   */
+  protected $id_list;
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param void
+   */
+  public function __construct($tag,$attributes){
+    parent::__construct($tag,$attributes);
+    $this->id_list =array();
+  }
+
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+    parent::__destruct();
+  }
+
+
+
+  // }}}
+  // {{{ add_sssl
+  /**
+   * dot_SSSL オブジェクトを追加する。
+   *
+   * @param class dot_SSSL $sssl dot_SSSLオブジェクト
+   */
+  public function add_sssl(dot_SSSL $sssl){
+    // 受入チェック
+    while(TRUE){
+      if($sssl instanceOf dot_sssl_tag_SEQ        ) break;
+      if($sssl instanceOf dot_sssl_tag_PAR        ) break;
+      if($sssl instanceOf dot_sssl_tag_SECTION    ) break;
+      if($sssl instanceOf dot_sssl_tag_REFSECTION ) break;
+      if($sssl instanceOf dot_sssl_tag_TEXT       ) break;
+      if($sssl instanceOf dot_sssl_tag_REFTEXT    ) break;
+      if($sssl instanceOf dot_sssl_tag_REF        ) break;
+      // 受け入れられないタグ
+      $tagName =$sssl->getTagName();
+      $mes ="<$tagName>は受け入れられません。";
+      throw new dot_sssl_ParserException($mes);
+    }
+
+    // IDチェック
+    $id =$sssl->getAttribute('ID');
+    if(isset($this->id_list[$id])){
+      $mes ="id=\"$id\"が２重定義されています。";
+      throw new dot_sssl_ParserException($mes);
+    }
+
+    // 受入処理
+    $this->id_list[$id] =$sssl;
+    parent::add_sssl($sssl);
+  }
+
+
+
+  // }}}
+  // {{{ get_contents
+  /**
+   * 情報を取得する
+   *
+   * @param dot_sssl_request  $req SSSLリクエスト情報
+   * @param dot_sssl_response $res SSSLレスポンス情報
+   * @return void
+   */
+  public function get_contents($req ,$res){
+
+
+
+
+  }
+
+
+
+  // }}}
+}
+//-----------------------------------------------------------------------------
+?>

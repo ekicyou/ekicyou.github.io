@@ -1,0 +1,38 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: notshiorirequest.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   NotShioriRequestイベント処理
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * SHIORIヘッダの解析に失敗した場合に発行されるイベント
+ *
+ * @package  dot.event.NotFound
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_event_NotShioriRequest extends dot_Event{
+  // {{{ OnRequest()
+  /**
+   * リクエストを処理する。
+   *
+   * @param void
+   */
+   public function OnRequest(){
+    $status   =dot_Response::RESULT_BAD_REQUEST;  // リクエスト不備
+    $version  ="SHIORI/3.0";
+    $this->res->set($this ,$status ,$version);
+    dot_Error::out($this, __LINE__, "処理できないSHIORIリクエストです。");
+  }
+
+
+
+  // }}}
+}
+?>

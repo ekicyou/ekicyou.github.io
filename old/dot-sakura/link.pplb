@@ -1,0 +1,77 @@
+<?php
+  require_once("HTML/templateUty.pplb");
+  unset($bb);
+
+//---------------------------------------------------------------------
+// ■リンク情報
+
+  unset($x);  //-------------------------------------------------------
+  $x["URL"    ] ="http://study.nanican.net/";
+  $x["BANNER" ] ="http://study.nanican.net/image/banner1.jpg";
+  $x["NAME"   ] ="うかべん";
+  $x["MES"    ] ="しずみません。";
+  $bb[LINK][] =$x;
+
+
+  unset($x);  //-------------------------------------------------------
+  $x["URL"    ] ="http://ssp.shillest.net/";
+  $x["BANNER" ] ="http://ssp.shillest.net/images/banner2.png";
+  $x["NAME"   ] ="SSP BUGTRAQ";
+  $x["MES"    ] ="「伺か」互換環境。ゴーストの複数起動機能あり。";
+  $bb[LINK][] =$x;
+
+
+  unset($x);  //-------------------------------------------------------
+  $x["URL"    ] ="http://disc2.s56.xrea.com/";
+  $x["BANNER" ] ="http://disc2.s56.xrea.com/image/disc_2.gif";
+  $x["NAME"   ] ="Disc-2";
+  $x["MES"    ] ="伺か関係の総合情報サイトです。";
+  $bb[LINK][] =$x;
+
+
+  unset($x);  //-------------------------------------------------------
+  $x["URL"    ] ="http://www.geocities.jp/hajiboto/";
+  $x["BANNER" ] ="images/hajiboto_banner.png";
+  $x["NAME"   ] ="初心者のための Bottle！";
+  $x["MES"    ] ="「．さくら」に関連が深いSSTP Bottle、その解説ページです。";
+  $bb[LINK][] =$x;
+
+
+  unset($x);  //-------------------------------------------------------
+  $x["URL"    ] ="http://ukiya.sakura.ne.jp/";
+  $x["BANNER" ] ="http://ukiya.sakura.ne.jp/ukibana.gif";
+  $x["NAME"   ] ="浮子屋本舗";
+  $x["MES"    ] ="SARS、SPAMと名前だけは怪しげなソフト達ですが、その実力は秀逸！愛用してます。";
+  $bb[LINK][] =$x;
+
+
+  unset($x);  //-------------------------------------------------------
+  $x["URL"    ] ="http://sakura.nanika.jp/sstpviewer/";
+  $x["BANNER" ] ="http://sakura.nanika.jp/sstpviewer/sv.png";
+  $x["NAME"   ] ="SSTP-Viewer's STREET";
+  $x["MES"    ] ="SSTP BOTTLEでの利用に特化したSSTPサーバ。最終安定版リリース。";
+  $bb[LINK][] =$x;
+
+
+  unset($x);  //-------------------------------------------------------
+  $x["URL"    ] ="http://www10.plala.or.jp/nagi_rkx/busy/";
+  $x["BANNER" ] ="images/busy.png";
+  $x["NAME"   ] ="時間のないサイト運営者リング";
+  $x["MES"    ] ="時間ねぇー";
+  $bb[LINK][] =$x;
+
+
+  unset($x);  //-------------------------------------------------------
+  $x["URL"    ] ="http://www.e-flick.net/neta.html";
+  $x["BANNER" ] ="images/natanasshi{$last_update_date}.gif";
+  $x["NAME"   ] ="「本日は、ネタがありません」";
+  $x["MES"    ] ="ネタが滅多にないサイトだったり‥‥(ーー;)";
+  $bb[LINK][] =$x;
+
+
+
+
+//---------------------------------------------------------------------
+  // ベーステンプレート
+  $buf[LINK] =TmplUty::getText("link.tmpl" ,$bb);
+?>

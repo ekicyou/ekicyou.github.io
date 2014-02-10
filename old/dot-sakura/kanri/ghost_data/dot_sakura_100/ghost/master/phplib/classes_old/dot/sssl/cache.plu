@@ -1,0 +1,158 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: cache.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   SSSL キャッシュ制御モジュール
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * SSSL Cache
+ *
+ * @package  dot_sssl_Cache
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_sssl_Cache extends SafeObject{
+  // {{{ properties
+  /**
+   * キャッシュアイテム(URLがkey,最も最新のものが後ろ)
+   * @var array
+   */
+  private $urlList;
+
+
+  /**
+   * キャッシュ最大値
+   * @var int
+   */
+  private $limit;
+
+
+  /**
+   * 上位レベルキャッシュ
+   * @var dot_sssl_Cache
+   */
+  private $upper;
+
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param  void
+   */
+  public function __construct($limit ,dot_sssl_Cache $upperCache =NULL) {
+    $this->limit   =$limit;
+    $this->upper   =$upperCache;
+    $this->urlList =array();
+  }
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+  }
+
+
+  // }}}
+  // {{{ addObject
+  /**
+   * SSSLオブジェクトを登録する。
+   * キャッシュが一杯の場合は古いものを消す。
+   *
+   * @param  int      $eventId イベントID
+   * @param  string   $url     要求されたURL
+   * @param  dot_SSSL $sssl    SSSLオブジェクト
+   * @return void
+   */
+  public function addObject($eventId ,$url ,dot_SSSL $sssl){
+    // キャッシュ不許可の場合は何もしない
+    if(! $sssl->hasCache()) return FALSE;
+
+    // 同一URLが存在する場合一旦削除
+    unset($this->urlList[$url]);
+    // 新しいアイテムを追加
+    $item =new dot_sssl_Citem($eventId ,$url ,dot_SSSL $sssl);
+    $this->urlList[$url] =$item;
+    // キャッシュの最大値を超えている場合、古いものを削除
+    while(count($this->urlList)>$this->limit){
+      array_shift($this->urlList);
+    }
+    return TRUE;
+  }
+
+
+  // }}}
+  // {{{ getObject
+  /**
+   * SSSLオブジェクトを取得する。
+   * アイテムのeventIdが異なる場合、キャッシュの最上位にセットする。
+   *
+   * @param  int      $eventId イベントID
+   * @param  string   $url     要求されたURL
+   * @return dot_SSSL $sssl    SSSLオブジェクト/存在しない場合FALSE
+   */
+  public function getObject($eventId ,$url){
+    // 上位レベルキャッシュが値を持つ場合はそれを返す
+    if($this->upper instanceOf dot_sssl_Cache){
+      $sssl =$this->upper->getObject($eventId ,$url);
+      if($sssl instanceOf dot_SSSL) return $sssl;
+    }
+    // 自身が保有しているかチェック
+    if(! isset($this->urlList[$url])) return FALSE;
+
+    // キャッシュアイテム取得
+    $item =$this->urlList[$url];
+    $this->chengeCacheLevel($eventId ,$item);
+
+    // ssslオブジェクトを返す
+    return $item->sssl;
+  }
+
+
+
+  // }}}
+  // {{{ chengeCacheLevel
+  /**
+   * SSSLオブジェクトのキャッシュレベルを操作する。
+   * 上位キャッシュが存在する場合はレベルUP、
+   * 存在しない場合は自身の最上位へ移動。
+   *
+   * @param  int            $eventId イベントID
+   * @param  dot_sssl_Citem $item キャッシュアイテム
+   * @return void
+   */
+  private function chengeCacheLevel($eventId ,dot_sssl_Citem $item){
+    // イベントID一致の場合は何もしない
+    if($item->eventId==$eventId)  return;
+
+    // eventIdを更新し、一旦自身のキャッシュから除去
+    $item->eventId =$eventId;
+    unset($this->urlList[$url]);
+
+    // 上位キャッシュが存在する場合、上位に登録
+    if($this->upper instanceOf dot_sssl_Cache){
+      $this->upper->addObject($item->eventId ,$item->url ,$item->sssl);
+    }
+
+    // 上位キャッシュが存在しない場合、自身の一番新しいキャッシュに追加
+    else{
+      $this->urlList[$url] =$item;
+    }
+  }
+
+
+
+  // }}}
+}
+?>

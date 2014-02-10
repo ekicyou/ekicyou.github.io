@@ -1,0 +1,43 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: error.plu,v 1.1 2004/08/10 10:08:24 cvs Exp $
+ *   ERROR出力クラス
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * エラーをSTDERRに出力する。
+ *
+ * @package  dot.Error
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+
+class dot_Error extends SafeObject{
+
+  // {{{ out()
+  /**
+   * エラー出力する。
+   *
+   * @param class * $class エラー出力対象のクラス
+   * @param int     $line  行番号
+   * @param string  $mes   エラーメッセージ
+   * @return void
+   */
+  static public function out(){
+    $className =get_class
+
+
+
+
+
+  }
+  // }}}
+}
+
+?>

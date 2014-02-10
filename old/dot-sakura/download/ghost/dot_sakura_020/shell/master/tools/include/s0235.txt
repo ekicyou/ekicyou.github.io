@@ -1,0 +1,16 @@
+//=====================================================================
+// @alias                235
+// @surfacetable.type    ネタサーフェス(２００～)
+// @surfacetable.comment さくら：なんでよっ。
+//=====================================================================
+surface5043
+{
+point.kinoko.centerx,87
+point.kinoko.centery,65
+
+collision0,54,75,137,105,Head
+collision1,61,124,124,143,Face
+collision2,83,208,133,237,Bust
+collision3,93,153,102,159,Mouse
+collision4,70,311,142,335,Apron
+}

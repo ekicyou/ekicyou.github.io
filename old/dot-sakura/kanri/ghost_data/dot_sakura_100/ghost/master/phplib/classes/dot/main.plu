@@ -1,0 +1,102 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: main.plu,v 1.9 2004/08/19 02:47:48 cvs Exp $
+ *   MAIN処理クラス
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * このスクリプトのメイン処理クラス。
+ * 標準入出力からSHIORIプロトコルによる通信が行われると仮定し、
+ * 適切な処理を呼び出します。
+ *
+ * 栞DLLモジュールとSHIORIプロトコルに関する詳細
+ * @see http://sakura.mikage.to/shiori.html
+ *
+ * Interface of shiori module and PHP
+ *
+ * @package  dot.Main
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.9 $
+ */
+
+class dot_Main extends SafeObject{
+
+  // {{{ properties
+
+  /**
+   * AIモジュール
+   * @var interface dot_AI
+   */
+  private $ai;
+
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param void
+   */
+  public function __construct(dot_AI $ai){
+    $this->ai =$ai;
+  }
+
+
+
+  // }}}
+  // {{{ run()
+  /**
+   * メインプロセス。
+   *
+   * [メインループ]
+   * 標準入力より１行ずつデータを読み込み、以下の処理の何れかを呼び出します。
+   * 1.    PING受信の場合
+   * 1.1   PONG応答を返す。
+   * 2    SHIORIリクエストの場合
+   * 2.1  適切なイベントハンドラを検索し、OnRequestメソッドを起動。
+   * 2.2  イベントハンドラのOnAfterResponceメソッドを呼び出す。
+   *
+   * [拡張処理]
+   * 以下の拡張処理が存在します。
+   * 2.3.1    OnAfterResponceメソッドがDOT_EXITを返した場合。
+   * 2.3.1.1  メインループを終了。
+   *
+   * @param  void
+   * @return void
+   */
+   public function run(){
+    $lines =array();
+
+    while(($line =fgets($fp, 65000))!==FALSE){
+      $line =trim($line);
+      switch($line){
+        case '.': // PING - PONG
+          fflush(STDERR);
+          echo ".\r\n";
+          flush();
+          break;
+
+        case '':  // リクエスト確定
+          $req =dot_shiori_Parser::createRequest($lines);
+          $lines =array();
+          $res =$ai->exec($req);
+          $res->output();
+          $res->runDelayedJob();
+          break;
+
+        default:  // リクエスト１行追加
+          $lines[] =$line;
+      }
+    }
+  }
+  // }}}
+}
+
+?>

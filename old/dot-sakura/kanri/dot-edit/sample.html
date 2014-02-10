@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>DOT-STATION　管理メニュー</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.0.0 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<LINK rel="stylesheet" href="../../common/style.css" type="text/css">
+<LINK rel="stylesheet" href="../../common/kanri.css" type="text/css">
+<LINK rel="stylesheet" href="../../common/item.css" type="text/css">
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<FORM name="form1" method="post" action="/dot-sakura/kanri/sstp/send.php"></FORM>
+<TABLE width="700" border="0" cellspacing="0" cellpadding="0">
+  <TBODY>
+    <TR>
+      <TD align="center" height="49">
+      <TABLE width="700" border="0" cellspacing="0" cellpadding="0">
+        <TBODY>
+          <TR>
+            <TD>
+            <TABLE border="0" cellspacing="0" cellpadding="0">
+              <TBODY>
+                <TR>
+                  <TD width="600" class="KANRI_TITLE_A">　管理画面</TD>
+                  <TD width="100" align="right"><A href="../index.php">ＴＯＰに戻る</A></TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            </TD>
+          </TR>
+          <TR>
+            <TD class="KANRI_TITLE_B">DOT-STATION　管理メニュー</TD>
+          </TR>
+          <TR>
+            <TD class="KANRI_TITLE_C">　スクリプト表示</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+    <TR>
+      <TD align="center">
+      <TABLE width="700" border="0" cellspacing="0" cellpadding="0">
+        <TBODY>
+          <TR>
+            <TD align="left"><BR>
+            <BR>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+    <TR>
+      <TD align="center">
+      <TABLE width="600" border="0" cellspacing="0" cellpadding="0">
+        <TBODY>
+          <TR>
+            <TD bgcolor="#999999">
+            <TABLE width="600" border="0" cellspacing="1" cellpadding="2">
+              <TBODY>
+                <TR>
+                  <TD colspan="2" bgcolor="#BBDDEE" align="left"><B>■入力内容</B></TD>
+                </TR>
+                <TR>
+                  <TD width="140" bgcolor="#E6F2FF"><B>ゴースト名</B></TD>
+                  <TD width="460" bgcolor="#FFFFFF"><INPUT type="text" name="UPDATE[GHOST]" value="" size="32" maxlength="32"></TD>
+                </TR>
+                <TR>
+                  <TD width="140" bgcolor="#E6F2FF"><B>スクリプト</B></TD>
+                  <TD width="460" bgcolor="#FFFFFF"><TEXTAREA name="UPDATE[SCRIPT]" rows="16" cols="64"></TEXTAREA></TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </TD>
+    </TR>
+    <TR>
+      <TD align="center"><INPUT type="submit" value="送信テスト">　<INPUT type="reset" value="リセット"></TD>
+    </TR>
+    <TR>
+      <TD align="center">
+      <FORM>
+      <TABLE border="0" width="650">
+        <TBODY>
+          <TR>
+            <TD colspan="2">ここはログ検索エリア</TD>
+          </TR>
+          <TR>
+            <TD width="250">
+            <TABLE border="0">
+              <TBODY>
+                <TR>
+                  <TD valign="top">●</TD>
+                  <TD valign="top">分類　 <SELECT>
+                    <OPTION value="1">--------------------</OPTION>
+                  </SELECT><BR>
+                  （追加）<INPUT size="20" type="text"></TD>
+                </TR>
+                <TR>
+                  <TD colspan="2">
+                  <HR>
+                  </TD>
+                </TR>
+                <TR>
+                  <TD valign="top">●</TD>
+                  <TD valign="top">イベント<SELECT>
+                    <OPTION value="1">--------------------</OPTION>
+                  </SELECT><BR>
+                  追加キーワード<INPUT size="10" type="text"></TD>
+                </TR>
+                <TR>
+                  <TD colspan="2">
+                  <HR>
+                  </TD>
+                </TR>
+                <TR>
+                  <TD valign="top">●</TD>
+                  <TD valign="top">時間要素<BR>
+                  <INPUT type="radio" name="TIME_MODE" value="1"> 無し<BR>
+                  <INPUT type="radio" name="TIME_MODE" value="2"> 時間<INPUT size="2" type="text" maxlength="2">：<INPUT size="2" type="text" maxlength="2"><BR>
+                  　　　　　<SELECT>
+                    <OPTION value="0">曜日指定無し</OPTION>
+                    <OPTION value="11">平日限定</OPTION>
+                    <OPTION value="12" selected>土日祝日</OPTION>
+                  </SELECT><BR>
+                  <INPUT type="radio" name="TIME_MODE" value="3"> 月・季節<SELECT>
+                    <OPTION value="12">１２月</OPTION>
+                    <OPTION value="21" selected>春</OPTION>
+                  </SELECT><BR>
+                  <INPUT type="radio" name="TIME_MODE" value="4"> 特定日時<INPUT size="20" type="text" maxlength="20"></TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            </TD>
+            <TD width="400">ここはトーク入力エリア</TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </FORM>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,33 @@
+//=====================================================================
+// @alias                69
+// @surfacetable.type    Ç≥Ç≠ÇÁägí£ÇQ(ÇTÇOÅ`)
+// @surfacetable.comment Ç≥Ç≠ÇÁÅFÇ“Çµ
+//=====================================================================
+surface5234
+{
+collision0,74,64,142,89,Head
+collision1,79,115,133,146,Face
+collision2,100,197,131,229,Bust
+collision3,100,150,113,160,Mouse
+collision4,68,318,155,337,Apron
+
+point.kinoko.centerx,105
+point.kinoko.centery,75
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5244,40,70,110
+animation0.pattern1,overlay,5245,40,70,110
+animation0.pattern2,overlay,-1,40,0,0
+
+animation1.interval,talk,4
+animation1.pattern0,overlay,5162,100,100,150
+animation1.pattern1,overlay,-1,100,0,0
+animation1.pattern2,overlay,5162,160,100,150
+animation1.pattern3,overlay,-1,160,0,0
+
+animation2.interval,runonce
+animation2.pattern0,overlay,5249,50,63,171
+animation2.pattern1,overlay,5250,50,63,171
+animation2.pattern2,overlay,5251,50,63,171
+animation2.pattern2,overlay,-1,50,
+}

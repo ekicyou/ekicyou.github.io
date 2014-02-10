@@ -1,0 +1,23 @@
+/* このページのCSS */
+body { background-color: #FFFFFF }
+
+
+/* 伝言板専用 */
+.dengon_title{
+  font-weight:bold;
+  color: #FFF;
+}
+.dengon_title1{
+  font-size: 19pt;
+}
+.dengon_title2{
+  font-size: 16pt;
+}
+.dengon_line {
+  width: 5%;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  font-family: "ＭＳ ゴシック",monospace;
+}

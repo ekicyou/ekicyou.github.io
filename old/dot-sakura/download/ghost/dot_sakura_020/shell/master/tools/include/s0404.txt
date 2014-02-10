@@ -1,0 +1,27 @@
+//=====================================================================
+// @alias                404
+// @surfacetable.type    寝間着サーフェスセット
+// @surfacetable.comment 寝間着さくら：はう～
+//=====================================================================
+surface5299
+{
+collision0,70,70,145,105,Head
+collision1,74,125,135,170,Face
+collision2,100,200,120,230,Bust
+collision3,100,167,117,172,Mouse
+
+point.kinoko.centerx,105
+point.kinoko.centery,75
+
+animation0.interval,runonce
+animation0.pattern0,overlay,5213,50,115,70
+animation0.pattern1,overlay,5213,50,115,80
+animation0.pattern2,overlay,5213,50,115,90
+animation0.pattern3,overlay,5213,50,115,100
+
+animation1.interval,talk,4
+animation1.pattern0,overlay,5319,150,100,167
+animation1.pattern1,overlay,-1,100,100,167
+animation1.pattern2,overlay,5319,160,100,167
+animation1.pattern3,overlay,-1,100,100,167
+}

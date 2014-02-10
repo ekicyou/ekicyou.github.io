@@ -1,0 +1,22 @@
+//=====================================================================
+// @alias                96
+// @surfacetable.type    ‚³‚­‚çŠg’£‚Q(‚T‚O`)
+// @surfacetable.comment ‚³‚­‚çF‚Ó‚Ÿ‚Ÿddi‚ ‚­‚Ñj
+//=====================================================================
+surface5342
+{
+point.kinoko.centerx,105
+point.kinoko.centery,75
+
+animation0.interval,runonce
+animation0.pattern0,overlay,5343,50,50,150
+animation0.pattern1,overlay,5343,50,45,153
+animation0.pattern2,overlay,5343,50,40,156
+animation0.pattern3,overlay,5343,50,35,159
+animation0.pattern4,overlay,5343,80,32,161
+animation0.pattern5,overlay,5343,100,29,163
+animation0.pattern6,overlay,5343,150,26,165
+animation0.pattern7,overlay,5012,100,26,165
+animation0.pattern8,overlay,-1,100
+}
+

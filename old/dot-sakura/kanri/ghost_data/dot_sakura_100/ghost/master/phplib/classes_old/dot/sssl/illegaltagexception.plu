@@ -1,0 +1,39 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: illegaltagexception.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   Exception:許可されないXML/SSSLタグ
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 例外：許可されないXML/SSSLタグ
+ *
+ * @package  dot_sssl_IllegalTagException
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_sssl_IllegalTagException extends dot_sssl_ParserException {
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param string
+   */
+  public function __construct($mes=NULL ,dot_SSSL $src=NULL ,dot_SSSL $dst=NULL){
+    if($src != NULL && $dst != NULL){
+      $srcName =$src->getTagName();
+      $dstName =$dst->getTagName();
+      $mes ="<$dstName>を<$srcName>に含むことは出来ません。$mes";
+    }
+    parent::__construct($mes);
+  }
+
+
+  // }}}
+}
+?>

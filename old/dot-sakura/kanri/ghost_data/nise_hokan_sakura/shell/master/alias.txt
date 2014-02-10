@@ -1,0 +1,13 @@
+sakura.surface.alias
+{
+30,[300]
+31,[308]
+}
+
+kero.surface.alias
+{
+110,[10]
+111,[11]
+112,[12]
+}
+

@@ -1,0 +1,149 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: requester.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   SSSL リクエスタ
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * URLリクエストを解析し、応答を作成する。
+ *
+ * @package  dot_sssl_Requester
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_sssl_Requester extends SafeObject{
+  // {{{ static properties
+  /**
+   * 共有インスタンス(Singletonパターン)
+   * @var dot_sssl_Requester
+   */
+  static private $ownInstance;
+
+
+
+  // }}}
+  // {{{ getInstance
+  /**
+   * インスタンスを取得する。(Singletonパターン)
+   *
+   * @param  void
+   * @return dot_sssl_Requester $instance;
+   */
+  static public function getInstance(){
+    if(! (dot_sssl_Requester::$ownInstance instanceOf dot_sssl_Requester)){
+      dot_sssl_Requester::$ownInstance =new dot_sssl_Requester();
+    }
+    return dot_sssl_Requester::$ownInstance;
+  }
+
+
+
+  // }}}
+  // {{{ getContesnts
+  /**
+   * イベントサブシステムよりコンテンツを取得する（静的メソッド）。
+   *
+   * @param  string $url URL文字列
+   * @return string $rc
+   */
+  static public function getContesnts($url) {
+    $requester =dot_sssl_Requester::getInstance();
+    $rc =$requester->getContesntsFromEventSubSystem($url);
+    return $rc;
+  }
+
+
+  // }}}
+  // {{{ properties
+  /**
+   * SSSLローダ
+   * @var dot_sssl_Loader
+   */
+  private $loader;
+
+
+  /**
+   * イベント処理ID
+   * @var int
+   */
+  private $eventId =0;
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param  void
+   */
+  private function __construct() {
+    $this->loader =new dot_sssl_Loader();
+  }
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+  }
+
+
+  // }}}
+  // {{{ getContesntsFromEventSubSystem
+  /**
+   * イベントサブシステムよりURL要求。
+   * 新規にイベントIDを発行する（キャッシュ制御に利用）。
+   *
+   * @param  string $url
+   * @return bool 解析に成功した場合はTRUE
+   */
+  public function getContesntsFromEventSubSystem($url) {
+    $this->eventId++;
+    $req =new dot_sssl_Request($this ,$this->eventId ,$url);
+    $res =new dot_sssl_Response();
+    $this->getContesnts($req ,$res);
+    return $res->getScript();
+  }
+
+
+  // }}}
+  // {{{ getContesntsFromSSSL
+  /**
+   * SSSLオブジェクトよりURL要求。
+   * URLを元に新たなリクエストを作成してリクエスト要求
+   *
+   * @param  string $url
+   * @return bool 解析に成功した場合はTRUE
+   */
+  public function getContesntsFromSSSL(dot_sssl_Request $req ,dot_sssl_Response $res ,$url){
+    $newReq =$req->createRequest($url);
+    $this->getContesnts($req ,$res);
+  }
+
+
+  // }}}
+  // {{{ getContesnts
+  /**
+   * リクエストを処理する。
+   *
+   * @param  dot_sssl_Request  $req リクエストオブジェクト
+   * @param  dot_sssl_Response $res レスポンスオブジェクト
+   * @return void
+   */
+  private function getContesnts(dot_sssl_Request $req ,dot_sssl_Response $res) {
+    $sssl =$this->loader->getObject($req);
+    $sssl->getContesnts($req ,$res);
+  }
+
+
+  // }}}
+}
+?>

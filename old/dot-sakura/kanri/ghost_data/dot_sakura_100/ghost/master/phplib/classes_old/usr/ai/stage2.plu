@@ -1,0 +1,129 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: stage2.plu,v 1.1 2004/08/13 00:52:53 cvs Exp $
+ *   ＡＩモジュール
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 「．さくら」ＡＩモジュール
+ *
+ * @package  usr_ai_DotSakura
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class usr_ai_Stage2 extends SafeObject implements dot_AI{
+
+  // {{{ properties
+
+
+
+  // }}}
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param void
+   */
+  public function __construct(){
+  }
+
+
+  // }}}
+  // {{{ delaydInit
+  /**
+   * 遅延初期化処理
+   *
+   * @param void
+   */
+  public function delaydInit(){
+  }
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+  }
+
+
+
+  // }}}
+  // {{{ get
+  /**
+   * GET通知に対する応答
+   *
+   * @param string[][]  $Params パラメータリスト
+   * @return string[][] $rc     パラメータリスト
+   */
+  public function get($eventName ,$Params=NULL){
+
+
+  }
+
+
+
+  // }}}
+  // {{{ notify
+  /**
+   * NOTIFY通知に対する応答
+   *
+   * @param string[][]  $Params パラメータリスト
+   * @return string[][] $rc     パラメータリスト
+   */
+  public function notify($eventName ,$Params=NULL){
+
+
+  }
+
+
+
+  // }}}
+  // {{{ begin
+  /**
+   * トランザクション開始
+   *
+   * @param void
+   * @return void
+   */
+  public function begin(){
+  }
+
+
+
+  // }}}
+  // {{{ commit
+  /**
+   * コミット
+   *
+   * @param void
+   * @return void
+   */
+  public function commit(){
+  }
+
+
+
+  // }}}
+  // {{{ rollback
+  /**
+   * ロールバック
+   *
+   * @param void
+   * @return void
+   */
+  public function rollback(){
+  }
+
+
+
+  // }}}
+}
+?>

@@ -1,0 +1,68 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: shiori3x.plu,v 1.1 2004/08/13 00:52:52 cvs Exp $
+ *   SHIORI/3.x 系イベント共通部実装
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * SHIORI/3.x 系イベント共通部実装
+ *
+ * @package  dot_event_GET_Version
+ * @since    PHP 5.0.0rc1
+ * @author   Dot-Station Mastor
+ * @version  $Revision: 1.1 $
+ */
+class dot_event_SHIORI3x extends dot_Event{
+
+  // {{{ __construct
+  /**
+   * コンストラクタ。
+   *
+   * @param class dot_Request  $req リクエストオブジェクト
+   * @param class dot_Response $res レスポンスオブジェクト
+   * @return void
+   */
+  public function __construct(dot_AI $ai ,dot_Request $req ,dot_Response $res=NULL){
+    parent::__construct($ai ,$req ,$res);
+
+
+  }
+
+
+
+  // }}}
+  // {{{ __destruct
+  /**
+   * デストラクタ。
+   */
+  function __destruct(){
+
+
+    parent::__destruct();
+  }
+
+
+
+  // }}}
+  // {{{ OnRequest()
+  /**
+   * リクエストを処理する。
+   *
+   * @param void
+   */
+   public function OnRequest(){
+
+
+
+  }
+
+
+
+  // }}}
+}
+?>
