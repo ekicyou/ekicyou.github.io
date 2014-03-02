@@ -7,4 +7,4 @@
 #書式 ： "(更新データのあるＵＲＬディレクトリ)"
 #必ず、「" "」で括ること。
 
-resource.homeurl : "http://ekicyou.github.io/old/dot-sakura/download/ghost/dot_sakura_000/"
+resource.homeurl : "http://ekicyou.github.com/old/dot-sakura/download/ghost/dot_sakura_000/"

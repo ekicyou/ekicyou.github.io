@@ -4,7 +4,7 @@ unyu=うにゅう
 sakura2=さくら
 user=ユーザーさん
 craftman=どっとステーション
-url=http://ekicyou.github.io/old/dot-sakura/
+url=http://ekicyou.github.com/old/dot-sakura/
 update=2005/08/28
 surfacefile="dot_sakura_100.png"
 

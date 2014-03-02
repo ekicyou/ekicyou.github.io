@@ -5,9 +5,9 @@ id,dot_sakura_020
 type,ghost
 craftman,dot-station
 craftmanw,どっとステーション駅長
-craftmanurl,http://ekicyou.github.io/old/dot-sakura/
+craftmanurl,http://ekicyou.github.com/old/dot-sakura/
 
-updateurl,http://ekicyou.github.io/old/dot-sakura/download/ghost/dot_sakura_020/
+updateurl,http://ekicyou.github.com/old/dot-sakura/download/ghost/dot_sakura_020/
 
 sakura.name,．さくら
 kero.name,うにゅう
