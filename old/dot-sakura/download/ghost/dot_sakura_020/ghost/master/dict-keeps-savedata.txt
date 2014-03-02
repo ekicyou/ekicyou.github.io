@@ -1,0 +1,11 @@
+#
+# Kawari saved file
+#
+# Entry sw.randomtalk
+# Entry interval
+interval : "57"
+# Entry sw.mikire
+# Entry sw.kasanari
+# Entry FlagMode
+# Entry username
+username : "ƒ†[ƒU[‚³‚ñ"
