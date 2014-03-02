@@ -1,9 +1,0 @@
-Charset,UTF-8
-install,447043023
-homeurl_found,1
-surfacecount,404
-homeurl,http://www.nanican.net/dot-sakura/download/ghost/dot_sakura_020/
-update_result,OK(0)
-firstboot,447043028
-commitmemorysize,10868111
-lastboot,447044707
