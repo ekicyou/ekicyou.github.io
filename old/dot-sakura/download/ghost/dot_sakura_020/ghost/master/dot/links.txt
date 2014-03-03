@@ -50,7 +50,7 @@ Portal.URLCaption : "ポータルサイト(&P)"
 
 #==============================================================================
 #さくら：お勧めリスト：SHIORI/2.2 対応アプリケーション=========================
-URL.sakura : "初心者のための Bottle！"$(chr 1)"http://www.globetown.net/~8390bottle/"$(chr 1)"http://ekicyou.github.io/old/dot-sakura/images/hajiboto.jpg"$(chr 2)
+URL.sakura : "初心者のための Bottle！"$(chr 1)"http://www.globetown.net/~8390bottle/"$(chr 1)"http://ekicyou.github.com/old/dot-sakura/images/hajiboto.jpg"$(chr 2)
 URL.sakura : "瓶典 -ボトルの辞典-"$(chr 1)"http://bottler.s22.xrea.com/"$(chr 1)""$(chr 2)
 URL.sakura : "NO MORE YASAGURE!!"$(chr 1)"http://seriko.nanika.jp/"$(chr 1)""$(chr 2)
 URL.sakura : "怪しげな小瓶。"$(chr 1)"http://k-a2shi.hp.infoseek.co.jp/bottle/"$(chr 1)""$(chr 2)
@@ -74,7 +74,7 @@ URL.kero : "やさぐれアンテナ"$(chr 1)"http://antenna.yasagure.net/"$(chr 1)"http
 URL.kero : "何か。の略歴"$(chr 1)"http://a1.st/nob/sakura/"$(chr 1)"http://a1.st/nob/sakura/r_banner.png"$(chr 2)
 URL.kero : "SSTP Bottle"$(chr 1)"http://bottle.mikage.to/"$(chr 1)"http://bottle.mikage.to/banner.gif"$(chr 2)
 URL.kero : "-"$(chr 2)
-URL.kero : "．さくらStation"$(chr 1)"http://ekicyou.github.io/old/dot-sakura/"$(chr 1)"http://ekicyou.github.io/old/dot-sakura/images/banner.png"$(chr 2)
+URL.kero : "．さくらStation"$(chr 1)"http://ekicyou.github.com/old/dot-sakura/"$(chr 1)"http://ekicyou.github.com/old/dot-sakura/images/banner.png"$(chr 2)
 
 
 
