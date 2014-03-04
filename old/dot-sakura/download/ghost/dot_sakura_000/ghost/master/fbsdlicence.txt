@@ -1,9 +1,9 @@
--------------------------------------------------------------------------------
-‚±‚ÌƒS[ƒXƒg‚Í‰Ø˜a—œŠJ”­ƒ`[ƒ€»ì‚ÌƒvƒƒOƒ‰ƒ}ƒuƒ‹€AIu‰Ø˜a—œv‚ðŽg—p‚µ‚Ä‚¢‚Ü‚·B 
+-
+ï¿½ï¿½ï¿½ÌƒSï¿½[ï¿½Xï¿½gï¿½Í‰Ø˜aï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½`ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìƒvï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½}ï¿½uï¿½ï¿½ï¿½ï¿½AIï¿½uï¿½Ø˜aï¿½ï¿½ï¿½vï¿½ï¿½gï¿½pï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B 
 
 Copyright (C) 2001-2002 Kawari development team 
 
-‰Ø˜a—œƒpƒbƒP[ƒW“à‚Ìƒtƒ@ƒCƒ‹(shiori.dll)‚ðˆÈ‰º‚Ìƒ‰ƒCƒZƒ“ƒX‚ÅÄ”z•z‚µ‚Ä‚¢‚Ü‚·B 
+ï¿½Ø˜aï¿½ï¿½ï¿½pï¿½bï¿½Pï¿½[ï¿½Wï¿½ï¿½Ìƒtï¿½@ï¿½Cï¿½ï¿½(shiori.dll)ï¿½ï¿½È‰ï¿½ï¿½Ìƒï¿½ï¿½Cï¿½Zï¿½ï¿½ï¿½Xï¿½ÅÄ”zï¿½zï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B 
 
 Redistribution and use in source and binary forms, with or without 
 modification, are permitted provided that the following conditions are met: 
@@ -27,30 +27,29 @@ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
 WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
 OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
 OF THE POSSIBILITY OF SUCH DAMAGE. 
--------------------------------------------------------------------------------- 
+-- 
 
-‚©‚È‚è‚¢‚¢‰ÁŒ¸‚Å–ó‚í‚©‚ç‚ñ–|–ó(^_^;)
+ï¿½ï¿½ï¿½È‚è‚¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å–ï¿½í‚©ï¿½ï¿½ï¿½|ï¿½ï¿½(^_^;)
 
-‚à‚µˆÈ‰º‚ÌðŒ‚ª–ž‚½‚³‚ç‚ê‚é‚È‚ç‚ÎAƒ\[ƒX‚¨‚æ‚ÑƒoƒCƒiƒŠ‚ÌÄ”z•z‚ÆŽg—p‚Í
-•”•ªC³‚Ì—L–³‚É‚©‚©‚í‚ç‚¸‹–‚³‚ê‚Ü‚·B
+ï¿½ï¿½ï¿½ï¿½È‰ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ÎAï¿½\ï¿½[ï¿½Xï¿½ï¿½ï¿½ï¿½Ñƒoï¿½Cï¿½iï¿½ï¿½ï¿½ÌÄ”zï¿½zï¿½ÆŽgï¿½pï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Ì—Lï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½ç‚¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
 
-1. ƒ\[ƒXƒR[ƒh‚ÌÄ”z•z‚ÍAã‹L‚Ì’˜ìŒ ŒfŽ¦A‚±‚ÌðŒ‚ÆˆÈ‰º‚Ì–ÆÓŽ–€‚ÌƒŠƒXƒg
-@ ‚ð•Û—L‚³‚¹‚é‚±‚ÆB
-2DƒoƒCƒiƒŠ‚ÌƒtƒH[ƒ€‚ÌÄ”z•z‚ÍAà–¾‘‚Ü‚½‚Í‹¤‚É”z•z‚³‚ê‚é‘¼‚Ì‘fÞ‚É‚¨‚¢‚ÄA
-@ ã‹L‚Ì’˜ìŒ ŒfŽ¦A‚±‚ÌðŒ‚ÆˆÈ‰º‚Ì–ÆÓŽ–€‚ÌƒŠƒXƒg‚ð•Û—L‚³‚¹‚é‚±‚ÆB
-3. ìŽÒ‚Ì–¼‘O‚ÍA–¾Šm‚ÈŽ–‘O‚Ì‘–Ê‚Å‚Ì‹–‰Â‚È‚µ‚Å‚±‚Ìƒ\ƒtƒgƒEƒFƒA‚©‚ç”h¶‚µ‚½
-@ »•i‚Ì„§A‚Ü‚½‚Í”Ì”„‘£i‚·‚é‚½‚ß‚É—p‚¢‚Ä‚Í‚È‚ç‚È‚¢B
+1. ï¿½\ï¿½[ï¿½Xï¿½Rï¿½[ï¿½hï¿½ÌÄ”zï¿½zï¿½ÍAï¿½ï¿½Lï¿½Ì’ï¿½ï¿½ìŒ ï¿½fï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ÆˆÈ‰ï¿½ï¿½Ì–ÆÓŽï¿½ï¿½ï¿½ï¿½Ìƒï¿½ï¿½Xï¿½g
+ï¿½@ ï¿½ï¿½Û—Lï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½ÆB
+2ï¿½Dï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½Ìƒtï¿½Hï¿½[ï¿½ï¿½ï¿½ÌÄ”zï¿½zï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Í‹ï¿½ï¿½É”zï¿½zï¿½ï¿½ï¿½ï¿½é‘¼ï¿½Ì‘fï¿½Þ‚É‚ï¿½ï¿½ï¿½ï¿½ÄA
+ï¿½@ ï¿½ï¿½Lï¿½Ì’ï¿½ï¿½ìŒ ï¿½fï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ÆˆÈ‰ï¿½ï¿½Ì–ÆÓŽï¿½ï¿½ï¿½ï¿½Ìƒï¿½ï¿½Xï¿½gï¿½ï¿½Û—Lï¿½ï¿½ï¿½ï¿½ï¿½é‚±ï¿½ÆB
+3. ï¿½ï¿½Ò‚Ì–ï¿½ï¿½Oï¿½ÍAï¿½ï¿½ï¿½mï¿½ÈŽï¿½ï¿½Oï¿½Ìï¿½ï¿½Ê‚Å‚Ì‹ï¿½ï¿½Â‚È‚ï¿½ï¿½Å‚ï¿½ï¿½Ìƒ\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½@ ï¿½ï¿½ï¿½iï¿½Ìï¿½ï¿½ï¿½ï¿½Aï¿½Ü‚ï¿½ï¿½Í”Ì”ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½é‚½ï¿½ß‚É—pï¿½ï¿½ï¿½Ä‚Í‚È‚ï¿½È‚ï¿½ï¿½B
 
-–ÆÓŽ–€
-@–{ƒ\ƒtƒgƒEƒFƒA‚Íh‚±‚Ì‚Ü‚Ü‚ÌŽph‚Å’ñ‹Ÿ‚³‚ê@–¾‚ç‚©‚ÉŽ¦‚³‚ê‚½A‚Ü‚½‚ÍŒ¾ŠO‚Ì
-•ÛØ‚ÍA¤—p—˜—p‚¨‚æ‚Ñ“Á’è–Ú“I‚Ö‚Ì“K‡‚É‘Î‚·‚éŒ¾ŠO‚Ì•ÛØ‚àŠÜ‚ÝA‚Ü‚½‚±‚ê‚ç
-‚¾‚¯‚ÉŒÀ‚ç‚¸A‘¶Ý‚µ‚È‚¢B‚½‚Æ‚¦ˆÈ‰º‚Ì‚æ‚¤‚È‘¹ŠQ‚Ì‰Â”\«‚ðŽ¦´‚³‚ê‚Ä‚¢‚½‚Æ
-‚µ‚Ä‚àA‚Ç‚Ì‚æ‚¤‚ÈŒ`‚É‚µ‚ë‚±‚Ìƒ\ƒtƒgƒEƒFƒA‚Ì—˜—p‚©‚ç”­¶‚µ‚½–â‘è‚É‚¨‚¢‚ÄA
-‚±‚Ì’˜ìŒ ŽÒ‚ÍA(‘ã‘Ö»•i‚âƒT[ƒrƒX‚Ì’²’B;—˜—pŒ Aƒf[ƒ^A‚ ‚é‚¢‚Í—˜‰v‚Ì‘¹Ž¸;
-‚ ‚é‚¢‚Í‰c‹Æ‚Ì’†’f‚ðŠÜ‚ÞA‚Ü‚½‚±‚ê‚ç‚¾‚¯‚ÉŒÀ‚ç‚¸)’¼Ú“I‚ÉAŠÔÚ“I‚ÉA‹ô‘R‚ÉA
-“Á•Ê‚ÉA’¦”±ãA‚ ‚é‚¢‚ÍA•K‘R“I‚É¶‚¶‚Ä‚µ‚Ü‚Á‚½‘¹ŠQ‚É‘Î‚µÓ”C‚Í‚È‚­A
-‚¢‚©‚È‚éÓ”C—˜_ã‚Å‚àŒ_–ñ‚Ì—L–³‚ÉŒW‚í‚ç‚¸Œµ–§‚ÈÓ”C‚Í‚È‚­A‚Ü‚½(‰ßŽ¸‚ ‚é‚¢‚Í
-‚»‚Ì‘¼‚ðŠÜ‚Þ)•s–@sˆ×‚É‘Î‚µ‚Ä‚àÓ”C‚Í‚È‚¢B
+ï¿½ÆÓŽï¿½ï¿½ï¿½
+ï¿½@ï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Íhï¿½ï¿½ï¿½Ì‚Ü‚Ü‚ÌŽpï¿½hï¿½Å’ñ‹Ÿ‚ï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½ç‚©ï¿½ÉŽï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Aï¿½Ü‚ï¿½ï¿½ÍŒï¿½ï¿½Oï¿½ï¿½
+ï¿½ÛØ‚ÍAï¿½ï¿½ï¿½pï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½Ñ“ï¿½ï¿½ï¿½Ú“Iï¿½Ö‚Ì“Kï¿½ï¿½ï¿½É‘Î‚ï¿½ï¿½éŒ¾ï¿½Oï¿½Ì•ÛØ‚ï¿½Ü‚ÝAï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ÉŒï¿½ï¿½ç‚¸ï¿½Aï¿½ï¿½ï¿½Ý‚ï¿½ï¿½È‚ï¿½ï¿½Bï¿½ï¿½ï¿½Æ‚ï¿½ï¿½È‰ï¿½ï¿½Ì‚æ‚¤ï¿½È‘ï¿½ï¿½Qï¿½Ì‰Â”\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½Ä‚ï¿½Aï¿½Ç‚Ì‚æ‚¤ï¿½ÈŒ`ï¿½É‚ï¿½ï¿½ë‚±ï¿½Ìƒ\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Ì—ï¿½ï¿½pï¿½ï¿½ï¿½ç”­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½ÄA
+ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ìŒ ï¿½Ò‚ÍA(ï¿½ï¿½Öï¿½ï¿½iï¿½ï¿½Tï¿½[ï¿½rï¿½Xï¿½Ì’ï¿½ï¿½B;ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Aï¿½fï¿½[ï¿½^ï¿½Aï¿½ï¿½ï¿½é‚¢ï¿½Í—ï¿½ï¿½vï¿½Ì‘ï¿½ï¿½ï¿½;
+ï¿½ï¿½ï¿½é‚¢ï¿½Í‰cï¿½Æ‚Ì’ï¿½ï¿½fï¿½ï¿½Ü‚ÞAï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ç‚¾ï¿½ï¿½ï¿½ÉŒï¿½ï¿½ç‚¸)ï¿½ï¿½ï¿½Ú“Iï¿½ÉAï¿½ÔÚ“Iï¿½ÉAï¿½ï¿½Rï¿½ÉA
+ï¿½ï¿½ï¿½Ê‚ÉAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½é‚¢ï¿½ÍAï¿½Kï¿½Rï¿½Iï¿½Éï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Qï¿½É‘Î‚ï¿½ï¿½Ó”Cï¿½Í‚È‚ï¿½ï¿½A
+ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½Ó”Cï¿½ï¿½ï¿½_ï¿½ï¿½Å‚ï¿½_ï¿½ï¿½Ì—Lï¿½ï¿½ï¿½ÉŒWï¿½ï¿½ç‚¸ï¿½ï¿½ï¿½ï¿½ï¿½ÈÓ”Cï¿½Í‚È‚ï¿½ï¿½Aï¿½Ü‚ï¿½(ï¿½ßŽï¿½ï¿½ï¿½ï¿½é‚¢ï¿½ï¿½
+ï¿½ï¿½ï¿½Ì‘ï¿½ï¿½ï¿½Ü‚ï¿½)ï¿½sï¿½@ï¿½sï¿½×‚É‘Î‚ï¿½ï¿½Ä‚ï¿½Ó”Cï¿½Í‚È‚ï¿½ï¿½B
 
-Œ´•¶‚Íhttp://www.freebsd.org/ja/copyright/‚É—L‚è‚Ü‚·Bi‚à‚Á‚Æ‚Ü‚Æ‚à‚È–ó•¶‚àj
-
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½http://www.freebsd.org/ja/copyright/ï¿½É—Lï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½iï¿½ï¿½ï¿½ï¿½Æ‚Ü‚Æ‚ï¿½È–ó•¶‚ï¿½j

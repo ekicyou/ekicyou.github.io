@@ -1,1162 +1,1161 @@
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:19:44.358979
 
-¡Request
+ï¿½ï¿½Request
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
-¡Response
-LOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
-
-
-¡STDERR
+ï¿½ï¿½Response
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 
-¡REPORT
+ï¿½ï¿½STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+ï¿½ï¿½REPORT
 (DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
 (DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
 (DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: ŠJŽn
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: Š®—¹
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€‹N“®ˆ—: Š®—¹
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:19:44.405854
 
-¡Response
+ï¿½ï¿½Response
 .
 
-¡STDERR
+ï¿½ï¿½STDERR
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:19:45.905854
 
-¡Response
+ï¿½ï¿½Response
 TESTDATA.
 
-¡STDERR
+ï¿½ï¿½STDERR
 TESTDATA.
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:19:45.015229
 
-¡Request
+ï¿½ï¿½Request
 TEST_REQUEST 1.0
 OK?
 
-¡Response
-TEST_REQUEST 1.0
-OK?
-
-.
-
-¡STDERR
+ï¿½ï¿½Response
 TEST_REQUEST 1.0
 OK?
 
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+ï¿½ï¿½STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€I—¹ˆ—: ****
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ****
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:19:45.108979
 
-¡Request
+ï¿½ï¿½Request
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
-¡Response
-UNLOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-
-
-¡STDERR
+ï¿½ï¿½Response
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+ï¿½ï¿½STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŠJŽn
-(DEBUG)ƒpƒCƒvƒNƒ[ƒY•“Ç‚ÝŽÌ‚Äˆ—: STDINo—ÍƒpƒCƒvClose
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Ç‚ÝŽÌ‚Äï¿½ï¿½ï¿½: STDINï¿½oï¿½Íƒpï¿½Cï¿½vClose
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŽqƒvƒƒZƒX‚ÌI—¹Šm”F
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: Š®—¹
-(DEBUG)ƒƒOƒtƒ@ƒCƒ‹: ƒNƒ[ƒY
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ÌIï¿½ï¿½ï¿½mï¿½F
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½ï¿½ï¿½Oï¿½tï¿½@ï¿½Cï¿½ï¿½: ï¿½Nï¿½ï¿½ï¿½[ï¿½Y
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:32.424750
 
-¡Request
+ï¿½ï¿½Request
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
-¡Response
-LOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
-
-
-¡STDERR
+ï¿½ï¿½Response
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 
-¡REPORT
+ï¿½ï¿½STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+ï¿½ï¿½REPORT
 (DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
 (DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
 (DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: ŠJŽn
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: Š®—¹
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€‹N“®ˆ—: Š®—¹
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:32.487250
 
-¡Response
+ï¿½ï¿½Response
 .
 
-¡STDERR
+ï¿½ï¿½STDERR
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:32.987250
 
-¡Response
+ï¿½ï¿½Response
 TESTDATA.
 
-¡STDERR
+ï¿½ï¿½STDERR
 TESTDATA.
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:32.081000
 
-¡Request
+ï¿½ï¿½Request
 TEST_REQUEST 1.0
 OK?
 
-¡Response
-TEST_REQUEST 1.0
-OK?
-
-.
-
-¡STDERR
+ï¿½ï¿½Response
 TEST_REQUEST 1.0
 OK?
 
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+ï¿½ï¿½STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€I—¹ˆ—: ****
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ****
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:32.190375
 
-¡Request
+ï¿½ï¿½Request
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
-¡Response
-UNLOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-
-
-¡STDERR
+ï¿½ï¿½Response
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+ï¿½ï¿½STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŠJŽn
-(DEBUG)ƒpƒCƒvƒNƒ[ƒY•“Ç‚ÝŽÌ‚Äˆ—: STDINo—ÍƒpƒCƒvClose
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Ç‚ÝŽÌ‚Äï¿½ï¿½ï¿½: STDINï¿½oï¿½Íƒpï¿½Cï¿½vClose
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŽqƒvƒƒZƒX‚ÌI—¹Šm”F
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: Š®—¹
-(DEBUG)ƒƒOƒtƒ@ƒCƒ‹: ƒNƒ[ƒY
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ÌIï¿½ï¿½ï¿½mï¿½F
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½ï¿½ï¿½Oï¿½tï¿½@ï¿½Cï¿½ï¿½: ï¿½Nï¿½ï¿½ï¿½[ï¿½Y
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:34.268500
 
-¡Request
+ï¿½ï¿½Request
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
-¡Response
-LOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
-
-
-¡STDERR
+ï¿½ï¿½Response
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 
-¡REPORT
+ï¿½ï¿½STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+ï¿½ï¿½REPORT
 (DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
 (DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
 (DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: ŠJŽn
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: Š®—¹
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€‹N“®ˆ—: Š®—¹
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:34.315375
 
-¡Response
+ï¿½ï¿½Response
 .
 
-¡STDERR
+ï¿½ï¿½STDERR
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:34.831000
 
-¡Response
+ï¿½ï¿½Response
 TESTDATA.
 
-¡STDERR
+ï¿½ï¿½STDERR
 TESTDATA.
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:34.924750
 
-¡Request
+ï¿½ï¿½Request
 TEST_REQUEST 1.0
 OK?
 
-¡Response
-TEST_REQUEST 1.0
-OK?
-
-.
-
-¡STDERR
+ï¿½ï¿½Response
 TEST_REQUEST 1.0
 OK?
 
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+ï¿½ï¿½STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€I—¹ˆ—: ****
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ****
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:34.034125
 
-¡Request
+ï¿½ï¿½Request
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
-¡Response
-UNLOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-
-
-¡STDERR
+ï¿½ï¿½Response
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+ï¿½ï¿½STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŠJŽn
-(DEBUG)ƒpƒCƒvƒNƒ[ƒY•“Ç‚ÝŽÌ‚Äˆ—: STDINo—ÍƒpƒCƒvClose
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Ç‚ÝŽÌ‚Äï¿½ï¿½ï¿½: STDINï¿½oï¿½Íƒpï¿½Cï¿½vClose
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŽqƒvƒƒZƒX‚ÌI—¹Šm”F
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: Š®—¹
-(DEBUG)ƒƒOƒtƒ@ƒCƒ‹: ƒNƒ[ƒY
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ÌIï¿½ï¿½ï¿½mï¿½F
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½ï¿½ï¿½Oï¿½tï¿½@ï¿½Cï¿½ï¿½: ï¿½Nï¿½ï¿½ï¿½[ï¿½Y
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:38.409125
 
-¡Request
+ï¿½ï¿½Request
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
-¡Response
-LOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
-
-
-¡STDERR
+ï¿½ï¿½Response
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 
-¡REPORT
+ï¿½ï¿½STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+ï¿½ï¿½REPORT
 (DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
 (DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
 (DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: ŠJŽn
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: Š®—¹
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€‹N“®ˆ—: Š®—¹
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:38.456000
 
-¡Response
+ï¿½ï¿½Response
 .
 
-¡STDERR
+ï¿½ï¿½STDERR
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:38.971625
 
-¡Response
+ï¿½ï¿½Response
 TESTDATA.
 
-¡STDERR
+ï¿½ï¿½STDERR
 TESTDATA.
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:38.065375
 
-¡Request
+ï¿½ï¿½Request
 TEST_REQUEST 1.0
 OK?
 
-¡Response
-TEST_REQUEST 1.0
-OK?
-
-.
-
-¡STDERR
+ï¿½ï¿½Response
 TEST_REQUEST 1.0
 OK?
 
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+ï¿½ï¿½STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€I—¹ˆ—: ****
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ****
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:38.174750
 
-¡Request
+ï¿½ï¿½Request
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
-¡Response
-UNLOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-
-
-¡STDERR
+ï¿½ï¿½Response
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+ï¿½ï¿½STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŠJŽn
-(DEBUG)ƒpƒCƒvƒNƒ[ƒY•“Ç‚ÝŽÌ‚Äˆ—: STDINo—ÍƒpƒCƒvClose
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Ç‚ÝŽÌ‚Äï¿½ï¿½ï¿½: STDINï¿½oï¿½Íƒpï¿½Cï¿½vClose
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŽqƒvƒƒZƒX‚ÌI—¹Šm”F
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: Š®—¹
-(DEBUG)ƒƒOƒtƒ@ƒCƒ‹: ƒNƒ[ƒY
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ÌIï¿½ï¿½ï¿½mï¿½F
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½ï¿½ï¿½Oï¿½tï¿½@ï¿½Cï¿½ï¿½: ï¿½Nï¿½ï¿½ï¿½[ï¿½Y
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:39.143500
 
-¡Request
+ï¿½ï¿½Request
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
-¡Response
-LOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
-
-
-¡STDERR
+ï¿½ï¿½Response
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 
-¡REPORT
+ï¿½ï¿½STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+ï¿½ï¿½REPORT
 (DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
 (DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
 (DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: ŠJŽn
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: Š®—¹
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€‹N“®ˆ—: Š®—¹
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:39.190375
 
-¡Response
+ï¿½ï¿½Response
 .
 
-¡STDERR
+ï¿½ï¿½STDERR
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:40.690375
 
-¡Response
+ï¿½ï¿½Response
 TESTDATA.
 
-¡STDERR
+ï¿½ï¿½STDERR
 TESTDATA.
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:40.799750
 
-¡Request
+ï¿½ï¿½Request
 TEST_REQUEST 1.0
 OK?
 
-¡Response
-TEST_REQUEST 1.0
-OK?
-
-.
-
-¡STDERR
+ï¿½ï¿½Response
 TEST_REQUEST 1.0
 OK?
 
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+ï¿½ï¿½STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€I—¹ˆ—: ****
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ****
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:40.893500
 
-¡Request
+ï¿½ï¿½Request
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
-¡Response
-UNLOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-
-
-¡STDERR
+ï¿½ï¿½Response
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+ï¿½ï¿½STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŠJŽn
-(DEBUG)ƒpƒCƒvƒNƒ[ƒY•“Ç‚ÝŽÌ‚Äˆ—: STDINo—ÍƒpƒCƒvClose
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Ç‚ÝŽÌ‚Äï¿½ï¿½ï¿½: STDINï¿½oï¿½Íƒpï¿½Cï¿½vClose
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŽqƒvƒƒZƒX‚ÌI—¹Šm”F
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: Š®—¹
-(DEBUG)ƒƒOƒtƒ@ƒCƒ‹: ƒNƒ[ƒY
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ÌIï¿½ï¿½ï¿½mï¿½F
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½ï¿½ï¿½Oï¿½tï¿½@ï¿½Cï¿½ï¿½: ï¿½Nï¿½ï¿½ï¿½[ï¿½Y
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:41.721625
 
-¡Request
+ï¿½ï¿½Request
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
-¡Response
-LOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
-
-
-¡STDERR
+ï¿½ï¿½Response
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 
-¡REPORT
+ï¿½ï¿½STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+ï¿½ï¿½REPORT
 (DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
 (DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
 (DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: ŠJŽn
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: Š®—¹
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€‹N“®ˆ—: Š®—¹
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:41.768500
 
-¡Response
+ï¿½ï¿½Response
 .
 
-¡STDERR
+ï¿½ï¿½STDERR
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:42.268500
 
-¡Response
+ï¿½ï¿½Response
 TESTDATA.
 
-¡STDERR
+ï¿½ï¿½STDERR
 TESTDATA.
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:42.377875
 
-¡Request
+ï¿½ï¿½Request
 TEST_REQUEST 1.0
 OK?
 
-¡Response
-TEST_REQUEST 1.0
-OK?
-
-.
-
-¡STDERR
+ï¿½ï¿½Response
 TEST_REQUEST 1.0
 OK?
 
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+ï¿½ï¿½STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€I—¹ˆ—: ****
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ****
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:42.471625
 
-¡Request
+ï¿½ï¿½Request
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
-¡Response
-UNLOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-
-
-¡STDERR
+ï¿½ï¿½Response
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+ï¿½ï¿½STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŠJŽn
-(DEBUG)ƒpƒCƒvƒNƒ[ƒY•“Ç‚ÝŽÌ‚Äˆ—: STDINo—ÍƒpƒCƒvClose
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Ç‚ÝŽÌ‚Äï¿½ï¿½ï¿½: STDINï¿½oï¿½Íƒpï¿½Cï¿½vClose
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŽqƒvƒƒZƒX‚ÌI—¹Šm”F
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: Š®—¹
-(DEBUG)ƒƒOƒtƒ@ƒCƒ‹: ƒNƒ[ƒY
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ÌIï¿½ï¿½ï¿½mï¿½F
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½ï¿½ï¿½Oï¿½tï¿½@ï¿½Cï¿½ï¿½: ï¿½Nï¿½ï¿½ï¿½[ï¿½Y
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:43.534125
 
-¡Request
+ï¿½ï¿½Request
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
-¡Response
-LOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
-
-
-¡STDERR
+ï¿½ï¿½Response
 LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 
-¡REPORT
+ï¿½ï¿½STDERR
+LOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
+
+
+ï¿½ï¿½REPORT
 (DEBUG)INI logType: -FATAL -ERROR -WARN -SYSTEM -TRACE -DEBUG -STDERR
 (DEBUG)INI appName: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\echo.exe
 (DEBUG)INI cmdLine: -i D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug\bin\test.ini
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: ŠJŽn
-(DEBUG)ŽqƒvƒƒZƒX‹N“®ˆ—: Š®—¹
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[194]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[LOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[194]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[LOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 LoadDirectry: D:\cvsSV\home\myWeb\httpd\html_nanika\dot-sakura\kanri\ghost_data\dot_sakura_100\ghost\master\src\tunaki\test\Debug
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€‹N“®ˆ—: Š®—¹
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:43.581000
 
-¡Response
+ï¿½ï¿½Response
 .
 
-¡STDERR
+ï¿½ï¿½STDERR
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:43.096625
 
-¡Response
+ï¿½ï¿½Response
 TESTDATA.
 
-¡STDERR
+ï¿½ï¿½STDERR
 TESTDATA.
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[8]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TESTDATA]
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[8]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TESTDATA]
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:43.190375
 
-¡Request
+ï¿½ï¿½Request
 TEST_REQUEST 1.0
 OK?
 
-¡Response
-TEST_REQUEST 1.0
-OK?
-
-.
-
-¡STDERR
+ï¿½ï¿½Response
 TEST_REQUEST 1.0
 OK?
 
 .
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+ï¿½ï¿½STDERR
+TEST_REQUEST 1.0
+OK?
+
+.
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[25]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[TEST_REQUEST 1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[25]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[TEST_REQUEST 1.0
 OK?
 
 ]
-(SYSTEM)ƒVƒXƒeƒ€I—¹ˆ—: ****
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[.
+(SYSTEM)ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ****
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[3]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[.
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[3]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[.
 ]
 
------------------------------------------------------------------------
+-----
 DATE: 2004/04/02 00:22:44.299750
 
-¡Request
+ï¿½ï¿½Request
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
-¡Response
-UNLOAD Version TUNAKI/1.0
-Sender: Nobody
-Charset: Shift_JIS
-
-
-¡STDERR
+ï¿½ï¿½Response
 UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 
-¡REPORT
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+ï¿½ï¿½STDERR
+UNLOAD Version TUNAKI/1.0
+Sender: Nobody
+Charset: Shift_JIS
+
+
+ï¿½ï¿½REPORT
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžˆ—[65]byte
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “Çžƒf[ƒ^[UNLOAD Version TUNAKI/1.0
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½[65]byte
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½fï¿½[ï¿½^[UNLOAD Version TUNAKI/1.0
 Sender: Nobody
 Charset: Shift_JIS
 
 ]
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŠJŽn
-(DEBUG)ƒpƒCƒvƒNƒ[ƒY•“Ç‚ÝŽÌ‚Äˆ—: STDINo—ÍƒpƒCƒvClose
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Jï¿½n
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Ç‚ÝŽÌ‚Äï¿½ï¿½ï¿½: STDINï¿½oï¿½Íƒpï¿½Cï¿½vClose
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDOUT “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ƒpƒCƒvŽc—ÊŠm”F: ƒpƒCƒv‚Ì“Ç‚ÝŽæ‚è‚ÉŽ¸”s: ENO(109) ƒpƒCƒv‚ÍI—¹‚µ‚Ü‚µ‚½B
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDOUT ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½pï¿½Cï¿½vï¿½cï¿½ÊŠmï¿½F: ï¿½pï¿½Cï¿½vï¿½Ì“Ç‚ÝŽï¿½ï¿½ÉŽï¿½ï¿½s: ENO(109) ï¿½pï¿½Cï¿½vï¿½ÍIï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B
 
-(DEBUG)ŽqƒvƒƒZƒX STDERR “Çžˆ—: “ÇžŠ®—¹‚Ìˆ×Aƒnƒ“ƒhƒ‹ƒNƒ[ƒY‚µI—¹
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: ŽqƒvƒƒZƒX‚ÌI—¹Šm”F
-(DEBUG)ŽqƒvƒƒZƒX‰ð•úˆ—: Š®—¹
-(DEBUG)ƒƒOƒtƒ@ƒCƒ‹: ƒNƒ[ƒY
-
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½X STDERR ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Çï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìˆ×Aï¿½nï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½[ï¿½Yï¿½ï¿½ï¿½Iï¿½ï¿½
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ÌIï¿½ï¿½ï¿½mï¿½F
+(DEBUG)ï¿½qï¿½vï¿½ï¿½ï¿½Zï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½
+(DEBUG)ï¿½ï¿½ï¿½Oï¿½tï¿½@ï¿½Cï¿½ï¿½: ï¿½Nï¿½ï¿½ï¿½[ï¿½Y
