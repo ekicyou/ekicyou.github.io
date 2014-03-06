@@ -32,21 +32,26 @@
 <ul class="postArchive">
 
 </ul>
-<p><script type="text/javascript">
-//&lt;![CDATA[
-(function() {
-    var links = document.getElementsByTagName('a');
-    var query = '?';
-    for(var i = 0; i &lt; links.length; i++) {
-    if(links[i].href.indexOf('#disqus_thread') &gt;= 0) {
-        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&amp;';
-    }
-    }
-    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/DISQUS_NAME/get_num_replies.js' + query + '">&lt;/' + 'script&gt;');
-})();
-//]]&gt;
-</script></p>
-
+<!-- START: Livefyre Embed -->
+<div id="livefyre-comments"></div>
+<p><script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script></p>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "354860",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
       </div>
     </div>
   </body>
