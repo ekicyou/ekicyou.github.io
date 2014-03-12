@@ -4,7 +4,7 @@
   <title>Feed Name</title>
   <link href="http://domain/"/>
   <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
-  <updated>2014-03-12T21:37:00.6489009+09:00</updated>
+  <updated>2014-03-12T23:07:29.5204656+09:00</updated>
   <id>http://domain/</id>
   <author>
     <name>Author</name>
@@ -16,7 +16,7 @@
     <id>http://domain//2014/03/12/about.html</id>
     <link type="text/html" rel="alternate" href="http://domain//2014/03/12/about.html"/>
     <title>About</title>
-    <updated>2014-03-12T21:37:00.6489009+09:00</updated>
+    <updated>2014-03-12T23:07:29.5204656+09:00</updated>
     <author>
       <name>Author</name>
       <uri>http://domain/</uri>
