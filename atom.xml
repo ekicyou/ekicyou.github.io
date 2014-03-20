@@ -4,12 +4,43 @@
   <title>Feed Name</title>
   <link href="http://domain/"/>
   <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
-  <updated>0001-01-01T00:00:00+09:00</updated>
+  <updated>2014-03-20T22:11:14.5479058+09:00</updated>
   <id>http://domain/</id>
   <author>
     <name>Author</name>
     <email>Email</email>
   </author>
 
+  
+  <entry>
+    <id>http://domain//2014/03/20/about.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/03/20/about.html"/>
+    <title>About</title>
+    <updated>2014-03-20T22:11:14.5479058+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;えちょの残骸&lt;/h1&gt;
+&lt;p&gt;ふるーい開発物を、後世に残す場所。
+世界のエントロピーの上昇に貢献します。&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/03/10/test.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/03/10/test.html"/>
+    <title>サイトの立ち上げテストでした</title>
+    <updated>2014-03-10T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;まずは実験的にサイトを作ってみました。&lt;/p&gt;
+&lt;p&gt;というか、サイト自体は1年以上前からほぼ準備完了してたけど、
+そっから絶賛放置だったわけで‥‥。&lt;/p&gt;
+&lt;p&gt;まあ、ゆっくりやってみます。&lt;/p&gt;
+</content>
+  </entry>
   
 </feed>

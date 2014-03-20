@@ -7,9 +7,34 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate></pubDate>
-    <lastBuildDate></lastBuildDate>
+    <pubDate>木, 20 3 2014 22:11:14 +0900</pubDate>
+    <lastBuildDate>木, 20 3 2014 22:11:14 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>About</title>
+      <link>http://domain/2014/03/20/about.html</link>
+      <pubDate>木, 20 3 2014 22:11:14 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2014/03/20/about.html</guid>
+      <description>&lt;h1&gt;えちょの残骸&lt;/h1&gt;
+&lt;p&gt;ふるーい開発物を、後世に残す場所。
+世界のエントロピーの上昇に貢献します。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>サイトの立ち上げテストでした</title>
+      <link>http://domain/2014/03/10/test.html</link>
+      <pubDate>月, 10 3 2014 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2014/03/10/test.html</guid>
+      <description>&lt;p&gt;まずは実験的にサイトを作ってみました。&lt;/p&gt;
+&lt;p&gt;というか、サイト自体は1年以上前からほぼ準備完了してたけど、
+そっから絶賛放置だったわけで‥‥。&lt;/p&gt;
+&lt;p&gt;まあ、ゆっくりやってみます。&lt;/p&gt;
+</description>
+    </item>
     
 
   </channel>
