@@ -1,8 +1,0 @@
-origin.x,14
-origin.y,14
-
-windowpos.x,0
-windowpos.y,0
-
-wordwrappoint.x,-30
-wordwrappoint.y,0
