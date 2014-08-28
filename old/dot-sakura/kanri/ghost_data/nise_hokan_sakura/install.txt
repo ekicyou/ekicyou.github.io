@@ -1,4 +1,0 @@
-type,ghost
-name,‹U•âŠ®‚³‚­‚ç
-directory,nise_hokan_sakura
-balloon.directory,bottle
