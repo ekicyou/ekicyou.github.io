@@ -13,10 +13,15 @@ body
     -webkit-text-combine-horizontal: digits 2;
 
     font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-    margin-left:auto;
-    margin-right: auto;
-    width:1100px;
+    margin: 0px;
+    min-width: 920px;
+    width: expression(document.body.clientWidth < 922? "920px" : "auto");
+    background-image:url("/img/ruins.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left bottom;
 }
+
 h1,h2,h3,h4,h5,h6
 {
     font-weight: lighter;
@@ -60,16 +65,21 @@ li
     margin-left:10px;
     list-style-type:circle;
 }
-#hometext a { font-size: 2em; margin-left: 5px; margin-right:10px; display: none; color: #41B1E1; font-weight: normal;  }
-#home:hover
+
+#container
 {
-    background:none;
+    position: relative;
+    top: 0px;
+    right: 0px;
 }
+
 #side
 {
-    float:right;
-    color: #41b1e1;
-    margin-left:50px;
+    position: absolute;
+    left: 0px;
+    bottom: 4px;
+    color: #CCCCCC;
+    margin-bottom:2px;
 }
 #side .section
 {
@@ -81,10 +91,28 @@ li
 {
     font-size:2em;
 }
+
+#hometext a {
+    font-size: 2em;
+    display: inline;
+    color: #CCCCCC;
+    font-weight: normal;
+}
+
+
+
+#pasta
+{
+
+
+}
+
+
 #content
 {
     width:auto;
 }
+
 img
 {
   width: auto !important;
@@ -108,27 +136,4 @@ img
 .idea h1, .entry h1
 {
     margin-bottom: 5px;
-}
-
-img#ruins
-{
-    position :absolute;
-    bottom: 0px;
-    left: 0px;
-    z-index: -1;
-}
-
-
-/* min-device-width: 800px instead? */
-@media screen and (max-width:900px)
-{
-    body { width:auto; margin:10px; }
-    #content { width : 100%; }
-    #side { float:none; width:100%; margin-left:0px; }
-    #side .section { margin-top:0; margin-right: 30px; }
-    #side .section ul { font-size:1.2em; padding:0px; margin:5px; }
-    #side li { display: inline; margin-left:3px; margin-right: 3px; font-weight: normal; }
-    #home { display: none;  }
-    #hometext a { display: inline;  }
-    h1 { margin-top: -0px;}
 }
