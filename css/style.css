@@ -1,5 +1,17 @@
+/* CSS設定 */
+
 body
 {
+    writing-mode: tb-rl; /* IE独自仕様 */
+    writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -o-writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -webkit-text-combine: horizontal;
+    text-combine-horizontal: digits 2;
+    -ms-text-combine-horizontal: digits 2;
+    -webkit-text-combine-horizontal: digits 2;
+
     font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
     margin-left:auto;
     margin-right: auto;
@@ -96,6 +108,14 @@ img
 .idea h1, .entry h1
 {
     margin-bottom: 5px;
+}
+
+img#ruins
+{
+    position :absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
 }
 
 
