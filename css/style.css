@@ -154,8 +154,8 @@ img
     height: auto;
     max-height: 100%;
 }
-div.fyre-editor{
-    margin-top: 80px;
+div.fyre-listener-avatars{
+    height: 50px important!;
 }
 
 div.fyre-comment-stream{
