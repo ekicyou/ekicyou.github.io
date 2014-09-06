@@ -159,13 +159,6 @@ img
     height: 50px;
 }
 
-div.fyre-stream-content
-{
-    max-height: 420px;
-    overflow-y: scroll;
-}
-
-
 div.fyre-hovercard
 {
     writing-mode: lr-tb; /* IE独自仕様 */
