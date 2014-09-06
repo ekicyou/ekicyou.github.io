@@ -154,7 +154,7 @@ img
     height: auto;
     max-height: 100%;
 }
-div.fyre div.fyre-listener-avatars
+#livefyre-comments div.fyre-listener-avatars
 {
     height: 50px important!;
 }
