@@ -154,11 +154,13 @@ img
     height: auto;
     max-height: 100%;
 }
-div.fyre-listener-avatars{
+div.fyre-live-container
+{
     height: 50px important!;
 }
 
-div.fyre-comment-stream{
+div.fyre-comment-stream
+{
     overflow: auto;
 }
 
