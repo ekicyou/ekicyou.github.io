@@ -159,9 +159,3 @@ img
     height: 50px;
 }
 
-div.fyre-stream-content
-{
-    max-height: 420px;
-    overflow-y: scroll;
-}
-
