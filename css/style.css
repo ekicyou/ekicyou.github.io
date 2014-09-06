@@ -150,6 +150,15 @@ img
     -webkit-writing-mode: horizontal-tb;
     -webkit-text-combine: horizontal-tb;
 
+    width: 400px;
+    height: auto;
+    max-height: 100%;
+}
+div.fyre-editor{
+    margin-top: 80px;
+}
+
+div.fyre-comment-stream{
     overflow: auto;
 }
 
