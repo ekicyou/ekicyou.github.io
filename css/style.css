@@ -138,3 +138,18 @@ img
 {
     margin-bottom: 5px;
 }
+
+
+/* livefyre */
+#livefyre-comments
+{
+    writing-mode: lr-tb; /* IE独自仕様 */
+    writing-mode: horizontal-tb;
+    -moz-writing-mode: vhorizontal-tb;
+    -o-writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -webkit-text-combine: horizontal-tb;
+
+    overflow: auto;
+}
+
