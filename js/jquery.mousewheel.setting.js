@@ -1,8 +1,4 @@
 $(function() {
-    //コンテンツの横サイズ
-    var cont = $('#contents');
-    var contW = $('.section').outerWidth(true) * $('div',cont ).length;
-    cont.css('width', contW);
     //スクロールスピード
     var speed = -50;
     //マウスホイールで横移動
