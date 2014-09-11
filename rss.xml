@@ -7,9 +7,23 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>金, 29 8 2014 00:00:00 +0900</pubDate>
-    <lastBuildDate>金, 29 8 2014 00:00:00 +0900</lastBuildDate>
+    <pubDate>木, 11 9 2014 00:00:00 +0900</pubDate>
+    <lastBuildDate>木, 11 9 2014 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>車輪の再発明の再発明の再発明の‥‥</title>
+      <link>http://domain/2014/09/11/remakemake.html</link>
+      <pubDate>木, 11 9 2014 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2014/09/11/remakemake.html</guid>
+      <description>&lt;p&gt;ちょーださいけど最低限コメントが打てる設定に。&lt;/p&gt;
+&lt;p&gt;あと、内部でMarkdownを使ってるんですが、
+微妙に気に入らないフォーマットなので少し手直ししようと手を加えてたら、
+いつの間にかpegに手を出している始末。&lt;/p&gt;
+&lt;p&gt;‥‥あれー？&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>事始め</title>
