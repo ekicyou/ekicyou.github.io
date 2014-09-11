@@ -4,7 +4,7 @@ $(function() {
     var contW = $('.box').outerWidth(true) * $('div',cont ).length;
     cont.css('width', contW);
     //スクロールスピード
-    var speed = 30;
+    var speed = -30;
     //マウスホイールで横移動
     $('html').mousewheel(function(event, mov) {
         //ie firefox
