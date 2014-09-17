@@ -15,7 +15,6 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
     <script src="/js/jquery.mousewheel.min.js"></script>
     <script src="/js/jquery.mousewheel.setting.js"></script>
-    <script src="/js/prettify/prettify.js"></script>
   </head>
   <body>
     <div id="container">
@@ -38,7 +37,7 @@
     <p>関西ならやはりおたふくでしょうか、
 地元にドリームソースもありますのでそちらも応援したいところですが。</p>
 <p>そうではなく‥‥。ソースコードの表示設定をしてみます。</p>
-<p>```
+<pre class="prettyprint linenums">
 // A Hello World! program in C#.
 using System;
 namespace HelloWorld
@@ -47,17 +46,16 @@ namespace HelloWorld
     {
         static void Main() 
         {
-            Console.WriteLine(&quot;Hello World!&quot;);</p>
-<pre><code>        // Keep the console window open in debug mode.
-        Console.WriteLine(&quot;Press any key to exit.&quot;);
-        Console.ReadKey();
+            Console.WriteLine("Hello World!");
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
     }
 }
-</code></pre>
-
-<p>}
-```</p>
-<p>縦書きサイトでソースコードを突っ込む無理やり感。</p>
+</pre>
+<p>縦書きサイトでソースコード表示を突っ込む無理やり感。</p>
 <p>だが、それがいい。</p>
 
   </div>
@@ -93,6 +91,8 @@ namespace HelloWorld
 
       </div>
     </div>
+<script src="/js/prettify/prettify.js"></script>
+<script>prettyPrint();</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
