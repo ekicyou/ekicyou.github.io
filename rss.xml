@@ -7,9 +7,42 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>火, 16 9 2014 00:00:00 +0900</pubDate>
-    <lastBuildDate>火, 16 9 2014 00:00:00 +0900</lastBuildDate>
+    <pubDate>水, 17 9 2014 00:00:00 +0900</pubDate>
+    <lastBuildDate>水, 17 9 2014 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>ソースの話</title>
+      <link>http://domain/2014/09/17/src.html</link>
+      <pubDate>水, 17 9 2014 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2014/09/17/src.html</guid>
+      <description>&lt;p&gt;関西ならやはりおたふくでしょうか、
+地元にドリームソースもありますのでそちらも応援したいところですが。&lt;/p&gt;
+&lt;p&gt;そうではなく‥‥。ソースコードの表示設定をしてみます。&lt;/p&gt;
+&lt;p&gt;```
+// A Hello World! program in C#.
+using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine(&amp;quot;Hello World!&amp;quot;);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        // Keep the console window open in debug mode.
+        Console.WriteLine(&amp;quot;Press any key to exit.&amp;quot;);
+        Console.ReadKey();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+```&lt;/p&gt;
+&lt;p&gt;縦書きサイトでソースコードを突っ込む無理やり感。&lt;/p&gt;
+&lt;p&gt;だが、それがいい。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>怖いユメ</title>
