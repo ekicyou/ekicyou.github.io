@@ -4,13 +4,34 @@
   <title>Feed Name</title>
   <link href="http://domain/"/>
   <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
-  <updated>2014-09-17T00:00:00+09:00</updated>
+  <updated>2014-09-18T00:00:00+09:00</updated>
   <id>http://domain/</id>
   <author>
     <name>Author</name>
     <email>Email</email>
   </author>
 
+  
+  <entry>
+    <id>http://domain//2014/09/18/date.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/09/18/date.html"/>
+    <title>日付が出ていなかった‥‥</title>
+    <updated>2014-09-18T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;日付の表示が出てなかったので色々いじりました。&lt;/p&gt;
+&lt;p&gt;ちなみに、このサイトのジェネレータには「&lt;a href=&quot;https://github.com/code52/pretzel&quot;&gt;Pretzel&lt;/a&gt;」
+というソフトの&lt;a href=&quot;https://github.com/ekicyou/pretzel&quot;&gt;自分改良版&lt;/a&gt;を使ってます。&lt;/p&gt;
+&lt;p&gt;少しいじったらすぐ落ちるようになってしまってるのを放置してますので、
+とても他人に使ってくださいとは言えませんが、ソースコードがどうしても見たい人は
+冷やかしてください‥‥。&lt;/p&gt;
+&lt;p&gt;最終的には独自の文書管理構造を作りたいと思ってるので、多分どこかでごっそりソフトを
+入れ替えます。そのタイミングで色々やりたいなあとは思ってますが、
+相変わらずのスローペースなので、それまではなるべくひっそりとしておくつもり。&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <id>http://domain//2014/09/17/src.html</id>

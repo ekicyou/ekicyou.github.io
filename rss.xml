@@ -7,9 +7,27 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>水, 17 9 2014 00:00:00 +0900</pubDate>
-    <lastBuildDate>水, 17 9 2014 00:00:00 +0900</lastBuildDate>
+    <pubDate>木, 18 9 2014 00:00:00 +0900</pubDate>
+    <lastBuildDate>木, 18 9 2014 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>日付が出ていなかった‥‥</title>
+      <link>http://domain/2014/09/18/date.html</link>
+      <pubDate>木, 18 9 2014 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2014/09/18/date.html</guid>
+      <description>&lt;p&gt;日付の表示が出てなかったので色々いじりました。&lt;/p&gt;
+&lt;p&gt;ちなみに、このサイトのジェネレータには「&lt;a href=&quot;https://github.com/code52/pretzel&quot;&gt;Pretzel&lt;/a&gt;」
+というソフトの&lt;a href=&quot;https://github.com/ekicyou/pretzel&quot;&gt;自分改良版&lt;/a&gt;を使ってます。&lt;/p&gt;
+&lt;p&gt;少しいじったらすぐ落ちるようになってしまってるのを放置してますので、
+とても他人に使ってくださいとは言えませんが、ソースコードがどうしても見たい人は
+冷やかしてください‥‥。&lt;/p&gt;
+&lt;p&gt;最終的には独自の文書管理構造を作りたいと思ってるので、多分どこかでごっそりソフトを
+入れ替えます。そのタイミングで色々やりたいなあとは思ってますが、
+相変わらずのスローペースなので、それまではなるべくひっそりとしておくつもり。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ソースの話</title>
