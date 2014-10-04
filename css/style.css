@@ -153,6 +153,11 @@ div.horizontal
     -webkit-text-combine: horizontal-tb;
 }
 
+iframe {
+    height: 100%;
+    border: none;
+}
+
 
 /* livefyre */
 #livefyre-comments
