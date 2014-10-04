@@ -20,7 +20,7 @@
       <description>&lt;p&gt;完成系が見えると放置してしまう悪い癖‥‥。
 ツイッターでSHIORI構文の話が出てたので、久々に引っ張り出す。&lt;/p&gt;
 &lt;div class=&quot;horizontal&quot; style=&quot;position: relative; height: 100%;&quot;&gt;
-&lt;iframe style=&quot;bottom: 0px;&quot; id=&quot;pasta&quot; src=&quot;/pasta/app/design.html&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;height:640px; bottom: 0px;&quot; id=&quot;pasta&quot; src=&quot;/pasta/app/design.html&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;日本語縦書きは、か細い感じの少女にこそふさわしい。&lt;/p&gt;
 </description>
