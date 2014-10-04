@@ -143,6 +143,17 @@ img
 }
 
 
+div.horizontal
+{
+    writing-mode: lr-tb; /* IE独自仕様 */
+    writing-mode: horizontal-tb;
+    -moz-writing-mode: vhorizontal-tb;
+    -o-writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -webkit-text-combine: horizontal-tb;
+}
+
+
 /* livefyre */
 #livefyre-comments
 {
