@@ -1,36 +1,43 @@
 ﻿
 <?xml version="1.0"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-    <title>Feed Name</title>
-    <link>http://domain/</link>
-    <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
-    <description></description>
-    <language>en-au</language>
-    <pubDate>土, 04 10 2014 00:00:00 +0900</pubDate>
-    <lastBuildDate>土, 04 10 2014 00:00:00 +0900</lastBuildDate>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Feed Name</title>
+  <link href="http://domain/"/>
+  <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
+  <updated>2014-10-04T00:00:00+09:00</updated>
+  <id>http://domain/</id>
+  <author>
+    <name>Author</name>
+    <email>Email</email>
+  </author>
 
-    
-    <item>
-      <title>久々にパスタさんを引っ張り出す。</title>
-      <link>http://domain/2014/10/04/pasta.html</link>
-      <pubDate>土, 04 10 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/10/04/pasta.html</guid>
-      <description>&lt;p&gt;完成系が見えると放置してしまう悪い癖‥‥。
+  
+  <entry>
+    <id>http://domain//2014/10/04/pasta.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/10/04/pasta.html"/>
+    <title>久々にパスタさんを引っ張り出す。</title>
+    <updated>2014-10-04T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;完成系が見えると放置してしまう悪い癖‥‥。
 ツイッターでSHIORI構文の話が出てたので、久々に引っ張り出す。&lt;/p&gt;
 &lt;iframe id=&quot;pasta&quot; src=&quot;/pasta/app/design.html&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;日本語縦書きは、か細い感じの少女にこそふさわしい。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>日付が出ていなかった‥‥</title>
-      <link>http://domain/2014/09/18/date.html</link>
-      <pubDate>木, 18 9 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/09/18/date.html</guid>
-      <description>&lt;p&gt;日付の表示が出てなかったので色々いじりました。&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/09/18/date.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/09/18/date.html"/>
+    <title>日付が出ていなかった‥‥</title>
+    <updated>2014-09-18T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;日付の表示が出てなかったので色々いじりました。&lt;/p&gt;
 &lt;p&gt;ちなみに、このサイトのジェネレータには「&lt;a href=&quot;https://github.com/code52/pretzel&quot;&gt;Pretzel&lt;/a&gt;」
 というソフトの&lt;a href=&quot;https://github.com/ekicyou/pretzel&quot;&gt;自分改良版&lt;/a&gt;を使ってます。&lt;/p&gt;
 &lt;p&gt;少しいじったらすぐ落ちるようになってしまってるのを放置してますので、
@@ -39,16 +46,19 @@
 &lt;p&gt;最終的には独自の文書管理構造を作りたいと思ってるので、多分どこかでごっそりソフトを
 入れ替えます。そのタイミングで色々やりたいなあとは思ってますが、
 相変わらずのスローペースなので、それまではなるべくひっそりとしておくつもり。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ソースの話</title>
-      <link>http://domain/2014/09/17/src.html</link>
-      <pubDate>水, 17 9 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/09/17/src.html</guid>
-      <description>&lt;p&gt;関西ならやはりおたふくでしょうか、
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/09/17/src.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/09/17/src.html"/>
+    <title>ソースの話</title>
+    <updated>2014-09-17T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;関西ならやはりおたふくでしょうか、
 地元にドリームソースもありますのでそちらも応援したいところですが。&lt;/p&gt;
 &lt;p&gt;そうではなく‥‥。ソースコードの表示設定をしてみます。&lt;/p&gt;
 &lt;pre class=&quot;prettyprint linenums&quot;&gt;
@@ -71,16 +81,19 @@ namespace HelloWorld
 &lt;/pre&gt;
 &lt;p&gt;縦書きサイトでソースコード表示を突っ込む無理やり感。&lt;/p&gt;
 &lt;p&gt;だが、それがいい。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>怖いユメ</title>
-      <link>http://domain/2014/09/16/dream.html</link>
-      <pubDate>火, 16 9 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/09/16/dream.html</guid>
-      <description>&lt;p&gt;最近、ユメ見てますか？夜見る方のユメ。&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/09/16/dream.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/09/16/dream.html"/>
+    <title>怖いユメ</title>
+    <updated>2014-09-16T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;最近、ユメ見てますか？夜見る方のユメ。&lt;/p&gt;
 &lt;p&gt;調子が悪いと夢を見なくなる（というか多分覚えてられなくなる）方なんですが、
 最近はそこそこ夢を覚えてます。まー10分もしたら忘れますが。
 途中で目覚めて、「あ、この続きみたいなーっ」て感じで連載物とか見たりします。&lt;/p&gt;
@@ -95,52 +108,59 @@ namespace HelloWorld
 &lt;p&gt;それに気が付いたらちょっと安心して、教訓にしよう、と思いつつ再び眠りに落ちました。&lt;/p&gt;
 &lt;p&gt;まあ、何にびっくりしたのかはさっぱり思い出せないのですけどね。
 そんなもんです。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>車輪の再発明の再発明の再発明の‥‥</title>
-      <link>http://domain/2014/09/11/remakemake.html</link>
-      <pubDate>木, 11 9 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/09/11/remakemake.html</guid>
-      <description>&lt;p&gt;ちょーださいけど最低限コメントが打てる設定に。&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/09/11/remakemake.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/09/11/remakemake.html"/>
+    <title>車輪の再発明の再発明の再発明の‥‥</title>
+    <updated>2014-09-11T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;ちょーださいけど最低限コメントが打てる設定に。&lt;/p&gt;
 &lt;p&gt;あと、内部でMarkdownを使ってるんですが、
 微妙に気に入らないフォーマットなので少し手直ししようと手を加えてたら、
 いつの間にかpegに手を出している始末。&lt;/p&gt;
 &lt;p&gt;‥‥あれー？&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>事始め</title>
-      <link>http://domain/2014/08/29/restart.html</link>
-      <pubDate>金, 29 8 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/08/29/restart.html</guid>
-      <description>&lt;p&gt;俺、このサイトが完成したら結婚するんだ‥‥（いろいろ脂肪フラグ）&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/08/29/restart.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/08/29/restart.html"/>
+    <title>事始め</title>
+    <updated>2014-08-29T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;俺、このサイトが完成したら結婚するんだ‥‥（いろいろ脂肪フラグ）&lt;/p&gt;
 &lt;p&gt;で、どんな残骸を残そうかということですが。&lt;/p&gt;
 &lt;p&gt;自分は職業SEで、以前はプログラム技術を中心にサイトを更新してました。けれど今、色々と興味が抜け落ちてきてるのです。プログラム技術は今は手段だし、それなりのゲーム・アニメオタクだったけど、コンテンツ消化のペースもどんどん落ちてる。&lt;/p&gt;
 &lt;p&gt;実は理由ははっきりしてて。自分は、自分が一番好きなコンテンツが、&lt;em&gt;自分で書いた物語&lt;/em&gt;だということに気が付いてしまったのでした。&lt;/p&gt;
 &lt;p&gt;私事だけど、2年ほど前に一気に趣味小説を書き上げたことがあります。その時の高揚感が未だ忘れられない。自分の要求を満たすものが自分の脳内から生まれ続ける時の脳内麻薬の連続放出を体験した結果、他のどんな娯楽も、ただの時間つぶしにしか思えない脳になってしまったのだ。&lt;/p&gt;
 &lt;p&gt;だからこのブログは「自分の物語を世界に残す」ためのあらゆる工夫をテーマに、のらりくらりと更新していきたいと思ってます。Webでの表現や、データの作り方、残し方とか。サイト自身が検討の場なのでものすごく落ち着きがないところになりそうだけど、あとまーそうは言いつつ脱線もいろいろしちゃうと思うけど、その辺はご容赦願いたい。&lt;/p&gt;
 &lt;p&gt;さて、40越え独身の枯れてきた心に、どれだけの残骸が残っているのか？ま、場末の居酒屋で繰り広げられる雑多な会話の一つ程度に楽しんでいただければ幸いです。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>サイトの立ち上げテストでした</title>
-      <link>http://domain/2014/03/10/test.html</link>
-      <pubDate>月, 10 3 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/03/10/test.html</guid>
-      <description>&lt;p&gt;まずは実験的にサイトを作ってみました。&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/03/10/test.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/03/10/test.html"/>
+    <title>サイトの立ち上げテストでした</title>
+    <updated>2014-03-10T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;まずは実験的にサイトを作ってみました。&lt;/p&gt;
 &lt;p&gt;というか、サイト自体は1年以上前からほぼ準備完了してたけど、
 そっから絶賛放置だったわけで‥‥。&lt;/p&gt;
 &lt;p&gt;まあ、ゆっくりやってみます。&lt;/p&gt;
-</description>
-    </item>
-    
-
-  </channel>
-</rss>
+</content>
+  </entry>
+  
+</feed>
