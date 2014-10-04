@@ -15,7 +15,7 @@
   <entry>
     <id>http://domain//2014/10/04/pasta.html</id>
     <link type="text/html" rel="alternate" href="http://domain//2014/10/04/pasta.html"/>
-    <title>久々にパスタさんを引っ張り出す。</title>
+    <title>久々にぱすたさんを引っ張り出す。</title>
     <updated>2014-10-04T00:00:00+09:00</updated>
     <author>
       <name>Author</name>
@@ -23,10 +23,13 @@
     </author>
     <content type="html">&lt;p&gt;完成系が見えると放置してしまう悪い癖‥‥。
 ツイッターでSHIORI構文の話が出てたので、久々に引っ張り出す。&lt;/p&gt;
-&lt;div class=&quot;horizontal&quot; style=&quot;position: relative; height: 100%;&quot;&gt;
-&lt;iframe style=&quot;width:600px; height:100%; bottom: 0px;&quot; id=&quot;pasta&quot; src=&quot;/pasta/app/design.html&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;p&gt;日本語縦書きは、か細い感じの少女にこそふさわしい。&lt;/p&gt;
+&lt;p&gt;淡い日本語縦書きは、か細い少女にこそ、ふさわしいのだ。&lt;/p&gt;
+&lt;p&gt;ぱすたさんの構文は、日本語ローマ字モードで楽々入力というコンセプトの元、
+「＠おはよう　」（最後は全角空白）であらゆる特殊モードを呼び出そうという
+チョー手抜きパーサ実装により実現されているのだ。&lt;/p&gt;
+&lt;p&gt;「&lt;a href=&quot;/pasta/app/index.html&quot;&gt;ぱすたさん：文法チェックモード&lt;/a&gt;」&lt;/p&gt;
+&lt;p&gt;てか、いつの間にかGoogle Chromeで発生してた文字かすれが軽減されている！
+技術は日々進歩してるんだなー。多分androidでもふつーに表示される模様。&lt;/p&gt;
 </content>
   </entry>
   

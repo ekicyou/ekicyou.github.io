@@ -107,13 +107,26 @@ li
 
 #pasta
 {
-
-
+    writing-mode: lr-tb; /* IE独自仕様 */
+    writing-mode: horizontal-tb;
+    -moz-writing-mode: vhorizontal-tb;
+    -o-writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -webkit-text-combine: horizontal-tb;
+    background-color: transparent;
+    border: 0;
+    width: 320px;
+    height: 420px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 10;
 }
 
 
 #content
 {
+
     max-height: 42em;
 }
 
