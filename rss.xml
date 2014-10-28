@@ -7,9 +7,38 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>土, 04 10 2014 00:00:00 +0900</pubDate>
-    <lastBuildDate>土, 04 10 2014 00:00:00 +0900</lastBuildDate>
+    <pubDate>火, 28 10 2014 00:00:00 +0900</pubDate>
+    <lastBuildDate>火, 28 10 2014 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>宇宙の外側の話</title>
+      <link>http://domain/2014/10/28/space.html</link>
+      <pubDate>火, 28 10 2014 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2014/10/28/space.html</guid>
+      <description>&lt;p&gt;よし、ちょっとけむに巻く話をしようか、今の宇宙が始まる前の話だ。
+今の宇宙が始まったときインフレーション＆ビックバンという空間爆発があったそうな。&lt;/p&gt;
+&lt;p&gt;まあ多分、その前にも「何か」があったんだろうな。その何かは吹き飛んだっぽいな。
+‥‥いやいや、本当に吹き飛んだのか？という疑惑。&lt;/p&gt;
+&lt;p&gt;「空間がものすごい勢いで膨張した」のは判る。
+んでも、空間ごと膨張したら、その膨張を空間にいる存在は気が付くことができるのか？&lt;/p&gt;
+&lt;p&gt;素粒子ほどの大きさが数百億光年に広がったんだからもうワケワカメ（死語）に
+決まってる、と言いたいところだけんど。&lt;/p&gt;
+&lt;p&gt;多分、「旧宇宙」にいた存在は、空間膨張と同時に時間の流れも極端に遅くなったはずなのだ。
+彼らが一瞬に感じる時間が、「新宇宙」の我々にとっては数百億年になってるのだ。&lt;/p&gt;
+&lt;p&gt;つまるところ、「空間が無限に大きくなる」現象って、旧宇宙視点で相対的にみると
+「ある領域の中に、無限に小さな何かが生まれる」のと同じともいえる。&lt;/p&gt;
+&lt;p&gt;あれ、なんかそんな存在知ってるな？「ブラックホール」だ。
+空間が無限小の領域に落ち込むとは何か？1点に落ち込むらしいけど、
+その1点の「サイズ」は無限小なのか？&lt;/p&gt;
+&lt;p&gt;空間が吸い込まれるということは、吸い込まれた空間はどんどん大きくなる、
+と解釈できなくもない。&lt;/p&gt;
+&lt;p&gt;今の宇宙は旧5次元宇宙に発生したブラックホールの内部だ、って説もあるそうな。
+結局のところ全ては相対的。時間の流れが遅くなれば、遅くなるだけ空間が大きくなる。
+我々の宇宙の「無限の時間」は、5次元宇宙の存在にとって「一瞬」の出来事なのかもしれない。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>久々にぱすたさんを引っ張り出す。</title>
@@ -23,61 +52,11 @@
 &lt;p&gt;ぱすたさんの構文は、日本語ローマ字モードで楽々入力というコンセプトの元、
 「＠おはよう　」（最後は全角空白）であらゆる特殊モードを呼び出そうという
 チョー手抜きパーサ実装により実現されているのだ。&lt;/p&gt;
-&lt;p&gt;「&lt;a href=&quot;/pasta/app/design.html&quot;&gt;ぱすたさん：文法チェックモード&lt;/a&gt;」&lt;/p&gt;
+&lt;p&gt;「&lt;a href=&quot;http://ekicyou.github.io/pasta/app/design.html&quot;&gt;ぱすたさん：文法チェックモード&lt;/a&gt;」&lt;/p&gt;
 &lt;p&gt;ただ、Google Chrome系だとまだ文字描画が不自然。
 貼り付け元のコンテンツが単純ならかすれないんですが、
 どーいう条件でおかしくなるのかちょっとわからないのが残念でありんす。&lt;/p&gt;
 &lt;p&gt;やっぱ縦書き制御が一番ちゃんとしてるのは現状IE11ですなー。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>日付が出ていなかった‥‥</title>
-      <link>http://domain/2014/09/18/date.html</link>
-      <pubDate>木, 18 9 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/09/18/date.html</guid>
-      <description>&lt;p&gt;日付の表示が出てなかったので色々いじりました。&lt;/p&gt;
-&lt;p&gt;ちなみに、このサイトのジェネレータには「&lt;a href=&quot;https://github.com/code52/pretzel&quot;&gt;Pretzel&lt;/a&gt;」
-というソフトの&lt;a href=&quot;https://github.com/ekicyou/pretzel&quot;&gt;自分改良版&lt;/a&gt;を使ってます。&lt;/p&gt;
-&lt;p&gt;少しいじったらすぐ落ちるようになってしまってるのを放置してますので、
-とても他人に使ってくださいとは言えませんが、ソースコードがどうしても見たい人は
-冷やかしてください‥‥。&lt;/p&gt;
-&lt;p&gt;最終的には独自の文書管理構造を作りたいと思ってるので、多分どこかでごっそりソフトを
-入れ替えます。そのタイミングで色々やりたいなあとは思ってますが、
-相変わらずのスローペースなので、それまではなるべくひっそりとしておくつもり。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ソースの話</title>
-      <link>http://domain/2014/09/17/src.html</link>
-      <pubDate>水, 17 9 2014 00:00:00 +0900</pubDate>
-      <author>Author</author>
-      <guid>http://domain/2014/09/17/src.html</guid>
-      <description>&lt;p&gt;関西ならやはりおたふくでしょうか、
-地元にドリームソースもありますのでそちらも応援したいところですが。&lt;/p&gt;
-&lt;p&gt;そうではなく‥‥。ソースコードの表示設定をしてみます。&lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-// A Hello World! program in C#.
-using System;
-namespace HelloWorld
-{
-    class Hello 
-    {
-        static void Main() 
-        {
-            Console.WriteLine(&quot;Hello World!&quot;);
-
-            // Keep the console window open in debug mode.
-            Console.WriteLine(&quot;Press any key to exit.&quot;);
-            Console.ReadKey();
-        }
-    }
-}
-&lt;/pre&gt;
-&lt;p&gt;縦書きサイトでソースコード表示を突っ込む無理やり感。&lt;/p&gt;
-&lt;p&gt;だが、それがいい。&lt;/p&gt;
 </description>
     </item>
     

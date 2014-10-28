@@ -16,9 +16,6 @@ body
     -webkit-text-combine-horizontal: digits 2;
 
     font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-/*
-    font-family:Times New Roman , "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", Hiragino Mincho ProN , "MSP明朝","MS PMincho","MS 明朝",serif;
-*/
     margin: 0px;
     background-image:url("/img/ruins.jpg");
     background-repeat: no-repeat;
@@ -107,26 +104,13 @@ li
 
 #pasta
 {
-    writing-mode: lr-tb; /* IE独自仕様 */
-    writing-mode: horizontal-tb;
-    -moz-writing-mode: vhorizontal-tb;
-    -o-writing-mode: horizontal-tb;
-    -webkit-writing-mode: horizontal-tb;
-    -webkit-text-combine: horizontal-tb;
-    background-color: transparent;
-    border: 0;
-    width: 320px;
-    height: 420px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    z-index: 10;
+
+
 }
 
 
 #content
 {
-    margin-right:200px;
     max-height: 42em;
 }
 
@@ -153,22 +137,6 @@ img
 .idea h1, .entry h1
 {
     margin-bottom: 5px;
-}
-
-
-div.horizontal
-{
-    writing-mode: lr-tb; /* IE独自仕様 */
-    writing-mode: horizontal-tb;
-    -moz-writing-mode: vhorizontal-tb;
-    -o-writing-mode: horizontal-tb;
-    -webkit-writing-mode: horizontal-tb;
-    -webkit-text-combine: horizontal-tb;
-}
-
-iframe {
-    height: 100%;
-    border: none;
 }
 
 
@@ -199,22 +167,4 @@ div.fyre-hovercard
     -o-writing-mode: horizontal-tb;
     -webkit-writing-mode: horizontal-tb;
     -webkit-text-combine: horizontal-tb;
-}
-
-
-/* prettify.js */
-pre.prettyprint
-{
-    writing-mode: lr-tb; /* IE独自仕様 */
-    writing-mode: horizontal-tb;
-    -moz-writing-mode: vhorizontal-tb;
-    -o-writing-mode: horizontal-tb;
-    -webkit-writing-mode: horizontal-tb;
-    -webkit-text-combine: horizontal-tb;
-    width: 38em;
-}
-
-pre.prettyprint li
-{
-    list-style-type: decimal;
 }
