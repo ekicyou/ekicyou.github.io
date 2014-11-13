@@ -1,0 +1,2 @@
+setlocal
+git add --all
