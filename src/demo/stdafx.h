@@ -22,5 +22,8 @@
 #include <memory.h>
 #include <tchar.h>
 
+// stl ヘッダー ファイル
+#include <memory>
+
 
 // EOF
