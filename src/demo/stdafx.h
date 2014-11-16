@@ -25,5 +25,8 @@
 // stl ヘッダー ファイル
 #include <memory>
 
+// HTML関係インポート
+#include "import.h"
+
 
 // EOF

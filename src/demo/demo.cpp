@@ -3,6 +3,8 @@
 
 #include "stdafx.h"
 #include "demo.h"
+#include "stdmethod.h"
+
 #include <sstream>
 #include <fstream>
 #include <codecvt>
@@ -10,27 +12,16 @@
 #include <dxgi1_3.h>
 #include <d2d1_2helper.h>
 #include <dcomp.h>
+
 #pragma comment(lib, "dcomp")
 using namespace Microsoft::WRL;
 
-// HRESULT エラーの例外への変換
-struct ComException
-{
-    HRESULT result;
-    ComException(HRESULT const value) :
-        result(value)
-    {}
-};
-
-inline void HR(HRESULT const result)
-{
-    if (S_OK != result)
-    {
-        throw ComException(result);
-    }
-}
 
 
+
+
+
+// utf8ファイルを読み込んでwstringに取り込む。
 std::wstring readFile(LPCTSTR filename)
 {
     std::wifstream wif(filename);

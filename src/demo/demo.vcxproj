@@ -92,7 +92,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="demo.h" />
+    <ClInclude Include="import.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="stdmethod.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +105,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\README.md" />
     <None Include="demo.html">
       <DeploymentContent>true</DeploymentContent>
     </None>
