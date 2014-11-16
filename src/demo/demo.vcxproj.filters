@@ -1,38 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ソース ファイル">
+    <Filter Include="window">
+      <UniqueIdentifier>{b0285e1c-b371-458b-8d9e-db94c9f67398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル">
+    <Filter Include="etc">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="ie">
+      <UniqueIdentifier>{fc3c6456-c363-47ff-a6d3-6526336a4b36}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>etc</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="demo.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>etc</Filter>
     </ClInclude>
     <ClInclude Include="import.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>etc</Filter>
     </ClInclude>
     <ClInclude Include="stdmethod.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>etc</Filter>
+    </ClInclude>
+    <ClInclude Include="d2dwindow.h">
+      <Filter>window</Filter>
+    </ClInclude>
+    <ClInclude Include="demo.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="ieutil.h">
+      <Filter>ie</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="demo.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="d2dwindow.cpp">
+      <Filter>window</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ieutil.cpp">
+      <Filter>ie</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
