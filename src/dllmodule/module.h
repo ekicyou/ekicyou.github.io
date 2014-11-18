@@ -11,6 +11,14 @@ public:
 
 public:
     HINSTANCE hinst;
+    UINT cp = CP_UTF8;
+
+public:
+    // SHIORI API
+
+    BOOL Module::unload(void);
+    BOOL Module::load(HGLOBAL hGlobal_loaddir, long loaddir_len);
+    HGLOBAL Module::request(HGLOBAL hGlobal_request, long& len);
 
 };
 
