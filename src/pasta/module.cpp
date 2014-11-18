@@ -11,7 +11,7 @@ Module::~Module()
     unload();
 }
 
-//-------------------------------------------------------------
+//-----------------------------------------------------------------------------
 // Ž©“®ŠJ•ú
 class AutoGrobal
 {
@@ -25,9 +25,7 @@ public:
     }
 };
 
-//-------------------------------------------------------------
-
-
+//-----------------------------------------------------------------------------
 // CP to CComBSTR •¶Žš—ñ•ÏŠ·
 inline CComBSTR g2CComBSTR(HGLOBAL hg, long bytes, UINT cp){
     USES_CONVERSION;
@@ -38,14 +36,8 @@ inline CComBSTR g2CComBSTR(HGLOBAL hg, long bytes, UINT cp){
 }
 
 
-
-/* ----------------------------------------------------------------------------
-* SHIORI API ŽÀ‘•
-*/
-
-/* ----------------------------------------------------------------------------
-* žx Method / unload
-*/
+//-----------------------------------------------------------------------------
+// SHIORI unload
 BOOL Module::unload(void)
 {
     try{
@@ -56,9 +48,8 @@ BOOL Module::unload(void)
     }
 }
 
-/* ----------------------------------------------------------------------------
-* žx Method / load
-*/
+//-----------------------------------------------------------------------------
+// SHIORI load
 BOOL Module::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
 {
     AutoGrobal ag1(hGlobal_loaddir);
@@ -71,9 +62,8 @@ BOOL Module::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
     }
 }
 
-/* ----------------------------------------------------------------------------
-* žx Method / request
-*/
+//-----------------------------------------------------------------------------
+// SHIORI request
 HGLOBAL Module::request(HGLOBAL hGlobal_request, long& len)
 {
     AutoGrobal ag1(hGlobal_request);
