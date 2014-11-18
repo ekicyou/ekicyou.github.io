@@ -2,7 +2,6 @@
 #include "module.h"
 #include <atlstr.h>
 
-
 Module::Module()
 {
 }
@@ -26,9 +25,18 @@ public:
     }
 };
 
-#define A2CComBSTR_CP(lpa, nChars, cp) (CComBSTR(A2W_CP_EX(lpa, nChars, cp)))
+//-------------------------------------------------------------
 
-#define G2CComBSTR_CP(hg, nChars, cp) A2CComBSTR_CP((LPCSTR)hg, nChars, cp)
+
+// CP to CComBSTR •¶Žš—ñ•ÏŠ·
+inline CComBSTR g2CComBSTR(HGLOBAL hg, long bytes, UINT cp){
+    USES_CONVERSION;
+    auto str = CAtlStringA((LPCSTR)hg, bytes);
+    auto wide = A2CW_CP(str, cp);
+    auto bstr = CComBSTR(wide);
+    return bstr;
+}
+
 
 
 /* ----------------------------------------------------------------------------
@@ -53,9 +61,8 @@ BOOL Module::unload(void)
 */
 BOOL Module::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
 {
-    USES_CONVERSION_EX;
     AutoGrobal ag1(hGlobal_loaddir);
-    auto loaddir = G2CComBSTR_CP(hGlobal_loaddir, loaddir_len, cp);
+    auto loaddir = g2CComBSTR(hGlobal_loaddir, loaddir_len, CP_ACP);
     try{
         return true;
     }
@@ -69,9 +76,8 @@ BOOL Module::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
 */
 HGLOBAL Module::request(HGLOBAL hGlobal_request, long& len)
 {
-    USES_CONVERSION_EX;
     AutoGrobal ag1(hGlobal_request);
-    auto req = G2CComBSTR_CP(hGlobal_request, len, cp);
+    auto req = g2CComBSTR(hGlobal_request, len, cp);
 
     try{
 
