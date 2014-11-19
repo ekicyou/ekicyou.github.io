@@ -28,6 +28,12 @@
     <ClInclude Include="iehostwindow.h">
       <Filter>ie</Filter>
     </ClInclude>
+    <ClInclude Include="interfaces.h">
+      <Filter>etc</Filter>
+    </ClInclude>
+    <ClInclude Include="shiori_agent.h">
+      <Filter>agent</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -35,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="iehostwindow.cpp">
       <Filter>ie</Filter>
+    </ClCompile>
+    <ClCompile Include="shiori_agent.cpp">
+      <Filter>agent</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
