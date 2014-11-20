@@ -5,10 +5,13 @@
 #include <atlstr.h>
 #include <atlcom.h>
 #include "interfaces.h"
+#include "messages.h"
+#include "iehostwindow.h"
 
-using namespace concurrency;
 
 namespace shiori{
+    using namespace concurrency;
+
     class ATL_NO_VTABLE CShiori
         : public CComObjectRoot
         , public CComCoClass < CShiori, &CLSID_NULL >
@@ -21,6 +24,9 @@ namespace shiori{
     private:
         HINSTANCE hinst;
         CComBSTR loaddir;
+        RequestQueue qreq;
+        ResponseQueue qres;
+        single_assignment<::IEHostWindow*> lazyWin;
 
     public: // IShiori
         HRESULT STDMETHODCALLTYPE load(HINSTANCE hinst, BSTR loaddir)override;

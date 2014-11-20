@@ -3,6 +3,7 @@
 #include <atlbase.h>
 #include <atlstr.h>
 #include <atlcom.h>
+#include "messages.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // IShiori
@@ -23,6 +24,3 @@ public:
 };
 
 typedef CComQIPtr<IShiori> CShioriPtr;
-
-const UINT WM_GETSHIORI = WM_APP + 1;
-const UINT WM_SHIORI_REQUEST = WM_APP + 2;
