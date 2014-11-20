@@ -8,7 +8,6 @@
 #include "messages.h"
 #include "iehostwindow.h"
 
-
 namespace shiori{
     using namespace concurrency;
 

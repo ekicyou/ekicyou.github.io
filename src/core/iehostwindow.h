@@ -14,9 +14,9 @@ class IEHostWindow :
 {
 public:
     static HANDLE CreateThread(
-        HINSTANCE hinst, 
-        BSTR loaddir, 
-        RequestQueue &qreq, 
+        HINSTANCE hinst,
+        BSTR loaddir,
+        RequestQueue &qreq,
         ResponseQueue &qres,
         concurrency::single_assignment<IEHostWindow*> &lazyWin,
         DWORD &thid);
