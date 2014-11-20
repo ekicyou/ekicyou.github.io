@@ -8,7 +8,6 @@
 #include <shlobj.h>
 #include <shlwapi.h>
 
-
 HRESULT	ExecExplorer(IWebBrowser2* pIWebBrowser2, DWORD nCmdID, DWORD nCmdExecOpt, VARIANTARG *pvaIn, VARIANTARG *pvaOut)
 {
     BEGIN_STDMETHOD_CODE;

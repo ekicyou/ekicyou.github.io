@@ -16,11 +16,6 @@
 #pragma comment(lib, "dcomp")
 using namespace Microsoft::WRL;
 
-
-
-
-
-
 // utf8ファイルを読み込んでwstringに取り込む。
 std::wstring readFile(LPCTSTR filename)
 {
@@ -79,7 +74,6 @@ HWND CreateIEWebBrowser(HWND parent, LPCTSTR url)
         HR(doc2->clear());
         HR(doc2->writeln(html));
     }
-
 
     return hwnd;
 }
@@ -141,8 +135,6 @@ void DrawSampleD2D(ComPtr<IDXGIDevice> &dxgiDevice, ComPtr<IDXGISwapChain1> &swa
         0)); // flags
 }
 
-
-
 LRESULT CALLBACK WinProc(HWND h, UINT m, WPARAM w, LPARAM l)
 {
     switch (m)
@@ -166,7 +158,6 @@ int WINAPI WinMain(HINSTANCE hinst, HINSTANCE, LPSTR, int)
     //CreateIEWebBrowser()関数内で実行したらアサートに引っかかった。
     //ということは、WinMain()関数内でないとダメ？？？
 
-    
     memset(&wc, 0, sizeof(wc));
     wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);

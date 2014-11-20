@@ -8,28 +8,23 @@
 
 using namespace concurrency;
 
-class ATL_NO_VTABLE CShioriAgent
-    : public CComObjectRoot
-    , public CComCoClass<CShioriAgent, &CLSID_NULL>
-    , public IShiori
-    , public agent
-{
-public:
-    CShioriAgent();
-    virtual ~CShioriAgent();
+namespace shiori{
+    class ATL_NO_VTABLE CShiori
+        : public CComObjectRoot
+        , public CComCoClass < CShiori, &CLSID_NULL >
+        , public IShiori
+    {
+    public:
+        CShiori();
+        virtual ~CShiori();
 
-private:
-    CComBSTR loaddir;
+    private:
+        HINSTANCE hinst;
+        CComBSTR loaddir;
 
-
-protected:
-    void run() override;
-
-public: // IShiori
-    HRESULT STDMETHODCALLTYPE load   (BSTR loaddir        )override;
-    HRESULT STDMETHODCALLTYPE unload (                    )override;
-    HRESULT STDMETHODCALLTYPE request(BSTR req, BSTR* res) override;
-
-
-};
-
+    public: // IShiori
+        HRESULT STDMETHODCALLTYPE load(HINSTANCE hinst, BSTR loaddir)override;
+        HRESULT STDMETHODCALLTYPE unload()override;
+        HRESULT STDMETHODCALLTYPE request(BSTR req, BSTR* res) override;
+    };
+}

@@ -35,7 +35,6 @@ inline CComBSTR g2CComBSTR(HGLOBAL hg, long bytes, UINT cp){
     return bstr;
 }
 
-
 //-----------------------------------------------------------------------------
 // SHIORI unload
 BOOL Module::unload(void)
@@ -70,11 +69,9 @@ HGLOBAL Module::request(HGLOBAL hGlobal_request, long& len)
     auto req = g2CComBSTR(hGlobal_request, len, cp);
 
     try{
-
         return NULL;
     }
     catch (...){
         return NULL;
     }
 }
-

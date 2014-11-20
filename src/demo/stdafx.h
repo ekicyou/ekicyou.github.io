@@ -28,5 +28,4 @@
 // HTML関係インポート
 #include "import.h"
 
-
 // EOF

@@ -4,51 +4,49 @@
 /////////////////////////////////////////////////////////////////////////////
 // CShioriAgent
 
-CShioriAgent::CShioriAgent()
+shiori::CShiori::CShiori()
 {
 }
 
-CShioriAgent::~CShioriAgent()
+shiori::CShiori::~CShiori()
 {
 }
-
 
 /////////////////////////////////////////////////////////////////////////////
 // IShiori
 
-HRESULT STDMETHODCALLTYPE CShioriAgent::load(BSTR bloaddir){
-    loaddir = bloaddir;
-    auto rc = start();
-
-
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CShioriAgent::unload(){
-
-    return S_OK;
-}
-
-HRESULT STDMETHODCALLTYPE CShioriAgent::request(BSTR breq, BSTR* bres){
-    CComBSTR req(breq), res;
+HRESULT STDMETHODCALLTYPE shiori::CShiori::load(HINSTANCE hinst, BSTR loaddir){
     try{
-
-
-
+        this->hinst = hinst;
+        this->loaddir = loaddir;
+        return S_OK;
     }
     catch (...){
+    }
+    return E_FAIL;
+}
 
+HRESULT STDMETHODCALLTYPE shiori::CShiori::unload(){
+    try{
+        return S_OK;
+    }
+    catch (...){
+    }
+    return E_FAIL;
+}
+
+HRESULT STDMETHODCALLTYPE shiori::CShiori::request(BSTR breq, BSTR* bres){
+    CComBSTR req(breq), res;
+    try{
+        *bres = res.Detach();
+        return S_OK;
+    }
+    catch (...){
     }
 
     *bres = res.Detach();
-    return S_OK;
+    return E_FAIL;
 }
-
 
 /////////////////////////////////////////////////////////////////////////////
 // agent
-
-void CShioriAgent::run(){
-}
-
-

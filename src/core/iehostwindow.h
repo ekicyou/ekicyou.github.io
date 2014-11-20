@@ -5,12 +5,10 @@
 #include <atlwin.h>
 #include <atlcom.h>
 
-
 class IEHostWindow :
-    public CWindowImpl< IEHostWindow, CAxWindow >
+    public CWindowImpl < IEHostWindow, CAxWindow >
 {
 public:
     IEHostWindow();
     ~IEHostWindow();
 };
-

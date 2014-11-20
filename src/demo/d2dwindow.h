@@ -6,9 +6,7 @@
 #include <atlhost.h>
 #include "import.h"
 
-
-class D2DWindow 
+class D2DWindow
     :public CAxWindow
 {
-
 };

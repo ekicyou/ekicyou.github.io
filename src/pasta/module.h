@@ -3,7 +3,7 @@
 #include <atlbase.h>
 #include <memory>
 
-class Module :public CAtlDllModuleT< Module >
+class Module :public CAtlDllModuleT < Module >
 {
 public:
     Module();
@@ -19,10 +19,8 @@ public:
     BOOL Module::unload(void);
     BOOL Module::load(HGLOBAL hGlobal_loaddir, long loaddir_len);
     HGLOBAL Module::request(HGLOBAL hGlobal_request, long& len);
-
 };
 
 extern std::unique_ptr<Module> module;
-
 
 // EOF

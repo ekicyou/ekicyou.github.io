@@ -7,7 +7,6 @@
 #include "shiori.h"
 #include "module.h"
 
-
 /* ----------------------------------------------------------------------------
 * žx Method / unload
 */
@@ -31,6 +30,5 @@ SHIORI_API HGLOBAL __cdecl request(HGLOBAL hGlobal_request, long& len)
 {
     return module->request(hGlobal_request, len);
 }
-
 
 // EOF
