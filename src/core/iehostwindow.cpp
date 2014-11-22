@@ -28,22 +28,29 @@ static DWORD WINAPI IEThread(LPVOID data){
     CAutoPtr<ThreadParam> args((ThreadParam*)data);
 
     // window作成
-    auto win = new IEHostWindow(
-        args->hinst,
-        args->loaddir,
-        args->qreq,
-        args->qres);
+    IEHostWindow win;
+    win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
 
-    // 作成したWindowを登録する
-    concurrency::send(args->lazyWin, win);
+
+
+    auto hwnd = win.Create(NULL, CWindow::rcDefault,
+        _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
+
+    // 作成したWindowを通知する
+    concurrency::send(args->lazyWin, &win);
 
     // メッセージループ
+    MSG msg;
+    while (GetMessage(&msg, NULL, 0, 0) > 0){
+        TranslateMessage(&msg);
+        DispatchMessage(&msg);
+    }
 
     return 0L;
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// 初期化
+// 初期化・解放
 
 HANDLE IEHostWindow::CreateThread(
     HINSTANCE hinst,
@@ -53,20 +60,31 @@ HANDLE IEHostWindow::CreateThread(
     concurrency::single_assignment<IEHostWindow*> &lazyWin,
     DWORD &thid){
     auto args = new ThreadParam(hinst, loaddir, qreq, qres, lazyWin);
-    return CRTThreadTraits::CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)IEThread, (void*)args, 0, &thid);
+    return Win32ThreadTraits::CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)IEThread, (void*)args, 0, &thid);
 }
 
-IEHostWindow::IEHostWindow(HINSTANCE hinst, BSTR loaddir, RequestQueue &qreq, ResponseQueue &qres)
-    : hinst(hinst)
-    , loaddir(loaddir)
-    , qreq(qreq)
-    , qres(qres)
-{
+void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres){
+    this->hinst = hinst;
+    this->loaddir = loaddir;
+    this->qreq = &qreq;
+    this->qres = &qres;
+}
+
+IEHostWindow::IEHostWindow(){
+}
+
+IEHostWindow::~IEHostWindow(){
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// 解放
+// WM_DESTROY
+LRESULT IEHostWindow::OnDestroy(){
+    ::PostQuitMessage(1);
+    return S_OK;
+}
 
-IEHostWindow::~IEHostWindow()
-{
+// WM_SHIORI_REQUEST
+LRESULT IEHostWindow::OnShioriRequest(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled){
+
+    return S_OK;
 }

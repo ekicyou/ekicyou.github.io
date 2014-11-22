@@ -24,3 +24,9 @@ public:
 };
 
 typedef CComQIPtr<IShiori> CShioriPtr;
+
+namespace shiori{
+    IShiori* CreateShiori();
+}
+
+//EOF

@@ -41,11 +41,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)pasta\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)pasta\;$(IncludePath);C:\wintools\dev\WTL\Include;</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)pasta\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)pasta\;$(IncludePath);C:\wintools\dev\WTL\Include;</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

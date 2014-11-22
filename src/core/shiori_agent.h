@@ -12,10 +12,15 @@ namespace shiori{
     using namespace concurrency;
 
     class ATL_NO_VTABLE CShiori
-        : public CComObjectRoot
+        : public CComObjectRootEx<CComSingleThreadModel>
         , public CComCoClass < CShiori, &CLSID_NULL >
         , public IShiori
     {
+    public:
+        BEGIN_COM_MAP(CShiori)
+            COM_INTERFACE_ENTRY(IShiori)
+        END_COM_MAP()
+
     public:
         CShiori();
         virtual ~CShiori();
@@ -25,7 +30,11 @@ namespace shiori{
         CComBSTR loaddir;
         RequestQueue qreq;
         ResponseQueue qres;
-        single_assignment<::IEHostWindow*> lazyWin;
+
+        // IEWindowŠÖŒW
+        single_assignment<::IEHostWindow*> ieWin;
+        CHandle ieThread;
+        DWORD ieThid;
 
     public: // IShiori
         HRESULT STDMETHODCALLTYPE load(HINSTANCE hinst, BSTR loaddir)override;

@@ -34,7 +34,9 @@
     <ClInclude Include="shiori_agent.h">
       <Filter>agent</Filter>
     </ClInclude>
-    <ClInclude Include="messages.h" />
+    <ClInclude Include="messages.h">
+      <Filter>etc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
