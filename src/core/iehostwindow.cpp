@@ -24,9 +24,8 @@ struct ThreadParam{
 /////////////////////////////////////////////////////////////////////////////
 // IE Thread
 
-
 static DWORD WINAPI IEThread(LPVOID data){
-    CAtlAutoThreadModule module;    // 別スレッドでATLを動かすために必要
+    CAtlAutoThreadModule module;    // 魔法、スレッドに関するATLの初期化をしてくれる
     CAutoPtr<ThreadParam> args((ThreadParam*)data);
 
     // window作成
@@ -91,5 +90,9 @@ LRESULT IEHostWindow::OnDestroy(){
 // WM_SHIORI_REQUEST
 LRESULT IEHostWindow::OnShioriRequest(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled){
 
-    return S_OK;
+    while (true){
+        shiori::Request req;
+        if (!concurrency::try_receive(qreq, req)) return S_OK;
+    }
+
 }

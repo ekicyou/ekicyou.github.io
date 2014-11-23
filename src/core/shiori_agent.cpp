@@ -41,8 +41,10 @@ HRESULT STDMETHODCALLTYPE shiori::CShiori::load(HINSTANCE hinst, BSTR loaddir){
 
 HRESULT STDMETHODCALLTYPE shiori::CShiori::unload(){
     try{
+        // IEWindowのクローズ
         auto win = ieWin.value();
         win->SendMessageW(WM_CLOSE);
+        // クローズ（スレッド終了）を待つ
         DWORD code;
         ::GetExitCodeThread(ieThread, &code);
         return S_OK;
