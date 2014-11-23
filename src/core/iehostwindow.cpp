@@ -24,15 +24,14 @@ struct ThreadParam{
 /////////////////////////////////////////////////////////////////////////////
 // IE Thread
 
+
 static DWORD WINAPI IEThread(LPVOID data){
+    CAtlAutoThreadModule module;    // 別スレッドでATLを動かすために必要
     CAutoPtr<ThreadParam> args((ThreadParam*)data);
 
     // window作成
     IEHostWindow win;
     win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
-
-
-
     auto hwnd = win.Create(NULL, CWindow::rcDefault,
         _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
 
@@ -77,6 +76,12 @@ IEHostWindow::~IEHostWindow(){
 }
 
 /////////////////////////////////////////////////////////////////////////////
+// WM_CREATE
+LRESULT IEHostWindow::OnCreate(LPCREATESTRUCT lpCreateStruct){
+    return S_OK;
+}
+
+
 // WM_DESTROY
 LRESULT IEHostWindow::OnDestroy(){
     ::PostQuitMessage(1);
