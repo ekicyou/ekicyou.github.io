@@ -34,6 +34,27 @@ static DWORD WINAPI IEThread(LPVOID data){
     auto hwnd = win.Create(NULL, CWindow::rcDefault,
         _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
 
+    // IEコントロールの作成
+    /*
+    const auto wndClass = CAxWindow::GetWndClassName();
+    const auto winStyle = WS_CHILD | WS_TABSTOP | WS_VISIBLE;
+    //const auto exStyle = WS_EX_NOREDIRECTIONBITMAP;
+    const auto exStyle = WS_EX_TRANSPARENT;
+
+    auto hIE = CreateWindowEx(exStyle, wndClass, _T("Shell.Explorer.2"), winStyle,
+    rect.left, rect.top,
+    abs(rect.right - rect.left),
+    abs(rect.bottom - rect.top),
+    hwnd, 0,
+    (HINSTANCE)GetWindowLong(hwnd, GWL_HINSTANCE),
+    0
+    );
+    */
+    RECT ieRect;
+
+    auto hIE = win.CreateControl(_T("Shell.Explorer.2"), NULL, NULL);
+
+
     // 作成したWindowを通知する
     concurrency::send(args->lazyWin, &win);
 
