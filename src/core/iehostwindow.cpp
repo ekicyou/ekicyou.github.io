@@ -25,26 +25,30 @@ struct ThreadParam{
 /////////////////////////////////////////////////////////////////////////////
 // IE Thread
 
-static DWORD WINAPI IEThread(LPVOID data){
+DWORD WINAPI IEHostWindow::ThreadProc(LPVOID data){
     CAtlAutoThreadModule module;    // 魔法、スレッドに関するATLの初期化をしてくれる
-    CAutoPtr<ThreadParam> args((ThreadParam*)data);
-
-    // window作成
     IEHostWindow win;
-    win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
-    auto hwin = win.Create(NULL, CWindow::rcDefault,
-        _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
-
-    // IEコントロールの作成
     CComQIPtr<IWebBrowser2>	web2;
     {
+        CAutoPtr<ThreadParam> args((ThreadParam*)data);
+        win.hinst = args->hinst;
+        win.loaddir = args->loaddir;
+        win.qreq = &args->qreq;
+        win.qres = &args->qres;
+
+        // window作成
+        win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
+        auto hwin = win.Create(NULL, CWindow::rcDefault,
+            _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
+
+        // IEコントロールの作成
         CComPtr<IUnknown> unknown;
         HR(win.CreateControlEx(_T("Shell.Explorer.2"), NULL, NULL, &unknown, IID_NULL, NULL));
         web2 = unknown;
-    }
 
-    // 作成したWindowを通知する
-    concurrency::send(args->lazyWin, &win);
+        // 作成したWindowを通知する
+        concurrency::send(args->lazyWin, &win);
+    }
 
     // メッセージループ
     MSG msg;
@@ -67,7 +71,7 @@ HANDLE IEHostWindow::CreateThread(
     concurrency::single_assignment<IEHostWindow*> &lazyWin,
     DWORD &thid){
     auto args = new ThreadParam(hinst, loaddir, qreq, qres, lazyWin);
-    return Win32ThreadTraits::CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)IEThread, (void*)args, 0, &thid);
+    return Win32ThreadTraits::CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)ThreadProc, (void*)args, 0, &thid);
 }
 
 void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres){

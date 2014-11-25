@@ -23,6 +23,8 @@ public:
         concurrency::single_assignment<IEHostWindow*> &lazyWin,
         DWORD &thid);
 
+    static DWORD WINAPI ThreadProc(LPVOID data);
+
 public:
     IEHostWindow();
     virtual ~IEHostWindow();

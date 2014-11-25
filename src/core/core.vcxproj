@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="fileio.h" />
     <ClInclude Include="interfaces.h" />
     <ClInclude Include="messages.h" />
     <ClInclude Include="shiori_agent.h" />
@@ -88,6 +89,7 @@
     <ClInclude Include="iehostwindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="fileio.cpp" />
     <ClCompile Include="shiori_agent.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
