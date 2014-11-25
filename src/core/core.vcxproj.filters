@@ -19,9 +19,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>etc</Filter>
     </ClInclude>
@@ -60,5 +57,11 @@
     <ClCompile Include="fileio.cpp">
       <Filter>lib</Filter>
     </ClCompile>
+    <ClCompile Include="ie_init.cpp">
+      <Filter>ie</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="index.html" />
   </ItemGroup>
 </Project>

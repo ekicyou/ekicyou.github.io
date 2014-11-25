@@ -20,4 +20,5 @@ namespace shiori{
 // WM ID
 
 const UINT WM_GETSHIORI = WM_APP + 1;
-const UINT WM_SHIORI_REQUEST = WM_APP + 2;
+const UINT WM_IEWIN_INIT2 = WM_APP + 2;
+const UINT WM_SHIORI_REQUEST = WM_APP + 3;
