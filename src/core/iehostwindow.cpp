@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "iehostwindow.h"
+#include "stdmethod.h"
 
 struct ThreadParam{
     HINSTANCE hinst;
@@ -31,29 +32,16 @@ static DWORD WINAPI IEThread(LPVOID data){
     // window作成
     IEHostWindow win;
     win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
-    auto hwnd = win.Create(NULL, CWindow::rcDefault,
+    auto hwin = win.Create(NULL, CWindow::rcDefault,
         _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
 
     // IEコントロールの作成
-    /*
-    const auto wndClass = CAxWindow::GetWndClassName();
-    const auto winStyle = WS_CHILD | WS_TABSTOP | WS_VISIBLE;
-    //const auto exStyle = WS_EX_NOREDIRECTIONBITMAP;
-    const auto exStyle = WS_EX_TRANSPARENT;
-
-    auto hIE = CreateWindowEx(exStyle, wndClass, _T("Shell.Explorer.2"), winStyle,
-    rect.left, rect.top,
-    abs(rect.right - rect.left),
-    abs(rect.bottom - rect.top),
-    hwnd, 0,
-    (HINSTANCE)GetWindowLong(hwnd, GWL_HINSTANCE),
-    0
-    );
-    */
-    RECT ieRect;
-
-    auto hIE = win.CreateControl(_T("Shell.Explorer.2"), NULL, NULL);
-
+    CComQIPtr<IWebBrowser2>	web2;
+    {
+        CComPtr<IUnknown> unknown;
+        HR(win.CreateControlEx(_T("Shell.Explorer.2"), NULL, NULL, &unknown, IID_NULL, NULL));
+        web2 = unknown;
+    }
 
     // 作成したWindowを通知する
     concurrency::send(args->lazyWin, &win);

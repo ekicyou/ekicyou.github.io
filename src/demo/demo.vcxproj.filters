@@ -26,9 +26,6 @@
     <ClInclude Include="import.h">
       <Filter>etc</Filter>
     </ClInclude>
-    <ClInclude Include="stdmethod.h">
-      <Filter>etc</Filter>
-    </ClInclude>
     <ClInclude Include="d2dwindow.h">
       <Filter>window</Filter>
     </ClInclude>
@@ -37,6 +34,9 @@
     </ClInclude>
     <ClInclude Include="ieutil.h">
       <Filter>ie</Filter>
+    </ClInclude>
+    <ClInclude Include="stdmethod.h">
+      <Filter>etc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

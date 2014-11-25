@@ -37,6 +37,9 @@
     <ClInclude Include="messages.h">
       <Filter>etc</Filter>
     </ClInclude>
+    <ClInclude Include="stdmethod.h">
+      <Filter>etc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
