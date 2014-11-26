@@ -12,7 +12,8 @@ IShiori : public IUnknown
 {
 public:
     virtual HRESULT STDMETHODCALLTYPE load(
-        /* [in] */ BSTR loaddir) = 0;
+        /* [in] */ HINSTANCE hinst,
+        /* [in] */ BSTR      loaddir) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE unload() = 0;
 
@@ -23,4 +24,8 @@ public:
 
 typedef CComQIPtr<IShiori> CShioriPtr;
 
-const UINT WM_GETSHIORI = WM_APP + 1;
+
+/////////////////////////////////////////////////////////////////////////////
+// WM
+const UINT WM_GETSHIORI      = WM_APP + 1;
+const UINT WM_SHIORI_REQUEST = WM_APP + 2;

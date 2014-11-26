@@ -8,15 +8,12 @@
     <Filter Include="etc">
       <UniqueIdentifier>{38f1b410-dd20-4c83-b11a-f4e7a5615f4f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="agent">
-      <UniqueIdentifier>{5d7ec4d5-5edc-4c0f-9eee-4e57f4690577}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ie">
       <UniqueIdentifier>{649fe110-f9c9-4851-b293-4fab90cd501d}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <Filter Include="shiori">
+      <UniqueIdentifier>{5d7ec4d5-5edc-4c0f-9eee-4e57f4690577}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -32,7 +29,10 @@
       <Filter>etc</Filter>
     </ClInclude>
     <ClInclude Include="shiori_agent.h">
-      <Filter>agent</Filter>
+      <Filter>shiori</Filter>
+    </ClInclude>
+    <ClInclude Include="shiori_messages.h">
+      <Filter>shiori</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -43,7 +43,7 @@
       <Filter>ie</Filter>
     </ClCompile>
     <ClCompile Include="shiori_agent.cpp">
-      <Filter>agent</Filter>
+      <Filter>shiori</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
