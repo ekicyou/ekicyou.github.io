@@ -30,12 +30,8 @@ DWORD WINAPI IEHostWindow::ThreadProc(LPVOID data){
     IEHostWindow win;
     {
         CAutoPtr<ThreadParam> args((ThreadParam*)data);
-
-
         win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
-
-        // 作成したWindowを通知する
-        concurrency::send(args->lazyWin, &win);
+        concurrency::send(args->lazyWin, &win); // 作成したWindowを通知
     }
 
     // メッセージループ
@@ -59,7 +55,7 @@ HANDLE IEHostWindow::CreateThread(
     concurrency::single_assignment<IEHostWindow*> &lazyWin,
     DWORD &thid){
     auto args = new ThreadParam(hinst, loaddir, qreq, qres, lazyWin);
-    return Win32ThreadTraits::CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)ThreadProc, (void*)args, 0, &thid);
+    return CRTThreadTraits::CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)ThreadProc, (void*)args, 0, &thid);
 }
 
 IEHostWindow::IEHostWindow(){

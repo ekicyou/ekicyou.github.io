@@ -5,6 +5,7 @@
 #include "shiori.h"
 #include <string>
 #include <filesystem>
+#include <atlconv.h>
 
 using namespace std;
 using namespace std::tr2::sys;
@@ -22,10 +23,12 @@ int _tmain(int argc, _TCHAR* argv[])
 {
     // shiori load
     {
-        auto p_current = initial_path<path>();
-        auto s_current = p_current.string();
+        USES_CONVERSION;
+        wpath exe_path(argv[0]);
+        auto dir_path = exe_path.branch_path();
+        string s_dir_path(W2A(dir_path.string().c_str()));
         long len = 0;
-        auto g_current = AllocString(s_current, len);
+        auto g_current = AllocString(s_dir_path, len);
         auto rc = load(g_current, len);
     }
 

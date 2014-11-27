@@ -6,7 +6,7 @@
 #include <codecvt>
 
 
-std::wstring readFile(LPCTSTR filename)
+std::wstring readFile(LPCWSTR filename)
 {
     std::wifstream wif(filename);
     wif.imbue(std::locale(std::locale::empty(), new std::codecvt_utf8<wchar_t>));

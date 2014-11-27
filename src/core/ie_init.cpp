@@ -33,7 +33,10 @@ LRESULT IEHostWindow::OnInit2(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHa
     {
         CComQIPtr<IHTMLDocument2> doc2;
         CComSafeArray<VARIANT> buf;
-        auto htmlText = readFile(_T("index.html"));
+        auto path = loaddir;
+        path /= L"index.html";
+        
+        auto htmlText = readFile(path.string().c_str());
         CComBSTR bHtml(htmlText.c_str());
         CComVariant vHtml(bHtml);
         HR(buf.Add(vHtml));

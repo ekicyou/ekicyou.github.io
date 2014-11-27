@@ -6,6 +6,7 @@
 #include <atlcom.h>
 #include <atlapp.h>
 #include <atlcrack.h>
+#include <filesystem>
 #include <agents.h>
 #include "messages.h"
 
@@ -33,7 +34,7 @@ public:
 
 private:
     HINSTANCE hinst;
-    BSTR loaddir;
+    std::tr2::sys::wpath loaddir;
     RequestQueue *qreq;
     ResponseQueue *qres;
 
