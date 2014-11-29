@@ -27,6 +27,8 @@ struct ThreadParam{
 
 DWORD WINAPI IEHostWindow::ThreadProc(LPVOID data){
     CAtlAutoThreadModule module;    // 魔法、スレッドに関するATLの初期化をしてくれる
+    HR(::CoInitialize(NULL));
+    OK(::AtlAxWinInit());
     IEHostWindow win;
     {
         CAutoPtr<ThreadParam> args((ThreadParam*)data);
@@ -41,6 +43,8 @@ DWORD WINAPI IEHostWindow::ThreadProc(LPVOID data){
         DispatchMessage(&msg);
     }
 
+    OK(::AtlAxWinTerm());
+    ::CoUninitialize();
     return 0L;
 }
 

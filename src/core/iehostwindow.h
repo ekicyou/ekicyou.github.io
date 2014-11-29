@@ -1,6 +1,7 @@
 #pragma once
 
 #include <windows.h>
+#include "import.h"
 #include <atlbase.h>
 #include <atlwin.h>
 #include <atlcom.h>
@@ -42,7 +43,7 @@ private:
     HANDLE hthread;
     DWORD thid;
 
-    CComPtr<IWebBrowser2> web2;
+    CComQIPtr<IWebBrowser2> web2;
 
 public:
     DECLARE_WND_CLASS(_T("IEHostWindow"));

@@ -10,3 +10,12 @@
 #define WIN32_LEAN_AND_MEAN             // Windows ヘッダーから使用されていない部分を除外します。
 
 // TODO: プログラムに必要な追加ヘッダーをここで参照してください。
+#include <windows.h>
+#include "import.h"
+#include <atlbase.h>
+#include <atlwin.h>
+#include <atlcom.h>
+#include <atlapp.h>
+#include <atlcrack.h>
+#include <filesystem>
+#include <agents.h>

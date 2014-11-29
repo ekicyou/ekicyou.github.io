@@ -83,6 +83,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="fileio.h" />
+    <ClInclude Include="import.h" />
     <ClInclude Include="interfaces.h" />
     <ClInclude Include="messages.h" />
     <ClInclude Include="shiori_agent.h" />

@@ -7,6 +7,10 @@ inline void HR(HRESULT const result)
     if (S_OK != result) AtlThrow(result);
 }
 
+inline void OK(BOOL const rc){
+    if (!rc) AtlThrow(E_FAIL);
+}
+
 // AtlExceptionをキャッチしてHRESULT をreturnするコードブロックを始めます。
 #define BEGIN_STDMETHOD_CODE try{
 // AtlExceptionをキャッチしてHRESULT をreturnするコードブロックを終わります。
