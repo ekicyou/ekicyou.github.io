@@ -14,38 +14,25 @@ void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue
     this->qreq = &qreq;
     this->qres = &qres;
 
+
     // window作成
     Create(NULL, CWindow::rcDefault,
         _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
 
-    // IEコントロールの作成[
-    RECT					rect;
-    CComPtr<IUnknown>		unknown;
+    ResizeClient(320, 480);
 
-    OK(GetClientRect(&rect));
-
-    const auto wndClass = CAxWindow::GetWndClassName();
-    const auto winStyle = WS_CHILD | WS_TABSTOP | WS_VISIBLE;
-    //const auto exStyle = WS_EX_NOREDIRECTIONBITMAP;
-    const auto exStyle = WS_EX_TRANSPARENT;
-
-    auto hwnd = CreateWindowEx(exStyle, wndClass, _T("Shell.Explorer.2"), winStyle,
-        rect.left, rect.top,
-        abs(rect.right - rect.left),
-        abs(rect.bottom - rect.top),
-        m_hWnd, 0,
-        (HINSTANCE)GetWindowLong(GWL_HINSTANCE),
-        0
-        );
-    OK(hwnd != NULL);
-    HR(AtlAxGetControl(hwnd, &unknown));
-    web2 = unknown;
-
-    // 続きはOnInit2で
-    this->PostMessageW(WM_IEWIN_INIT2);
+    InitIE();
 }
 
-LRESULT IEHostWindow::OnInit2(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled){
+#define SHOW_PASTA_SAN
+
+void IEHostWindow::InitIE(){
+    // IEコントロールの作成
+    CComPtr<IUnknown> unknown;
+    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, NULL, &unknown, IID_NULL, NULL));
+    web2 = unknown;
+
+#ifndef SHOW_PASTA_SAN
     // 空ページの作成
     CComVariant	no_use, blank_url(_T("about:blank"));
     HR(web2->Navigate2(&blank_url, &no_use, &no_use, &no_use, &no_use));
@@ -65,5 +52,12 @@ LRESULT IEHostWindow::OnInit2(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHa
     doc2 = disp;
     HR(doc2->clear());
     HR(doc2->writeln(buf));
-    return S_OK;
+
+#else
+    // ぱすたさんの読み込み
+    CComVariant	no_use, blank_url(_T("http://ekicyou.github.io/pasta/app/index.html"));
+    HR(web2->Navigate2(&blank_url, &no_use, &no_use, &no_use, &no_use));
+
+#endif
+
 }
