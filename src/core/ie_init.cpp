@@ -56,8 +56,13 @@ void IEHostWindow::InitIE(){
 #else
     // ぱすたさんの読み込み
     CComVariant	no_use, blank_url(_T("http://ekicyou.github.io/pasta/app/index.html"));
+//    CComVariant	no_use, blank_url(_T("http://zakkiweb.net/tools/accessinfo/"));
     HR(web2->Navigate2(&blank_url, &no_use, &no_use, &no_use, &no_use));
 
+    // IEのレジストリ操作をしないと性能最適化されない
+    // http://tabbrowser.info/ie9mode.html
+    // この辺とかも参考に、必要なフラグを操作する
+    // http://www.spacelan.ne.jp/~m-yana/micro/Visual_C/regist/reg.htm
 #endif
 
 }
