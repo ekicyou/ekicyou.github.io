@@ -32,6 +32,8 @@ public:
     virtual ~IEHostWindow();
 
     void Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres);
+    void InitRegKey();
+    void InitWindow();
     void InitIE();
 
 private:
@@ -43,7 +45,6 @@ private:
 private:
     HANDLE hthread;
     DWORD thid;
-
     CComQIPtr<IWebBrowser2> web2;
 
 public:

@@ -15,14 +15,20 @@ void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue
     this->qres = &qres;
 
 
+    InitRegKey();
+    InitWindow();
+    InitIE();
+}
+
+
+void IEHostWindow::InitWindow(){
     // windowçÏê¨
     Create(NULL, CWindow::rcDefault,
         _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
 
     ResizeClient(320, 480);
-
-    InitIE();
 }
+
 
 #define SHOW_PASTA_SAN
 

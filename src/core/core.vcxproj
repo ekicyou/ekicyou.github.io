@@ -95,6 +95,7 @@
   <ItemGroup>
     <ClCompile Include="fileio.cpp" />
     <ClCompile Include="ie_init.cpp" />
+    <ClCompile Include="ie_regkey.cpp" />
     <ClCompile Include="shiori_agent.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
