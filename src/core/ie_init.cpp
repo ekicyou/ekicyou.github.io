@@ -35,6 +35,11 @@ void IEHostWindow::InitIE(){
     HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, NULL, &unknown, IID_NULL, NULL));
     web2 = unknown;
 
+    {
+        CComQIPtr<IServiceProvider> sv = unknown;
+    }
+
+
 #ifndef SHOW_PASTA_SAN
     // ãÛÉyÅ[ÉWÇÃçÏê¨
     CComVariant	no_use, blank_url(_T("about:blank"));
