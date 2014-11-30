@@ -11,6 +11,10 @@ inline void OK(BOOL const rc){
     if (!rc) AtlThrow(E_FAIL);
 }
 
+inline void OK(LSTATUS const rc){
+    if (rc != ERROR_SUCCESS) AtlThrow(E_FAIL);
+}
+
 // AtlExceptionをキャッチしてHRESULT をreturnするコードブロックを始めます。
 #define BEGIN_STDMETHOD_CODE try{
 // AtlExceptionをキャッチしてHRESULT をreturnするコードブロックを終わります。

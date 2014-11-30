@@ -70,7 +70,6 @@ inline HGLOBAL AllocString(CComBSTR& text, UINT cp, long &len)
     return hText;
 }
 
-
 //-----------------------------------------------------------------------------
 // SHIORI unload
 BOOL Module::unload(void)

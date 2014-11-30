@@ -9,12 +9,14 @@
 #include <atlcrack.h>
 #include <filesystem>
 #include <agents.h>
+#include <atlapp.h>
+#include <atlcrack.h>
 #include "messages.h"
 
 using namespace shiori;
 
 class IEHostWindow :
-    public CWindowImpl < IEHostWindow, CAxWindow, CWinTraits<WS_OVERLAPPEDWINDOW>>
+    public CWindowImpl < IEHostWindow, CAxWindow, CWinTraits<WS_OVERLAPPEDWINDOW> >
 {
 public:
     static HANDLE CreateThread(
@@ -32,9 +34,9 @@ public:
     virtual ~IEHostWindow();
 
     void Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres);
-    void InitRegKey();
     void InitWindow();
     void InitIE();
+    bool HasRegKeyWrite();
 
 private:
     HINSTANCE hinst;
@@ -46,6 +48,7 @@ private:
     HANDLE hthread;
     DWORD thid;
     CComQIPtr<IWebBrowser2> web2;
+    bool hasRegKeyWrite;
 
 public:
     DECLARE_WND_CLASS(_T("IEHostWindow"));
@@ -55,7 +58,6 @@ public:
         MSG_WM_DESTROY(OnDestroy)
         MESSAGE_HANDLER(WM_SHIORI_REQUEST, OnShioriRequest)
     END_MSG_MAP()
-
 
 private:
     LRESULT OnDestroy();

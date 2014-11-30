@@ -23,7 +23,6 @@ IShiori* shiori::CreateShiori(){
     return impl;
 }
 
-
 HRESULT STDMETHODCALLTYPE shiori::CShiori::load(HINSTANCE hinst, BSTR loaddir){
     try{
         this->hinst = hinst;

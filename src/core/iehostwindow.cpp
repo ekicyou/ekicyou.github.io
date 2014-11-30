@@ -74,7 +74,6 @@ LRESULT IEHostWindow::OnCreate(LPCREATESTRUCT lpCreateStruct){
     return S_OK;
 }
 
-
 // WM_DESTROY
 LRESULT IEHostWindow::OnDestroy(){
     ::PostQuitMessage(1);
@@ -83,10 +82,8 @@ LRESULT IEHostWindow::OnDestroy(){
 
 // WM_SHIORI_REQUEST
 LRESULT IEHostWindow::OnShioriRequest(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled){
-
     while (true){
         shiori::Request req;
         if (!concurrency::try_receive(qreq, req)) return S_OK;
     }
-
 }
