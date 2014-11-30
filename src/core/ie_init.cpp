@@ -14,6 +14,7 @@ void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue
     this->qres = &qres;
 
     this->hasRegKeyWrite = HasRegKeyWrite();
+    if (this->hasRegKeyWrite)InitRegKey();
     InitWindow();
     InitIE();
 }
@@ -58,7 +59,7 @@ void IEHostWindow::InitIE(){
 #else
     // ぱすたさんの読み込み
     CComVariant	no_use, blank_url(_T("http://ekicyou.github.io/pasta/app/index.html"));
-    //    CComVariant	no_use, blank_url(_T("http://zakkiweb.net/tools/accessinfo/"));
+    //CComVariant	no_use, blank_url(_T("http://zakkiweb.net/tools/accessinfo/"));
     HR(web2->Navigate2(&blank_url, &no_use, &no_use, &no_use, &no_use));
 
     // IEのレジストリ操作をしないと性能最適化されない

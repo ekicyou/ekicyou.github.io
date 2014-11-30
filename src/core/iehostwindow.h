@@ -37,6 +37,7 @@ public:
     void InitWindow();
     void InitIE();
     bool HasRegKeyWrite();
+    void InitRegKey();
 
 private:
     HINSTANCE hinst;
