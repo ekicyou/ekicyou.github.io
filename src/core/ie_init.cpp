@@ -27,14 +27,13 @@ void IEHostWindow::InitWindow(){
     ResizeClient(320, 480);
 }
 
-#define SHOW_PASTA_SAN
+//#define SHOW_PASTA_SAN
 
 void IEHostWindow::InitIE(){
     // IEÉRÉìÉgÉçÅ[ÉãÇÃçÏê¨
     CComPtr<IUnknown> unknown, uhost;
     HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
     web2 = unknown;
-
 
 
 #ifndef SHOW_PASTA_SAN
@@ -57,6 +56,27 @@ void IEHostWindow::InitIE(){
     doc2 = disp;
     HR(doc2->clear());
     HR(doc2->writeln(buf));
+    {
+        CComPtr<IUnknown> check = doc2;
+        CComQIPtr<IViewObject> vo = check;
+        CComQIPtr<IViewObjectPresentSite> ps = check;
+        CComQIPtr<IViewObjectPresentNotify> nf = check;
+    }
+    {
+        CComPtr<IUnknown> check = web2;
+        CComQIPtr<IViewObject> vo = check;
+        CComQIPtr<IViewObjectPresentSite> ps = check;
+        CComQIPtr<IViewObjectPresentNotify> nf = check;
+    }
+    {
+        CComQIPtr<IOleObject> ole = web2;
+        CComPtr<IOleClientSite> check;
+        ole->GetClientSite(&check);
+        CComQIPtr<IViewObject> vo = check;
+        CComQIPtr<IViewObjectPresentSite> ps = check;
+        CComQIPtr<IViewObjectPresentNotify> nf = check;
+    }
+
 
 #else
     // ÇœÇ∑ÇΩÇ≥ÇÒÇÃì«Ç›çûÇ›
@@ -71,9 +91,11 @@ void IEHostWindow::InitIE(){
         CComQIPtr<IOleObject> ole = web2;
         CComPtr<IOleClientSite> site;
         ole->GetClientSite(&site);
-        CComQIPtr<IViewObjectPresentSite> sv = site;
+        CComPtr<IViewObjectPresentSite> sv;
+
         CComQIPtr<IOleClientSite> site2 = uhost;
         CComQIPtr<IViewObjectPresentSite> sv2 = uhost;
+
     }
 
 }

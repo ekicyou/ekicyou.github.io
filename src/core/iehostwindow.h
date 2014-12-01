@@ -16,6 +16,9 @@
 
 using namespace shiori;
 
+// TODO  IEのイベントを受信する
+//       http://www.usefullcode.net/2009/03/receive_ie_event.html
+
 class IEHostWindow
     : public CWindowImpl < IEHostWindow, CAxWindow, CWinTraits<WS_OVERLAPPEDWINDOW> >
 {
