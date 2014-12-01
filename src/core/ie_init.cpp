@@ -31,11 +31,12 @@ void IEHostWindow::InitWindow(){
 
 void IEHostWindow::InitIE(){
     // IEÉRÉìÉgÉçÅ[ÉãÇÃçÏê¨
-    CComPtr<IUnknown> unknown;
-    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, NULL, &unknown, IID_NULL, NULL));
+    CComPtr<IUnknown> unknown, uhost;
+    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
     web2 = unknown;
 
     {
+        CComQIPtr<IOleClientSite> site = uhost;
         CComQIPtr<IServiceProvider> sv = unknown;
     }
 
