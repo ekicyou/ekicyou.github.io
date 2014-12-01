@@ -5,6 +5,7 @@
 #include <atlbase.h>
 #include <atlwin.h>
 #include <atlcom.h>
+#include <atlctl.h>
 #include <atlapp.h>
 #include <atlcrack.h>
 #include <filesystem>
@@ -15,8 +16,8 @@
 
 using namespace shiori;
 
-class IEHostWindow :
-    public CWindowImpl < IEHostWindow, CAxWindow, CWinTraits<WS_OVERLAPPEDWINDOW> >
+class IEHostWindow
+    : public CWindowImpl < IEHostWindow, CAxWindow, CWinTraits<WS_OVERLAPPEDWINDOW> >
 {
 public:
     static HANDLE CreateThread(
