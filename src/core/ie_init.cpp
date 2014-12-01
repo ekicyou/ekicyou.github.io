@@ -35,10 +35,6 @@ void IEHostWindow::InitIE(){
     HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
     web2 = unknown;
 
-    {
-        CComQIPtr<IOleClientSite> site = uhost;
-        CComQIPtr<IServiceProvider> sv = unknown;
-    }
 
 
 #ifndef SHOW_PASTA_SAN
@@ -69,4 +65,15 @@ void IEHostWindow::InitIE(){
     HR(web2->Navigate2(&blank_url, &no_use, &no_use, &no_use, &no_use));
 
 #endif
+
+    {
+        // ‚Ç‚¤‚É‚à‚È‚ç‚È‚¢ŽŽ‚Ý‚Å‚ ‚é‚ª“¯‚¶‚±‚Æ‚ðŒJ‚è•Ô‚³‚È‚¢‚½‚ß‚ÉŽc‚·
+        CComQIPtr<IOleObject> ole = web2;
+        CComPtr<IOleClientSite> site;
+        ole->GetClientSite(&site);
+        CComQIPtr<IViewObjectPresentSite> sv = site;
+        CComQIPtr<IOleClientSite> site2 = uhost;
+        CComQIPtr<IViewObjectPresentSite> sv2 = uhost;
+    }
+
 }
