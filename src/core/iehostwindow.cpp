@@ -62,7 +62,9 @@ HANDLE IEHostWindow::CreateThread(
     return CRTThreadTraits::CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)ThreadProc, (void*)args, 0, &thid);
 }
 
-IEHostWindow::IEHostWindow(){
+IEHostWindow::IEHostWindow()
+    :refWin(this)
+{
 }
 
 IEHostWindow::~IEHostWindow(){

@@ -19,6 +19,41 @@ void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue
     InitIE();
 }
 
+//■変更
+HWND IEHostWindow::Create(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
+    DWORD dwStyle = 0, DWORD dwExStyle = 0,
+    _U_MENUorID MenuOrID = 0U, LPVOID lpCreateParam = NULL)
+{
+    HWND	hWnd;
+
+    //__super::ではなく、CWindow::のCreateをCAxWindow::GetWndClassName()指定で利用
+    hWnd = CWindow::Create(CAxWindow::GetWndClassName(), hWndParent, rect, szWindowName, dwStyle, dwExStyle, MenuOrID, lpCreateParam);
+    if (hWnd == NULL)        return	NULL;
+
+    refWin.SubclassWindow(m_hWnd);		//メッセージマップが使えるようにこのウインドウをサブクラス化
+
+    //CWindow::Createで作れたコントロールをこのウインドウにアタッチ
+    {
+        CComPtr<IUnknown> unknown;
+
+        AtlAxGetControl(m_hWnd, &unknown);
+        if (unknown)
+            AttachControl(unknown, m_hWnd);
+
+        QueryControl(IID_IWebBrowser2, (void**)&web2);  //_pIWebBrowser2にこのビューに関連づいているIEをセットする
+        if (web2 == NULL) return hWnd;                  //WebBrowser取得失敗
+
+        //サイトも設定
+        unknown = NULL;
+        QueryHost(&unknown);
+        SetSite(unknown);
+    }
+
+    Advise(web2);		//IEとの接続
+
+    return	hWnd;
+}
+
 void IEHostWindow::InitWindow(){
     // window作成
     Create(NULL, CWindow::rcDefault,
@@ -34,7 +69,6 @@ void IEHostWindow::InitIE(){
     CComPtr<IUnknown> unknown, uhost;
     HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
     web2 = unknown;
-
 
 #ifndef SHOW_PASTA_SAN
     // 空ページの作成
@@ -77,7 +111,6 @@ void IEHostWindow::InitIE(){
         CComQIPtr<IViewObjectPresentNotify> nf = check;
     }
 
-
 #else
     // ぱすたさんの読み込み
     CComVariant	no_use, blank_url(_T("http://ekicyou.github.io/pasta/app/index.html"));
@@ -95,7 +128,5 @@ void IEHostWindow::InitIE(){
 
         CComQIPtr<IOleClientSite> site2 = uhost;
         CComQIPtr<IViewObjectPresentSite> sv2 = uhost;
-
     }
-
 }

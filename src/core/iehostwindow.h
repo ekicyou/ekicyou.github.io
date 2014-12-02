@@ -14,14 +14,32 @@
 #include <atlcrack.h>
 #include "messages.h"
 
+#define SINKID_EVENTS 0
+
 using namespace shiori;
 
 // TODO  IEのイベントを受信する
 //       http://www.usefullcode.net/2009/03/receive_ie_event.html
 
 class IEHostWindow
-    : public CWindowImpl < IEHostWindow, CAxWindow, CWinTraits<WS_OVERLAPPEDWINDOW> >
+    : public CComObject<CAxHostWindow>
+    , public IDispEventImpl < SINKID_EVENTS, IEHostWindow, &DIID_DWebBrowserEvents2 >
 {
+    class CReflectWnd : public CWindowImpl<CReflectWnd>
+    {
+        IEHostWindow* win;
+    public:
+        CReflectWnd(IEHostWindow* win)
+        {
+            this->win = win;
+        }
+        BEGIN_MSG_MAP(CReflectWnd)
+            CHAIN_MSG_MAP_MEMBER((*win))
+        END_MSG_MAP()
+    };
+
+    CReflectWnd refWin;
+
 public:
     static HANDLE CreateThread(
         HINSTANCE hinst,
@@ -36,6 +54,10 @@ public:
 public:
     IEHostWindow();
     virtual ~IEHostWindow();
+
+    HWND Create(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
+        DWORD dwStyle = 0, DWORD dwExStyle = 0,
+        _U_MENUorID MenuOrID = 0U, LPVOID lpCreateParam = NULL);
 
     void Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres);
     void InitWindow();
@@ -62,6 +84,7 @@ public:
         MSG_WM_CREATE(OnCreate)
         MSG_WM_DESTROY(OnDestroy)
         MESSAGE_HANDLER(WM_SHIORI_REQUEST, OnShioriRequest)
+        CHAIN_MSG_MAP(CAxHostWindow)
     END_MSG_MAP()
 
 private:
