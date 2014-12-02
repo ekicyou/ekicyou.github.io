@@ -20,9 +20,10 @@ void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue
 }
 
 //Å°ïœçX
-HWND IEHostWindow::Create(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
-    DWORD dwStyle = 0, DWORD dwExStyle = 0,
-    _U_MENUorID MenuOrID = 0U, LPVOID lpCreateParam = NULL)
+HWND IEHostWindow::Create(
+    HWND hWndParent, _U_RECT rect, LPCTSTR szWindowName,
+    DWORD dwStyle, DWORD dwExStyle,
+    _U_MENUorID MenuOrID, LPVOID lpCreateParam)
 {
     HWND	hWnd;
 

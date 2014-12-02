@@ -63,7 +63,7 @@ HANDLE IEHostWindow::CreateThread(
 }
 
 IEHostWindow::IEHostWindow()
-    :refWin(this)
+    :refWin(*this)
 {
 }
 
