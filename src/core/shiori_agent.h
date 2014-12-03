@@ -32,7 +32,7 @@ namespace shiori{
         ResponseQueue qres;
 
         // IEWindowŠÖŒW
-        single_assignment<::IEHostWindow*> ieWin;
+        single_assignment<::CIEHostWindow*> ieWin;
         CHandle ieThread;
         DWORD ieThid;
 

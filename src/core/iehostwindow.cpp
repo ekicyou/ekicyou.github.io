@@ -7,14 +7,14 @@ struct ThreadParam{
     BSTR loaddir;
     RequestQueue &qreq;
     ResponseQueue &qres;
-    concurrency::single_assignment<IEHostWindow*> &lazyWin;
+    concurrency::single_assignment<CIEHostWindow*> &lazyWin;
 
     ThreadParam(
         HINSTANCE hinst,
         BSTR loaddir,
         RequestQueue &qreq,
         ResponseQueue &qres,
-        concurrency::single_assignment<IEHostWindow*> &lazyWin)
+        concurrency::single_assignment<CIEHostWindow*> &lazyWin)
         : hinst(hinst)
         , loaddir(loaddir)
         , qreq(qreq)
@@ -25,11 +25,11 @@ struct ThreadParam{
 /////////////////////////////////////////////////////////////////////////////
 // IE Thread
 
-DWORD WINAPI IEHostWindow::ThreadProc(LPVOID data){
+DWORD WINAPI CIEHostWindow::ThreadProc(LPVOID data){
     CAtlAutoThreadModule module;    // 魔法、スレッドに関するATLの初期化をしてくれる
     HR(::CoInitialize(NULL));
     OK(::AtlAxWinInit());
-    IEHostWindow win;
+    CIEHostWindow win;
     {
         CAutoPtr<ThreadParam> args((ThreadParam*)data);
         win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
@@ -51,39 +51,39 @@ DWORD WINAPI IEHostWindow::ThreadProc(LPVOID data){
 /////////////////////////////////////////////////////////////////////////////
 // 初期化・解放
 
-HANDLE IEHostWindow::CreateThread(
+HANDLE CIEHostWindow::CreateThread(
     HINSTANCE hinst,
     BSTR loaddir,
     RequestQueue &qreq,
     ResponseQueue &qres,
-    concurrency::single_assignment<IEHostWindow*> &lazyWin,
+    concurrency::single_assignment<CIEHostWindow*> &lazyWin,
     DWORD &thid){
     auto args = new ThreadParam(hinst, loaddir, qreq, qres, lazyWin);
     return CRTThreadTraits::CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)ThreadProc, (void*)args, 0, &thid);
 }
 
-IEHostWindow::IEHostWindow()
+CIEHostWindow::CIEHostWindow()
     :refWin(*this)
 {
 }
 
-IEHostWindow::~IEHostWindow(){
+CIEHostWindow::~CIEHostWindow(){
 }
 
 /////////////////////////////////////////////////////////////////////////////
 // WM_CREATE
-LRESULT IEHostWindow::OnCreate(LPCREATESTRUCT lpCreateStruct){
+LRESULT CIEHostWindow::OnCreate(LPCREATESTRUCT lpCreateStruct){
     return S_OK;
 }
 
 // WM_DESTROY
-LRESULT IEHostWindow::OnDestroy(){
+LRESULT CIEHostWindow::OnDestroy(){
     ::PostQuitMessage(1);
     return S_OK;
 }
 
 // WM_SHIORI_REQUEST
-LRESULT IEHostWindow::OnShioriRequest(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled){
+LRESULT CIEHostWindow::OnShioriRequest(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled){
     while (true){
         shiori::Request req;
         if (!concurrency::try_receive(qreq, req)) return S_OK;

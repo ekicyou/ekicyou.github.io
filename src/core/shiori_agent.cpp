@@ -29,7 +29,7 @@ HRESULT STDMETHODCALLTYPE shiori::CShiori::load(HINSTANCE hinst, BSTR loaddir){
         this->loaddir = loaddir;
 
         // IEThread‚Ì—§‚¿ã‚°
-        ieThread.Attach(IEHostWindow::CreateThread(hinst, loaddir, qreq, qres, ieWin, ieThid));
+        ieThread.Attach(CIEHostWindow::CreateThread(hinst, loaddir, qreq, qres, ieWin, ieThid));
 
         return S_OK;
     }

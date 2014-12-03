@@ -7,7 +7,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // コントロール初期化
 
-void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres){
+void CIEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres){
     this->hinst = hinst;
     this->loaddir = loaddir;
     this->qreq = &qreq;
@@ -20,7 +20,7 @@ void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue
 }
 
 //■変更
-HWND IEHostWindow::Create(
+HWND CIEHostWindow::Create(
     HWND hWndParent, _U_RECT rect, LPCTSTR szWindowName,
     DWORD dwStyle, DWORD dwExStyle,
     _U_MENUorID MenuOrID, LPVOID lpCreateParam)
@@ -55,7 +55,7 @@ HWND IEHostWindow::Create(
     return	hWnd;
 }
 
-void IEHostWindow::InitWindow(){
+void CIEHostWindow::InitWindow(){
     // window作成
     Create(NULL, CWindow::rcDefault,
         _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
@@ -65,7 +65,7 @@ void IEHostWindow::InitWindow(){
 
 //#define SHOW_PASTA_SAN
 
-void IEHostWindow::InitIE(){
+void CIEHostWindow::InitIE(){
     // IEコントロールの作成
     CComPtr<IUnknown> unknown, uhost;
     HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));

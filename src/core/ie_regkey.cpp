@@ -30,7 +30,7 @@ static void SetDWORD(const HKEY root, LPCTSTR key, LPCTSTR valueName, const DWOR
 #define REG_ROOT    "Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl"
 
 // レジストリの設定が必要かどうかを確認する
-bool IEHostWindow::HasRegKeyWrite(){
+bool CIEHostWindow::HasRegKeyWrite(){
     // exe名取得
     auto exepath = exePath();
     auto exename = exepath.filename();
@@ -52,7 +52,7 @@ bool IEHostWindow::HasRegKeyWrite(){
 /////////////////////////////////////////////////////////////////////////////
 // レジストリの設定
 
-void IEHostWindow::InitRegKey(){
+void CIEHostWindow::InitRegKey(){
     // exe名取得
     auto exepath = exePath();
     auto exename = exepath.filename();

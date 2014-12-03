@@ -22,37 +22,20 @@ using namespace shiori;
 //       http://www.usefullcode.net/2009/03/receive_ie_event.html
 
 
-class CIEHostSite
-    : public CComObjectRootEx<CComSingleThreadModel>
-    , public IDispatchImpl<IDispatch>
-    , public IOleClientSite
-{
-
-public:
-    BEGIN_COM_MAP(CIEHostSite)
-        COM_INTERFACE_ENTRY(IDispatch)
-        COM_INTERFACE_ENTRY(IOleClientSite)
-    END_COM_MAP()
-
-    CIEHostSite();
-};
-
-
-class IEHostWindow
+// IEをホストするウィンドウ
+class CIEHostWindow
     : public CComObject<CAxHostWindow>
-    , public IDispEventImpl<SINKID_EVENTS, IEHostWindow, &DIID_DWebBrowserEvents2>
+    , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
     , public IViewObjectPresentNotifySite
 {
-
 public:
     DECLARE_WND_SUPERCLASS(NULL, CAxWindow::GetWndClassName());
 
-    BEGIN_COM_MAP(IEHostWindow)
+    BEGIN_COM_MAP(CIEHostWindow)
         COM_INTERFACE_ENTRY(IViewObjectPresentSite)
         COM_INTERFACE_ENTRY(IViewObjectPresentNotifySite)
         COM_INTERFACE_ENTRY_CHAIN(CAxHostWindow)
     END_COM_MAP()
-
 
 public:
     static HANDLE CreateThread(
@@ -60,14 +43,14 @@ public:
         BSTR loaddir,
         RequestQueue &qreq,
         ResponseQueue &qres,
-        concurrency::single_assignment<IEHostWindow*> &lazyWin,
+        concurrency::single_assignment<CIEHostWindow*> &lazyWin,
         DWORD &thid);
 
     static DWORD WINAPI ThreadProc(LPVOID data);
 
 public:
-    IEHostWindow();
-    virtual ~IEHostWindow();
+    CIEHostWindow();
+    virtual ~CIEHostWindow();
 
     HWND Create(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
         DWORD dwStyle = 0, DWORD dwExStyle = 0,
@@ -92,9 +75,9 @@ private:
     bool hasRegKeyWrite;
 
 public:
-    // IViewObjectPresentSite
+    // インターフェース実装：IViewObjectPresentSite
 
-    HRESULT STDMETHODCALLTYPE CreateSurfacePresenter(
+    STDMETHOD(CreateSurfacePresenter)(
         /* [in] */ __RPC__in_opt IUnknown *pDevice,
         /* [in] */ UINT width,
         /* [in] */ UINT height,
@@ -103,15 +86,15 @@ public:
         /* [in] */ VIEW_OBJECT_ALPHA_MODE mode,
         /* [out][retval] */ __RPC__deref_out_opt ISurfacePresenter **ppQueue) override;
 
-    HRESULT STDMETHODCALLTYPE IsHardwareComposition(
+    STDMETHOD(IsHardwareComposition)(
         /* [out][retval] */ __RPC__out BOOL *pIsHardwareComposition) override;
 
-    HRESULT STDMETHODCALLTYPE SetCompositionMode(
+    STDMETHOD(SetCompositionMode)(
         /* [in] */ VIEW_OBJECT_COMPOSITION_MODE mode) override;
 
-    // IViewObjectPresentSite
+    // インターフェース実装：IViewObjectPresentSite
 
-    HRESULT STDMETHODCALLTYPE RequestFrame(void) override;
+    STDMETHOD(RequestFrame)(void) override;
 
 public:
     template <class Q>
@@ -133,12 +116,23 @@ public:
         return hr;
     }
 
+public:
+    // IEコントロールからのイベント通知
+    BEGIN_SINK_MAP(CIEHostWindow)
+        SINK_ENTRY_EX(SINKID_EVENTS, DIID_DWebBrowserEvents2, DISPID_DOCUMENTCOMPLETE, OnDocumentComplete)
+    END_SINK_MAP()
+
 private:
-    class CReflectWnd : public CWindowImpl<CReflectWnd>
+    //HTMLページが読み終わったときに呼ばれる処理
+    STDMETHOD(OnDocumentComplete)(IDispatch* pDisp, VARIANT* vURL);
+
+
+private:
+    class CReflectWnd : public CWindowImpl < CReflectWnd >
     {
-        IEHostWindow &win;
+        CIEHostWindow &win;
     public:
-        CReflectWnd(IEHostWindow& win) :win(win){};
+        CReflectWnd(CIEHostWindow& win) :win(win){};
         BEGIN_MSG_MAP(CReflectWnd)
             CHAIN_MSG_MAP_MEMBER(win)
         END_MSG_MAP()
@@ -156,15 +150,5 @@ private:
     LRESULT OnDestroy();
     LRESULT OnCreate(LPCREATESTRUCT lpCreateStruct);
     LRESULT OnShioriRequest(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
-
-public:
-    // IEコントロールからのイベント通知
-    BEGIN_SINK_MAP(IEHostWindow)
-        SINK_ENTRY_EX(SINKID_EVENTS, DIID_DWebBrowserEvents2, DISPID_DOCUMENTCOMPLETE, OnDocumentComplete)
-    END_SINK_MAP()
-
-private:
-    //HTMLページが読み終わったときに呼ばれる処理
-    STDMETHOD(OnDocumentComplete)(IDispatch* pDisp, VARIANT* vURL);
 
 };
