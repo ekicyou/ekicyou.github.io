@@ -27,15 +27,16 @@ class CIEHostWindow
     : public CComObject<CAxHostWindow>
     , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
     , public IViewObjectPresentNotifySite
-{
+    {
 public:
     DECLARE_WND_SUPERCLASS(NULL, CAxWindow::GetWndClassName());
 
     BEGIN_COM_MAP(CIEHostWindow)
         COM_INTERFACE_ENTRY(IViewObjectPresentSite)
         COM_INTERFACE_ENTRY(IViewObjectPresentNotifySite)
-        COM_INTERFACE_ENTRY_CHAIN(CAxHostWindow)
+        COM_INTERFACE_ENTRY_CHAIN(CComObject<CAxHostWindow>)
     END_COM_MAP()
+
 
 public:
     static HANDLE CreateThread(
@@ -56,6 +57,8 @@ public:
         DWORD dwStyle = 0, DWORD dwExStyle = 0,
         _U_MENUorID MenuOrID = 0U, LPVOID lpCreateParam = NULL);
 
+
+private:
     void Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres);
     void InitWindow();
     void InitIE();
@@ -95,6 +98,7 @@ public:
     // インターフェース実装：IViewObjectPresentSite
 
     STDMETHOD(RequestFrame)(void) override;
+
 
 public:
     template <class Q>
