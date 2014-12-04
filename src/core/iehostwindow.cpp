@@ -22,6 +22,8 @@ struct ThreadParam{
         , lazyWin(lazyWin){}
 };
 
+
+
 /////////////////////////////////////////////////////////////////////////////
 // IE Thread
 
@@ -29,18 +31,20 @@ DWORD WINAPI CIEHostWindow::ThreadProc(LPVOID data){
     CAtlAutoThreadModule module;    // 魔法、スレッドに関するATLの初期化をしてくれる
     HR(::CoInitialize(NULL));
     OK(::AtlAxWinInit());
-    CIEHostWindow win;
     {
-        CAutoPtr<ThreadParam> args((ThreadParam*)data);
-        win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
-        concurrency::send(args->lazyWin, &win); // 作成したWindowを通知
-    }
+        CIEHostWindow win;
+        {
+            CAutoPtr<ThreadParam> args((ThreadParam*)data);
+            win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
+            concurrency::send(args->lazyWin, &win); // 作成したWindowを通知
+        }
 
-    // メッセージループ
-    MSG msg;
-    while (GetMessage(&msg, NULL, 0, 0) > 0){
-        TranslateMessage(&msg);
-        DispatchMessage(&msg);
+        // メッセージループ
+        MSG msg;
+        while (GetMessage(&msg, NULL, 0, 0) > 0){
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
     }
 
     OK(::AtlAxWinTerm());

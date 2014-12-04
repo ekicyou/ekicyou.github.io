@@ -22,12 +22,13 @@ using namespace shiori;
 //       http://www.usefullcode.net/2009/03/receive_ie_event.html
 
 
+
 // IEをホストするウィンドウ
 class CIEHostWindow
     : public CComObject<CAxHostWindow>
     , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
     , public IViewObjectPresentNotifySite
-    {
+{
 public:
     DECLARE_WND_SUPERCLASS(NULL, CAxWindow::GetWndClassName());
 
@@ -36,7 +37,6 @@ public:
         COM_INTERFACE_ENTRY(IViewObjectPresentNotifySite)
         COM_INTERFACE_ENTRY_CHAIN(CComObject<CAxHostWindow>)
     END_COM_MAP()
-
 
 public:
     static HANDLE CreateThread(
@@ -90,14 +90,16 @@ public:
         /* [out][retval] */ __RPC__deref_out_opt ISurfacePresenter **ppQueue) override;
 
     STDMETHOD(IsHardwareComposition)(
-        /* [out][retval] */ __RPC__out BOOL *pIsHardwareComposition) override;
+        /* [out][retval] */ __RPC__out BOOL *pIsHardwareComposition)override;
 
     STDMETHOD(SetCompositionMode)(
-        /* [in] */ VIEW_OBJECT_COMPOSITION_MODE mode) override;
+        /* [in] */ VIEW_OBJECT_COMPOSITION_MODE mode)override;
 
-    // インターフェース実装：IViewObjectPresentSite
+public:
+    // インターフェース実装：IViewObjectPresentNotifySite
 
-    STDMETHOD(RequestFrame)(void) override;
+    STDMETHOD(RequestFrame)(void)override;
+
 
 
 public:

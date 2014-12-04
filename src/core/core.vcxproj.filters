@@ -46,6 +46,7 @@
     <ClInclude Include="import.h">
       <Filter>etc</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -69,5 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="core.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
