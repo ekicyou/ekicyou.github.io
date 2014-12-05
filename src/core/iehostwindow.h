@@ -62,7 +62,6 @@ public:
 // IEをホストするウィンドウ
 class ATL_NO_VTABLE CIEHostWindow
     : public CComObject<CAxHostWindow>
-    , public CComTearOffObjectBase<CAxHostWindow>
     , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
 {
 public:

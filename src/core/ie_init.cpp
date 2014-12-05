@@ -29,28 +29,10 @@ HWND CIEHostWindow::Create(
 
     //__super::ではなく、CWindow::のCreateをCAxWindow::GetWndClassName()指定で利用
     hWnd = CWindow::Create(CAxWindow::GetWndClassName(), hWndParent, rect, szWindowName, dwStyle, dwExStyle, MenuOrID, lpCreateParam);
-    if (hWnd == NULL)        return	NULL;
+    if (hWnd == NULL) return NULL;
 
-    refWin.SubclassWindow(m_hWnd);		//メッセージマップが使えるようにこのウインドウをサブクラス化
-
-    //CWindow::Createで作れたコントロールをこのウインドウにアタッチ
-    {
-        CComPtr<IUnknown> unknown;
-
-        AtlAxGetControl(m_hWnd, &unknown);
-        if (unknown)
-            AttachControl(unknown, m_hWnd);
-
-        QueryControl(IID_IWebBrowser2, (void**)&web2);  //_pIWebBrowser2にこのビューに関連づいているIEをセットする
-        if (web2 == NULL) return hWnd;                  //WebBrowser取得失敗
-
-        //サイトも設定
-        unknown = NULL;
-        QueryHost(&unknown);
-        SetSite(unknown);
-    }
-
-    Advise(web2);		//IEとの接続
+    //メッセージマップが使えるようにこのウインドウをサブクラス化
+    refWin.SubclassWindow(m_hWnd);
 
     return	hWnd;
 }
@@ -60,7 +42,7 @@ void CIEHostWindow::InitWindow(){
     Create(NULL, CWindow::rcDefault,
         _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
 
-    ResizeClient(320, 480);
+//    ResizeClient(320, 480);
 }
 
 //#define SHOW_PASTA_SAN
@@ -68,7 +50,9 @@ void CIEHostWindow::InitWindow(){
 void CIEHostWindow::InitIE(){
     // IEコントロールの作成
     CComPtr<IUnknown> unknown, uhost;
-// TODO:ちゃんとする    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
+
+    HR(CreateControlEx(_T("Shell.Explorer.2"), m_hWnd, NULL, &unknown, IID_NULL, NULL));
+    // TODO:ちゃんとする    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
     web2 = unknown;
 
 #ifndef SHOW_PASTA_SAN
@@ -130,4 +114,4 @@ void CIEHostWindow::InitIE(){
         CComQIPtr<IOleClientSite> site2 = uhost;
         CComQIPtr<IViewObjectPresentSite> sv2 = uhost;
     }
-}
+    }
