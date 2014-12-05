@@ -14,8 +14,6 @@
 #include <atlcrack.h>
 #include "messages.h"
 
-#define SINKID_EVENTS 0
-
 using namespace shiori;
 
 // TODO  IEのイベントを受信する
@@ -23,8 +21,9 @@ using namespace shiori;
 
 
 
+
 // IEをホストするウィンドウ
-class CIEHostWindow
+class ATL_NO_VTABLE CIEHostWindow
     : public CComObject<CAxHostWindow>
     , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
     , public IViewObjectPresentNotifySite
@@ -35,7 +34,7 @@ public:
     BEGIN_COM_MAP(CIEHostWindow)
         COM_INTERFACE_ENTRY(IViewObjectPresentSite)
         COM_INTERFACE_ENTRY(IViewObjectPresentNotifySite)
-        COM_INTERFACE_ENTRY_CHAIN(CComObject<CAxHostWindow>)
+        COM_INTERFACE_ENTRY_CHAIN(CAxHostWindow)
     END_COM_MAP()
 
 public:
