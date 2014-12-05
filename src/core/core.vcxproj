@@ -60,6 +60,9 @@
     <PostBuildEvent>
       <Command>copy "$(ProjectDir)index.html" "$(TargetDir)"</Command>
     </PostBuildEvent>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -80,6 +83,9 @@
     <PostBuildEvent>
       <Command>copy "$(ProjectDir)index.html" "$(TargetDir)"</Command>
     </PostBuildEvent>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="fileio.h" />

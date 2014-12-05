@@ -68,7 +68,7 @@ void CIEHostWindow::InitWindow(){
 void CIEHostWindow::InitIE(){
     // IEÉRÉìÉgÉçÅ[ÉãÇÃçÏê¨
     CComPtr<IUnknown> unknown, uhost;
-    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
+// TODO:ÇøÇ·ÇÒÇ∆Ç∑ÇÈ    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
     web2 = unknown;
 
 #ifndef SHOW_PASTA_SAN

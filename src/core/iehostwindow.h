@@ -20,61 +20,19 @@ using namespace shiori;
 //       http://www.usefullcode.net/2009/03/receive_ie_event.html
 
 
+class CIEHostWindow;
 
-
-// IEをホストするウィンドウ
-class ATL_NO_VTABLE CIEHostWindow
-    : public CComObject<CAxHostWindow>
-    , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
-    , public IViewObjectPresentNotifySite
+// IEWindowのPresentSite実装
+class CIEHostWindowPresentSite
+    : public IViewObjectPresentNotifySite
+    , public CComTearOffObjectBase < CIEHostWindow, CComSingleThreadModel >
 {
 public:
-    DECLARE_WND_SUPERCLASS(NULL, CAxWindow::GetWndClassName());
-
-    BEGIN_COM_MAP(CIEHostWindow)
+    CIEHostWindowPresentSite() {}
+    BEGIN_COM_MAP(CIEHostWindowPresentSite)
         COM_INTERFACE_ENTRY(IViewObjectPresentSite)
         COM_INTERFACE_ENTRY(IViewObjectPresentNotifySite)
-        COM_INTERFACE_ENTRY_CHAIN(CAxHostWindow)
     END_COM_MAP()
-
-public:
-    static HANDLE CreateThread(
-        HINSTANCE hinst,
-        BSTR loaddir,
-        RequestQueue &qreq,
-        ResponseQueue &qres,
-        concurrency::single_assignment<CIEHostWindow*> &lazyWin,
-        DWORD &thid);
-
-    static DWORD WINAPI ThreadProc(LPVOID data);
-
-public:
-    CIEHostWindow();
-    virtual ~CIEHostWindow();
-
-    HWND Create(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
-        DWORD dwStyle = 0, DWORD dwExStyle = 0,
-        _U_MENUorID MenuOrID = 0U, LPVOID lpCreateParam = NULL);
-
-
-private:
-    void Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres);
-    void InitWindow();
-    void InitIE();
-    bool HasRegKeyWrite();
-    void InitRegKey();
-
-private:
-    HINSTANCE hinst;
-    std::tr2::sys::wpath loaddir;
-    RequestQueue *qreq;
-    ResponseQueue *qres;
-
-private:
-    HANDLE hthread;
-    DWORD thid;
-    CComQIPtr<IWebBrowser2> web2;
-    bool hasRegKeyWrite;
 
 public:
     // インターフェース実装：IViewObjectPresentSite
@@ -98,8 +56,55 @@ public:
     // インターフェース実装：IViewObjectPresentNotifySite
 
     STDMETHOD(RequestFrame)(void)override;
+};
 
 
+// IEをホストするウィンドウ
+class ATL_NO_VTABLE CIEHostWindow
+    : public CComObject<CAxHostWindow>
+    , public CComTearOffObjectBase<CAxHostWindow>
+    , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
+{
+public:
+    DECLARE_WND_SUPERCLASS(_T("PASTA_CIEHostWindow"), CAxWindow::GetWndClassName());
+
+public:
+    static HANDLE CreateThread(
+        HINSTANCE hinst,
+        BSTR loaddir,
+        RequestQueue &qreq,
+        ResponseQueue &qres,
+        concurrency::single_assignment<CIEHostWindow*> &lazyWin,
+        DWORD &thid);
+
+    static DWORD WINAPI ThreadProc(LPVOID data);
+
+public:
+    CIEHostWindow();
+    virtual ~CIEHostWindow();
+
+    HWND Create(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
+        DWORD dwStyle = 0, DWORD dwExStyle = 0,
+        _U_MENUorID MenuOrID = 0U, LPVOID lpCreateParam = NULL);
+
+private:
+    void Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue &qreq, ResponseQueue &qres);
+    void InitWindow();
+    void InitIE();
+    bool HasRegKeyWrite();
+    void InitRegKey();
+
+private:
+    HINSTANCE hinst;
+    std::tr2::sys::wpath loaddir;
+    RequestQueue *qreq;
+    ResponseQueue *qres;
+
+private:
+    HANDLE hthread;
+    DWORD thid;
+    CComQIPtr<IWebBrowser2> web2;
+    bool hasRegKeyWrite;
 
 public:
     template <class Q>
@@ -131,7 +136,6 @@ private:
     //HTMLページが読み終わったときに呼ばれる処理
     STDMETHOD(OnDocumentComplete)(IDispatch* pDisp, VARIANT* vURL);
 
-
 private:
     class CReflectWnd : public CWindowImpl < CReflectWnd >
     {
@@ -155,5 +159,6 @@ private:
     LRESULT OnDestroy();
     LRESULT OnCreate(LPCREATESTRUCT lpCreateStruct);
     LRESULT OnShioriRequest(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
-
 };
+
+

@@ -33,6 +33,7 @@ DWORD WINAPI CIEHostWindow::ThreadProc(LPVOID data){
     OK(::AtlAxWinInit());
     {
         CIEHostWindow win;
+
         {
             CAutoPtr<ThreadParam> args((ThreadParam*)data);
             win.Init(args->hinst, args->loaddir, args->qreq, args->qres);
