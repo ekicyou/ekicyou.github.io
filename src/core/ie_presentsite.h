@@ -139,7 +139,7 @@ private:
             if (FAILED(hr))return hr;
             if (dcompDevice == NULL)return E_FAIL;
 
-            // 合成ターゲット
+            // 合成ターゲット(hwnd)
             hr = dcompDevice->CreateTargetForHwnd(
                 m_hWnd,
                 true, // Top most
@@ -235,6 +235,7 @@ public:
 
     STDMETHOD(RequestFrame)(void)
     {
-        return E_NOTIMPL;
+        // 暫定、何もしていない
+        return S_OK;
     }
 };
