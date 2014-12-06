@@ -19,16 +19,32 @@ void CIEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueu
     InitIE();
 }
 
-//■変更
+void CIEHostWindow::InitWindow(){
+    // window作成
+
+
+    auto hwnd = Create(NULL, CWindow::rcDefault,
+        _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
+
+    //    ResizeClient(320, 480);
+}
+
 HWND CIEHostWindow::Create(
     HWND hWndParent, _U_RECT rect, LPCTSTR szWindowName,
     DWORD dwStyle, DWORD dwExStyle,
     _U_MENUorID MenuOrID, LPVOID lpCreateParam)
 {
-    HWND	hWnd;
-
     //__super::ではなく、CWindow::のCreateをCAxWindow::GetWndClassName()指定で利用
-    hWnd = CWindow::Create(CAxWindow::GetWndClassName(), hWndParent, rect, szWindowName, dwStyle, dwExStyle, MenuOrID, lpCreateParam);
+    auto hWnd = CWindow::Create(
+        CAxWindow::GetWndClassName(),   // [in]  lpstrWndClass
+        hWndParent,                     // [in]  hWndParent
+        rect,                           // [in]  rect
+        szWindowName,                   // [in]  szWindowName
+        dwStyle,                        // [in]  dwStyle
+        dwExStyle,                      // [in]  dwExStyle
+        MenuOrID,                       // [in]  MenuOrID
+        lpCreateParam);                 // [in]  lpCreateParam
+    ATLENSURE(hWnd != NULL);
     if (hWnd == NULL) return NULL;
 
     //メッセージマップが使えるようにこのウインドウをサブクラス化
@@ -37,13 +53,6 @@ HWND CIEHostWindow::Create(
     return	hWnd;
 }
 
-void CIEHostWindow::InitWindow(){
-    // window作成
-    Create(NULL, CWindow::rcDefault,
-        _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
-
-//    ResizeClient(320, 480);
-}
 
 //#define SHOW_PASTA_SAN
 
@@ -51,8 +60,17 @@ void CIEHostWindow::InitIE(){
     // IEコントロールの作成
     CComPtr<IUnknown> unknown, uhost;
 
-    HR(CreateControlEx(_T("Shell.Explorer.2"), m_hWnd, NULL, &unknown, IID_NULL, NULL));
+    HR(CreateControlEx(
+        _T("Shell.Explorer.2"), // [in]  lpszName
+        NULL,                   // [in]  pStream
+        NULL,                   // [out] ppUnkContainer
+        &unknown,               // [out] ppUnkControl
+        IID_NULL,               // [in]  iidSink
+        NULL));                 // [in]  punkSink
     // TODO:ちゃんとする    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
+
+
+
     web2 = unknown;
 
 #ifndef SHOW_PASTA_SAN
