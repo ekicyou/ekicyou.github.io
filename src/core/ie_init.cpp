@@ -44,6 +44,7 @@ HWND CIEHostWindow::Create(
         dwExStyle,                      // [in]  dwExStyle
         MenuOrID,                       // [in]  MenuOrID
         lpCreateParam);                 // [in]  lpCreateParam
+    auto err = ::GetLastError();
     ATLENSURE(hWnd != NULL);
     if (hWnd == NULL) return NULL;
 
