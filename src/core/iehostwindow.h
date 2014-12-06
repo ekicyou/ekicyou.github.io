@@ -12,6 +12,7 @@
 #include <agents.h>
 #include <atlapp.h>
 #include <atlcrack.h>
+#include "atlhostex.h"
 #include "messages.h"
 
 using namespace shiori;
@@ -22,46 +23,9 @@ using namespace shiori;
 
 class CIEHostWindow;
 
-// IEWindowのPresentSite実装
-class CIEHostWindowPresentSite
-    : public IViewObjectPresentNotifySite
-    , public CComTearOffObjectBase < CIEHostWindow, CComSingleThreadModel >
-{
-public:
-    CIEHostWindowPresentSite() {}
-    BEGIN_COM_MAP(CIEHostWindowPresentSite)
-        COM_INTERFACE_ENTRY(IViewObjectPresentSite)
-        COM_INTERFACE_ENTRY(IViewObjectPresentNotifySite)
-    END_COM_MAP()
-
-public:
-    // インターフェース実装：IViewObjectPresentSite
-
-    STDMETHOD(CreateSurfacePresenter)(
-        /* [in] */ __RPC__in_opt IUnknown *pDevice,
-        /* [in] */ UINT width,
-        /* [in] */ UINT height,
-        /* [in] */ UINT backBufferCount,
-        /* [in] */ DXGI_FORMAT format,
-        /* [in] */ VIEW_OBJECT_ALPHA_MODE mode,
-        /* [out][retval] */ __RPC__deref_out_opt ISurfacePresenter **ppQueue) override;
-
-    STDMETHOD(IsHardwareComposition)(
-        /* [out][retval] */ __RPC__out BOOL *pIsHardwareComposition)override;
-
-    STDMETHOD(SetCompositionMode)(
-        /* [in] */ VIEW_OBJECT_COMPOSITION_MODE mode)override;
-
-public:
-    // インターフェース実装：IViewObjectPresentNotifySite
-
-    STDMETHOD(RequestFrame)(void)override;
-};
-
-
 // IEをホストするウィンドウ
 class ATL_NO_VTABLE CIEHostWindow
-    : public CComObject<CAxHostWindow>
+    : public CComObject<CAxHostWindowEX>
     , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
 {
 public:
@@ -152,7 +116,7 @@ private:
         MSG_WM_CREATE(OnCreate)
         MSG_WM_DESTROY(OnDestroy)
         MESSAGE_HANDLER(WM_SHIORI_REQUEST, OnShioriRequest)
-        CHAIN_MSG_MAP(CAxHostWindow)
+        CHAIN_MSG_MAP(CAxHostWindowEX)
     END_MSG_MAP()
 
     LRESULT OnDestroy();

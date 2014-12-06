@@ -40,10 +40,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(WTL_PATH)Include</IncludePath>
+    <IncludePath>$(SolutionDir)..\externals\dx\;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(WTL_PATH)Include</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(WTL_PATH)Include</IncludePath>
+    <IncludePath>$(SolutionDir)..\externals\dx\;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(WTL_PATH)Include</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -88,7 +88,9 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="atlhostex.h" />
     <ClInclude Include="fileio.h" />
+    <ClInclude Include="ie_presentsite.h" />
     <ClInclude Include="import.h" />
     <ClInclude Include="interfaces.h" />
     <ClInclude Include="messages.h" />
