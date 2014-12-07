@@ -20,12 +20,11 @@ using namespace shiori;
 // TODO  IEのイベントを受信する
 //       http://www.usefullcode.net/2009/03/receive_ie_event.html
 
-
-class CIEHostWindow;
+typedef CAxHostWindow HostWindowBase;
 
 // IEをホストするウィンドウ
 class ATL_NO_VTABLE CIEHostWindow
-    : public CComObject<CAxHostWindowEX>
+    : public CComObject<HostWindowBase>
     , public IDispEventImpl < SINKID_EVENTS, CIEHostWindow, &DIID_DWebBrowserEvents2 >
 {
 public:
@@ -46,7 +45,7 @@ public:
     CIEHostWindow();
     virtual ~CIEHostWindow();
 
-    HWND Create(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
+    HWND Create2(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
         DWORD dwStyle = 0, DWORD dwExStyle = 0,
         _U_MENUorID MenuOrID = 0U, LPVOID lpCreateParam = NULL);
 
@@ -116,12 +115,10 @@ private:
         MSG_WM_CREATE(OnCreate)
         MSG_WM_DESTROY(OnDestroy)
         MESSAGE_HANDLER(WM_SHIORI_REQUEST, OnShioriRequest)
-        CHAIN_MSG_MAP(CAxHostWindowEX)
+        CHAIN_MSG_MAP(HostWindowBase)
     END_MSG_MAP()
 
     LRESULT OnDestroy();
     LRESULT OnCreate(LPCREATESTRUCT lpCreateStruct);
     LRESULT OnShioriRequest(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 };
-
-

@@ -15,6 +15,7 @@ void CIEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueu
 
     this->hasRegKeyWrite = HasRegKeyWrite();
     if (this->hasRegKeyWrite)InitRegKey();
+    auto err = ::GetLastError();
     InitWindow();
     InitIE();
 }
@@ -22,18 +23,18 @@ void CIEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueu
 void CIEHostWindow::InitWindow(){
     // windowçÏê¨
 
-
-    auto hwnd = Create(NULL, CWindow::rcDefault,
+    auto hwnd = Create2(NULL, CWindow::rcDefault,
         _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
 
     //    ResizeClient(320, 480);
 }
 
-HWND CIEHostWindow::Create(
+HWND CIEHostWindow::Create2(
     HWND hWndParent, _U_RECT rect, LPCTSTR szWindowName,
     DWORD dwStyle, DWORD dwExStyle,
     _U_MENUorID MenuOrID, LPVOID lpCreateParam)
 {
+    auto err = ::GetLastError();
     //__super::Ç≈ÇÕÇ»Ç≠ÅACWindow::ÇÃCreateÇCAxWindow::GetWndClassName()éwíËÇ≈óòóp
     auto hWnd = CWindow::Create(
         CAxWindow::GetWndClassName(),   // [in]  lpstrWndClass
@@ -44,7 +45,6 @@ HWND CIEHostWindow::Create(
         dwExStyle,                      // [in]  dwExStyle
         MenuOrID,                       // [in]  MenuOrID
         lpCreateParam);                 // [in]  lpCreateParam
-    auto err = ::GetLastError();
     ATLENSURE(hWnd != NULL);
     if (hWnd == NULL) return NULL;
 
@@ -53,7 +53,6 @@ HWND CIEHostWindow::Create(
 
     return	hWnd;
 }
-
 
 //#define SHOW_PASTA_SAN
 
@@ -69,8 +68,6 @@ void CIEHostWindow::InitIE(){
         IID_NULL,               // [in]  iidSink
         NULL));                 // [in]  punkSink
     // TODO:ÇøÇ·ÇÒÇ∆Ç∑ÇÈ    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
-
-
 
     web2 = unknown;
 
@@ -133,4 +130,4 @@ void CIEHostWindow::InitIE(){
         CComQIPtr<IOleClientSite> site2 = uhost;
         CComQIPtr<IViewObjectPresentSite> sv2 = uhost;
     }
-    }
+}

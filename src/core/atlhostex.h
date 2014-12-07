@@ -21,7 +21,7 @@ class ATL_NO_VTABLE CAxHostWindowEX :
 #ifndef _ATL_NO_DOCHOSTUIHANDLER
     public IDocHostUIHandler,
 #endif
-    public IDispatchImpl<IAxWinAmbientDispatchEx, &__uuidof(IAxWinAmbientDispatchEx), &CAtlModule::m_libid, 0xFFFF, 0xFFFF>
+    public IDispatchImpl < IAxWinAmbientDispatchEx, &__uuidof(IAxWinAmbientDispatchEx), &CAtlModule::m_libid, 0xFFFF, 0xFFFF >
 {
 public:
     // ctor/dtor
@@ -699,7 +699,6 @@ public:
                         spBrowser->Navigate2(&vurl, &ve, &ve, &ve, &ve);
                     }
                 }
-
             }
             if (FAILED(hr) || m_spUnknown == NULL)
             {
@@ -1910,7 +1909,6 @@ public:
         return hr;
     }
 
-
     // pointers
     CComPtr<IUnknown> m_spUnknown;
     CComPtr<IOleObject> m_spOleObject;
@@ -2098,5 +2096,4 @@ public:
         return hr;
     }
     ATLPREFAST_UNSUPPRESS()
-
 };
