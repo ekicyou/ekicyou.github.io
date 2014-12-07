@@ -15,16 +15,21 @@ void CIEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueu
 
     this->hasRegKeyWrite = HasRegKeyWrite();
     if (this->hasRegKeyWrite)InitRegKey();
-    auto err = ::GetLastError();
     InitWindow();
     InitIE();
 }
 
 void CIEHostWindow::InitWindow(){
     // window作成
+    HWND hWndParent = NULL;
+    auto rect = CWindow::rcDefault;
+    auto szWindowName = _T("IEWindow");
+    auto dwStyle = WS_OVERLAPPEDWINDOW | WS_VISIBLE;
+    auto dwExStyle = WS_EX_OVERLAPPEDWINDOW;
 
-    auto hwnd = Create2(NULL, CWindow::rcDefault,
-        _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
+
+    Create(hWndParent, rect, szWindowName, dwStyle, dwExStyle);
+    ATLENSURE(m_hWnd != NULL);
 
     //    ResizeClient(320, 480);
 }
@@ -34,10 +39,11 @@ HWND CIEHostWindow::Create2(
     DWORD dwStyle, DWORD dwExStyle,
     _U_MENUorID MenuOrID, LPVOID lpCreateParam)
 {
-    auto err = ::GetLastError();
     //__super::ではなく、CWindow::のCreateをCAxWindow::GetWndClassName()指定で利用
+    auto lpstrWndClass = CAxWindow::GetWndClassName();
+
     auto hWnd = CWindow::Create(
-        CAxWindow::GetWndClassName(),   // [in]  lpstrWndClass
+        lpstrWndClass,                  // [in]  lpstrWndClass
         hWndParent,                     // [in]  hWndParent
         rect,                           // [in]  rect
         szWindowName,                   // [in]  szWindowName
@@ -45,8 +51,7 @@ HWND CIEHostWindow::Create2(
         dwExStyle,                      // [in]  dwExStyle
         MenuOrID,                       // [in]  MenuOrID
         lpCreateParam);                 // [in]  lpCreateParam
-    ATLENSURE(hWnd != NULL);
-    if (hWnd == NULL) return NULL;
+    ATLENSURE(m_hWnd != NULL);
 
     //メッセージマップが使えるようにこのウインドウをサブクラス化
     refWin.SubclassWindow(m_hWnd);
