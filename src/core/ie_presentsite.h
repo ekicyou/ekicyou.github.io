@@ -11,7 +11,6 @@
 // IRootHWND
 //
 
-
 MIDL_INTERFACE("18F64041-43A0-45BE-8D9E-B877C7645F7C")
 IRootHWND : public IUnknown
 {
@@ -19,10 +18,6 @@ public:
     STDMETHOD(SetRootHWND)(_In_ HWND hWnd) = 0;
     STDMETHOD(GetRootHWND)(_Inout_ HWND& hWnd) = 0;
 };
-
-
-
-
 
 //////////////////////////////////////////////////////////////////////////////
 // IViewObjectPresentNotifySiteImpl
@@ -39,7 +34,6 @@ public:
     }
     VIEW_OBJECT_COMPOSITION_MODE m_compositionMode;
     HWND m_hRootWnd;
-
 
 private:
 
@@ -268,4 +262,3 @@ public:
         return S_OK;
     }
 };
-

@@ -28,7 +28,6 @@ HRESULT IEHostWindow::CreateControlEx2(
             lpszName, m_hWnd, pStream, ppUnkContainer, ppUnkControl, iidSink, punkSink);
         if (FAILED(hr))return hr;
 
-
         return hr;
     }
 

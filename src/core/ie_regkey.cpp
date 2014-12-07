@@ -3,6 +3,7 @@
 #include "stdmethod.h"
 #include "fileio.h"
 #include <atlbase.h>
+#include <urlmon.h>
 
 /////////////////////////////////////////////////////////////////////////////
 // IEコンポーネントが最新バージョンで動くようにレジストリキーを設定
@@ -41,7 +42,7 @@ bool IEHostWindow::HasRegKeyWrite(){
     if (root.Open(HKEY_CURRENT_USER, _T(REG_ROOT), KEY_READ) != ERROR_SUCCESS)return true;
 
     // FEATURE_BROWSER_EMULATION >= 11000
-    if (GetDWORD(root, _T("FEATURE_BROWSER_EMULATION"), valueName) < 11000)return true;
+    if (GetDWORD(root, _T("FEATURE_BROWSER_EMULATION"), valueName) < 11001)return true;
 
     // FEATURE_GPU_RENDERING >= 1
     if (GetDWORD(root, _T("FEATURE_GPU_RENDERING"), valueName) < 1)return true;
@@ -63,7 +64,7 @@ void IEHostWindow::InitRegKey(){
     OK(root.Create(HKEY_CURRENT_USER, _T(REG_ROOT)));
 
     // FEATURE_BROWSER_EMULATION >= 11000
-    SetDWORD(root, _T("FEATURE_BROWSER_EMULATION"), valueName, 11000);
+    SetDWORD(root, _T("FEATURE_BROWSER_EMULATION"), valueName, 11001);
 
     // FEATURE_GPU_RENDERING >= 1
     SetDWORD(root, _T("FEATURE_GPU_RENDERING"), valueName, 1);
