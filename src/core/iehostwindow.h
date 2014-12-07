@@ -13,6 +13,7 @@
 #include <atlapp.h>
 #include <atlcrack.h>
 #include "messages.h"
+#include "atlhostex.h"
 
 using namespace shiori;
 

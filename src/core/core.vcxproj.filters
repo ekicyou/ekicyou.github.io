@@ -46,6 +46,12 @@
     <ClInclude Include="import.h">
       <Filter>etc</Filter>
     </ClInclude>
+    <ClInclude Include="atlhostex.h">
+      <Filter>ie</Filter>
+    </ClInclude>
+    <ClInclude Include="ie_presentsite.h">
+      <Filter>ie</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
