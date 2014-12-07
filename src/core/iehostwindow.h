@@ -13,7 +13,6 @@
 #include <atlapp.h>
 #include <atlcrack.h>
 #include "messages.h"
-#include "atlhostex.h"
 
 using namespace shiori;
 
@@ -40,6 +39,15 @@ public:
     void InitIE();
     bool HasRegKeyWrite();
     void InitRegKey();
+
+public:
+    STDMETHOD(CreateControlEx2)(
+        _In_z_ LPCOLESTR lpszName,
+        _Inout_opt_ IStream* pStream = NULL,
+        _Outptr_opt_ IUnknown** ppUnkContainer = NULL,
+        _Outptr_opt_ IUnknown** ppUnkControl = NULL,
+        _In_ REFIID iidSink = IID_NULL,
+        _Inout_opt_ IUnknown* punkSink = NULL);
 
 private:
     HINSTANCE hinst;

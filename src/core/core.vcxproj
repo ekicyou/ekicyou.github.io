@@ -95,6 +95,7 @@
     <ClInclude Include="iehostwindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="atlhostex.cpp" />
     <ClCompile Include="fileio.cpp" />
     <ClCompile Include="ie_init.cpp" />
     <ClCompile Include="ie_regkey.cpp" />

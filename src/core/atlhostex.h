@@ -2097,12 +2097,21 @@ public:
     }
     ATLPREFAST_UNSUPPRESS()
 
+public:
 
+    ATLINLINE static  ATLAPI AxCreateControlEx(
+        _In_z_ LPCOLESTR lpszName,
+        _In_ HWND hWnd,
+        _Inout_opt_ IStream* pStream,
+        _Outptr_opt_ IUnknown** ppUnkContainer,
+        _Outptr_opt_ IUnknown** ppUnkControl,
+        _In_ REFIID iidSink,
+        _Inout_opt_ IUnknown* punkSink)
+    {
+        return AxCreateControlLicEx(lpszName, hWnd, pStream, ppUnkContainer, ppUnkControl, iidSink, punkSink, NULL);
+    }
 
-
-        public:
-
-        ATLPREFAST_SUPPRESS(6387)
+    ATLPREFAST_SUPPRESS(6387)
         ATLINLINE static ATLAPI AxCreateControlLicEx(
         _In_z_ LPCOLESTR lpszName,
         _In_ HWND hWnd,
@@ -2149,7 +2158,4 @@ public:
         return hr;
     }
     ATLPREFAST_UNSUPPRESS()
-
-
 };
-

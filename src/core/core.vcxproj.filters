@@ -72,6 +72,9 @@
     <ClCompile Include="ie_regkey.cpp">
       <Filter>ie</Filter>
     </ClCompile>
+    <ClCompile Include="atlhostex.cpp">
+      <Filter>ie</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="index.html" />
