@@ -23,13 +23,20 @@ HRESULT IEHostWindow::CreateControlEx2(
 
     // If QueryHost failed, there is no host attached to this window
     // We assume that the user wants to create a new host and subclass the current window
-    if (FAILED(hr))
-        return AtlAxCreateControlEx(lpszName, m_hWnd, pStream, ppUnkContainer, ppUnkControl, iidSink, punkSink);
+    if (FAILED(hr)){
+        hr = CAxHostWindowEX::AxCreateControlEx(
+            lpszName, m_hWnd, pStream, ppUnkContainer, ppUnkControl, iidSink, punkSink);
+        if (FAILED(hr))return hr;
+
+
+        return hr;
+    }
 
     // Create the control requested by the caller
     CComPtr<IUnknown> pControl;
     if (SUCCEEDED(hr))
-        hr = spWinHost->CreateControlEx(lpszName, m_hWnd, pStream, &pControl, iidSink, punkSink);
+        hr = spWinHost->CreateControlEx(
+        lpszName, m_hWnd, pStream, &pControl, iidSink, punkSink);
 
     // Send back the necessary interface pointers
     if (SUCCEEDED(hr))

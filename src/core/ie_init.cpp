@@ -32,7 +32,7 @@ void IEHostWindow::InitWindow(){
 void IEHostWindow::InitIE(){
     // IEÉRÉìÉgÉçÅ[ÉãÇÃçÏê¨
     CComPtr<IUnknown> unknown, uhost;
-    HR(CreateControlEx(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
+    HR(CreateControlEx2(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
     web2 = unknown;
 
 #ifndef SHOW_PASTA_SAN

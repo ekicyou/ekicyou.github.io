@@ -82,6 +82,7 @@ public:
         COM_INTERFACE_ENTRY(IOleClientSite)
         COM_INTERFACE_ENTRY(IViewObjectPresentSite)
         COM_INTERFACE_ENTRY(IViewObjectPresentNotifySite)
+        COM_INTERFACE_ENTRY(IRootHWND)
         COM_INTERFACE_ENTRY(IOleInPlaceSiteWindowless)
         COM_INTERFACE_ENTRY(IOleInPlaceSiteEx)
         COM_INTERFACE_ENTRY(IOleInPlaceSite)
@@ -2130,6 +2131,13 @@ public:
         hr = _CreatorClass::CreateInstance(NULL, __uuidof(IUnknown), (void**)&spUnkContainer);
         if (SUCCEEDED(hr))
         {
+            {
+                CComQIPtr<IRootHWND> pRootHWND = spUnkContainer;
+                ATLENSURE(pRootHWND != NULL);
+                hr = pRootHWND->SetRootHWND(hWnd);
+                ATLENSURE(SUCCEEDED(hr));
+            }
+
             CComPtr<IAxWinHostWindowLic> pAxWindow;
             spUnkContainer->QueryInterface(__uuidof(IAxWinHostWindow), (void**)&pAxWindow);
             CComBSTR bstrName(lpszName);

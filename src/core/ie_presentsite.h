@@ -8,18 +8,38 @@
 #pragma comment(lib, "dcomp")
 
 //////////////////////////////////////////////////////////////////////////////
+// IRootHWND
+//
+
+
+MIDL_INTERFACE("18F64041-43A0-45BE-8D9E-B877C7645F7C")
+IRootHWND : public IUnknown
+{
+public:
+    STDMETHOD(SetRootHWND)(_In_ HWND hWnd) = 0;
+    STDMETHOD(GetRootHWND)(_Inout_ HWND& hWnd) = 0;
+};
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
 // IViewObjectPresentNotifySiteImpl
 //
 
 template <class T>
 class ATL_NO_VTABLE IViewObjectPresentNotifySiteImpl
     : public IViewObjectPresentNotifySite
+    , public IRootHWND
 {
 public:
     virtual ~IViewObjectPresentNotifySiteImpl()
     {
     }
     VIEW_OBJECT_COMPOSITION_MODE m_compositionMode;
+    HWND m_hRootWnd;
+
 
 private:
 
@@ -35,7 +55,6 @@ private:
     public:
         typedef IViewObjectPresentNotifySiteImpl<T> Site;
 
-        Site* site;
         HWND m_hWnd;
         DXGI_SWAP_CHAIN_DESC1 description = {};
         CComQIPtr<ID3D11Device> direct3dDevice;
@@ -48,7 +67,7 @@ private:
         virtual ~ISurfacePresenterImpl(){}
 
         HRESULT Init(
-            Site *site,
+            HWND hWnd,
             /* [in] */ __RPC__in_opt IUnknown *pDevice,
             /* [in] */ UINT width,
             /* [in] */ UINT height,
@@ -57,9 +76,7 @@ private:
             /* [in] */ VIEW_OBJECT_ALPHA_MODE mode
             )
         {
-            this->site = site;
-            auto win = static_cast<T*>(site);
-            m_hWnd = win->m_hWnd;
+            m_hWnd = hWnd;
             HRESULT hr;
 
             // ＜＜ DirectCompositionによるスワップ チェーン 合成＞＞
@@ -206,7 +223,7 @@ public:
     {
         auto sp = new CComObject < ISurfacePresenterImpl >();
         auto hr = sp->Init(
-            this, pDevice, width, height, backBufferCount, format, mode);
+            m_hRootWnd, pDevice, width, height, backBufferCount, format, mode);
         if (FAILED(hr)){
             delete sp;
             return hr;
@@ -238,4 +255,17 @@ public:
         // 暫定、何もしていない
         return S_OK;
     }
+
+public:
+    // インターフェース実装：IRootHWND
+
+    STDMETHOD(SetRootHWND)(_In_ HWND hWnd){
+        m_hRootWnd = hWnd;
+        return S_OK;
+    }
+    STDMETHOD(GetRootHWND)(_Inout_ HWND& hWnd) {
+        hWnd = m_hRootWnd;
+        return S_OK;
+    }
 };
+
