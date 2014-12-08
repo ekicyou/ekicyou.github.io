@@ -2,6 +2,7 @@
 #include "iehostwindow.h"
 #include "stdmethod.h"
 #include "fileio.h"
+#include "checkIF.h"
 #include <atlsafe.h>
 
 /////////////////////////////////////////////////////////////////////////////
@@ -21,13 +22,17 @@ void IEHostWindow::Init(const HINSTANCE hinst, const BSTR &loaddir, RequestQueue
 
 void IEHostWindow::InitWindow(){
     // window作成
-    Create(NULL, CWindow::rcDefault,
-        _T("IEWindow"), WS_OVERLAPPEDWINDOW | WS_VISIBLE);
+    auto rect = CWindow::rcDefault;
+    auto szWindowName = _T("IEWindow");
+    auto dwStyle = WS_OVERLAPPEDWINDOW | WS_VISIBLE;
+    auto dwExStyle = WS_EX_OVERLAPPEDWINDOW;
+    //auto dwExStyle =  WS_EX_NOREDIRECTIONBITMAP;
 
+    Create(NULL, rect, szWindowName, dwStyle, dwExStyle);
     ResizeClient(320, 480);
 }
 
-#define SHOW_PASTA_SAN
+//#define SHOW_PASTA_SAN
 
 void IEHostWindow::InitIE(){
     // IEコントロールの作成
@@ -66,11 +71,18 @@ void IEHostWindow::InitIE(){
 
     {
         // どうにもならない試みであるが同じことを繰り返さないために残す
+
         CComQIPtr<IOleObject> ole = web2;
         CComPtr<IOleClientSite> site;
         ole->GetClientSite(&site);
-        CComQIPtr<IViewObjectPresentSite> sv = site;
-        CComQIPtr<IOleClientSite> site2 = uhost;
-        CComQIPtr<IViewObjectPresentSite> sv2 = uhost;
+
+        ::CheckInterface(web2, _T("web2"));
+        ::CheckInterface(doc2, _T("doc2"));
+        ::CheckInterface(site, _T("site"));
+
+        CComQIPtr<IViewObjectEx> vex = doc2;
+        DWORD status;
+        HR(vex->GetViewStatus(&status));
+        AtlTrace(_T("doc2->[IViewObjectEx::GetViewStatus] %x"), status);
     }
 }

@@ -17,7 +17,7 @@
 using namespace shiori;
 
 class IEHostWindow
-    : public CWindowImpl < IEHostWindow, CAxWindow, CWinTraits<WS_OVERLAPPEDWINDOW | WS_VISIBLE, WS_EX_NOREDIRECTIONBITMAP> >
+    : public CWindowImpl < IEHostWindow, CAxWindow>
 {
 public:
     static HANDLE CreateThread(
