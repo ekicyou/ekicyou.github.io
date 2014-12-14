@@ -52,6 +52,12 @@
     <ClInclude Include="ie_presentsite.h">
       <Filter>ie</Filter>
     </ClInclude>
+    <ClInclude Include="checkIF.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="checkIFimpl.h">
+      <Filter>lib</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -74,6 +80,15 @@
     </ClCompile>
     <ClCompile Include="atlhostex.cpp">
       <Filter>ie</Filter>
+    </ClCompile>
+    <ClCompile Include="checkIF.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="checkIFimpl1.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="checkIFimpl2.cpp">
+      <Filter>lib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

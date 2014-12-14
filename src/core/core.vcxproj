@@ -83,6 +83,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="atlhostex.h" />
+    <ClInclude Include="checkIF.h" />
+    <ClInclude Include="checkIFimpl.h" />
     <ClInclude Include="fileio.h" />
     <ClInclude Include="ie_presentsite.h" />
     <ClInclude Include="import.h" />
@@ -96,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="atlhostex.cpp" />
+    <ClCompile Include="checkIF.cpp" />
+    <ClCompile Include="checkIFimpl1.cpp" />
+    <ClCompile Include="checkIFimpl2.cpp" />
     <ClCompile Include="fileio.cpp" />
     <ClCompile Include="ie_init.cpp" />
     <ClCompile Include="ie_regkey.cpp" />
