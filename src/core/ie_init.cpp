@@ -25,8 +25,8 @@ void IEHostWindow::InitWindow(){
     auto rect = CWindow::rcDefault;
     auto szWindowName = _T("IEWindow");
     auto dwStyle = WS_OVERLAPPEDWINDOW | WS_VISIBLE;
-    auto dwExStyle = WS_EX_OVERLAPPEDWINDOW;
-    //auto dwExStyle =  WS_EX_NOREDIRECTIONBITMAP;
+    //auto dwExStyle = WS_EX_OVERLAPPEDWINDOW;
+    auto dwExStyle =  WS_EX_NOREDIRECTIONBITMAP;
 
     Create(NULL, rect, szWindowName, dwStyle, dwExStyle);
     ResizeClient(320, 480);
@@ -35,6 +35,9 @@ void IEHostWindow::InitWindow(){
 //#define SHOW_PASTA_SAN
 
 void IEHostWindow::InitIE(){
+
+#ifdef xxxxxxxx
+
     // IEコントロールの作成
     CComPtr<IUnknown> unknown, uhost;
     HR(CreateControlEx2(_T("Shell.Explorer.2"), NULL, &uhost, &unknown, IID_NULL, NULL));
@@ -44,22 +47,8 @@ void IEHostWindow::InitIE(){
     // 空ページの作成
     CComVariant	no_use, blank_url(_T("about:blank"));
     HR(web2->Navigate2(&blank_url, &no_use, &no_use, &no_use, &no_use));
-
-    // ドキュメントファイルの読み込み
-    CComPtr<IDispatch> disp;
-    CComQIPtr<IHTMLDocument2> doc2;
-    CComSafeArray<VARIANT> buf;
-    auto path = loaddir;
-    path /= L"index.html";
-
-    auto htmlText = readFile(path.string().c_str());
-    CComBSTR bHtml(htmlText.c_str());
-    CComVariant vHtml(bHtml);
-    HR(buf.Add(vHtml));
     HR(web2->get_Document(&disp));
     doc2 = disp;
-    HR(doc2->clear());
-    HR(doc2->writeln(buf));
 
 #else
     // ぱすたさんの読み込み
@@ -69,18 +58,47 @@ void IEHostWindow::InitIE(){
 
 #endif
 
+
+#endif
+    // htmlfile_FullWindowEmbedの作成
+    CComPtr<IUnknown> unknown, uhost;
+#ifdef xxxxxxxx
+    // htmlfile
+    HR(CreateControlEx2(_T("htmlfile"), NULL, &uhost, &unknown, IID_NULL, NULL));
+    // Microsoft HTML DwnBindInfo
+    HR(CreateControlEx2(_T("{3050F3C2-98B5-11CF-BB82-00AA00BDCE0B}"), NULL, &uhost, &unknown, IID_NULL, NULL));
+    // Microsoft Html Component
+    HR(CreateControlEx2(_T("{3050f4f8-98b5-11cf-bb82-00aa00bdce0b}"), NULL, &uhost, &unknown, IID_NULL, NULL));
+#endif
+
+
+    doc2 = unknown;
+
+#ifdef xxxxxxxx
+    // ドキュメントファイルの読み込み
+    CComPtr<IDispatch> disp;
+    CComSafeArray<VARIANT> buf;
+    auto path = loaddir;
+    path /= L"index.html";
+    auto htmlText = readFile(path.string().c_str());
+    CComBSTR bHtml(htmlText.c_str());
+    CComVariant vHtml(bHtml);
+    HR(buf.Add(vHtml));
+    HR(doc2->clear());
+    HR(doc2->writeln(buf));
+#endif
+
     {
         // どうにもならない試みであるが同じことを繰り返さないために残す
+        ::CheckInterface(unknown, _T("unknown"));
+        ::CheckInterface(doc2, _T("doc2"));
 
-        CComQIPtr<IOleObject> ole = web2;
+        CComQIPtr<IOleObject> ole = unknown;
         CComPtr<IOleClientSite> site;
         ole->GetClientSite(&site);
-
-        ::CheckInterface(web2, _T("web2"));
-        ::CheckInterface(doc2, _T("doc2"));
         ::CheckInterface(site, _T("site"));
 
-        CComQIPtr<IViewObjectEx> vex = doc2;
+        CComQIPtr<IViewObjectEx> vex = unknown;
         DWORD status;
         HR(vex->GetViewStatus(&status));
         AtlTrace(_T("doc2->[IViewObjectEx::GetViewStatus] %x"), status);

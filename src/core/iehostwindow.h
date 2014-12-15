@@ -59,6 +59,7 @@ private:
     HANDLE hthread;
     DWORD thid;
     CComQIPtr<IWebBrowser2> web2;
+    CComQIPtr<IHTMLDocument2> doc2;
     bool hasRegKeyWrite;
 
 public:

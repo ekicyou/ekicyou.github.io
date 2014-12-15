@@ -225,7 +225,7 @@ mshtml.dllに関連するGUID情報
 {30590067-98b5-11cf-bb82-00aa00bdce0b} XHTML Document
     ProgID xhtmlfile
 
-{429AF92C-A51F-11d2-861E-00C04FA35C89} %Trident API%
+{429AF92C-A51F-11d2-861E-00C04FA35C89} HostDialogHelper
 
 {607fd4e8-0a03-11d1-ab1d-00c04fc9b304} CoICOFilter Class
     ProgID ICOFilter.CoICOFilter.1
