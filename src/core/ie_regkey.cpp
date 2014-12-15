@@ -41,7 +41,7 @@ bool IEHostWindow::HasRegKeyWrite(){
     CRegKey root;
     if (root.Open(HKEY_CURRENT_USER, _T(REG_ROOT), KEY_READ) != ERROR_SUCCESS)return true;
 
-    // FEATURE_BROWSER_EMULATION >= 11000
+    // FEATURE_BROWSER_EMULATION >= 11001
     if (GetDWORD(root, _T("FEATURE_BROWSER_EMULATION"), valueName) < 11001)return true;
 
     // FEATURE_GPU_RENDERING >= 1
@@ -63,7 +63,7 @@ void IEHostWindow::InitRegKey(){
     CRegKey root;
     OK(root.Create(HKEY_CURRENT_USER, _T(REG_ROOT)));
 
-    // FEATURE_BROWSER_EMULATION >= 11000
+    // FEATURE_BROWSER_EMULATION >= 11001
     SetDWORD(root, _T("FEATURE_BROWSER_EMULATION"), valueName, 11001);
 
     // FEATURE_GPU_RENDERING >= 1

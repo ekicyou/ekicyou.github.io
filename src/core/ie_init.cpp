@@ -25,8 +25,8 @@ void IEHostWindow::InitWindow(){
     auto rect = CWindow::rcDefault;
     auto szWindowName = _T("IEWindow");
     auto dwStyle = WS_OVERLAPPEDWINDOW | WS_VISIBLE;
-    //auto dwExStyle = WS_EX_OVERLAPPEDWINDOW;
-    auto dwExStyle =  WS_EX_NOREDIRECTIONBITMAP;
+    auto dwExStyle = WS_EX_OVERLAPPEDWINDOW;
+    //auto dwExStyle =  WS_EX_NOREDIRECTIONBITMAP;
 
     Create(NULL, rect, szWindowName, dwStyle, dwExStyle);
     ResizeClient(320, 480);
@@ -70,11 +70,12 @@ void IEHostWindow::InitIE(){
     // Microsoft Html Component
     HR(CreateControlEx2(_T("{3050f4f8-98b5-11cf-bb82-00aa00bdce0b}"), NULL, &uhost, &unknown, IID_NULL, NULL));
 #endif
+    // htmlfile_FullWindowEmbed
+    HR(CreateControlEx2(_T("htmlfile_FullWindowEmbed"), NULL, &uhost, &unknown, IID_NULL, NULL));
 
 
     doc2 = unknown;
 
-#ifdef xxxxxxxx
     // ドキュメントファイルの読み込み
     CComPtr<IDispatch> disp;
     CComSafeArray<VARIANT> buf;
@@ -86,7 +87,6 @@ void IEHostWindow::InitIE(){
     HR(buf.Add(vHtml));
     HR(doc2->clear());
     HR(doc2->writeln(buf));
-#endif
 
     {
         // どうにもならない試みであるが同じことを繰り返さないために残す
