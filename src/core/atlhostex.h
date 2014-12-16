@@ -5,6 +5,8 @@
 #include <atlhost.h>
 #include <atlbase.h>
 
+
+
 class ATL_NO_VTABLE CAxHostWindowEX :
     public CComCoClass<CAxHostWindowEX, &CLSID_NULL>,
     public CComObjectRootEx<CComSingleThreadModel>,
@@ -17,7 +19,7 @@ class ATL_NO_VTABLE CAxHostWindowEX :
     public IObjectWithSiteImpl<CAxHostWindowEX>,
     public IViewObjectPresentNotifySiteImpl<CAxHostWindowEX>,
     public IServiceProvider,
-    public IAdviseSink,
+    public IAdviseSinkEx,
 #ifndef _ATL_NO_DOCHOSTUIHANDLER
     public IDocHostUIHandler,
 #endif
@@ -97,6 +99,7 @@ public:
         COM_INTERFACE_ENTRY(IDocHostUIHandler)
 #endif
         COM_INTERFACE_ENTRY(IAdviseSink)
+        COM_INTERFACE_ENTRY(IAdviseSinkEx)
     END_COM_MAP()
 
     static CWndClassInfo& GetWndClassInfo()
@@ -1752,6 +1755,12 @@ public:
     {
     }
     STDMETHOD_(void, OnClose)()
+    {
+    }
+
+    // IAdviseSinkEx
+    STDMETHOD_(void, OnViewStatusChange)(
+        /* [in] */ DWORD dwViewStatus)
     {
     }
 
