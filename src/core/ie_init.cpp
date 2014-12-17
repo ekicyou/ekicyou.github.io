@@ -77,7 +77,6 @@ void IEHostWindow::InitIE(){
     doc2 = unknown;
 
     // ドキュメントファイルの読み込み
-    CComPtr<IDispatch> disp;
     CComSafeArray<VARIANT> buf;
     auto path = loaddir;
     path /= L"index.html";
@@ -88,15 +87,22 @@ void IEHostWindow::InitIE(){
     HR(doc2->clear());
     HR(doc2->writeln(buf));
 
+    CComQIPtr<IHTMLDocument7> doc7 = doc2;
+    CComPtr<IUnknown> h1;
+    {
+        CComPtr<IHTMLElementCollection> elColl;
+        HR(doc7->getElementsByClassName(CComBSTR(L"fixedbottom"), &elColl));
+        _variant_t index = 0;
+        CComPtr<IDispatch> disp;
+        HR(elColl->item(index, index, &disp));
+        h1 = disp;
+    }
+
     {
         // どうにもならない試みであるが同じことを繰り返さないために残す
         ::CheckInterface(unknown, _T("unknown"));
-        ::CheckInterface(doc2, _T("doc2"));
+        ::CheckInterface(h1, _T("h1"));
 
-        CComQIPtr<IOleObject> ole = unknown;
-        CComPtr<IOleClientSite> site;
-        ole->GetClientSite(&site);
-        ::CheckInterface(site, _T("site"));
 
         CComQIPtr<IViewObjectEx> vex = unknown;
         DWORD status;
