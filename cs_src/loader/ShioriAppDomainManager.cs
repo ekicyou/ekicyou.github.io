@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Runtime;
 using System.Runtime.InteropServices;
 
-namespace Loader
+namespace ShioriLoader
 {
     [Guid("233CD954-86BB-4984-A2A2-C4BFA7F9C14D")]
     [ComVisible(true)]
-    public sealed class ShioriAppDomainManager : AppDomainManager, IShiori
+    public sealed class ShioriAppDomainManager : AppDomainManager, IShioriRawAPI
     {
         public bool unload()
         {

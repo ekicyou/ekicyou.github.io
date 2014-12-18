@@ -7,7 +7,7 @@
     <ProjectGuid>{30F47E01-AE3F-40AF-BB16-40923CE82E3F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Loader</RootNamespace>
+    <RootNamespace>ShioriLoader</RootNamespace>
     <AssemblyName>Loader</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IShiori.cs" />
+    <Compile Include="IShioriRawAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShioriAppDomainManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\tlbexp" "$(TargetPath)" /out: "$(SolutionDir)lib\$(TargetName).tlb</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
