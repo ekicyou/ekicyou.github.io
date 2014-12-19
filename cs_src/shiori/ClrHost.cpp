@@ -107,7 +107,9 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
         HR(clrCtrl->SetAppDomainManagerType(assemblyName, appDomainManagerTypename));
 
         // CLRを起動し、Ghost通信インターフェースを取得します。
+        ATLTRACE2(_T("clr start >>>>>>>>>>>>>>>>\n"));
         HR(clr->Start());
+        ATLTRACE2(_T("clr start <<<<<<<<<<<<<<<<\n"));
 
         // Ghostを取得します。
         ghost = hostCtrl->GetGhost();
@@ -116,7 +118,7 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
         HR(ghost->load(bloaddir, &rc));
         return rc;
     }
-    catch (CAtlException &ex){ ATLTRACE2(_T("CAtlException hresult:[%d]"), ex.m_hr); }
+    catch (CAtlException &ex){ ATLTRACE2(_T("CAtlException hresult:[%d] <<<<<<<<\n"), ex.m_hr); }
     catch (...){}
     return FALSE;
 }
@@ -132,7 +134,7 @@ BOOL ClrHost::unload(void)
         if (clr)HR(clr->Stop());
         return rc;
     }
-    catch (CAtlException &ex){ ATLTRACE2(_T("CAtlException hresult:[%d]"), ex.m_hr); }
+    catch (CAtlException &ex){ ATLTRACE2(_T("CAtlException hresult:[%d]\n"), ex.m_hr); }
     catch (...){}
     return FALSE;
 }
