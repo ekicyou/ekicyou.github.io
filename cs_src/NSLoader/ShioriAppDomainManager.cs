@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
-namespace ShioriLoader
+namespace NShiori
 {
     [Guid("233CD954-86BB-4984-A2A2-C4BFA7F9C14D")]
     [ComVisible(true)]
@@ -14,17 +15,22 @@ namespace ShioriLoader
     {
         public bool unload()
         {
-            throw new NotImplementedException();
+            Debug.WriteLine("[unload] 終了");
+            return true;
         }
 
         public bool load(string loaddir)
         {
+            Debug.WriteLine("[load] loaddir=[{0}]", loaddir);
             throw new NotImplementedException();
         }
 
         public bool request(string req, out string res)
         {
-            throw new NotImplementedException();
+            Debug.WriteLine("[request] 未実装...");
+            res = null;
+            return true;
         }
+
     }
 }

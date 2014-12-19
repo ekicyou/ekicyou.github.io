@@ -16,11 +16,12 @@
 #include <atlstr.h>
 
 // TODO: プログラムに必要な追加ヘッダーをここで参照してください。
+#include <atlpath.h>
 #include <metahost.h>
 #include <mscoree.h>
 #include <corerror.h>
 #include <comdef.h>
 #pragma comment(lib, "mscoree.lib")
 
-#import "../lib/NSLoader.tlb"
+#import "../lib/NSLoader.tlb" raw_interfaces_only
 
