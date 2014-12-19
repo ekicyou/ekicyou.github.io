@@ -10,7 +10,7 @@ namespace ShioriLoader
 {
     [Guid("233CD954-86BB-4984-A2A2-C4BFA7F9C14D")]
     [ComVisible(true)]
-    public sealed class ShioriAppDomainManager : AppDomainManager, IShioriRawAPI
+    public sealed class ShioriAppDomainManager : AppDomainManager, IShiori1
     {
         public bool unload()
         {

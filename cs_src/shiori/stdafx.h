@@ -15,9 +15,6 @@
 #include <atlbase.h>
 #include <atlstr.h>
 
-// STL
-#include <memory>
-
 // TODO: プログラムに必要な追加ヘッダーをここで参照してください。
 #include <metahost.h>
 #include <mscoree.h>
@@ -25,5 +22,5 @@
 #include <comdef.h>
 #pragma comment(lib, "mscoree.lib")
 
-#import "../lib/Loader.tlb"
+#import "../lib/NSLoader.tlb"
 

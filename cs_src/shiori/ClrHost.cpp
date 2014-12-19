@@ -2,6 +2,13 @@
 #include "ClrHost.h"
 
 //-----------------------------------------------------------------------------
+// HRESULTÉGÉâÅ[Ç≈ó·äOî≠çs
+inline void HR(HRESULT const result)
+{
+    if (S_OK != result) AtlThrow(result);
+}
+
+//-----------------------------------------------------------------------------
 // é©ìÆäJï˙
 class AutoGrobal
 {
@@ -39,17 +46,30 @@ ClrHost::ClrHost(const HINSTANCE hinst)
 }
 
 /* ----------------------------------------------------------------------------
-* ûx Method / unload
-*/
-BOOL ClrHost::unload(void)
-{
-    return TRUE;
-}
-
-/* ----------------------------------------------------------------------------
 * ûx Method / load
 */
 BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
+{
+    try{
+        AutoGrobal ag(hGlobal_loaddir);
+        auto loaddir = g2CComBSTR(hGlobal_loaddir, loaddir_len, CP_ACP);
+
+        // 
+
+        return TRUE;
+    }
+    catch (CAtlException &ex){
+        ATLTRACE2(_T("CAtlException hresult:[%d]"), ex.m_hr);
+    }
+    catch (...){
+    }
+    return FALSE;
+}
+
+/* ----------------------------------------------------------------------------
+* ûx Method / unload
+*/
+BOOL ClrHost::unload(void)
 {
     return TRUE;
 }
@@ -59,5 +79,7 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
 */
 HGLOBAL ClrHost::request(HGLOBAL hGlobal_request, long& len)
 {
+    AutoGrobal ag(hGlobal_request);
+
     return NULL;
 }

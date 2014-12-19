@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "console", "console\console.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shiori", "shiori\shiori.vcxproj", "{A34D8627-E88B-4DF8-8BDB-9F39CD9AE31B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loader", "loader\Loader.csproj", "{30F47E01-AE3F-40AF-BB16-40923CE82E3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSLoader", "NSLoader\NSLoader.csproj", "{30F47E01-AE3F-40AF-BB16-40923CE82E3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

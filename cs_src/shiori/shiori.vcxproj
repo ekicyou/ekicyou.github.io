@@ -93,7 +93,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\loader\loader.csproj">
+    <ProjectReference Include="..\NSLoader\NSLoader.csproj">
       <Project>{30f47e01-ae3f-40af-bb16-40923ce82e3f}</Project>
     </ProjectReference>
   </ItemGroup>

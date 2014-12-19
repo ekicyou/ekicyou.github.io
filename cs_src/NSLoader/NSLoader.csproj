@@ -7,8 +7,8 @@
     <ProjectGuid>{30F47E01-AE3F-40AF-BB16-40923CE82E3F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ShioriLoader</RootNamespace>
-    <AssemblyName>Loader</AssemblyName>
+    <RootNamespace>NShiori</RootNamespace>
+    <AssemblyName>NSLoader</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

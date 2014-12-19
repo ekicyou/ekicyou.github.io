@@ -10,7 +10,8 @@
 /**----------------------------------------------------------------------------
 * グローバルインスタンス
 */
-std::unique_ptr<ClrHost> host;
+static HINSTANCE hinst;
+static CAutoPtr<ClrHost> host;
 
 /**----------------------------------------------------------------------------
 * Dllエントリーポイント
@@ -23,12 +24,11 @@ extern "C" __declspec(dllexport) BOOL WINAPI DllMain(
 {
     switch (fdwReason) {
     case    DLL_PROCESS_ATTACH: // プロセス接続
-        host.reset(new ClrHost(hinstDLL));
+        hinst = hinstDLL;
         break;
 
     case    DLL_PROCESS_DETACH: // プロセス切り離し
         unload();
-        host.release();
         break;
 
     case    DLL_THREAD_ATTACH:  // スレッド接続
@@ -45,7 +45,12 @@ extern "C" __declspec(dllexport) BOOL WINAPI DllMain(
 */
 SHIORI_API BOOL __cdecl unload(void)
 {
-    return host->unload();
+    BOOL rc = FALSE;
+    if (host) {
+        rc = host->unload();
+        host.Free();
+    }
+    return rc;
 }
 
 /* ----------------------------------------------------------------------------
@@ -53,6 +58,7 @@ SHIORI_API BOOL __cdecl unload(void)
 */
 SHIORI_API BOOL __cdecl load(HGLOBAL hGlobal_loaddir, long loaddir_len)
 {
+    host.Attach(new ClrHost(hinst));
     return host->load(hGlobal_loaddir, loaddir_len);
 }
 

@@ -12,7 +12,7 @@ namespace ShioriLoader
     /// </summary>
     [Guid("BC6068DA-EA2B-4A49-A2DE-7DE8F5355EF2")]
     [ComVisible(true)]
-    public interface IShioriRawAPI
+    public interface IShiori1
     {
         bool unload();
         bool load(string loaddir);
