@@ -9,11 +9,57 @@ inline void HR(HRESULT const result)
 }
 
 //-----------------------------------------------------------------------------
-// HRESULTエラーで例外発行
+// TRUE以外で例外発行
 inline void OK(BOOL const result)
 {
     if (!result) AtlThrow(E_FAIL);
 }
+
+/* ----------------------------------------------------------------------------
+* Win32エラーメッセージ取得
+*/
+CString GetWinErrMessage(const HRESULT hr)
+{
+    LPVOID string;
+    FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER |
+        FORMAT_MESSAGE_FROM_SYSTEM,
+        NULL,
+        hr,
+        MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+        (LPTSTR)&string,
+        0,
+        NULL);
+    CString rc;
+    if (string != NULL) rc.Format(_T("[%x:%s]"), hr, string);
+    else                rc.Format(_T("[%x:----]"), hr);
+    LocalFree(string);
+    return rc;
+}
+
+//-----------------------------------------------------------------------------
+// ディレクトリ変更＆自動復帰
+class Pushd
+{
+private:
+    CString mOldDir;
+
+public:
+    Pushd(LPCTSTR newdir)
+        :mOldDir()
+    {
+        TCHAR buf[_MAX_PATH + 1];
+        GetCurrentDirectory(sizeof(buf), buf);
+        mOldDir = buf;
+        BOOL rc = SetCurrentDirectory(newdir);
+        if (!rc) AtlThrow(FAILED(ERROR_CURRENT_DIRECTORY));
+    }
+
+    ~Pushd()
+    {
+        if (mOldDir.IsEmpty()) return;
+        SetCurrentDirectory(mOldDir);
+    }
+};
 
 //-----------------------------------------------------------------------------
 // 自動開放
@@ -68,14 +114,28 @@ ClrHost::ClrHost(const HINSTANCE hinst)
 BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
 {
     try{
+        // ディレクトリ名の取得
         AutoGrobal ag(hGlobal_loaddir);
-        auto loaddir = g2CPathW(hGlobal_loaddir, loaddir_len, CP_ACP);
+        auto loaddir = g2CComBSTR(hGlobal_loaddir, loaddir_len, CP_ACP);
+        ATLTRACE2(_T("         loaddir :[%s]\n"), (LPCTSTR)loaddir);
+        //           |xxxxxxxxxxxxxxxx :[xxx]
+
+        // 処理中のディレクトリを取得したディレクトリに切り替えておく
+        Pushd pushd(loaddir);
 
         // アセンブリ名⇒"NSLoader.dll"
-        OK(loaddir.Append(_T("NSLoader.dll")));
-        loaddir.Canonicalize();
-        ATLTRACE2(_T("loaddir = [%s]\n"), (LPCTSTR)loaddir);
-        OK(loaddir.FileExists());
+        // 絶対パスである必要があります。
+        TCHAR assemblyPath[_MAX_PATH + 1];
+        TCHAR* assemblyFileName = nullptr;
+        {
+            CPath path(loaddir);
+            OK(path.Append(_T("NSLoader.dll")));
+            OK(path.FileExists());
+            DWORD len = GetFullPathName(path, sizeof(assemblyPath) / sizeof(TCHAR), assemblyPath, &assemblyFileName);
+            ATLTRACE2(_T("assemblyFileName :[%s]\n"), (LPCTSTR)assemblyFileName);
+            ATLTRACE2(_T("    assemblyPath :[%s]\n"), (LPCTSTR)assemblyPath);
+            //           |xxxxxxxxxxxxxxxx :[xxx]
+        }
 
         // ICLRMetaHostの取得
         CComPtr<ICLRMetaHostPolicy> metaHostPolicy;
@@ -86,7 +146,7 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
         CAtlStringW clrVersion;
         DWORD clrVersionLength = 32;
         HR(metaHostPolicy->GetRequestedRuntime(
-            METAHOST_POLICY_HIGHCOMPAT, (LPCWSTR)loaddir, NULL,
+            METAHOST_POLICY_HIGHCOMPAT, assemblyPath, NULL,
             clrVersion.GetBufferSetLength(clrVersionLength), &clrVersionLength,
             NULL, NULL, NULL, IID_ICLRRuntimeInfo, (LPVOID*)&clrInfo));
         clrVersion.ReleaseBuffer();
@@ -118,7 +178,7 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
         HR(ghost->load(bloaddir, &rc));
         return rc;
     }
-    catch (CAtlException &ex){ ATLTRACE2(_T("CAtlException hresult:[%d] <<<<<<<<\n"), ex.m_hr); }
+    catch (CAtlException &ex){ ATLTRACE2(_T("CAtlException hresult:[%s] <<<<<<<<\n"), (LPCTSTR)GetWinErrMessage(ex.m_hr)); }
     catch (...){}
     return FALSE;
 }

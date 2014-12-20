@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using System.Security.Policy;
 
 namespace NShiori
 {
@@ -13,6 +14,36 @@ namespace NShiori
     [ComVisible(true)]
     public sealed class ShioriAppDomainManager : AppDomainManager, IShiori1
     {
+        #region AppDomainManager override
+
+        static ShioriAppDomainManager()
+        {
+            Debug.WriteLine("[static constructor]");
+        }
+
+
+        public ShioriAppDomainManager()
+        {
+            Debug.WriteLine("[constructor]");
+        }
+
+        public override void InitializeNewDomain(AppDomainSetup appDomainInfo)
+        {
+            Debug.WriteLine("[InitializeNewDomain] start");
+            this.InitializationFlags = AppDomainManagerInitializationOptions.RegisterWithHost;
+        }
+
+        public override AppDomain CreateDomain(string friendlyName, Evidence securityInfo, AppDomainSetup appDomainInfo)
+        {
+            var appDomain = base.CreateDomain(friendlyName, securityInfo, appDomainInfo);
+            System.Console.WriteLine("*** Created AppDomain {0}", friendlyName);
+            return appDomain;
+        }
+
+
+        #endregion
+        #region IShiori1
+
         public bool unload()
         {
             Debug.WriteLine("[unload] 終了");
@@ -32,5 +63,7 @@ namespace NShiori
             return true;
         }
 
+
+        #endregion
     }
 }
