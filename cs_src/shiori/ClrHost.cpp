@@ -120,7 +120,7 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
         ATLTRACE2(_T("         loaddir :[%s]\n"), (LPCTSTR)loaddir);
         //           "xxxxxxxxxxxxxxxx :[xx]\n"
 
-        // 処理中のディレクトリを取得したディレクトリに切り替えておく
+        // 処理中のディレクトリをアセンブリが存在するディレクトリに切り替える
         Pushd pushd(loaddir);
 
         // アセンブリ名⇒"NSLoader.dll"
