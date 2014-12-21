@@ -48,16 +48,16 @@ public:
         :mOldDir()
     {
         TCHAR buf[_MAX_PATH + 1];
-        GetCurrentDirectory(sizeof(buf), buf);
+        ::GetCurrentDirectory(sizeof(buf), buf);
         mOldDir = buf;
-        BOOL rc = SetCurrentDirectory(newdir);
-        if (!rc) AtlThrow(FAILED(ERROR_CURRENT_DIRECTORY));
+        BOOL rc = ::SetCurrentDirectory(newdir);
+        if (!rc) AtlThrow(ERROR_CURRENT_DIRECTORY);
     }
 
     ~Pushd()
     {
         if (mOldDir.IsEmpty()) return;
-        SetCurrentDirectory(mOldDir);
+        ::SetCurrentDirectory(mOldDir);
     }
 };
 
@@ -118,13 +118,13 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
         AutoGrobal ag(hGlobal_loaddir);
         auto loaddir = g2CComBSTR(hGlobal_loaddir, loaddir_len, CP_ACP);
         ATLTRACE2(_T("         loaddir :[%s]\n"), (LPCTSTR)loaddir);
-        //           |xxxxxxxxxxxxxxxx :[xxx]
+        //           "xxxxxxxxxxxxxxxx :[xx]\n"
 
         // 処理中のディレクトリを取得したディレクトリに切り替えておく
         Pushd pushd(loaddir);
 
         // アセンブリ名⇒"NSLoader.dll"
-        // 絶対パスである必要があります。
+        // 絶対パス表記に変換しておく。
         TCHAR assemblyPath[_MAX_PATH + 1];
         TCHAR* assemblyFileName = nullptr;
         {
@@ -134,7 +134,7 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
             DWORD len = GetFullPathName(path, sizeof(assemblyPath) / sizeof(TCHAR), assemblyPath, &assemblyFileName);
             ATLTRACE2(_T("assemblyFileName :[%s]\n"), (LPCTSTR)assemblyFileName);
             ATLTRACE2(_T("    assemblyPath :[%s]\n"), (LPCTSTR)assemblyPath);
-            //           |xxxxxxxxxxxxxxxx :[xxx]
+            //           "xxxxxxxxxxxxxxxx :[xx]\n"
         }
 
         // ICLRMetaHostの取得
@@ -161,21 +161,24 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
         hostCtrl = new NSHostControl();
         HR(clr->SetHostControl(hostCtrl));
 
-        // Ghost通信用のAppDomainManagerクラスを登録します。
-        LPCWSTR appDomainManagerTypename = L"ShioriAppDomainManager";
+        // Ghost通信用のAppDomainManager実装[ShioriAppDomainManager]を登録します。
+        LPCWSTR appDomainManagerTypename = L"NShiori.ShioriAppDomainManager";
         LPCWSTR assemblyName = L"NSLoader";
         HR(clrCtrl->SetAppDomainManagerType(assemblyName, appDomainManagerTypename));
 
         // CLRを起動し、Ghost通信インターフェースを取得します。
-        ATLTRACE2(_T("clr start >>>>>>>>>>>>>>>>\n"));
         HR(clr->Start());
-        ATLTRACE2(_T("clr start <<<<<<<<<<<<<<<<\n"));
 
         // Ghostを取得します。
         ghost = hostCtrl->GetGhost();
         CComBSTR bloaddir(loaddir);
         VARIANT_BOOL rc;
         HR(ghost->load(bloaddir, &rc));
+
+        // load終了後にGhostを再取得します。
+        // これが本体のGhostです。
+        ghost = hostCtrl->GetGhost();
+
         return rc;
     }
     catch (CAtlException &ex){ ATLTRACE2(_T("CAtlException hresult:[%s] <<<<<<<<\n"), (LPCTSTR)GetWinErrMessage(ex.m_hr)); }

@@ -40,12 +40,15 @@ public:
     {
         HRESULT hr = S_OK;
         UnkAppDomainManager = pUnkAppDomainManager;
-        CComQIPtr<NSLoader::IShiori1> g(UnkAppDomainManager);
-        if (!g) ghost = g;
+        CComQIPtr<NSLoader::IShiori1> g = UnkAppDomainManager;
+        if (g)
+            ghost = g;
         return hr;
     }
 
-    CComPtr<NSLoader::IShiori1> GetGhost(){ return ghost; }
+    CComPtr<NSLoader::IShiori1> GetGhost(){
+        return ghost; 
+    }
 
 private:
     long refCount;

@@ -53,7 +53,7 @@ namespace NShiori
         public bool load(string loaddir)
         {
             Debug.WriteLine("[load] loaddir=[{0}]", loaddir);
-            throw new NotImplementedException();
+            return true;
         }
 
         public bool request(string req, out string res)
