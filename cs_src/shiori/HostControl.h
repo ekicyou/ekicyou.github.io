@@ -40,9 +40,12 @@ public:
     {
         HRESULT hr = S_OK;
         UnkAppDomainManager = pUnkAppDomainManager;
-        CComQIPtr<NSLoader::IShiori1> g = UnkAppDomainManager;
-        if (g)
-            ghost = g;
+        if (!ghost){
+            CComQIPtr<NSLoader::IShiori1> g = UnkAppDomainManager;
+            if (g){
+                ghost = g;
+            }
+        }
         return hr;
     }
 

@@ -175,10 +175,6 @@ BOOL  ClrHost::load(HGLOBAL hGlobal_loaddir, long loaddir_len)
         VARIANT_BOOL rc;
         HR(ghost->load(bloaddir, &rc));
 
-        // load終了後にGhostを再取得します。
-        // これが本体のGhostです。
-        ghost = hostCtrl->GetGhost();
-
         return rc;
     }
     catch (CAtlException &ex){ ATLTRACE2(_T("CAtlException hresult:[%s] <<<<<<<<\n"), (LPCTSTR)GetWinErrMessage(ex.m_hr)); }

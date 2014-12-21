@@ -14,8 +14,25 @@ namespace NShiori
     [ComVisible(true)]
     public interface IShiori1
     {
-        bool unload();
+        /// <summary>
+        /// SHIORIアセンブリにloadコマンドを発行します。
+        /// </summary>
+        /// <param name="loaddir"></param>
+        /// <returns></returns>
         bool load(string loaddir);
+
+        /// <summary>
+        /// SHIORIアセンブリにunloadコマンドを発行します。
+        /// </summary>
+        /// <returns></returns>       
+        bool unload();
+
+        /// <summary>
+        /// SHIORIアセンブリにrequestコマンドを発行します。
+        /// </summary>
+        /// <param name="req"></param>
+        /// <param name="res"></param>
+        /// <returns></returns>
         bool request(string req, out string res);
     }
 }
