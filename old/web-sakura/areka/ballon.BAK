@@ -9,14 +9,9 @@ body{
 
 div.screen{
   width: 100%;
-
   -webkit-transition-property: top;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease;
-
-  transition-property: top;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
 
   position: fixed;
 }
@@ -50,24 +45,17 @@ div.ballon{
   -webkit-transition-property: opacity, max-height, -webkit-transform;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease;
-
-  transition-property: opacity, max-height, -webkit-transform;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-
   height: auto;
   opacity: 1;
 }
 div.ballon.sakura{
   margin-left:   1px;
   margin-right: 34px;
-  transform-origin: 150% 10px;
   -webkit-transform-origin: 150% 10px;
 }
 div.ballon.kero{
   margin-left:  32px;
   margin-right:  3px;
-  transform-origin: 50% 10px;
   -webkit-transform-origin: 50% 10px;
 }
 
@@ -91,10 +79,6 @@ i{
   -webkit-animation-name: char-effect;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: 1;
-
-  animation-name: char-effect;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
 }
 
 i[m]{
@@ -114,11 +98,9 @@ div.ballon[m]{
 
 div.ballon.sakura[m]{
   -webkit-transform: translate( 30px, 30px) rotate(-10deg) ;
-  transform: translate( 30px, 30px) rotate(-10deg) ;
 }
 div.ballon.kero[m]{
   -webkit-transform: translate(-30px, 50px) rotate(10deg);
-  transform: translate(-30px, 50px) rotate(10deg);
 }
 
 div.ballon img{
