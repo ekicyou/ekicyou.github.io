@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = 320">
+<title>あれか？</title>
+<script src="http://www.google.com/jsapi"></script>
+<script src="js/loadapi.js"></script>
+
+<script src="js/json2.js"></script>
+<script src="js/jqtouch.min.js"></script>
+<script src="js/dummyconsole.js"></script>
+<script>
+$(function(){
+
+var winStage;
+
+var loadFunc = function(ev){
+  winStage = $("#stage")[0].contentWindow;
+}
+window.addEventListener("load", loadFunc, false);
+
+
+var send = function(){
+  var sel = $("#selcommand").val();
+  console.log(sel);
+  var obj ={
+        method: "designTest",
+      }
+  // 送信
+  var send = JSON.stringify(obj);
+  winStage.postMessage(send, "*");
+}
+
+
+var html = document.getElementsByTagName("html")[0]
+html.addEventListener('click',      send, true);
+
+
+var intervalSend = function(){
+  send()
+}
+
+setInterval(intervalSend, 1000*20)
+
+//var screen = $("#screen")[0]
+//screen.addEventListener('click',      send, true);
+
+//===================================================
+});
+
+</script>
+<style>
+body{
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px;
+  height: 460px;
+}
+iframe{
+  border: 0px;
+  height: 460px;
+  width: 320px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+#check{
+  position: absolute;
+  top: 250px;
+  width: 100px;
+}
+#send{
+  zoom: 2.0;
+}
+
+</style>
+</head>
+<body>
+  <div id="screen">
+  <div onclick="send();">
+  <iframe id="stage" src="stage.html" allowtransparency seamless frameborder="0" onclick="send();"></iframe>
+  </div>
+</body>
+</html>

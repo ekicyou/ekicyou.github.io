@@ -1,0 +1,3544 @@
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseEnterAll
+Reference0: 127
+Reference1: 19
+Reference2: 0
+Reference3: 0
+Reference4: Head
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseEnter
+Reference0: 127
+Reference1: 19
+Reference2: 0
+Reference3: 0
+Reference4: Head
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 127
+Reference1: 19
+Reference2: 0
+Reference3: 0
+Reference4: Head
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseLeave
+Reference0: 140
+Reference1: 59
+Reference2: 0
+Reference3: 0
+Reference4: Head
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseEnter
+Reference0: 140
+Reference1: 59
+Reference2: 0
+Reference3: 0
+Reference4: Face
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 140
+Reference1: 59
+Reference2: 0
+Reference3: 0
+Reference4: Face
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 156
+Reference1: 93
+Reference2: 0
+Reference3: 0
+Reference4: Face
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 162
+Reference1: 106
+Reference2: 0
+Reference3: 0
+Reference4: Face
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseLeave
+Reference0: 163
+Reference1: 108
+Reference2: 0
+Reference3: 0
+Reference4: Face
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseEnter
+Reference0: 163
+Reference1: 108
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 176
+Reference1: 126
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 187
+Reference1: 133
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 188
+Reference1: 134
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 191
+Reference1: 134
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 192
+Reference1: 134
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 194
+Reference1: 131
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 196
+Reference1: 127
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 196
+Reference1: 126
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 197
+Reference1: 122
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 197
+Reference1: 119
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 197
+Reference1: 114
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 198
+Reference1: 113
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 198
+Reference1: 111
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 201
+Reference1: 109
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 201
+Reference1: 107
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 204
+Reference1: 105
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseHover
+Reference0: 205
+Reference1: 104
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: tooltip
+Reference0: 205
+Reference1: 104
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 206
+Reference1: 103
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 208
+Reference1: 102
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+***CallTime:16msec.
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 208
+Reference1: 101
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseDown
+Reference0: 208
+Reference1: 101
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 1
+
+
+=====response=====
+***CallTime:15msec.
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseClick
+Reference0: 208
+Reference1: 101
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 1
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseUp
+Reference0: 208
+Reference1: 101
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 1
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.popupmenu.visible
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.popupmenu.type
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: recommendrootbutton.visible
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.recommendbuttoncaption
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: recommendrootbutton.caption
+
+
+=====response=====
+***CallTime:15msec.
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: おすすめ
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: portalrootbutton.visible
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.portalbuttoncaption
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: portalrootbutton.caption
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: ポータル
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: homeurl
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: http://ms.shillest.net/ghost/mechdays/
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: updatebutton.visible
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: updatebuttoncaption
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.updatebuttoncaption
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: updatebutton.caption
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: ファームウェア更新
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: readmebutton.visible
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: readmebuttoncaption
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: readmebutton.caption
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: 最初にお読みください
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: vanishbuttonvisible
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: vanishbutton.visible
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: 1
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: vanishbuttoncaption
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: vanishbutton.caption
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: シャットダウン
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.recommendsites
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: ###Shell Processing Unit###Cherry Pot:基本部http://cherrypot.myweb.hinet.net/SundayFish:追加表情http://fa-x.hp.infoseek.co.jp/回空:眼鏡http://kenoglasses.nobody.jp/名電工舎企画室:MiSPhttp://mdk-kikakusitu.way-nifty.com/-###Ghost Processing Unit###SSP BUGTRAQhttp://ssp.shillest.net/the fifth moon.http://fifthmoon.tarenari.jp/百花繚藍http://ryouran.mallotus-villosus.net/謎の小部屋http://d.hatena.ne.jp/kinapapa/桜霞庵http://rubious.sakura.ne.jp/しんぷるいずべた～http://news-fresh-green.hp.infoseek.co.jp/-###Ghost Scripting Library###YAYAhttp://emily.shillest.net/ayaya/華和梨http://kawari.sourceforge.net/里々http://www.geocities.jp/poskoma/
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.portalsites
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: ###Libretto Portal###LIBRETTERS' NETWORKhttp://www.libretters.net/FTOSHIBA Libretto FAQhttp://forum.nifty.com/ftoshiba/data/libretto/0100.htmぬりかべHPhttp://www.kyoto2001.com/nuk/Libretto Fanhttp://homepage2.nifty.com/mniwa/librettofan/さんぺいのページhttp://www.libretters.net/~sanpei/-###Ghost Finder###Marble Notehttp://marble.tarenari.jp/GHOST TOWNhttp://ghosttown.mikage.jp/何かゴーストセンターhttp://ngc.aqrs.jp/
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: readmebutton.visible
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: readmebutton.caption
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: 最初にお読みください
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseLeave
+Reference0: 208
+Reference1: 101
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseLeaveAll
+Reference0: 208
+Reference1: 101
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnCloseAll
+BaseID: OnClose
+Reference0: user
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnClose
+Reference0: user
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: \0\s[4]\1\s[10]\0…\w5あれ、\w5さくら？\w9\w9\1\s[14]ぎぎぎ…\w9\w9\0\n\n[half]何してるの？\w9\w9\1\n\n[half]節電モードに入ろうとしたら、\w5メインバッテリー排出ミスって…\w5体だけうごかない…\w9\w9\0\n\n[half]…\w5…\w5つついていい？\w9\-
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseEnterAll
+Reference0: 209
+Reference1: 93
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseEnter
+Reference0: 209
+Reference1: 93
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 209
+Reference1: 93
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+ID: OnTranslate
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Reference0: \0\s[4]\1\s[10]\0…\w5あれ、\w5さくら？\w9\w9\1\s[14]ぎぎぎ…\w9\w9\0\n\n[half]何してるの？\w9\w9\1\n\n[half]節電モードに入ろうとしたら、\w5メインバッテリー排出ミスって…\w5体だけうごかない…\w9\w9\0\n\n[half]…\w5…\w5つついていい？\w9\-
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSurfaceChange
+Reference0: 4
+Reference1: 10
+Reference2: 1,10,191,363
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSurfaceChange
+Reference0: 4
+Reference1: 10
+Reference2: 0,4,302,363
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSurfaceChange
+Reference0: 4
+Reference1: 10
+Reference2: 1,10,191,363
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSurfaceChange
+Reference0: 4
+Reference1: 10
+Reference2: 0,4,302,363
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnMouseMove
+Reference0: 210
+Reference1: 93
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnMouseMove
+Reference0: 221
+Reference1: 85
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnMouseLeave
+Reference0: 225
+Reference1: 83
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnMouseLeaveAll
+Reference0: 225
+Reference1: 83
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSurfaceChange
+Reference0: 4
+Reference1: 14
+Reference2: 1,14,191,363
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 1
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnDestroy
+Reference0: 
+Reference1: 1
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+(unload call)
+=====send=====
+(free library)
+=====send=====
+(load library)
+=====send=====
+(function : load found)
+=====send=====
+(function : request found)
+=====send=====
+(function : unload found)
+=====send=====
+(getversion/loadex call)
+=====send=====
+(load call)
+=====send=====
+GET Version SHIORI/2.6
+Charset: UTF-8
+Sender: SSP
+
+
+=====response=====
+SHIORI/3.0 400 Bad Request
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+ID: version
+SecurityLevel: local
+Sender: SSP
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: Tc535-2
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnInitialize
+Reference0: 
+Reference1: 1
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: ownerghostname
+Reference0: メカエミリ
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: basewareversion
+Reference0: 2.01.82
+Reference1: SSP
+Reference2: 2.1.82.3000
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: capability
+Reference0: request.status
+Reference1: request.securitylevel
+Reference2: request.baseid
+Reference3: response.marker
+Reference4: response.errorlevel
+Reference5: response.errordescription
+Reference6: response.securitylevel
+Reference7: response.requestcharset
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnNotifyOSInfo
+Reference0: WindowsNT,6.1
+Reference1: AMD,3000,0.16.2.3,178bfbff
+Reference2: 8387584,2096128
+Reference3: 2
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnNotifyFontInfo
+Reference0: Marlett
+Reference1: Arial
+Reference2: Batang
+Reference3: BatangChe
+Reference4: Gungsuh
+Reference5: GungsuhChe
+Reference6: Courier New
+Reference7: DaunPenh
+Reference8: DokChampa
+Reference9: Estrangelo Edessa
+Reference10: Euphemia
+Reference11: Gautami
+Reference12: Vani
+Reference13: Gulim
+Reference14: GulimChe
+Reference15: Dotum
+Reference16: DotumChe
+Reference17: Impact
+Reference18: Iskoola Pota
+Reference19: Kalinga
+Reference20: Kartika
+Reference21: Khmer UI
+Reference22: Lao UI
+Reference23: Latha
+Reference24: Lucida Console
+Reference25: Malgun Gothic
+Reference26: Mangal
+Reference27: メイリオ
+Reference28: Meiryo UI
+Reference29: Microsoft Himalaya
+Reference30: Microsoft JhengHei
+Reference31: Microsoft YaHei
+Reference32: MingLiU
+Reference33: PMingLiU
+Reference34: MingLiU_HKSCS
+Reference35: MingLiU-ExtB
+Reference36: PMingLiU-ExtB
+Reference37: MingLiU_HKSCS-ExtB
+Reference38: Mongolian Baiti
+Reference39: ＭＳ ゴシック
+Reference40: ＭＳ Ｐゴシック
+Reference41: MS UI Gothic
+Reference42: ＭＳ 明朝
+Reference43: ＭＳ Ｐ明朝
+Reference44: MV Boli
+Reference45: Microsoft New Tai Lue
+Reference46: Nyala
+Reference47: Microsoft PhagsPa
+Reference48: Plantagenet Cherokee
+Reference49: Raavi
+Reference50: Segoe Script
+Reference51: Segoe UI
+Reference52: Segoe UI Semibold
+Reference53: Segoe UI Light
+Reference54: Segoe UI Symbol
+Reference55: Shruti
+Reference56: SimSun
+Reference57: NSimSun
+Reference58: SimSun-ExtB
+Reference59: Sylfaen
+Reference60: Microsoft Tai Le
+Reference61: Times New Roman
+Reference62: Tunga
+Reference63: Vrinda
+Reference64: Shonar Bangla
+Reference65: Microsoft Yi Baiti
+Reference66: Tahoma
+Reference67: Microsoft Sans Serif
+Reference68: Angsana New
+Reference69: Aparajita
+Reference70: Cordia New
+Reference71: Ebrima
+Reference72: Gisha
+Reference73: Kokila
+Reference74: Leelawadee
+Reference75: Microsoft Uighur
+Reference76: MoolBoran
+Reference77: Symbol
+Reference78: Utsaah
+Reference79: Vijaya
+Reference80: Wingdings
+Reference81: Andalus
+Reference82: Arabic Typesetting
+Reference83: Simplified Arabic
+Reference84: Simplified Arabic Fixed
+Reference85: Sakkal Majalla
+Reference86: Traditional Arabic
+Reference87: Aharoni
+Reference88: David
+Reference89: FrankRuehl
+Reference90: Levenim MT
+Reference91: Miriam
+Reference92: Miriam Fixed
+Reference93: Narkisim
+Reference94: Rod
+Reference95: FangSong
+Reference96: SimHei
+Reference97: KaiTi
+Reference98: AngsanaUPC
+Reference99: Browallia New
+Reference100: BrowalliaUPC
+Reference101: CordiaUPC
+Reference102: DilleniaUPC
+Reference103: EucrosiaUPC
+Reference104: FreesiaUPC
+Reference105: IrisUPC
+Reference106: JasmineUPC
+Reference107: KodchiangUPC
+Reference108: LilyUPC
+Reference109: DFKai-SB
+Reference110: Lucida Sans Unicode
+Reference111: Arial Black
+Reference112: Calibri
+Reference113: Cambria
+Reference114: Cambria Math
+Reference115: Candara
+Reference116: Comic Sans MS
+Reference117: Consolas
+Reference118: Constantia
+Reference119: Corbel
+Reference120: Franklin Gothic Medium
+Reference121: Gabriola
+Reference122: Georgia
+Reference123: Palatino Linotype
+Reference124: Segoe Print
+Reference125: Trebuchet MS
+Reference126: Verdana
+Reference127: Webdings
+Reference128: MT Extra
+Reference129: HGｺﾞｼｯｸE
+Reference130: HGPｺﾞｼｯｸE
+Reference131: HGSｺﾞｼｯｸE
+Reference132: HGｺﾞｼｯｸM
+Reference133: HGPｺﾞｼｯｸM
+Reference134: HGSｺﾞｼｯｸM
+Reference135: HG行書体
+Reference136: HGP行書体
+Reference137: HGS行書体
+Reference138: HG教科書体
+Reference139: HGP教科書体
+Reference140: HGS教科書体
+Reference141: HG丸ｺﾞｼｯｸM-PRO
+Reference142: HG明朝B
+Reference143: HGP明朝B
+Reference144: HGS明朝B
+Reference145: HG明朝E
+Reference146: HGP明朝E
+Reference147: HGS明朝E
+Reference148: HG創英角ｺﾞｼｯｸUB
+Reference149: HGP創英角ｺﾞｼｯｸUB
+Reference150: HGS創英角ｺﾞｼｯｸUB
+Reference151: HG創英角ﾎﾟｯﾌﾟ体
+Reference152: HGP創英角ﾎﾟｯﾌﾟ体
+Reference153: HGS創英角ﾎﾟｯﾌﾟ体
+Reference154: HG創英ﾌﾟﾚｾﾞﾝｽEB
+Reference155: HGP創英ﾌﾟﾚｾﾞﾝｽEB
+Reference156: HGS創英ﾌﾟﾚｾﾞﾝｽEB
+Reference157: HG正楷書体-PRO
+Reference158: OCRB
+Reference159: Century
+Reference160: Wingdings 2
+Reference161: Wingdings 3
+Reference162: Arial Unicode MS
+Reference163: Book Antiqua
+Reference164: Century Gothic
+Reference165: YOzFontN
+Reference166: YOzFontN90
+Reference167: YOzFontNF
+Reference168: YOzFontNF90
+Reference169: YOzFontA
+Reference170: YOzFontA90
+Reference171: YOzFontAF
+Reference172: YOzFontAF90
+Reference173: YOzFontC
+Reference174: YOzFontC90
+Reference175: YOzFontCF
+Reference176: YOzFontCF90
+Reference177: YOzFont
+Reference178: YOzFont90
+Reference179: YOzFontF
+Reference180: YOzFontF90
+Reference181: YOzFontE
+Reference182: YOzFontE90
+Reference183: YOzFontEF
+Reference184: YOzFontEF90
+Reference185: Haettenschweiler
+Reference186: MS Outlook
+Reference187: Bookshelf Symbol 7
+Reference188: MS Reference Sans Serif
+Reference189: MS Reference Specialty
+Reference190: Bradley Hand ITC
+Reference191: Freestyle Script
+Reference192: French Script MT
+Reference193: Juice ITC
+Reference194: Kristen ITC
+Reference195: Lucida Handwriting
+Reference196: Mistral
+Reference197: Papyrus
+Reference198: Pristina
+Reference199: Tempus Sans ITC
+Reference200: Garamond
+Reference201: Monotype Corsiva
+Reference202: Agency FB
+Reference203: Arial Rounded MT Bold
+Reference204: Blackadder ITC
+Reference205: Bodoni MT
+Reference206: Bodoni MT Black
+Reference207: Bodoni MT Condensed
+Reference208: Bookman Old Style
+Reference209: Calisto MT
+Reference210: Castellar
+Reference211: Century Schoolbook
+Reference212: Copperplate Gothic Bold
+Reference213: Copperplate Gothic Light
+Reference214: Curlz MT
+Reference215: Edwardian Script ITC
+Reference216: Elephant
+Reference217: Engravers MT
+Reference218: Eras Bold ITC
+Reference219: Eras Demi ITC
+Reference220: Eras Light ITC
+Reference221: Eras Medium ITC
+Reference222: Felix Titling
+Reference223: Forte
+Reference224: Franklin Gothic Book
+Reference225: Franklin Gothic Demi
+Reference226: Franklin Gothic Demi Cond
+Reference227: Franklin Gothic Heavy
+Reference228: Franklin Gothic Medium Cond
+Reference229: Gigi
+Reference230: Gill Sans MT
+Reference231: Gill Sans MT Condensed
+Reference232: Gill Sans Ultra Bold
+Reference233: Gill Sans Ultra Bold Condensed
+Reference234: Gill Sans MT Ext Condensed Bold
+Reference235: Gloucester MT Extra Condensed
+Reference236: Goudy Old Style
+Reference237: Goudy Stout
+Reference238: Imprint MT Shadow
+Reference239: Lucida Sans
+Reference240: Lucida Sans Typewriter
+Reference241: Maiandra GD
+Reference242: OCR A Extended
+Reference243: Palace Script MT
+Reference244: Perpetua
+Reference245: Perpetua Titling MT
+Reference246: Rage Italic
+Reference247: Rockwell
+Reference248: Rockwell Condensed
+Reference249: Rockwell Extra Bold
+Reference250: Script MT Bold
+Reference251: Tw Cen MT
+Reference252: Tw Cen MT Condensed
+Reference253: Tw Cen MT Condensed Extra Bold
+Reference254: Algerian
+Reference255: Baskerville Old Face
+Reference256: Bauhaus 93
+Reference257: Bell MT
+Reference258: Berlin Sans FB
+Reference259: Berlin Sans FB Demi
+Reference260: Bernard MT Condensed
+Reference261: Bodoni MT Poster Compressed
+Reference262: Britannic Bold
+Reference263: Broadway
+Reference264: Brush Script MT
+Reference265: Californian FB
+Reference266: Centaur
+Reference267: Chiller
+Reference268: Colonna MT
+Reference269: Cooper Black
+Reference270: Footlight MT Light
+Reference271: Harlow Solid Italic
+Reference272: Harrington
+Reference273: High Tower Text
+Reference274: Jokerman
+Reference275: Kunstler Script
+Reference276: Lucida Bright
+Reference277: Lucida Calligraphy
+Reference278: Lucida Fax
+Reference279: Magneto
+Reference280: Matura MT Script Capitals
+Reference281: Modern No. 20
+Reference282: Niagara Engraved
+Reference283: Niagara Solid
+Reference284: Old English Text MT
+Reference285: Onyx
+Reference286: Parchment
+Reference287: Playbill
+Reference288: Poor Richard
+Reference289: Ravie
+Reference290: Informal Roman
+Reference291: Showcard Gothic
+Reference292: Snap ITC
+Reference293: Stencil
+Reference294: Viner Hand ITC
+Reference295: Vivaldi
+Reference296: Vladimir Script
+Reference297: Wide Latin
+Reference298: Arial Narrow
+Reference299: 7 Segment
+Reference300: 7 Segment 3D
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnNotifySelfInfo
+Reference0: め か び よ り
+Reference1: メカエミリ
+Reference2: メカさくら
+Reference3: めかめか
+Reference4: C:/wintools/nanika/ssp/ghost/MechDays/shell/master/
+Reference5: SSPデフォルト+
+Reference6: C:/wintools/nanika/ssp/balloon/ssp/
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: useorigin1
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: version
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: Tc535-2
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: name
+
+
+=====response=====
+***CallTime:16msec.
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: YAYA
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: craftman
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: umeici/The Maintenance Shop
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: craftmanw
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: umeici/The Maintenance Shop
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnNotifyUserInfo
+Reference0: えちょさん
+Reference1: えちょ
+Reference2: 1971,04,21
+Reference3: male
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+ID: otherghostname
+SecurityLevel: local
+Charset: UTF-8
+Sender: SSP
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnNetworkStatusChange
+Reference0: online
+Reference1: 192.168.1.208fe80::cd1b:ddba:a6fe:6068fe80::14aa:861:3f57:fe2f2001:0:cf2e:3096:14aa:861:3f57:fe2f
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: ghostpathlist
+Reference0: C:\wintools\nanika\ssp\ghost\
+Reference1: E:\Users\maz\Documents\hg\ghost-remain\ghost\
+Reference2: E:\Users\maz\Documents\hg\ghost-remain\network\ghost\
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: balloonpathlist
+Reference0: C:\wintools\nanika\ssp\balloon\
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: headlinepathlist
+Reference0: C:\wintools\nanika\ssp\headline\
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: pluginpathlist
+Reference0: C:\wintools\nanika\ssp\plugin\
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: calendarskinpathlist
+Reference0: C:\wintools\nanika\ssp\calendar\skin\
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: calendarpluginpathlist
+Reference0: C:\wintools\nanika\ssp\calendar\plugin\
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: menu.background.bitmap.filename
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: menu.foreground.bitmap.filename
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: username
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: ペド
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: installedghostname
+Reference0: ．さくら 20%
+Reference1: Emily/Phase4.5
+Reference2: pack of lies
+Reference3: アキバの妹
+Reference4: みな☆かな
+Reference5: め か び よ り
+Reference6: め か び よ り(えちょ開発)
+Reference7: 残り１分！
+Reference8: 残り１分！
+Reference9: 残り３分！
+Reference10: 残り３分！
+Reference11: 残り５分！
+Reference12: 残り５分！
+Reference13: 残り秒数２０！
+Reference14: 残り秒数２０！
+Reference15: 残り秒数２０！
+Reference16: 残り秒数２０！## SP ##
+Reference17: 残り秒数２０！## SP ##
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: installedballoonname
+Reference0: Balloon for Emily/P4
+Reference1: SSPデフォルト+
+Reference2: ボトル（でふぉ改）
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: installedheadlinename
+Reference0: GAME Watch
+Reference1: Google ニュース 日本語版
+Reference2: ITmedia +D Games
+Reference3: ITMedia News
+Reference4: SlashDot-JP
+Reference5: ねとわくアンテナ
+Reference6: ハァハァアンテナ
+Reference7: 何かアンテナ
+Reference8: 各種スレアンテナ
+Reference9: 回収・無償修理等のお知らせ
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.recommendsites
+
+
+=====response=====
+***CallTime:15msec.
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: ###Shell Processing Unit###Cherry Pot:基本部http://cherrypot.myweb.hinet.net/SundayFish:追加表情http://fa-x.hp.infoseek.co.jp/回空:眼鏡http://kenoglasses.nobody.jp/名電工舎企画室:MiSPhttp://mdk-kikakusitu.way-nifty.com/-###Ghost Processing Unit###SSP BUGTRAQhttp://ssp.shillest.net/the fifth moon.http://fifthmoon.tarenari.jp/百花繚藍http://ryouran.mallotus-villosus.net/謎の小部屋http://d.hatena.ne.jp/kinapapa/桜霞庵http://rubious.sakura.ne.jp/しんぷるいずべた～http://news-fresh-green.hp.infoseek.co.jp/-###Ghost Scripting Library###YAYAhttp://emily.shillest.net/ayaya/華和梨http://kawari.sourceforge.net/里々http://www.geocities.jp/poskoma/
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: sakura.portalsites
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: ###Libretto Portal###LIBRETTERS' NETWORKhttp://www.libretters.net/FTOSHIBA Libretto FAQhttp://forum.nifty.com/ftoshiba/data/libretto/0100.htmぬりかべHPhttp://www.kyoto2001.com/nuk/Libretto Fanhttp://homepage2.nifty.com/mniwa/librettofan/さんぺいのページhttp://www.libretters.net/~sanpei/-###Ghost Finder###Marble Notehttp://marble.tarenari.jp/GHOST TOWNhttp://ghosttown.mikage.jp/何かゴーストセンターhttp://ngc.aqrs.jp/
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: kero.recommendsites
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: なにか話してscript:\![raise,OnChoiceSelect,Choice_AITALK]～について話してscript:\![raise,OnChoiceSelect,Choice_KEYWORD_TALK]コントロールパネルscript:\![raise,OnChoiceSelect,Choice_CONTROL_PANEL]便利機能script:\![raise,OnChoiceSelect,Choice_Tool]
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: installedshellname
+Reference0: めかめか
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: uniqueid
+Reference0: ssp_fmo_header_00000b68_000601e6
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+ID: otherghostname
+SecurityLevel: local
+Charset: UTF-8
+Sender: SSP
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: hwnd
+Reference0: 393702131784
+Reference1: 459488131786
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: installedshellname
+Reference0: めかめか
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnDisplayChange
+Reference0: 32
+Reference1: 1920
+Reference2: 1080
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnBatteryNotify
+Reference0: -1
+Reference1: -1
+Reference2: online
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnNotifyDressupInfo
+
+
+=====response=====
+***CallTime:15msec.
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: installedplugin
+Reference0: SwissArmyKnife8F8BCFB8-B27A-456f-9BA0-551484856DDC
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnBoot
+Reference0: めかめか
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Sender: AYA
+Charset: UTF-8
+Value: \0\s[0]\1\1朝だー、\w5朝だよー、\w5電力深夜割引終了だよー。\w9\w9\0地域によっては朝の割安タイム開始だね。
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: rateofusegraph
+Reference0: め か び よ りメカエミリメカさくら1741980288.925813boot
+Reference1: remain060時間が無い！15715887.131310install
+Reference2: みな☆かな光奈子香南36693.004311install
+Reference3: 残り秒数２０！時間が無い！147910.408658install
+Reference4: pack of liesリエnone5360.161667install
+Reference5: ．さくら 20%．さくらうにゅう3220.098796install
+Reference6: 残り５分！時間が無い！11180.080833install
+Reference7: め か び よ り(えちょ開発)メカエミリメカさくら2120.053889install
+Reference8: 残り１分！時間が無い！32100.044907install
+Reference9: アキバの妹戦神ひみこたまちゃん1100.044907install
+Reference10: 残り３分！時間が無い！370.031435install
+Reference11: Emily/Phase4.5EmilyTeddy230.013472install
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+ID: OnTranslate
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Reference0: \0\s[0]\1\1朝だー、\w5朝だよー、\w5電力深夜割引終了だよー。\w9\w9\0地域によっては朝の割安タイム開始だね。
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSurfaceChange
+Reference0: 0
+Reference1: -1
+Reference2: 0,0,246,400
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+Status: talking
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 0
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 200 OK
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSurfaceChange
+Reference0: 0
+Reference1: 10
+Reference2: 1,10,191,363
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMinuteChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 1
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnBatteryNotify
+Reference0: -1
+Reference1: -1
+Reference2: online
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+NOTIFY SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: rateofusegraph
+Reference0: め か び よ りメカエミリメカさくら1741980388.926310boot
+Reference1: remain060時間が無い！15715887.130989install
+Reference2: みな☆かな光奈子香南36693.004176install
+Reference3: 残り秒数２０！時間が無い！147910.408640install
+Reference4: pack of liesリエnone5360.161660install
+Reference5: ．さくら 20%．さくらうにゅう3220.098792install
+Reference6: 残り５分！時間が無い！11180.080830install
+Reference7: め か び よ り(えちょ開発)メカエミリメカさくら2120.053887install
+Reference8: 残り１分！時間が無い！32100.044905install
+Reference9: アキバの妹戦神ひみこたまちゃん1100.044905install
+Reference10: 残り３分！時間が無い！370.031434install
+Reference11: Emily/Phase4.5EmilyTeddy230.013472install
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnBalloonTimeout
+Reference0: \0\s[0]\1\1朝だー、\w5朝だよー、\w5電力深夜割引終了だよー。\w9\w9\0地域によっては朝の割安タイム開始だね。
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 1
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseEnterAll
+Reference0: 54
+Reference1: 171
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseEnter
+Reference0: 54
+Reference1: 171
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 54
+Reference1: 171
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 62
+Reference1: 181
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 67
+Reference1: 190
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 68
+Reference1: 193
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 69
+Reference1: 195
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 69
+Reference1: 198
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 70
+Reference1: 200
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 71
+Reference1: 202
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 73
+Reference1: 202
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseDown
+Reference0: 73
+Reference1: 202
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseUp
+Reference0: 73
+Reference1: 202
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseClick
+Reference0: 73
+Reference1: 202
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 73
+Reference1: 202
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 73
+Reference1: 201
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 71
+Reference1: 199
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 64
+Reference1: 193
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseMove
+Reference0: 58
+Reference1: 188
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseLeave
+Reference0: 52
+Reference1: 184
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnMouseLeaveAll
+Reference0: 52
+Reference1: 184
+Reference2: 0
+Reference3: 0
+Reference4: 
+Reference5: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+
+=====send=====
+GET SHIORI/3.0
+Charset: UTF-8
+Sender: SSP
+SecurityLevel: local
+ID: OnSecondChange
+Reference0: 0
+Reference1: 0
+Reference2: 0
+Reference3: 1
+Reference4: 0
+
+
+=====response=====
+SHIORI/3.0 204 No Content
+Charset: UTF-8
+
+

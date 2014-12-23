@@ -1,0 +1,7 @@
+JavaScript情報など
+http://sugartest.scriptia.net/
+http://developer.yahoo.com/yui/
+http://james.padolsey.com/javascript/prettyprint-for-javascript/
+http://softwaremaniacs.org/soft/highlight/en/
+http://javascriptcompressor.com/
+http://tinyjs.com/
