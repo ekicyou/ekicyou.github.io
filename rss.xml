@@ -6,9 +6,23 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>水, 04 2 2015 00:00:00 +0900</pubDate>
-    <lastBuildDate>水, 04 2 2015 00:00:00 +0900</lastBuildDate>
+    <pubDate>月, 11 1 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>月, 11 1 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>明けてました</title>
+      <link>http://domain/2016/2016/01/11/new.html</link>
+      <pubDate>月, 11 1 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/01/11/new.html</guid>
+      <description>&lt;p&gt;レイアウトエンジンを差し替えたら
+レイアウトがぶっつぶれてしまったまま放置してたのを、
+何とか直しました。&lt;/p&gt;
+&lt;p&gt;縦書き関係は色々と仕様が流動的で、単純に直しただけだと
+崩れたままなのでcssも調査する羽目に。縦書き国日本としては
+頑張ってほしいものですと、他人事のように言ってみるのです。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>作ってみた</title>
