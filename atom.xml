@@ -1,16 +1,32 @@
-
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Feed Name</title>
   <link href="http://domain/"/>
   <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
-  <updated>2015-02-04T00:00:00+09:00</updated>
+  <updated>2016-01-11T00:00:00+09:00</updated>
   <id>http://domain/</id>
   <author>
     <name>Author</name>
     <email>Email</email>
   </author>
 
+  
+  <entry>
+    <id>http://domain//2016/2016/01/11/new.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/01/11/new.html"/>
+    <title>明けてました</title>
+    <updated>2016-01-11T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;レイアウトエンジンを差し替えたら
+レイアウトがぶっつぶれてしまったまま放置してたのを、
+何とか直しました。&lt;/p&gt;
+&lt;p&gt;縦書き関係は色々と仕様が流動的で、単純に直しただけだと
+崩れたままなのでcssも調査する羽目に。縦書き国日本としては
+頑張ってほしいものですと、他人事のように言ってみるのです。&lt;/p&gt;</content>
+  </entry>
   
   <entry>
     <id>http://domain//2015/2015/02/04/space.html</id>
