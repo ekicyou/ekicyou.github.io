@@ -3,13 +3,32 @@
   <title>Feed Name</title>
   <link href="http://domain/"/>
   <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
-  <updated>2016-01-11T00:00:00+09:00</updated>
+  <updated>2016-02-15T00:00:00+09:00</updated>
   <id>http://domain/</id>
   <author>
     <name>Author</name>
     <email>Email</email>
   </author>
 
+  
+  <entry>
+    <id>http://domain//2016/2016/02/15/no.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/02/15/no.html"/>
+    <title>だがやらない</title>
+    <updated>2016-02-15T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;今年の抱負は、「だがやらない」にしよう。&lt;/p&gt;
+&lt;p&gt;なんかここ数年、やれないことに負い目を感じて、
+やれない状況に拍車がかかっていることに気が付きました。&lt;/p&gt;
+&lt;p&gt;だから、やりたいことや興味があることにポインタを付けることに
+負い目を感じないようにしなければ、です。&lt;/p&gt;
+&lt;p&gt;とりあえず直近は、markdownで日本語を通すと色々ダサいことに
+関して、非常に何とかしたいと感じています。&lt;/p&gt;
+&lt;p&gt;だが、やらない！&lt;/p&gt;</content>
+  </entry>
   
   <entry>
     <id>http://domain//2016/2016/01/11/new.html</id>
