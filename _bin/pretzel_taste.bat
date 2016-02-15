@@ -1,3 +1,3 @@
 setlocal
 cd ..
-_bin\pretzel taste --port 5000
+_bin\pretzel taste --port 5100
