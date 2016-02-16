@@ -9,6 +9,9 @@
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Blog Feed" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="shortcut icon" href="/img/favicon.ico" />
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
@@ -33,7 +36,42 @@
     <div class="idea">
 
     
-      <h1><a href="/2016/2016/02/15/no.html">だがやらない</a></h1>
+      <h1><a href="/2016/2016/02/16/code.html">コード埋め込みテスト</a></h1>
+      <div class="postdate">2016年02月16日
+        <ul>
+        
+        </ul>
+      </div>
+      <p>ブログ内にコード断片を埋め込むテスト</p>
+<pre><code class="language-cs">using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine(&quot;Hello World!&quot;);
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine(&quot;Press any key to exit.&quot;);
+            Console.ReadKey();
+        }
+    }
+}
+</code></pre>
+<p>縦書き文書の中にコード断片だけ横書きなのはおされだと思うの。</p>
+      <br />
+      <a href="/2016/2016/02/16/code.html#disqus_thread">Comments</a>
+
+    
+    </div>
+  </li>
+
+  <li>
+    <div class="idea">
+
+    
+      <h2><a class="postlink" href="/2016/2016/02/15/no.html">だがやらない</a></h2>
       <div class="postdate">2016年02月15日
         <ul>
         
@@ -47,7 +85,6 @@
 <p>とりあえず直近は、markdownで日本語を通すと色々ダサいことに
 関して、非常に何とかしたいと感じています。</p>
 <p>だが、やらない！</p>
-      <br />
       <a href="/2016/2016/02/15/no.html#disqus_thread">Comments</a>
 
     
@@ -132,37 +169,15 @@
     </div>
   </li>
 
-  <li>
-    <div class="idea">
-
-    
-      <h2><a class="postlink" href="/2014/2014/10/04/pasta.html">久々にぱすたさんを引っ張り出す。</a></h2>
-      <div class="postdate">2014年10月04日
-        <ul>
-        
-        </ul>
-      </div>
-      <p>完成系が見えると放置してしまう悪い癖‥‥。
-ツイッターでSHIORI構文の話が出てたので、久々に引っ張り出す。</p>
-<p>淡い日本語縦書きは、か細い少女にこそ、ふさわしいのだ。</p>
-<p>ぱすたさんの構文は、日本語ローマ字モードで楽々入力というコンセプトの元、
-「＠おはよう　」（最後は全角空白）であらゆる特殊モードを呼び出そうという
-チョー手抜きパーサ実装により実現されているのだ。</p>
-<p>「<a href="http://ekicyou.github.io/pasta/app/design.html">ぱすたさん：文法チェックモード</a>」</p>
-<p>ただ、Google Chrome系だとまだ文字描画が不自然。
-貼り付け元のコンテンツが単純ならかすれないんですが、
-どーいう条件でおかしくなるのかちょっとわからないのが残念でありんす。</p>
-<p>やっぱ縦書き制御が一番ちゃんとしてるのは現状IE11ですなー。</p>
-      <a href="/2014/2014/10/04/pasta.html#disqus_thread">Comments</a>
-
-    
-    </div>
-  </li>
-
 </ul>
 
 <h3>OLDER</h3>
 <ul class="postArchive">
+
+  <li>
+    <span class="olderpostdate"> 2014年10月04日 </span>
+    <a class="postlink" href="/2014/2014/10/04/pasta.html">久々にぱすたさんを引っ張り出す。</a>
+  </li>
 
   <li>
     <span class="olderpostdate"> 2014年09月16日 </span>
@@ -198,5 +213,6 @@
   ga('send', 'pageview');
 
 </script>
+<script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

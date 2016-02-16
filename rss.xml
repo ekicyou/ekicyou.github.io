@@ -6,9 +6,35 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>月, 15 2 2016 00:00:00 +0900</pubDate>
-    <lastBuildDate>月, 15 2 2016 00:00:00 +0900</lastBuildDate>
+    <pubDate>火, 16 2 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>火, 16 2 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>コード埋め込みテスト</title>
+      <link>http://domain/2016/2016/02/16/code.html</link>
+      <pubDate>火, 16 2 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/02/16/code.html</guid>
+      <description>&lt;p&gt;ブログ内にコード断片を埋め込むテスト&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine(&amp;quot;Hello World!&amp;quot;);
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine(&amp;quot;Press any key to exit.&amp;quot;);
+            Console.ReadKey();
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;縦書き文書の中にコード断片だけ横書きなのはおされだと思うの。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>だがやらない</title>
