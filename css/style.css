@@ -172,3 +172,11 @@ div.fyre-hovercard
     -webkit-writing-mode: horizontal-tb;
     -webkit-text-combine: horizontal-tb;
 }
+
+code
+{
+    -ms-writing-mode: lr-tb;              /* IE用　*/
+    -webkit-writing-mode: horizontal-tb;  /* chrome用　*/
+    -o-writing-mode: horizontal-tb;       /* opera用　*/
+    writing-mode: horizontal-tb;
+}

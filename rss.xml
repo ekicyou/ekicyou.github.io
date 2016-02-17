@@ -6,9 +6,51 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>月, 11 1 2016 00:00:00 +0900</pubDate>
-    <lastBuildDate>月, 11 1 2016 00:00:00 +0900</lastBuildDate>
+    <pubDate>火, 16 2 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>火, 16 2 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>コード埋め込みテスト</title>
+      <link>http://domain/2016/2016/02/16/code.html</link>
+      <pubDate>火, 16 2 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/02/16/code.html</guid>
+      <description>&lt;p&gt;ブログ内にコード断片を埋め込むテスト&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine(&amp;quot;Hello World!&amp;quot;);
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine(&amp;quot;Press any key to exit.&amp;quot;);
+            Console.ReadKey();
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;縦書き文書の中にコード断片だけ横書きなのはおされだと思うの。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>だがやらない</title>
+      <link>http://domain/2016/2016/02/15/no.html</link>
+      <pubDate>月, 15 2 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/02/15/no.html</guid>
+      <description>&lt;p&gt;今年の抱負は、「だがやらない」にしよう。&lt;/p&gt;
+&lt;p&gt;なんかここ数年、やれないことに負い目を感じて、
+やれない状況に拍車がかかっていることに気が付きました。&lt;/p&gt;
+&lt;p&gt;だから、やりたいことや興味があることにポインタを付けることに
+負い目を感じないようにしなければ、です。&lt;/p&gt;
+&lt;p&gt;とりあえず直近は、markdownで日本語を通すと色々ダサいことに
+関して、非常に何とかしたいと感じています。&lt;/p&gt;
+&lt;p&gt;だが、やらない！&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>明けてました</title>
