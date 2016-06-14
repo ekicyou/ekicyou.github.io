@@ -106,6 +106,24 @@ li
 
 
 
+div.sakura
+{
+    position:relative;
+    width: 320px;
+    height: 100%;
+}
+
+div.sakura iframe
+{
+    position:absolute;
+    bottom:0;
+    height: 460px;
+    width: 100%;
+}
+
+
+
+
 #pasta
 {
 
