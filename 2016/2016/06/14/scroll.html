@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>コード埋め込みテスト</title>
+    <title>マウスホイールしてみた</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Blog Feed" />
@@ -32,34 +32,46 @@
       <div id="content">
         <div class="entry-container">
   <div class='entry'>
-    <h1> コード埋め込みテスト </h1>
-    <span class="postdate">2016年02月16日
+    <h1> マウスホイールしてみた </h1>
+    <span class="postdate">2016年06月14日
       
     </span>
-    <p>ブログ内に<code>コード断片</code>を埋め込むテスト</p>
-<pre><code>using System;
-namespace HelloWorld
-{
-    class Hello 
-    {
-        static void Main() 
-        {
-            Console.WriteLine(&quot;Hello World!&quot;);
+    <p>マウスホイールで横スクロールするコードを調整しました。「jquery.mousewheel.js」を使ってます。マウスホイールイベントはこんな感じですが‥‥。</p>
+<pre><code>$(function() {
+    //スクロールスピード
+    var speed = -300;
 
-            // Keep the console window open in debug mode.
-            Console.WriteLine(&quot;Press any key to exit.&quot;);
-            Console.ReadKey();
-        }
+    var scroll_webkit = function(mov){
+        var el = $('body')
+        var oldPos = el.scrollLeft();
+        var newPos = oldPos - mov * speed;
+        el.scrollLeft(newPos);
     }
-}
+
+     var scroll_ie = function(mov){
+        var x = window.pageXOffset;
+        var oldY = window.pageYOffset;
+        var y = oldY + mov * speed;
+        window.scrollTo(x,y);
+    }
+
+    //マウスホイールで横移動
+    $(document).mousewheel(function(event, mov) {
+        scroll_webkit(mov);
+        scroll_ie    (mov);
+
+        return false;   //縦スクロール不可
+    });
+});
 </code></pre>
 
-<p>縦書き文書の中にコード断片だけ横書きなのはおされだと思うの。</p>
+<p>地味にね、IEとWebkitで互換がないです。
+世界が一つになるのはまだまだ先の話だなあ。</p>
   </div>
 </div>
 <div id="page-navigation">
-  <div class="left">  <a href="/2016/2016/02/15/no.html" title="Previous Post: だがやらない">&larr; だがやらない</a>  </div>
-  <div class="right">  <a href="/2016/2016/06/14/scroll.html" title="next Post: マウスホイールしてみた">マウスホイールしてみた &rarr; </a>  </div>
+  <div class="left">  <a href="/2016/2016/02/16/code.html" title="Previous Post: コード埋め込みテスト">&larr; コード埋め込みテスト</a>  </div>
+  <div class="right">  </div>
   <div class="clear">&nbsp;</div>
 </div>
 

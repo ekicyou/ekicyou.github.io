@@ -6,9 +6,48 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>火, 16 2 2016 00:00:00 +0900</pubDate>
-    <lastBuildDate>火, 16 2 2016 00:00:00 +0900</lastBuildDate>
+    <pubDate>火, 14 6 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>火, 14 6 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>マウスホイールしてみた</title>
+      <link>http://domain/2016/2016/06/14/scroll.html</link>
+      <pubDate>火, 14 6 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/06/14/scroll.html</guid>
+      <description>&lt;p&gt;マウスホイールで横スクロールするコードを調整しました。「jquery.mousewheel.js」を使ってます。マウスホイールイベントはこんな感じですが‥‥。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$(function() {
+    //スクロールスピード
+    var speed = -300;
+
+    var scroll_webkit = function(mov){
+        var el = $(&apos;body&apos;)
+        var oldPos = el.scrollLeft();
+        var newPos = oldPos - mov * speed;
+        el.scrollLeft(newPos);
+    }
+
+     var scroll_ie = function(mov){
+        var x = window.pageXOffset;
+        var oldY = window.pageYOffset;
+        var y = oldY + mov * speed;
+        window.scrollTo(x,y);
+    }
+
+    //マウスホイールで横移動
+    $(document).mousewheel(function(event, mov) {
+        scroll_webkit(mov);
+        scroll_ie    (mov);
+
+        return false;   //縦スクロール不可
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;地味にね、IEとWebkitで互換がないです。
+世界が一つになるのはまだまだ先の話だなあ。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>コード埋め込みテスト</title>

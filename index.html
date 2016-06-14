@@ -36,7 +36,55 @@
     <div class="idea">
 
     
-      <h1><a href="/2016/2016/02/16/code.html">コード埋め込みテスト</a></h1>
+      <h1><a href="/2016/2016/06/14/scroll.html">マウスホイールしてみた</a></h1>
+      <div class="postdate">2016年06月14日
+        <ul>
+        
+        </ul>
+      </div>
+      <p>マウスホイールで横スクロールするコードを調整しました。「jquery.mousewheel.js」を使ってます。マウスホイールイベントはこんな感じですが‥‥。</p>
+<pre><code>$(function() {
+    //スクロールスピード
+    var speed = -300;
+
+    var scroll_webkit = function(mov){
+        var el = $('body')
+        var oldPos = el.scrollLeft();
+        var newPos = oldPos - mov * speed;
+        el.scrollLeft(newPos);
+    }
+
+     var scroll_ie = function(mov){
+        var x = window.pageXOffset;
+        var oldY = window.pageYOffset;
+        var y = oldY + mov * speed;
+        window.scrollTo(x,y);
+    }
+
+    //マウスホイールで横移動
+    $(document).mousewheel(function(event, mov) {
+        scroll_webkit(mov);
+        scroll_ie    (mov);
+
+        return false;   //縦スクロール不可
+    });
+});
+</code></pre>
+
+<p>地味にね、IEとWebkitで互換がないです。
+世界が一つになるのはまだまだ先の話だなあ。</p>
+      <br />
+      <a href="/2016/2016/06/14/scroll.html#disqus_thread">Comments</a>
+
+    
+    </div>
+  </li>
+
+  <li>
+    <div class="idea">
+
+    
+      <h2><a class="postlink" href="/2016/2016/02/16/code.html">コード埋め込みテスト</a></h2>
       <div class="postdate">2016年02月16日
         <ul>
         
@@ -61,7 +109,6 @@ namespace HelloWorld
 </code></pre>
 
 <p>縦書き文書の中にコード断片だけ横書きなのはおされだと思うの。</p>
-      <br />
       <a href="/2016/2016/02/16/code.html#disqus_thread">Comments</a>
 
     
@@ -129,45 +176,15 @@ namespace HelloWorld
     </div>
   </li>
 
-  <li>
-    <div class="idea">
-
-    
-      <h2><a class="postlink" href="/2014/2014/10/28/space.html">宇宙の外側の話</a></h2>
-      <div class="postdate">2014年10月28日
-        <ul>
-        
-        </ul>
-      </div>
-      <p>よし、ちょっとけむに巻く話をしようか、今の宇宙が始まる前の話だ。
-今の宇宙が始まったときインフレーション＆ビックバンという空間爆発があったそうな。</p>
-<p>まあ多分、その前にも「何か」があったんだろうな。その何かは吹き飛んだっぽいな。
-‥‥いやいや、本当に吹き飛んだのか？という疑惑。</p>
-<p>「空間がものすごい勢いで膨張した」のは判る。
-んでも、空間ごと膨張したら、その膨張を空間にいる存在は気が付くことができるのか？</p>
-<p>素粒子ほどの大きさが数百億光年に広がったんだからもうワケワカメ（死語）に決まってる、と言いたいところだけんど。</p>
-<p>多分、「旧宇宙」にいた存在は、空間膨張と同時に時間の流れも極端に遅くなったはずなのだ。
-彼らが一瞬に感じる時間が、「新宇宙」の我々にとっては数百億年になってるのだ。</p>
-<p>つまるところ、「空間が無限に大きくなる」現象って、旧宇宙視点で相対的にみると
-「ある領域の中に、無限に小さな何かが生まれる」のと同じともいえる。</p>
-<p>あれ、なんかそんな存在知ってるな？「ブラックホール」だ。
-空間が無限小の領域に落ち込むとは何か？1点に落ち込むらしいけど、
-その1点の「サイズ」は無限小なのか？</p>
-<p>空間が吸い込まれるということは、吸い込まれた空間はどんどん大きくなる、
-と解釈できなくもない。</p>
-<p>今の宇宙は旧5次元宇宙に発生したブラックホールの内部だ、って説もあるそうな。
-結局のところ全ては相対的。時間の流れが遅くなれば、遅くなるだけ空間が大きくなる。
-我々の宇宙の「無限の時間」は、5次元宇宙の存在にとって「一瞬」の出来事なのかもしれない。</p>
-      <a href="/2014/2014/10/28/space.html#disqus_thread">Comments</a>
-
-    
-    </div>
-  </li>
-
 </ul>
 
 <h3>OLDER</h3>
 <ul class="postArchive">
+
+  <li>
+    <span class="olderpostdate"> 2014年10月28日 </span>
+    <a class="postlink" href="/2014/2014/10/28/space.html">宇宙の外側の話</a>
+  </li>
 
   <li>
     <span class="olderpostdate"> 2014年10月04日 </span>
