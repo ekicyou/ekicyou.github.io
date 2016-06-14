@@ -173,6 +173,12 @@ div.fyre-hovercard
     -webkit-text-combine: horizontal-tb;
 }
 
+pre
+{
+    margin: 1em 0px 1em;
+}
+
+
 code
 {
     -ms-writing-mode: lr-tb;              /* IE用　*/
