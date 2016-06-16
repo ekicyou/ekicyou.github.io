@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>マウスホイールしてみた</title>
+    <title>privateにしてみた</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Blog Feed" />
@@ -32,46 +32,20 @@
       <div id="content">
         <div class="entry-container">
   <div class='entry'>
-    <h1> マウスホイールしてみた </h1>
-    <span class="postdate">2016年06月14日
+    <h1> privateにしてみた </h1>
+    <span class="postdate">2016年06月16日
       
     </span>
-    <p>マウスホイールで横スクロールするコードを調整しました。「jquery.mousewheel.js」を使ってます。マウスホイールイベントはこんな感じですが‥‥。</p>
-<pre><code>$(function() {
-    //スクロールスピード
-    var speed = -300;
-
-    var scroll_webkit = function(mov){
-        var el = $('body')
-        var oldPos = el.scrollLeft();
-        var newPos = oldPos - mov * speed;
-        el.scrollLeft(newPos);
-    }
-
-     var scroll_ie = function(mov){
-        var x = window.pageXOffset;
-        var oldY = window.pageYOffset;
-        var y = oldY + mov * speed;
-        window.scrollTo(x,y);
-    }
-
-    //マウスホイールで横移動
-    $(document).mousewheel(function(event, mov) {
-        scroll_webkit(mov);
-        scroll_ie    (mov);
-
-        return false;   //縦スクロール不可
-    });
-});
-</code></pre>
-
-<p>地味にね、IEとWebkitで互換がないです。
-世界が一つになるのはまだまだ先の話だなあ。</p>
+    <p>privateリポジトリ作り放題になったので、
+「ekicyou.github.com」プロジェクトをprivateに設定しました。
+主に更新日時を外部に漏れなくするた。。。ゴホゴホ。</p>
+<p>旧コンテンツなど、別途gitで取り出したいものなどありましたら
+@ekicyouにご連絡ください。publicプロジェクトに切り出します。</p>
   </div>
 </div>
 <div id="page-navigation">
-  <div class="left">  <a href="/2016/2016/02/16/code.html" title="Previous Post: コード埋め込みテスト">&larr; コード埋め込みテスト</a>  </div>
-  <div class="right">  <a href="/2016/2016/06/16/private.html" title="next Post: privateにしてみた">privateにしてみた &rarr; </a>  </div>
+  <div class="left">  <a href="/2016/2016/06/14/scroll.html" title="Previous Post: マウスホイールしてみた">&larr; マウスホイールしてみた</a>  </div>
+  <div class="right">  </div>
   <div class="clear">&nbsp;</div>
 </div>
 

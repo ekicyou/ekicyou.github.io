@@ -6,9 +6,22 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>火, 14 6 2016 00:00:00 +0900</pubDate>
-    <lastBuildDate>火, 14 6 2016 00:00:00 +0900</lastBuildDate>
+    <pubDate>木, 16 6 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>木, 16 6 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>privateにしてみた</title>
+      <link>http://domain/2016/2016/06/16/private.html</link>
+      <pubDate>木, 16 6 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/06/16/private.html</guid>
+      <description>&lt;p&gt;privateリポジトリ作り放題になったので、
+「ekicyou.github.com」プロジェクトをprivateに設定しました。
+主に更新日時を外部に漏れなくするた。。。ゴホゴホ。&lt;/p&gt;
+&lt;p&gt;旧コンテンツなど、別途gitで取り出したいものなどありましたら
+@ekicyouにご連絡ください。publicプロジェクトに切り出します。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>マウスホイールしてみた</title>
