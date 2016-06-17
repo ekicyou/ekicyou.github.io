@@ -6,9 +6,20 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>金, 17 6 2016 00:00:00 +0900</pubDate>
-    <lastBuildDate>金, 17 6 2016 00:00:00 +0900</lastBuildDate>
+    <pubDate>土, 18 6 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>土, 18 6 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>晴れてみた</title>
+      <link>http://domain/2016/2016/06/18/sun.html</link>
+      <pubDate>土, 18 6 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/06/18/sun.html</guid>
+      <description>&lt;p&gt;今日を逃すとしばらくお日様がない！とのことで、布団一式カバーも洗って干しまくる。
+そして洗濯機が回って暇な時間にちょっと色をいじってみる。
+静的な縦書きコンテンツの検証も含んでますので、しばらくは毎日更新の癖を付けようと思います。意味を求めるのはじっくり、と。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ちょっとわかりやすくしてみた</title>

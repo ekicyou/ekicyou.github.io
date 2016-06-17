@@ -31,24 +31,24 @@ h1,h2,h3,h4,h5,h6
 {
     font-weight: lighter;
     margin-bottom:0px;
+    color:#9f6f55;
 }
 h1
 {
-    font-size: 2.5em;
+    font-size: 1.8em;
 }
 h2
 {
-    font-size: 2.5em;
+    font-size: 1.8em;
 }
 a, a:visited
 {
     text-decoration: none;
-    color:#13678b;
+    color:#9f6f55;
 }
 a:hover
 {
-    color:white;
-    background: #13678b
+    background: #f3f3f2;
 }
 ul
 {
@@ -100,7 +100,7 @@ li
 #hometext a {
     font-size: 2em;
     display: inline;
-    color: #CCCCCC;
+    color: #6f514c;
     font-weight: normal;
 }
 
@@ -177,10 +177,10 @@ img
 
 div.idea, div.entry
 {
-    border-top: solid 0.2em Gainsboro;
+    border-top: solid 0.2em #d6c6af;
     padding-top: 0.2em;
 
-    border-bottom: solid 0.2em Gainsboro;
+    border-bottom: solid 0.2em #d6c6af;
     padding-bottom: 0.2em;
 }
 
