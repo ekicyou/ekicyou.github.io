@@ -1,4 +1,0 @@
-type,ghost
-name,ÅDÇ≥Ç≠ÇÁ
-directory,dot_sakura_100
-balloon.directory,bottle
