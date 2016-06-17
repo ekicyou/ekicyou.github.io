@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5,h6
 }
 h1
 {
-    font-size: 4em;
+    font-size: 2.5em;
 }
 h2
 {
@@ -105,6 +105,16 @@ li
 }
 
 
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: monospace;
+    line-height: 1.2em;
+    font-size: 1em;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+    padding: 0.5em 0;
+}
 
 div.sakura
 {
@@ -133,7 +143,8 @@ div.sakura iframe
 
 #content
 {
-    max-height: 42em;
+    margin-top: 1.5em;
+    max-height: 42.8em;
 }
 
 img
@@ -156,9 +167,21 @@ img
     width: 150px;
     margin-right: 15px;
 }
+
+
+
 .idea h1, .entry h1
 {
-    margin-bottom: 5px;
+    margin-left: 0.2em;
+}
+
+div.idea, div.entry
+{
+    border-top: solid 0.2em Gainsboro;
+    padding-top: 0.2em;
+
+    border-bottom: solid 0.2em Gainsboro;
+    padding-bottom: 0.2em;
 }
 
 
