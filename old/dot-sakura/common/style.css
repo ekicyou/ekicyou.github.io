@@ -1,0 +1,52 @@
+/* 共通スタイルシート */
+a:visited { color: #191970; text-decoration: none; white-space:nowrap}
+a:link { color: #191970; text-decoration: none; white-space:nowrap}
+a:hover { color: #8b0000; text-decoration: underline; cursor: pointer; white-space:nowrap }
+a:active { color: #8b0000; text-decoration: none; white-space:nowrap}
+
+.tz6px  { font-size:  6px; line-height: 100%}
+.tz10px { font-size: 10px; line-height: 100%}
+.tz12px { font-size: 12px; line-height: 100%}
+.tz14px { font-size: 14px; line-height: 100%}
+.tz16px { font-size: 16px; line-height: 100%}
+.nz10px { font-size: 10px; line-height: 105%}
+.nz12px { font-size: 12px; line-height: 105%}
+.nz14px { font-size: 14px; line-height: 105%}
+.nz16px { font-size: 16px; line-height: 105%}
+.sz10px { font-size: 10px; line-height: 120%}
+.sz12px { font-size: 12px; line-height: 120%}
+.sz14px { font-size: 14px; line-height: 120%}
+.sz16px { font-size: 16px; line-height: 120%}
+.vz12px { font-size: 12px; line-height: 140%}
+
+
+
+.bt12px { font-size: 12px; line-height: 140%; font-family: "ＭＳ ゴシック",Osaka,sans-serif;}
+.bt16px { font-size: 16px; line-height: 140%; font-family: "ＭＳ ゴシック",Osaka,sans-serif;}
+.bt24px { font-size: 24px; line-height: 140%; font-family: "ＭＳ ゴシック",Osaka,sans-serif;}
+
+.bq12px { font-size: 12px; line-height: 100%; font-family: "ＭＳ ゴシック",Osaka,sans-serif;}
+.bq16px { font-size: 16px; line-height: 100%; font-family: "ＭＳ ゴシック",Osaka,sans-serif;}
+.bq24px { font-size: 24px; line-height: 100%; font-family: "ＭＳ ゴシック",Osaka,sans-serif;}
+
+
+.b { font-weight: bold}
+
+.f1 {font-family: "ＭＳ Ｐゴシック",Osaka,sans-serif;}
+
+.p1 {padding: 1px;}
+.p2 {padding: 2px;}
+
+.tate {font-family: "ＭＳ Ｐゴシック",Osaka,sans-serif; font-size: 12px; line-height: 100%; color: #FFFFFF}
+.dead{color: #888888}
+
+.st   {font-family: "ＭＳ Ｐゴシック",Osaka,sans-serif; font-size: 12px; line-height: 100%; color: #000000}
+.st:visited {font-family: "ＭＳ Ｐゴシック",Osaka,sans-serif; font-size: 12px; line-height: 100%; color: #000000; text-decoration: none; white-space:nowrap}
+.st:link  {font-family: "ＭＳ Ｐゴシック",Osaka,sans-serif; font-size: 12px; line-height: 100%; color: #000000; text-decoration: none; white-space:nowrap}
+.st:hover {font-family: "ＭＳ Ｐゴシック",Osaka,sans-serif; font-size: 12px; line-height: 100%; color: #000000; text-decoration: underline; cursor: pointer; white-space:nowrap}
+.st:active  {font-family: "ＭＳ Ｐゴシック",Osaka,sans-serif; font-size: 12px; line-height: 100%; color: #000000; text-decoration: none; white-space:nowrap}
+
+
+.align_center { text-align: center }
+.border_zero {border :0px; margin: 0px; padding :0px; border-spacing: 0px;}
+form {border :0px; margin: 0px; padding :0px}

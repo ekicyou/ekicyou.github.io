@@ -10,8 +10,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
+<!--
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
     <script                 src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+-->
+    <link rel="stylesheet" href="/css/prism.css">
+
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="shortcut icon" href="/img/favicon.ico" />
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
@@ -36,7 +40,28 @@
     <div class="idea">
 
     
-      <h1><a href="/2016/2016/06/16/private.html">privateにしてみた</a></h1>
+      <h1><a href="/2016/2016/06/17/css.html">ちょっとわかりやすくしてみた</a></h1>
+      <div class="postdate">2016年06月17日
+        <ul>
+        
+        </ul>
+      </div>
+      <p>見た目にすっきり感が無いので、少しcssを弄ってみました。
+少なくとも記事とその境目を作って、視線が迷わないように。
+まあ、デザイナーではないので野暮ったさを何とかするのは難しいですが。
+現状カテゴリ系の機能が無いので、次はその辺、何とかしたいですねぇ。</p>
+      <br />
+      <a href="/2016/2016/06/17/css.html#disqus_thread">Comments</a>
+
+    
+    </div>
+  </li>
+
+  <li>
+    <div class="idea">
+
+    
+      <h2><a class="postlink" href="/2016/2016/06/16/private.html">privateにしてみた</a></h2>
       <div class="postdate">2016年06月16日
         <ul>
         
@@ -47,7 +72,6 @@
 主に更新日時を外部に漏れなくするた。。。ゴホゴホ。
 旧コンテンツなど、別途gitで取り出したいものなどありましたら
 @ekicyouにご連絡ください。publicプロジェクトに切り出します。</p>
-      <br />
       <a href="/2016/2016/06/16/private.html#disqus_thread">Comments</a>
 
     
@@ -65,7 +89,7 @@
         </ul>
       </div>
       <p>マウスホイールで横スクロールするコードを調整しました。「jquery.mousewheel.js」を使ってます。マウスホイールイベントはこんな感じですが‥‥。</p>
-<pre><code>$(function() {
+<pre><code class="language-javascript">$(function() {
     //スクロールスピード
     var speed = -300;
 
@@ -90,10 +114,8 @@
 
         return false;   //縦スクロール不可
     });
-});
-</code></pre>
-
-<p>地味にね、IEとWebkitで互換がないです。
+});</code></pre>
+<p>地味にIEとWebkitで互換がないです。
 世界が一つになるのはまだまだ先の話だなあ。</p>
       <a href="/2016/2016/06/14/scroll.html#disqus_thread">Comments</a>
 
@@ -112,23 +134,21 @@
         </ul>
       </div>
       <p>ブログ内に<code>コード断片</code>を埋め込むテスト</p>
-<pre><code>using System;
+<pre><code class="language-csharp">using System;
 namespace HelloWorld
 {
     class Hello 
     {
         static void Main() 
         {
-            Console.WriteLine(&quot;Hello World!&quot;);
+            Console.WriteLine("Hello World!");
 
             // Keep the console window open in debug mode.
-            Console.WriteLine(&quot;Press any key to exit.&quot;);
+            Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
     }
-}
-</code></pre>
-
+}</code></pre>
 <p>縦書き文書の中にコード断片だけ横書きなのはおされだと思うの。</p>
       <a href="/2016/2016/02/16/code.html#disqus_thread">Comments</a>
 
@@ -158,29 +178,15 @@ namespace HelloWorld
     </div>
   </li>
 
-  <li>
-    <div class="idea">
-
-    
-      <h2><a class="postlink" href="/2016/2016/01/11/new.html">明けてました</a></h2>
-      <div class="postdate">2016年01月11日
-        <ul>
-        
-        </ul>
-      </div>
-      <p>レイアウトエンジンを差し替えたらレイアウトがぶっつぶれてしまったまま放置してたのを、
-何とか直しました。</p>
-<p>縦書き関係は色々と仕様が流動的で、単純に直しただけだと崩れたままなのでcssも調査する羽目に。縦書き国日本としては頑張ってほしいものですと、他人事のように言ってみるのです。</p>
-      <a href="/2016/2016/01/11/new.html#disqus_thread">Comments</a>
-
-    
-    </div>
-  </li>
-
 </ul>
 
 <h3>OLDER</h3>
 <ul class="postArchive">
+
+  <li>
+    <span class="olderpostdate"> 2016年01月11日 </span>
+    <a class="postlink" href="/2016/2016/01/11/new.html">明けてました</a>
+  </li>
 
   <li>
     <span class="olderpostdate"> 2015年02月04日 </span>
@@ -231,6 +237,6 @@ namespace HelloWorld
   ga('send', 'pageview');
 
 </script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/prism.js"></script>
   </body>
 </html>

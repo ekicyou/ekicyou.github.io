@@ -6,9 +6,21 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>木, 16 6 2016 00:00:00 +0900</pubDate>
-    <lastBuildDate>木, 16 6 2016 00:00:00 +0900</lastBuildDate>
+    <pubDate>金, 17 6 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>金, 17 6 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>ちょっとわかりやすくしてみた</title>
+      <link>http://domain/2016/2016/06/17/css.html</link>
+      <pubDate>金, 17 6 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/06/17/css.html</guid>
+      <description>&lt;p&gt;見た目にすっきり感が無いので、少しcssを弄ってみました。
+少なくとも記事とその境目を作って、視線が迷わないように。
+まあ、デザイナーではないので野暮ったさを何とかするのは難しいですが。
+現状カテゴリ系の機能が無いので、次はその辺、何とかしたいですねぇ。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>privateにしてみた</title>
@@ -30,7 +42,7 @@
       <author>Author</author>
       <guid>http://domain/2016/2016/06/14/scroll.html</guid>
       <description>&lt;p&gt;マウスホイールで横スクロールするコードを調整しました。「jquery.mousewheel.js」を使ってます。マウスホイールイベントはこんな感じですが‥‥。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$(function() {
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;$(function() {
     //スクロールスピード
     var speed = -300;
 
@@ -55,10 +67,8 @@
 
         return false;   //縦スクロール不可
     });
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;地味にね、IEとWebkitで互換がないです。
+});&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;地味にIEとWebkitで互換がないです。
 世界が一つになるのはまだまだ先の話だなあ。&lt;/p&gt;</description>
     </item>
     
@@ -69,23 +79,21 @@
       <author>Author</author>
       <guid>http://domain/2016/2016/02/16/code.html</guid>
       <description>&lt;p&gt;ブログ内に&lt;code&gt;コード断片&lt;/code&gt;を埋め込むテスト&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;using System;
+&lt;pre&gt;&lt;code class=&quot;language-csharp&quot;&gt;using System;
 namespace HelloWorld
 {
     class Hello 
     {
         static void Main() 
         {
-            Console.WriteLine(&amp;quot;Hello World!&amp;quot;);
+            Console.WriteLine(&quot;Hello World!&quot;);
 
             // Keep the console window open in debug mode.
-            Console.WriteLine(&amp;quot;Press any key to exit.&amp;quot;);
+            Console.WriteLine(&quot;Press any key to exit.&quot;);
             Console.ReadKey();
         }
     }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
+}&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;縦書き文書の中にコード断片だけ横書きなのはおされだと思うの。&lt;/p&gt;</description>
     </item>
     
