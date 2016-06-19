@@ -58,6 +58,32 @@
     <div class="idea">
 
     
+      <h2><a class="postlink" href="/2016/2016/06/19/sound-room.html">空き部屋スタジオ化計画（1）</a></h2>
+      <div class="postdate">2016年06月19日
+        <ul>
+        
+        </ul>
+      </div>
+      <p>栄えある一歩をここに刻む。実はいろんな経緯でマンション一棟、引き継ぎました。まあ借金もセットなので、年間で修繕費で年百万位の赤字を排出せにゃならんのですが。基本運営は管理会社任せなので確定申告が面倒になっただけとも言えます。で、よくよくみると
+「一部屋、１０年以上空き部屋」つーことに気が付きました。</p>
+<p>この部屋、もともとは住居用で設計されていましたが、設計時に塾に利用することになり、間取りが全部取っ払われて2DK分のスペースが丸ごと１個、
+畳２３畳分？どーんと何もない空間になっています。
+子供も減って塾は撤退しましたが、住居用にリフォームするにはまあ300万以上はかかるし、かといって２階で隣の建物の陰になり日当たりも微妙なため、
+住居にしたところでまともな賃料は見込めません。
+どっちにせよ大規模リフォーム入れないと貸せる見込みがないのです。</p>
+<p>だから思いついた。
+「ここ、リハーサルバンドスタジオができる部屋にしてみない？」
+夢見るだけならただなので、しばらく妄想いたします。さて？</p>
+      <a href="/2016/2016/06/19/sound-room.html#disqus_thread">Comments</a>
+
+    
+    </div>
+  </li>
+
+  <li>
+    <div class="idea">
+
+    
       <h2><a class="postlink" href="/2016/2016/06/18/sun.html">晴れてみた</a></h2>
       <div class="postdate">2016年06月18日
         <ul>
@@ -114,55 +140,15 @@
     </div>
   </li>
 
-  <li>
-    <div class="idea">
-
-    
-      <h2><a class="postlink" href="/2016/2016/06/14/scroll.html">マウスホイールしてみた</a></h2>
-      <div class="postdate">2016年06月14日
-        <ul>
-        
-        </ul>
-      </div>
-      <p>マウスホイールで横スクロールするコードを調整しました。「jquery.mousewheel.js」を使ってます。マウスホイールイベントはこんな感じですが‥‥。</p>
-<pre><code class="language-javascript">$(function() {
-    //スクロールスピード
-    var speed = -300;
-
-    var scroll_webkit = function(mov){
-        var el = $('body')
-        var oldPos = el.scrollLeft();
-        var newPos = oldPos - mov * speed;
-        el.scrollLeft(newPos);
-    }
-
-     var scroll_ie = function(mov){
-        var x = window.pageXOffset;
-        var oldY = window.pageYOffset;
-        var y = oldY + mov * speed;
-        window.scrollTo(x,y);
-    }
-
-    //マウスホイールで横移動
-    $(document).mousewheel(function(event, mov) {
-        scroll_webkit(mov);
-        scroll_ie    (mov);
-
-        return false;   //縦スクロール不可
-    });
-});</code></pre>
-<p>地味にIEとWebkitで互換がないです。
-世界が一つになるのはまだまだ先の話だなあ。</p>
-      <a href="/2016/2016/06/14/scroll.html#disqus_thread">Comments</a>
-
-    
-    </div>
-  </li>
-
 </ul>
 
 <h3>OLDER</h3>
 <ul class="postArchive">
+
+  <li>
+    <span class="olderpostdate"> 2016年06月14日 </span>
+    <a class="postlink" href="/2016/2016/06/14/scroll.html">マウスホイールしてみた</a>
+  </li>
 
   <li>
     <span class="olderpostdate"> 2016年02月16日 </span>
