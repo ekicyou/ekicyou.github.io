@@ -3,13 +3,25 @@
   <title>Feed Name</title>
   <link href="http://domain/"/>
   <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
-  <updated>2016-06-18T00:00:00+09:00</updated>
+  <updated>2016-06-19T00:00:00+09:00</updated>
   <id>http://domain/</id>
   <author>
     <name>Author</name>
     <email>Email</email>
   </author>
 
+  
+  <entry>
+    <id>http://domain//2016/2016/06/19/lazer.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/19/lazer.html"/>
+    <title>NASA研究のレーザー推進</title>
+    <updated>2016-06-19T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;ちょっと古いけど、&lt;a href=&quot;http://www.itmedia.co.jp/news/articles/1603/08/news127.html&quot;&gt;itmediaのニュース&lt;/a&gt;。目新しいのはエンジンが地上側にあるという発想。これを発展させれば、あらゆる人工衛星がエンジン不要になるよね！ていうか、たぶんこのレベルのパワーがあればICBMとか撃ち落とせるんじゃ。。。あっ誰か来たなんだきみたちやめろたｓけｔあえう&lt;/p&gt;</content>
+  </entry>
   
   <entry>
     <id>http://domain//2016/2016/06/18/sun.html</id>

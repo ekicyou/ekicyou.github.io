@@ -6,9 +6,18 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>土, 18 6 2016 00:00:00 +0900</pubDate>
-    <lastBuildDate>土, 18 6 2016 00:00:00 +0900</lastBuildDate>
+    <pubDate>日, 19 6 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>日, 19 6 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>NASA研究のレーザー推進</title>
+      <link>http://domain/2016/2016/06/19/lazer.html</link>
+      <pubDate>日, 19 6 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/06/19/lazer.html</guid>
+      <description>&lt;p&gt;ちょっと古いけど、&lt;a href=&quot;http://www.itmedia.co.jp/news/articles/1603/08/news127.html&quot;&gt;itmediaのニュース&lt;/a&gt;。目新しいのはエンジンが地上側にあるという発想。これを発展させれば、あらゆる人工衛星がエンジン不要になるよね！ていうか、たぶんこのレベルのパワーがあればICBMとか撃ち落とせるんじゃ。。。あっ誰か来たなんだきみたちやめろたｓけｔあえう&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>晴れてみた</title>
