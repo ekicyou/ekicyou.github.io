@@ -14,6 +14,7 @@ using System.Text.RegularExpressions;
                 + @"\p{IsCJKUnifiedIdeographsExtensionA}"
                 + @"\p{IsHiragana}"
                 + @"\p{IsKatakana}"
+                + @"\p{P}"
                 + @"\u31F0-\u31FF\u3099-\u309C\uFF65-\uFF9F"
                 + "]";
 
