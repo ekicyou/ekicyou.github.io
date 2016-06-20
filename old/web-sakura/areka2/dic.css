@@ -1,0 +1,98 @@
+/* トーク辞書簡易閲覧用css */
+
+q{
+  color: orangered;
+  font-weight: bold;
+}
+
+div.会話::before{
+  content: "<<" attr(class) ">>";
+}
+
+
+div.会話{
+  display: block;
+  padding: 4px;
+  margin: 0px 0px 3px 0px;
+  border: 1px;
+  border-style: dashed;
+  border-color: #666666;
+  background-color: #EFEFEF;
+}
+
+div.会話 hr::before{
+  content: ">> [" attr(jump) "]";
+  color:            #C44;
+  font-weight:      bold;
+}
+div.会話 hr{
+  display: block;
+  margin:  0px 0px 0px 16px;
+  padding: 0px 0px 0px  4px;
+  border: none;
+  font-size: 80%;
+  background-color: #AA8;
+  border-radius:     8px;
+}
+
+
+div.会話 p::before{
+  content: "[" attr(class) "]";
+  color: mediumblue;
+}
+div.会話 p{
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  font-size: 80%;
+  border-width: 1px 0px 0px 0px;
+  border-style: dashed;
+  border-color: #666666;
+}
+
+div.会話 p.さくら{
+  background-color: lightpink;
+}
+div.会話 p.うにゅう{
+  background-color: lightskyblue;
+}
+
+
+div.会話 p.さくら + p.さくら{
+  border-width: 0px;
+}
+div.会話 p.うにゅう + p.うにゅう{
+  border-width: 0px;
+}
+
+
+
+div.単語::before{
+  content: "<<単語辞書>>";
+}
+
+
+div.単語{
+  display: block;
+  padding: 4px;
+  margin: 0px 0px 3px 0px;
+  border: 1px;
+  border-style: dashed;
+  border-color: #666666;
+  background-color: #EFEFAF;
+}
+
+div.単語 p::before{
+  display: inline;
+  content: "[" attr(class) "] ";
+  color: mediumblue;
+}
+div.単語 p{
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  font-size: 80%;
+  border-width: 1px 0px 0px 0px;
+  border-style: dashed;
+  border-color: #666666;
+}

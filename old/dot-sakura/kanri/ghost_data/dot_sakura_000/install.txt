@@ -1,0 +1,4 @@
+type,ghost
+name,ÅDÇ≥Ç≠ÇÁ
+directory,dot_sakura
+balloon.directory,bottle

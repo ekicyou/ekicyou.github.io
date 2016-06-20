@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>再帰下降パーサジェネレータ JavaScript ライブラリ Gin のサンプル</title>
+<style type="text/css">
+pre {
+  background-color:	#ddd;
+  line-height: 1.3;
+  padding: 0.5em;
+}
+.in input, .in textarea {
+  width: 98%;
+}
+.result {
+  width: 80%;
+}
+</style>
+<script type="text/javascript" src="gin.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+
+function $(id) {
+  return document.getElementById(id);
+}
+
+function toggleScript(scriptId, button) {
+  var outputId = scriptId + "Out";
+  var output = $(outputId);
+  if (!output) {
+    output = document.createElement("pre");
+    output.id = outputId;
+    output.style.display = "none";
+    var script = $(scriptId);
+    var content = script.text || script.textContent || script.innerText;
+    content = content.replace(/^\s*\/\/\s*<!\[CDATA\[\s*|\s*\/\/\s*\]\]>\s*$/g, "");
+    /*@cc_on
+    @if (@_win32)
+    content = content.replace(/\n/g, "\r");
+    @end @*/
+    output.appendChild(document.createTextNode(content));
+    button.parentNode.parentNode.insertBefore(output, button.parentNode.nextSibling);
+  }
+  if (output.style.display == "none") {
+    output.style.display = "block";
+    button.value = button.value.replace("表示", "隠す");
+  } else {
+    output.style.display = "none";
+    button.value = button.value.replace("隠す", "表示");
+  }
+}
+
+// ]]>
+</script>
+</head>
+<body>
+
+<h1>再帰下降パーサジェネレータのサンプル</h1>
+
+<h2>四則演算</h2>
+<script id="calcScript" type="text/javascript">
+// <![CDATA[
+
+var calc = new Gin.Grammar({
+  Expr: / Term ([+] Term:add | [-] Term:sub)* /,
+  Term: / Fctr ([*] Fctr:mul | [/] Fctr:div)* /,
+  Fctr: / $INT:push | [(] Expr [)] /
+}, "Expr", Gin.SPACE);
+
+function CalcHandler() { this._stack = []; }
+CalcHandler.prototype = {
+  push: function (v) { this._stack.push(v); },
+  pop: function () { return this._stack.pop(); },
+  add: function (v) { var b = this.pop(), a = this.pop(); this.push(a + b); },
+  sub: function (v) { var b = this.pop(), a = this.pop(); this.push(a - b); },
+  mul: function (v) { var b = this.pop(), a = this.pop(); this.push(a * b); },
+  div: function (v) { var b = this.pop(), a = this.pop(); this.push(a / b); }
+};
+
+function parseExpr() {
+  var handler = new CalcHandler();
+  var match = calc.parse($("calcIn").value, handler);
+  $("calcOut").value = (match && match.full)
+                       ? handler.pop() : "Error: 計算式が間違っています";
+}
+
+// ]]>
+</script>
+<p class="in">
+<input id="calcIn" type="text" value="1 + 2 / (3 - 4) + 5 * 6"
+       onkeypress="if (event.keyCode == 13) parseExpr();" />
+</p>
+<p class="out">
+<input type="button" value="計算" onclick="parseExpr();" />
+<input id="calcOut" class="result" value="" />
+</p>
+<p>
+<input type="button" value="スクリプトを表示 (四則演算)"
+       onclick="toggleScript('calcScript', this);" />
+</p>
+
+<h2><abbr title="JavaScript Object Notation">JSON</abbr></h2>
+<script id="jsonScript" type="text/javascript">
+// <![CDATA[
+
+var json = new Gin.Grammar({
+  JSON:    / Object | Array ::first /,
+  Object:  / '\{':object Member (',' Member)* '\}' ::pop /,
+  Member:  / ($JS_STRING ':' Value):member /,
+  Array:   / '\[':array Element (',' Element)* '\]' ::pop /,
+  Element: / Value:element /,
+  Value:   / Keyword | $REAL | $JS_STRING | Object | Array ::first /,
+  Keyword: / 'true':trueV | 'false':falseV | 'null':nullV ::first /
+}, "JSON", Gin.SPACE);
+
+function JsonHandler() { this._s = []; }
+JsonHandler.prototype = {
+  object:  function (v) { this._s.push({}); },
+  array:   function (v) { this._s.push([]); },
+  member:  function (v) { this._s[this._s.length - 1][v[0]] = v[2]; },
+  element: function (v) { this._s[this._s.length - 1].push(v); },
+  trueV:   function (v) { return true; },
+  falseV:  function (v) { return false; },
+  nullV:   function (v) { return null; },
+  pop:     function (v) { return this._s.pop(); },
+  first:   function (v) { return v[0]; }
+};
+
+function parseJson() {
+  var handler = new JsonHandler();
+  var match = json.parse($("jsonIn").value, handler);
+  if (!match || !match.full) {
+    $("jsonOut").value = "Error: JSON として解析できません";
+    return;
+  }
+  var target = match.value;
+  try {
+    $("jsonOut").value = eval($("jsonExpr").value);
+  } catch (ex) {
+    $("jsonOut").value = "Error: " + (ex.message || ex);
+  }
+}
+
+// ]]>
+</script>
+<p class="in">
+<textarea id="jsonIn" cols="80" rows="12">{
+  "books": [
+    { "title": "Webの創成",
+      "author": "Tim Berners-Lee",
+      "price": 2520 },
+    { "title": "ユニバーサルHTML\u002fXHTML",
+      "author": "神崎正英",
+      "price": 2310 },
+    { "title": "スタイルシートWebデザイン",
+      "author": "すみけんたろう",
+      "price": 2079 }
+  ]
+}
+</textarea>
+<input id="jsonExpr" type="text" value="target.books[0].title"
+       onkeypress="if (event.keyCode == 13) parseJson();" />
+</p>
+<p class="out">
+<input type="button" value="評価" onclick="parseJson();" />
+<input id="jsonOut" class="result" type="text" value="" />
+</p>
+<p>
+<input type="button" value="スクリプトを表示 (JSON)"
+       onclick="toggleScript('jsonScript', this);" />
+</p>
+
+<ul>
+<li><a href="http://nanto.asablo.jp/blog/2007/09/12/1793275">JavaScript で構文解析</a></li>
+<li><a href="gin.js">gin.js (Gin 0.90)</a></li>
+</ul>
+
+<address><a href="http://www.ne.jp/asahi/nanto/moon/">nanto_vi</a></address>
+
+</body>
+</html>

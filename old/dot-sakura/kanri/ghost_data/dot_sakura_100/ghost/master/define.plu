@@ -1,0 +1,53 @@
+<?php
+/* ----------------------------------------------------------------------------
+ * $Id: define.plu,v 1.8 2004/11/15 10:31:57 cvs Exp $
+ *   共通定義パラメータ
+ * ----------------------------------------------------------------------------
+ * Mastering programed by Dot-Station Mastor
+ *
+ * Copyright 2004 Dot-Station.
+ * ----------------------------------------------------------------------------
+ */
+
+  // ディレクトリ定義
+  define('GHOST_DIR0'     ,dirname(__FILE__));
+  define('GHOST_DIR'      ,realpath(GHOST_DIR0));
+  define('TALK_DIR'       ,realpath(GHOST_DIR ."/talk"));
+  define('DB_DIR'         ,realpath(GHOST_DIR ."/db"));
+
+
+  // メインＡＩエンジン
+  define('AI_ENGINE'      ,"usr_ai_DotSakura");
+
+
+  // INCLUDE PATHの定義設定
+  unset($include_path_list);
+  $include_path_list[] =".";
+  $include_path_list[] =realpath(GHOST_DIR ."/phplib");
+  $include_path_list[] =realpath(GHOST_DIR ."/pear");
+
+  // CLASS PATHの定義設定
+  unset($class_path_list);
+  $class_path_list[] =realpath(GHOST_DIR ."/phplib/classes");
+
+  // イベントクラスの呼び出し優先順位
+  $GLOBALS['DOT_SCRIPT']['EVENT_CALL_LIST'] =array(
+      'usr_event',    // usr/event 配下のクラスを検索
+      'dot_event',    // dot/event 配下のクラスを検索
+    );
+
+  // 内部ファイルの呼び出し優先順位[dot_sssl_Loader::loadObject]
+  $GLOBALS['DOT_SCRIPT']['SSSL_LOADER_CALL_LOCAL_LIST'] =array(
+      'stage1',   // stage1データベース（即時起動、軽量級）
+      'stage2',   // stage2データベース（遅延起動、重量級）
+    );
+
+  // テンポラリディレクトリの作成
+  if(! file_exists(GHOST_DIR ."/tmp")){
+    mkdir(GHOST_DIR ."/tmp");
+    chmod(GHOST_DIR ."/tmp" ,0777);
+  }
+  define('TMP_DIR' ,realpath(GHOST_DIR ."/tmp"));
+
+
+?>

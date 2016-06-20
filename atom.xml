@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Feed Name</title>
+  <link href="http://domain/"/>
+  <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
+  <updated>2016-06-19T00:00:00+09:00</updated>
+  <id>http://domain/</id>
+  <author>
+    <name>Author</name>
+    <email>Email</email>
+  </author>
+
+  
+  <entry>
+    <id>http://domain//2016/2016/06/19/lazer.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/19/lazer.html"/>
+    <title>NASA研究のレーザー推進</title>
+    <updated>2016-06-19T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;ちょっと古いけど、&lt;a href=&quot;http://www.itmedia.co.jp/news/articles/1603/08/news127.html&quot;&gt;itmediaのニュース&lt;/a&gt;。目新しいのはエンジンが地上側にあるという発想。これを発展させれば、あらゆる人工衛星がエンジン不要になるよね！ていうか、たぶんこのレベルのパワーがあればICBMとか撃ち落とせるんじゃ。。。あっ誰か来たなんだきみたちやめろたｓけｔあえう&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/06/19/sound-room.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/19/sound-room.html"/>
+    <title>空き部屋スタジオ化計画（1）</title>
+    <updated>2016-06-19T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;実はいろんな経緯で賃貸マンション一棟の運営を引き継ぎました。借金返済もセットなのでキャッシュが増えるわけでもなく、修繕があれば１００万単位でお金が吹っ飛ぶ、現状赤字の物件です。自分の仕事がありますので運営は管理会社任せです。&lt;/p&gt;
+&lt;p&gt;で、よくよく確認すると「一部屋、１０年以上空き部屋」つーことに気が付きました。しかも住居ではなくオフィス用途で使ってたので畳２３畳分？どーんと何もない空間になっています。来年予定で建物全体の大規模修繕時期がくるため、そのタイミングで銀行からお金を借りなおす予定があるため、そのタイミングでリフォームすべきなのですが。。。&lt;/p&gt;
+&lt;p&gt;住居用にリフォームするにはまあ300万以上はかかるし、かといって問題の部屋は隣の建物との位置関係上日当たりも微妙なため、高い賃料は見込めません。&lt;/p&gt;
+&lt;p&gt;だから思いついた。「ここ、リハーサルバンドスタジオができる部屋にしてみない？」夢見るだけならただなので、しばらく妄想いたします。さて？&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/06/19/tags.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/19/tags.html"/>
+    <title>タグがない</title>
+    <updated>2016-06-19T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;タグ表示のためのコードが無いのでtagsをクリックしても何も出ません。次はそのあたり何とかしないだわ。&lt;/p&gt;
+&lt;p&gt;ちなみに、地味ですがこのサイトはマウスホイールで横スクロールします。ほんとーに地味ですが。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/06/18/sun.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/18/sun.html"/>
+    <title>晴れてみた</title>
+    <updated>2016-06-18T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;今日を逃すとしばらくお日様がない！とのことで、布団一式カバーも洗って干しまくる。そして洗濯機が回って暇な時間にちょっと色をいじってみる。静的な縦書きコンテンツの検証も含んでますので、しばらくは毎日更新の癖を付けようと思います。意味を求めるのはじっくり、と。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/06/17/css.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/17/css.html"/>
+    <title>ちょっとわかりやすくしてみた</title>
+    <updated>2016-06-17T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;見た目にすっきり感が無いので、少しcssを弄ってみました。少なくとも記事とその境目を作って、視線が迷わないように。まあ、デザイナーではないので野暮ったさを何とかするのは難しいですが。現状カテゴリ系の機能が無いので、次はその辺、何とかしたいですねぇ。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/06/16/private.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/16/private.html"/>
+    <title>privateにしてみた</title>
+    <updated>2016-06-16T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;privateリポジトリ作り放題になったので、「ekicyou.github.com」プロジェクトをprivateに設定しました。主に更新日時を外部に漏れなくするた。。。ゴホゴホ。旧コンテンツなど、別途gitで取り出したいものなどありましたら@ekicyouにご連絡ください。publicプロジェクトに切り出します。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/06/14/scroll.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/14/scroll.html"/>
+    <title>マウスホイールしてみた</title>
+    <updated>2016-06-14T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;マウスホイールで横スクロールするコードを調整しました。「jquery.mousewheel.js」を使ってます。マウスホイールイベントはこんな感じですが‥‥。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;$(function() {
+    //スクロールスピード
+    var speed = -300;
+
+    var scroll_webkit = function(mov){
+        var el = $(&apos;body&apos;)
+        var oldPos = el.scrollLeft();
+        var newPos = oldPos - mov * speed;
+        el.scrollLeft(newPos);
+    }
+
+     var scroll_ie = function(mov){
+        var x = window.pageXOffset;
+        var oldY = window.pageYOffset;
+        var y = oldY + mov * speed;
+        window.scrollTo(x,y);
+    }
+
+    //マウスホイールで横移動
+    $(document).mousewheel(function(event, mov) {
+        scroll_webkit(mov);
+        scroll_ie    (mov);
+
+        return false;   //縦スクロール不可
+    });});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;地味にIEとWebkitで互換がないです。世界が一つになるのはまだまだ先の話だなあ。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/02/16/code.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/02/16/code.html"/>
+    <title>コード埋め込みテスト</title>
+    <updated>2016-02-16T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;ブログ内に&lt;code&gt;コード断片&lt;/code&gt;を埋め込むテスト&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-csharp&quot;&gt;using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine(&amp;quot;Hello World!&amp;quot;);
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine(&amp;quot;Press any key to exit.&amp;quot;);
+            Console.ReadKey();
+        }
+    }}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;縦書き文書の中にコード断片だけ横書きなのはおされだと思うの。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/02/15/no.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/02/15/no.html"/>
+    <title>だがやらない</title>
+    <updated>2016-02-15T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;今年の抱負は、「だがやらない」にしよう。&lt;/p&gt;
+&lt;p&gt;なんかここ数年、やれないことに負い目を感じて、やれない状況に拍車がかかっていることに気が付きました。だから、やりたいことや興味があることにポインタを付けることに負い目を感じないようにしなければ、です。&lt;/p&gt;
+&lt;p&gt;とりあえず直近は、markdownで日本語を通すと色々ダサいことに関して、非常に何とかしたいと感じています。&lt;/p&gt;
+&lt;p&gt;だが、やらない！&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2016/2016/01/11/new.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/01/11/new.html"/>
+    <title>明けてました</title>
+    <updated>2016-01-11T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;レイアウトエンジンを差し替えたらレイアウトがぶっつぶれてしまったまま放置してたのを、何とか直しました。&lt;/p&gt;
+&lt;p&gt;縦書き関係は色々と仕様が流動的で、単純に直しただけだと崩れたままなのでcssも調査する羽目に。縦書き国日本としては頑張ってほしいものですと、他人事のように言ってみるのです。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2015/2015/02/04/space.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2015/2015/02/04/space.html"/>
+    <title>作ってみた</title>
+    <updated>2015-02-04T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;うかべんが５月３日にあるということなので作ってみた。
+&lt;img src=&quot;/img/2015/ukazemi.png&quot; alt=&quot;伺ゼミ&quot; title=&quot;伺ゼミ&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://bkaclub.web.fc2.com/henzemi_gen.html&quot; title=&quot;これ使いましたの。&quot;&gt;これ使いましたの。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;‥‥後悔はしていない。多分。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/2014/10/28/space.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/2014/10/28/space.html"/>
+    <title>宇宙の外側の話</title>
+    <updated>2014-10-28T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;よし、ちょっとけむに巻く話をしようか、今の宇宙が始まる前の話だ。今の宇宙が始まったときインフレーション＆ビックバンという空間爆発があったそうな。&lt;/p&gt;
+&lt;p&gt;まあ多分、その前にも「何か」があったんだろうな。その何かは吹き飛んだっぽいな。‥‥いやいや、本当に吹き飛んだのか？という疑惑。&lt;/p&gt;
+&lt;p&gt;「空間がものすごい勢いで膨張した」のは判る。んでも、空間ごと膨張したら、その膨張を空間にいる存在は気が付くことができるのか？&lt;/p&gt;
+&lt;p&gt;素粒子ほどの大きさが数百億光年に広がったんだからもうワケワカメ（死語）に決まってる、と言いたいところだけんど。&lt;/p&gt;
+&lt;p&gt;多分、「旧宇宙」にいた存在は、空間膨張と同時に時間の流れも極端に遅くなったはずなのだ。彼らが一瞬に感じる時間が、「新宇宙」の我々にとっては数百億年になってるのだ。&lt;/p&gt;
+&lt;p&gt;つまるところ、「空間が無限に大きくなる」現象って、旧宇宙視点で相対的にみると「ある領域の中に、無限に小さな何かが生まれる」のと同じともいえる。&lt;/p&gt;
+&lt;p&gt;あれ、なんかそんな存在知ってるな？「ブラックホール」だ。空間が無限小の領域に落ち込むとは何か？1点に落ち込むらしいけど、その1点の「サイズ」は無限小なのか？&lt;/p&gt;
+&lt;p&gt;空間が吸い込まれるということは、吸い込まれた空間はどんどん大きくなる、と解釈できなくもない。&lt;/p&gt;
+&lt;p&gt;今の宇宙は旧5次元宇宙に発生したブラックホールの内部だ、って説もあるそうな。結局のところ全ては相対的。時間の流れが遅くなれば、遅くなるだけ空間が大きくなる。我々の宇宙の「無限の時間」は、5次元宇宙の存在にとって「一瞬」の出来事なのかもしれない。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/2014/10/04/pasta.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/2014/10/04/pasta.html"/>
+    <title>久々にぱすたさんを引っ張り出す。</title>
+    <updated>2014-10-04T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;完成系が見えると放置してしまう悪い癖‥‥。ツイッターでSHIORI構文の話が出てたので、久々に引っ張り出す。&lt;/p&gt;
+&lt;p&gt;淡い日本語縦書きは、か細い少女にこそ、ふさわしいのだ。&lt;/p&gt;
+&lt;p&gt;ぱすたさんの構文は、日本語ローマ字モードで楽々入力というコンセプトの元、「＠おはよう　」（最後は全角空白）であらゆる特殊モードを呼び出そうというチョー手抜きパーサ実装により実現されているのだ。&lt;/p&gt;
+&lt;p&gt;「&lt;a href=&quot;http://ekicyou.github.io/pasta/app/design.html&quot;&gt;ぱすたさん：文法チェックモード&lt;/a&gt;」&lt;/p&gt;
+&lt;p&gt;ただ、Google Chrome系だとまだ文字描画が不自然。貼り付け元のコンテンツが単純ならかすれないんですが、どーいう条件でおかしくなるのかちょっとわからないのが残念でありんす。&lt;/p&gt;
+&lt;p&gt;やっぱ縦書き制御が一番ちゃんとしてるのは現状IE11ですなー。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/2014/09/16/dream.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/2014/09/16/dream.html"/>
+    <title>怖いユメ</title>
+    <updated>2014-09-16T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;最近、ユメ見てますか？夜見る方のユメ。&lt;/p&gt;
+&lt;p&gt;調子が悪いと夢を見なくなる（というか多分覚えてられなくなる）方なんですが、最近はそこそこ夢を覚えてます。まー10分もしたら忘れますが。途中で目覚めて、「あ、この続きみたいなーっ」て感じで連載物とか見たりします。&lt;/p&gt;
+&lt;p&gt;悪夢っぽいのも玉に見ます。どっちかというと、ユメの中で極端に感情が振れたら目が覚めちゃう感じですね。昔は怖い系でよく起きてましたが、最近はなんか怒ってる系統が多いです‥‥むう。&lt;/p&gt;
+&lt;p&gt;こないだ、ものすごく調子に乗って有頂天になってて（なぜ有頂天になっていたのかは覚えていない）、そこに一言、ものすごく冷や水の冷静な言葉をかけられて（どんな一言かは覚えていない）、それにびっくりして目が覚めたことがあります。&lt;/p&gt;
+&lt;p&gt;「やばい、自分ってこんな人間なんだ。」と真っ青になって目が覚めましたが、良く考えたら「自分のそんなとこはよくない。」って指摘できる自分がいるという事ですね。&lt;/p&gt;
+&lt;p&gt;それに気が付いたらちょっと安心して、教訓にしよう、と思いつつ再び眠りに落ちました。&lt;/p&gt;
+&lt;p&gt;まあ、何にびっくりしたのかはさっぱり思い出せないのですけどね。そんなもんです。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/2014/09/11/remakemake.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/2014/09/11/remakemake.html"/>
+    <title>車輪の再発明の再発明の再発明の‥‥</title>
+    <updated>2014-09-11T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;ちょーださいけど最低限コメントが打てる設定に。&lt;/p&gt;
+&lt;p&gt;あと、内部でMarkdownを使ってるんですが、微妙に気に入らないフォーマットなので少し手直ししようと手を加えてたら、いつの間にかpegに手を出している始末。&lt;/p&gt;
+&lt;p&gt;‥‥あれー？&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/2014/08/29/restart.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/2014/08/29/restart.html"/>
+    <title>事始め</title>
+    <updated>2014-08-29T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;俺、このサイトが完成したら結婚するんだ‥‥（いろいろ脂肪フラグ）&lt;/p&gt;
+&lt;p&gt;で、どんな残骸を残そうかということですが。&lt;/p&gt;
+&lt;p&gt;自分は職業SEで、以前はプログラム技術を中心にサイトを更新してました。けれど今、色々と興味が抜け落ちてきてるのです。プログラム技術は今は手段だし、それなりのゲーム・アニメオタクだったけど、コンテンツ消化のペースもどんどん落ちてる。&lt;/p&gt;
+&lt;p&gt;実は理由ははっきりしてて。自分は、自分が一番好きなコンテンツが、&lt;em&gt;自分で書いた物語&lt;/em&gt;だということに気が付いてしまったのでした。&lt;/p&gt;
+&lt;p&gt;私事だけど、2年ほど前に一気に趣味小説を書き上げたことがあります。その時の高揚感が未だ忘れられない。自分の要求を満たすものが自分の脳内から生まれ続ける時の脳内麻薬の連続放出を体験した結果、他のどんな娯楽も、ただの時間つぶしにしか思えない脳になってしまったのだ。&lt;/p&gt;
+&lt;p&gt;だからこのブログは「自分の物語を世界に残す」ためのあらゆる工夫をテーマに、のらりくらりと更新していきたいと思ってます。Webでの表現や、データの作り方、残し方とか。サイト自身が検討の場なのでものすごく落ち着きがないところになりそうだけど、あとまーそうは言いつつ脱線もいろいろしちゃうと思うけど、その辺はご容赦願いたい。&lt;/p&gt;
+&lt;p&gt;さて、40越え独身の枯れてきた心に、どれだけの残骸が残っているのか？ま、場末の居酒屋で繰り広げられる雑多な会話の一つ程度に楽しんでいただければ幸いです。&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://domain//2014/2014/03/10/test.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2014/2014/03/10/test.html"/>
+    <title>サイトの立ち上げテストでした</title>
+    <updated>2014-03-10T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;まずは実験的にサイトを作ってみました。&lt;/p&gt;
+&lt;p&gt;というか、サイト自体は1年以上前からほぼ準備完了してたけど、そっから絶賛放置だったわけで‥‥。&lt;/p&gt;
+&lt;p&gt;まあ、ゆっくりやってみます。&lt;/p&gt;</content>
+  </entry>
+  
+</feed>
