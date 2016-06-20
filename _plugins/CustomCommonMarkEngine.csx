@@ -1,6 +1,5 @@
-#r MarkdownDeep.dll
+#r "CommonMark.dll"
 
-using MarkdownDeep;
 using System.Text.RegularExpressions;
 
 
@@ -46,19 +45,11 @@ using System.Text.RegularExpressions;
 
 
 [Export(typeof(ILightweightMarkupEngine))]
-public sealed class MarkdownDeepEngine : ILightweightMarkupEngine
+public sealed class CustomCommonMarkEngine : ILightweightMarkupEngine
 {
-    private readonly Markdown _markdownDeep; 
-
-    public MarkdownDeepEngine()
+    public string Convert(string source)
     {
-        _markdownDeep = new MarkdownDeep.Markdown();
-        _markdownDeep.ExtraMode = true;
-    }
-
-    public string Convert(string markdownContent)
-    {
-        var t1 = _markdownDeep.Transform(markdownContent);
+        var t1 = CommonMark.CommonMarkConverter.Convert(source);
         var t2 = JpExt.RemoveCRLF(t1);
         return t2;
     }
