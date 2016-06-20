@@ -6,9 +6,19 @@
     <atom:link href="http://domain/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-au</language>
-    <pubDate>日, 19 6 2016 00:00:00 +0900</pubDate>
-    <lastBuildDate>日, 19 6 2016 00:00:00 +0900</lastBuildDate>
+    <pubDate>月, 20 6 2016 00:00:00 +0900</pubDate>
+    <lastBuildDate>月, 20 6 2016 00:00:00 +0900</lastBuildDate>
 
+    
+    <item>
+      <title>ここは何？</title>
+      <link>http://domain/2016/2016/06/20/what.html</link>
+      <pubDate>月, 20 6 2016 00:00:00 +0900</pubDate>
+      <author>Author</author>
+      <guid>http://domain/2016/2016/06/20/what.html</guid>
+      <description>&lt;p&gt;グーグルによると何のサイトかよくわからないらしいです。最も、「記事が少なすぎて判断できない」とのことで‥‥。小遣い稼ぎくらいにはなるかなと、広告置く準備をしていたら突っ込まれました。&lt;/p&gt;
+&lt;p&gt;そりゃまあその通りです（笑）。縦書きブログという形から入ってるので、内容的が散文的になっていますし、どうしても中身の判断がつかないですね。とりあえずあと３か月記事を突っ込んでから、方針定めていくことになりそう。ボチボチと進めます。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>NASA研究のレーザー推進</title>

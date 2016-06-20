@@ -3,13 +3,26 @@
   <title>Feed Name</title>
   <link href="http://domain/"/>
   <link type="application/atom+xml" rel="self" href="http://domain/atom.xml"/>
-  <updated>2016-06-19T00:00:00+09:00</updated>
+  <updated>2016-06-20T00:00:00+09:00</updated>
   <id>http://domain/</id>
   <author>
     <name>Author</name>
     <email>Email</email>
   </author>
 
+  
+  <entry>
+    <id>http://domain//2016/2016/06/20/what.html</id>
+    <link type="text/html" rel="alternate" href="http://domain//2016/2016/06/20/what.html"/>
+    <title>ここは何？</title>
+    <updated>2016-06-20T00:00:00+09:00</updated>
+    <author>
+      <name>Author</name>
+      <uri>http://domain/</uri>
+    </author>
+    <content type="html">&lt;p&gt;グーグルによると何のサイトかよくわからないらしいです。最も、「記事が少なすぎて判断できない」とのことで‥‥。小遣い稼ぎくらいにはなるかなと、広告置く準備をしていたら突っ込まれました。&lt;/p&gt;
+&lt;p&gt;そりゃまあその通りです（笑）。縦書きブログという形から入ってるので、内容的が散文的になっていますし、どうしても中身の判断がつかないですね。とりあえずあと３か月記事を突っ込んでから、方針定めていくことになりそう。ボチボチと進めます。&lt;/p&gt;</content>
+  </entry>
   
   <entry>
     <id>http://domain//2016/2016/06/19/lazer.html</id>
