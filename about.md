@@ -2,6 +2,7 @@
 layout: post
 title: About
 comments: false
+date: 2013-07-05
 ---
 
 えちょの残骸
