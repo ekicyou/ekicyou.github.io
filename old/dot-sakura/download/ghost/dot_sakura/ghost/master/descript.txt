@@ -6,6 +6,7 @@ type,ghost
 craftman,dot-station
 craftmanw,どっとステーション駅長
 craftmanurl,http://www.nanican.net/dot-sakura/
+updateurl,http://ekicyou.github.com/old/dot-sakura/download/ghost/dot_sakura/
 
 sakura.name,さくら
 kero.name,うにゅう
