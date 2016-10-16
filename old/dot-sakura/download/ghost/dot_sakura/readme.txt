@@ -28,5 +28,6 @@
 ************************************************************************
 ゴーストに関する問い合わせ等はすべて駅長までお願いします。
 
-「．さくらステーション」http://www.nanican.net/dot-sakura/
-どっとステーション駅長：dot-station@saku2.com
+「えちょの残骸」http://ekicyou.github.io/about.html
+どっとステーション駅長：dot.station@gmail.com
+ツイッター：@ekicyou
