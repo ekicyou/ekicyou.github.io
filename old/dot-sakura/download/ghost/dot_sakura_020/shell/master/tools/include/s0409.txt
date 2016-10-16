@@ -1,0 +1,34 @@
+//=====================================================================
+// @alias                409
+// @surfacetable.type    寝間着サーフェスセット
+// @surfacetable.comment 寝間着さくら：照れ怒り
+//=====================================================================
+surface5304
+{
+collision0,75,72,135,106,Head
+collision1,75,132,139,162,Face
+collision2,83,196,131,222,Bust
+collision3,97,163,116,170,Mouse
+
+point.kinoko.centerx,105
+point.kinoko.centery,80
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5327,40,70,123
+animation0.pattern1,overlay,5328,40,70,123
+animation0.pattern2,overlay,-1,40,0,0
+
+animation1.interval,sometimes
+animation1.pattern0,overlay,5327,40,70,123
+animation1.pattern1,overlay,5328,40,70,123
+animation1.pattern2,overlay,-1,40,0,0
+
+animation2.interval,sometimes
+animation2.pattern0,alternativestart,(0,1)
+
+animation3.interval,talk,4
+animation3.pattern0,overlay,5329,160,96,161
+animation3.pattern1,overlay,-1,100,0,0
+animation3.pattern2,overlay,5329,160,96,161
+animation3.pattern3,overlay,-1,160,0,0
+}

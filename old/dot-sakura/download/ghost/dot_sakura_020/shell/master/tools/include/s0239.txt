@@ -1,0 +1,16 @@
+//=====================================================================
+// @alias                239
+// @surfacetable.type    ネタサーフェス(２００～)
+// @surfacetable.comment さくら：正座
+//=====================================================================
+surface5352
+{
+element0,overlay,surface5351.png,0,0
+element0,overlay,surface5391.png,145,90
+
+animation0.interval,runonce
+animation0.pattern0,overlay,5213,100,155,90
+animation0.pattern1,overlay,5213,100,155,95
+animation0.pattern2,overlay,5213,100,155,100
+animation0.pattern3,overlay,5213,100,155,105
+}
