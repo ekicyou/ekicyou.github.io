@@ -13,7 +13,7 @@ date: 2016-10-16
  -  [どっとさくら](/old/dot-sakura/download/nar/dot_sakura_020.nar)
  -  [webさくら](/old/web-sakura/areka/i.html)
  -  [パスタさん](/pasta/index.html)
-  - →[testモード](/pasta/app/test.html)
+  - →[testモード](/pasta/app/design.html)
 
 現在は縦書きによるブログ構築技術・研究そのものを目的としています。
 
