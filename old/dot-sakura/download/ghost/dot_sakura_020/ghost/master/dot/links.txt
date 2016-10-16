@@ -74,7 +74,7 @@ URL.kero : "やさぐれアンテナ"$(chr 1)"http://antenna.yasagure.net/"$(chr 1)"http
 URL.kero : "何か。の略歴"$(chr 1)"http://a1.st/nob/sakura/"$(chr 1)"http://a1.st/nob/sakura/r_banner.png"$(chr 2)
 URL.kero : "SSTP Bottle"$(chr 1)"http://bottle.mikage.to/"$(chr 1)"http://bottle.mikage.to/banner.gif"$(chr 2)
 URL.kero : "-"$(chr 2)
-URL.kero : "．さくらStation"$(chr 1)"http://ekicyou.github.com/old/dot-sakura/"$(chr 1)"http://ekicyou.github.com/old/dot-sakura/images/banner.png"$(chr 2)
+URL.kero : "えちょの残骸"$(chr 1)"http://ekicyou.github.io/about.html"$(chr 1)"http://ekicyou.github.io/img/ruins.jpg"$(chr 2)
 
 
 
