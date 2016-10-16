@@ -1,8 +1,6 @@
 shell\master\Thumbs.db
 shell\sakura50\Thumbs.db
 shell\sakura75\Thumbs.db
-ghost\master\menu_forground.png
-ghost\master\SakuraHomeUrl.txt
 shell\master\surface100.png
 shell\master\surface101.png
 shell\master\surface102.png
