@@ -2080,7 +2080,7 @@ surface5259
 surface5352
 {
 element0,overlay,surface5351.png,0,0
-element0,overlay,surface5391.png,145,90
+element1,overlay,surface5391.png,145,90
 
 animation0.interval,runonce
 animation0.pattern0,overlay,5213,100,155,90
@@ -2093,7 +2093,7 @@ animation0.pattern3,overlay,5213,100,155,105
 surface5347
 {
 element0,overlay,surface5348.png,0,0
-element0,overlay,surface5391.png,125,190
+element1,overlay,surface5391.png,125,190
 
 animation0.interval,runonce
 animation0.pattern0,overlay,5213,100,130,180
