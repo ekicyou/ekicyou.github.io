@@ -30,4 +30,4 @@
 
 「えちょの残骸」http://ekicyou.github.io/about.html
 どっとステーション駅長：dot.station@gmail.com
-ツイッター：@ekicyou
+Twitter：@ekicyou
