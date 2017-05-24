@@ -1,9 +1,0 @@
-craftman,
-id,dot_sakura
-name,Ç≥Ç≠ÇÁ50Åì
-type,shell
-
-sakura.balloon.offsetx,15
-sakura.balloon.offsety,-67
-kero.balloon.offsetx,5
-kero.balloon.offsety,-33
