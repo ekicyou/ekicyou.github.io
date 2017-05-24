@@ -39,4 +39,5 @@ jekyll s
 
 http://localhost:4000/ にアクセス。
 
-
+この辺参考にする。
+http://qiita.com/takuya0301/items/374b2ab5be407b138ef9

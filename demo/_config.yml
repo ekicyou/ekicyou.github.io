@@ -26,7 +26,7 @@ github_username:  ekicyou
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-swiss
 gems:
   - jekyll-feed
 exclude:
