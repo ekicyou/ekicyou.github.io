@@ -2,13 +2,12 @@ title: えちょのざんがい
 author: ekicyou
 email: dot.station@gmail.com
 description: > # this means to ignore newlines until "twitter_username:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  このサイトは主に2000年代初頭に発生した、
+  えちょの嗜好についての諸々をgithubが続く限り残し続ける場所です。
 
 # social links
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: ekicyou
+github_username:  ekicyou
 rss: rss
 # dribbble_username: jekyll
 # facebook_username: jekyll
