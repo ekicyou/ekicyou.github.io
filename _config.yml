@@ -4,6 +4,7 @@ email: dot.station@gmail.com
 description: > # this means to ignore newlines until "twitter_username:"
   このサイトは主に2000年代初頭に発生した、
   えちょの嗜好についての諸々をgithubが続く限り残し続ける場所です。
+
   世界のエントロピー上昇に貢献します。
 
 # social links
@@ -20,12 +21,9 @@ rss: rss
 # googleplus_username: +jekyll
 
 # Mastodon instances
-# mastodon:
-# - username: jekyll
-#   instance: example.com
-# - username: jekyll2
-#   instance: example.com
-
+mastodon:
+ - username: ekicyou
+   instance: ukadon.shillest.net
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
