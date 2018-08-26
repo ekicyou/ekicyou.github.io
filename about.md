@@ -1,18 +1,20 @@
 ---
-layout: page
+layout: post
 title: About
-permalink: /about/
+comments: false
+date: 2016-10-16
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+えちょの残骸
+============
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+ふるーい開発物を、後世に残す場所。
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+ + どっとさくら
+  + 　→[どっとさくら20%（ぼとるさくら）](/old/dot-sakura/download/nar/dot_sakura_020.nar)
+  + 　→[どっとさくら](/old/dot-sakura/download/nar/dot_sakura.nar)
+ +  [webさくら](/old/web-sakura/areka/i.html)
+ +  [パスタさん](/pasta/index.html)
+  + 　→[testモード](/pasta/app/design.html)
 
-
-[jekyll-organization]: https://github.com/jekyll
+このサイトは世界のエントロピーの上昇に貢献します。
