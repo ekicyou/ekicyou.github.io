@@ -1,0 +1,25 @@
+//=====================================================================
+// @alias                501
+// @surfacetable.type    すくみずサーフェスセット
+// @surfacetable.comment さくら：すくみず：エロ面
+//=====================================================================
+surface5354
+{
+collision0,74,64,142,89,Head
+collision1,79,115,133,146,Face
+collision2,103,155,110,160,Mouse
+
+point.kinoko.centerx,105
+point.kinoko.centery,68
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5378,40,70,118
+animation0.pattern1,overlay,5379,40,70,118
+animation0.pattern2,overlay,-1,40,0,0
+
+animation1.interval,talk,4
+animation1.pattern0,overlay,5139,100,102,152
+animation1.pattern1,overlay,-1,100,0,0
+animation1.pattern2,overlay,5139,160,102,152
+animation1.pattern3,overlay,-1,160,0,0
+}

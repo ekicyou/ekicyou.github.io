@@ -1,0 +1,21 @@
+//=====================================================================
+// @alias                81
+// @surfacetable.type    Ç≥Ç≠ÇÁägí£ÇQ(ÇTÇOÅ`)
+// @surfacetable.comment ä·ãæÇ≥Ç≠ÇÁÅFÉGÉçñ 
+//=====================================================================
+surface5113
+{
+collision0,74,64,142,89,Head
+collision1,79,115,133,146,Face
+collision2,88,197,131,229,Bust
+collision3,92,156,99,161,Mouse
+collision4,68,318,155,337,Apron
+
+point.kinoko.centerx,109
+point.kinoko.centery,63
+
+animation0.interval,sometimes
+animation0.pattern0,overlay,5129,40,69,124
+animation0.pattern1,overlay,5130,40,69,124
+animation0.pattern2,overlay,-1,40,0,0
+}

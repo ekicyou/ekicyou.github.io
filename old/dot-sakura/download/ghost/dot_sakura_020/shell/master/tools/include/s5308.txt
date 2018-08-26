@@ -1,0 +1,10 @@
+//=====================================================================
+// @alias                5308
+// @surfacetable.type    XXXX
+// @surfacetable.comment XXXX
+//=====================================================================
+surface5308
+{
+element0,overlay,surface5307.png,0,0
+element1,overlay,surface5333.png,4,285
+}

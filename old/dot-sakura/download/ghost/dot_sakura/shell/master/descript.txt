@@ -1,0 +1,16 @@
+charset,Shift_JIS
+
+id,dot_sakura
+craftman,Rebuild by Sui Hikage
+craftmanw,Rebuild by “úˆü ‰
+type,shell
+name,master
+mode,material
+
+readme,readme.txt
+
+sakura.balloon.offsetx,10
+sakura.balloon.offsety,60
+
+kero.balloon.offsetx,60
+kero.balloon.offsety,234

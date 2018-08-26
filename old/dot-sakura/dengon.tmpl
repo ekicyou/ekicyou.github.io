@@ -1,0 +1,85 @@
+<!--{def TEMPLATE_COMMENT}-->
+<html>
+<head>
+<title>さくら表示テンプレート</title>
+<meta http-equiv="Content-Type" content="text/html;">
+</head>
+<body bgcolor="#ffffff">
+<!--{/def}-->
+
+<!-- ■伝言板 START■ -->
+<table id="dengon" summary="t" width="100%" border="2" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#008000">
+      <form method="post" action="{rval SCRIPT_NAME}#dengon">
+        <table summary="t" width="100%" bgcolor="#008000" border="0" cellpadding="0" cellspacing="2">
+          <tr>
+            <td align="center" colspan="20" bgcolor="#008080" style="color:#FFFFFF">
+              <span class="dengon_title">
+                <span class="dengon_title1">帰　っ　て　き　た　</span>
+                <span class="dengon_title2">伝　言　板</span>
+              </span>
+<!--{def ERR_MESSAGE}-->
+              <br /><span class="b"><font size="3" color="#FF8888">{rval ERR_MESSAGE}</font></span>
+<!--{/def}-->
+            </td>
+          </tr>
+
+<!--{def NORMAL_MODE}-->
+          <tr>
+            <td align="center" colspan="20" bgcolor="#008080">
+              <input type="hidden" name="MODE" value="ADD" />
+              <table summary="t" width="100%">
+                <tr>
+                  <td align="center">
+                    <span class="tz12px">
+                      <a href="{rval SCRIPT_NAME}?MODE=DEL_CHECK#dengon" style="color:#FFFFFF">黒板消</a>
+                    </span>
+                  </td>
+                  <td align="left">
+                    <span class="b">名前(6文字まで)</span><input type="text" size="12" name="UPDATE[NAME]" value="{rval HTML/NAME}" />　　　<input type="submit" value="書く" /><br />
+                    <span class="b">伝言(30文字まで)</span><input type="text" size="60" name="UPDATE[DENGON]" value="{rval HTML/DENGON}" />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+<!--{/def}-->
+
+<!--{def DEL_MODE}-->
+          <tr>
+            <td align="center" colspan="20" bgcolor="#008080">
+              <input type="hidden" name="MODE" value="DEL_COMMIT" />
+              <table summary="t" width="100%">
+                <tr>
+                  <td align="center">
+                    <font size="2">
+                      <a href="{rval SCRIPT_NAME}#dengon" style="color:#FFFFFF">通常モード</a>
+                    </font>
+                  </td>
+                  <td align="left">
+                    <span class="b">削除KEY</span><input type="text" size="8" name="UPDATE[PASS]" value="" />　　　<input type="submit" value="マークした伝言を削除" />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+<!--{/def}-->
+
+
+          <tr bgcolor="#008080" class="tate">
+<!--{each ITEMS}-->
+            <td valign="top" class="dengon_line">{rval ITEMS/HTML}</td>
+<!--{/each}-->
+
+          </tr>
+        </table>
+      </form>
+    </td>
+  </tr>
+</table>
+<!-- ■伝言板 END■ -->
+<!--{def TEMPLATE_COMMENT}-->
+</body>
+</html>
+<!--{/def}-->

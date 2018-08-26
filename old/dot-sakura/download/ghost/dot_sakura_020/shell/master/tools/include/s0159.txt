@@ -1,0 +1,29 @@
+//=====================================================================
+// @alias                159
+// @surfacetable.type    Ç§Ç…Ç„Ç§ägí£ÇQ(ÇPÇRÇOÅ`)
+// @surfacetable.comment Ç§Ç…Ç„Ç§ÅFâ‘âŒ
+//=====================================================================
+surface5349
+{
+animation0.interval,runonce
+animation0.pattern0,base,5349,40,0,0
+animation0.pattern1,move,0,0,0,-150
+animation0.pattern2,base,5350,40,0,0
+animation0.pattern3,move,0,0,0,-120
+animation0.pattern4,base,5012,60,0,0
+animation0.pattern5,base,5012,500,0,0
+animation0.pattern6,move,0,0,0,-150
+animation0.pattern7,base,5388,120,0,0
+animation0.pattern8,base,5389,180,0,0
+animation0.pattern9,base,5390,150,0,0
+animation0.pattern10,base,5012,50,0,0
+animation0.pattern11,base,5260,1000,0,0
+animation0.pattern12,move,0,0,0,0
+animation0.pattern13,overlay,5204,50,145,265
+animation0.pattern14,overlay,5204,50,145,263
+animation0.pattern15,overlay,5204,50,145,261
+animation0.pattern16,overlay,5204,50,145,259
+animation0.pattern17,overlay,5204,50,145,257
+animation0.pattern18,overlay,5204,50,145,255
+animation0.pattern19,overlay,5012,50,0,0
+}
