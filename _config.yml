@@ -38,6 +38,7 @@ minima:
 
 # Build settings
 theme: jekyll-theme-minimal
+markdown: GFM
 
 plugins:
  - jekyll-feed
