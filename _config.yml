@@ -37,7 +37,7 @@ minima:
 # - about.md
 
 # Build settings
-theme: jekyll-theme-leap-day
+theme: jekyll-theme-minimal
 
 plugins:
  - jekyll-feed
