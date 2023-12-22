@@ -7,7 +7,6 @@ description: > # this means to ignore newlines until "twitter_username:"
   世界のエントロピー上昇に貢献します。
 
 # social links
-twitter_username: ekicyou
 github_username:  ekicyou
 rss: rss
 # dribbble_username: jekyll
@@ -43,9 +42,11 @@ disqus:
   shortname: echiyonozangai
 
 # Build settings
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
+remote_theme: pages-themes/modernist@v0.2.0
 markdown: GFM
 
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ - jekyll-remote-theme
