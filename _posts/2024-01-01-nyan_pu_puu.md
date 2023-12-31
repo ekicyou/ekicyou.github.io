@@ -1,6 +1,9 @@
 ---
 layout: post
-title:  「にゃんぷっぷー」をリリースした
+title: 「にゃんぷっぷー」をリリースした
+image: /nyan-pu-puu/images/surface0.png
+description:
+   ゴースト「にゃんぷっぷー」をリリースします。
 comments: true
 tags:
    - 伺か
