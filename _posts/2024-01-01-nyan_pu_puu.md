@@ -9,7 +9,7 @@ tags:
    - 伺か
 ---
 
-![ごーすと「にゃんぷっぷー」](/nyan-pu-puu/images/surface0.png "にゃんぷっぷー")
+[![ごーすと「にゃんぷっぷー」](/nyan-pu-puu/images/surface0.png "にゃんぷっぷー")](/nyan-pu-puu/ghost/main/nyan-pu-puu.nar)
 
 新年あけましておめでとうございます。
 数年間ろくに更新しませんでしたが、本年も変わらぬご愛顧よろしくお願いします。
