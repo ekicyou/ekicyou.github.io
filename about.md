@@ -9,6 +9,7 @@ date: 2016-10-16
 
 新旧の開発物を、後世に残す場所。
 
++ [にゃんぷっぷー](/nyan-pu-puu/)
 + [えも？](/2020/08/10/emo.html)
 + [パスタさん](/pasta/index.html)
   + →[testモード](/pasta/app/design.html)
