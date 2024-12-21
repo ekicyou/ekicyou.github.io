@@ -33,3 +33,7 @@ date: 2024-01-01
 ### 2019-08-19
 
 サイト構成の調整。
+
+## その他
+
+[![時間のないサイト運営者](/img/EmbeddedImage.png)](https://sites.google.com/view/happy-busy/)
