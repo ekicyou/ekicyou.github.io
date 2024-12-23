@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 「にゃんぷっぷー」言語について語る
+title: 「にゃんぷっぷー」言語について判明した事実
 image: /nyan-pu-puu/images/surface0.png
 description:
    「にゃんぷっぷー」言語について語る
