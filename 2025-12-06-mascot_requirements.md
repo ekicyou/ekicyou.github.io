@@ -14,6 +14,8 @@ tags:
 > 当記事は[伺か・伺的 Advent Calendar 2025](https://adventar.org/calendars/11651)に参加したものである。
 なお、アドカレはまだ（12月06日現在）空席があるため、ふるって参加なされたい。
 
+[＜昨日](https://gist.github.com/Tatakinov/1434986b65fa68bb2b3ae974db43a50b)　[明日＞](xxx)
+
 <iframe src="https://adventar.org/calendars/11651/embed" width="100%" height="362"></iframe>
 
 ---
