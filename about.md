@@ -11,8 +11,8 @@ date: 2024-01-01
 
 + [にゃんぷっぷー](/nyan-pu-puu/)
 + [えも？](/2020/08/10/emo.html)
-+ [パスタさん](/pasta/index.html)
-  + →[testモード](/pasta/app/design.html)
++ [パスタさん](/zzz-pasta/index.html)
+  + →[testモード](/zzz-pasta/app/design.html)
 + どっとさくら
   + →[どっとさくら20%（ぼとるさくら）](/old/dot-sakura/download/nar/dot_sakura_020.nar)
   + →[どっとさくら](/old/dot-sakura/download/nar/dot_sakura.nar)
