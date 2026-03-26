@@ -9,6 +9,7 @@ date: 2024-01-01
 
 新旧の開発物を、後世に残す場所。
 
++ [えも？？](/ghost_dev/emo2/)
 + [にゃんぷっぷー](/nyan-pu-puu/)
 + [えも？](/2020/08/10/emo.html)
 + [パスタさん](/zzz-pasta/index.html)
