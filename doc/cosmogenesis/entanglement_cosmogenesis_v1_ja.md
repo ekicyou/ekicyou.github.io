@@ -6,7 +6,11 @@ description:
 comments: true
 use_math: true
 tags:
-   -宇宙
+   - 宇宙
+   - 素粒子
+   - ダークマター
+   - ホログラム
+   - エンタングル
 ---
 
 **著者：** ekicyou¹  

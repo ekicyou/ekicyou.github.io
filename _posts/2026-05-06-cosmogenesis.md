@@ -7,6 +7,10 @@ comments: true
 image: /doc/cosmogenesis/space_cat.jpg
 tags:
    - 宇宙
+   - 素粒子
+   - ダークマター
+   - ホログラム
+   - エンタングル
 ---
 
 最近、Claudeネキと宇宙を語らうのが趣味です。
