@@ -1,0 +1,808 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{authblk}
+\usepackage{abstract}
+\usepackage{titling}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    citecolor=blue!50!black,
+    urlcolor=blue!50!black,
+}
+
+% Title and author
+\title{From Bell-Pair Dark Matter to Entanglement Cosmogenesis:\\
+{\large A Programmatic Conjecture with Testable Predictions}}
+
+\author[1]{ekicyou\thanks{\href{mailto:dot.station@gmail.com}{dot.station@gmail.com}}}
+\affil[1]{Independent Researcher, Japan}
+
+\date{May 5, 2026 (Version 1.0)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+We propose a programmatic conjecture for cosmology and particle physics based on a strict \emph{qubit-only ontology}: nothing exists except qubits and their entanglement patterns; concepts such as ``vacuum,'' ``field,'' ``particle,'' and ``spacetime'' are emergent descriptions. Within this framework, dark matter is identified with closed Bell pairs adhering to holographic boundaries, dark energy with the ground-state structure of the boundary register, leptons with open 2-qubit pairs, quarks with 3-qubit triangles, and baryons with 9-qubit \emph{trinity} structures isomorphic to the Shor quantum error-correcting code. We argue that color confinement follows from the no-cloning theorem, that the Pauli exclusion principle emerges from entanglement monogamy combined with the non-existence of AME$(4,2)$ states, and that Hawking radiation is naturally described as discrete qubit ejection events from horizon registers. The framework provides structural answers to several open problems---the cosmological constant problem, the black-hole information paradox, and the lepton/quark asymmetry---and yields approximately thirteen testable quantitative predictions across cosmology, particle physics, and gravitational-wave astronomy. We emphasize that this work is a \emph{programmatic conjecture}, not a completed theory; quantitative derivations and rigorous mathematical formulations are left as open problems for the community. The paper is presented as a dated archive of conceptual structure for potential confrontation with observations on a 5--15 year timescale.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{Motivation: The Crisis of $\Lambda$CDM}
+
+As of 2026, the standard cosmological model ($\Lambda$CDM) faces several persistent observational tensions:
+\begin{itemize}[leftmargin=*]
+\item The Hubble tension, with disagreement between local and CMB-inferred values of $H_0$ exceeding $6\sigma$~\cite{Riess2022,Planck2020}.
+\item DESI 2024--2025 results suggesting dynamical dark-energy evolution rather than a pure cosmological constant~\cite{DESI2024}.
+\item JWST observations of unexpectedly mature galaxies at high redshift~\cite{Boylan2023}.
+\item More than two decades of null results in direct dark-matter detection experiments~\cite{LUX2017,XENON2023}.
+\end{itemize}
+
+These tensions motivate alternative frameworks. Here we explore one: a strict information-theoretic ontology in which all of physics emerges from qubit entanglement.
+
+\subsection{Approach}
+
+We adopt a single ontological principle: \textbf{only qubits and their entanglement patterns exist}. All other concepts---fields, particles, spacetime, vacuum---are emergent descriptions. From this principle we derive structural constraints (qubit number conservation, monogamy-based exclusion, AME-based dimensional limits) and from these constraints we attempt to recover the broad structure of standard physics, with several testable departures.
+
+This approach is in the spirit of Wheeler's ``It from Bit''~\cite{Wheeler1990} but pushed further: not only is information physical, but information \emph{is the only thing that is physical}. The framework also extends ideas from Verlinde's emergent gravity~\cite{Verlinde2010,Verlinde2016}, Wen's string-net liquid~\cite{Wen2017}, and Szangolies's qubit-based gauge group emergence~\cite{Szangolies2025}.
+
+\subsection{Scope and Limitations}
+
+This work is presented as a \emph{programmatic conjecture}, not a completed theory:
+\begin{itemize}[leftmargin=*]
+\item No claim of mathematical completeness is made.
+\item Many quantitative results remain at the level of order-of-magnitude estimates or proposed derivation paths.
+\item The author is an independent researcher without academic affiliation; this document is offered for community evaluation rather than to establish authorial priority.
+\item The aim is to seed conceptual structure for further development; refinement, refutation, or extension by the broader research community is welcomed.
+\end{itemize}
+
+\subsection{Organization}
+
+Section~\ref{sec:foundations} establishes the qubit-only ontology and three strict conservation laws. Section~\ref{sec:hierarchy} derives a particle hierarchy from qubit structures. Section~\ref{sec:dimensions} discusses dimensional emergence and the AME$(4,2)$ obstruction. Sections~\ref{sec:dynamics}--\ref{sec:bh} treat dynamics, cosmology, and black holes. Section~\ref{sec:predictions} catalogs testable predictions. Sections~\ref{sec:related}--\ref{sec:conclusion} discuss related work, open problems, and conclusions.
+
+\section{Foundations: Qubit-Only Ontology}
+\label{sec:foundations}
+
+\subsection{The Single Principle}
+
+Our entire framework rests on one ontological commitment:
+\begin{quote}
+\textit{There exist only qubits and their entanglement patterns. All other concepts are emergent.}
+\end{quote}
+
+This minimalist stance excludes: vacuum as an independent substance, fields as fundamental entities, ``creation from nothing,'' and free creation/annihilation of qubits. It commits us to: a fixed-dimensional Hilbert space (modulo cosmological horizon expansion), strictly unitary evolution, and emergent treatment of all other physical concepts.
+
+\subsection{Three Strict Conservation Laws}
+
+From the qubit-only ontology, three strict conservation laws follow:
+
+\paragraph{Conservation A (Qubit Number).}
+\begin{equation}
+N_{\text{total}} = \frac{A_{\text{cosmic}}}{4\ell_P^2 \ln 2} = \text{constant},
+\end{equation}
+where $A_{\text{cosmic}}$ is the area of the cosmological horizon. $N_{\text{total}}$ increases discretely only as the cosmological horizon expands.
+
+\paragraph{Conservation B (Total Energy).}
+\begin{equation}
+E_{\text{total}} = \sum_{i=1}^{N_{\text{total}}} E_i = \text{constant},
+\end{equation}
+summed over all qubits. Local processes redistribute energy; the total is invariant.
+
+\paragraph{Conservation C (Entanglement Structure).}
+The total of all monogamy constraints (in the sense of Coffman-Kundu-Wootters~\cite{CKW2000}) is invariant under local rearrangement.
+
+These conservation laws follow from standard quantum mechanical unitarity but are made explicit as foundational constraints of the framework.
+
+\subsection{Reinterpretation of ``Vacuum''}
+
+In standard quantum field theory, ``vacuum'' is treated as a distinct ontological entity (the ground state of fields). Within our framework:
+\begin{quote}
+\textit{``Vacuum'' is the collective designation for the state in which all qubits occupy their ground state. It is not a separate entity.}
+\end{quote}
+
+Concrete consequences:
+\begin{itemize}[leftmargin=*]
+\item Vacuum energy = sum of qubit ground-state energies.
+\item ``Virtual particles'' = transient excitations of specific qubits (the qubits themselves are real; their excited states are short-lived).
+\item Vacuum polarization = local distortion of qubit configurations near charged qubits.
+\item Casimir effect = restriction of qubit excitation modes by boundary conditions.
+\item Higgs vacuum expectation value = collective ground-state synchronization pattern.
+\end{itemize}
+
+The phrase ``borrowing energy from the vacuum'' is replaced by: \emph{exciting a specific qubit}; the lender and borrower are the same qubit.
+
+\subsection{Boundary Registers}
+
+By the holographic principle~\cite{tHooft1993,Susskind1995}, every qubit belongs to some \emph{boundary register} associated with a horizon. Horizons are hierarchical:
+\begin{itemize}[leftmargin=*]
+\item Each black hole's event horizon
+\item The cosmological (de Sitter) horizon of the observable universe
+\item Local causal horizons (Rindler-type)
+\end{itemize}
+
+The total qubit count of the universe is the sum of qubits across all such boundary registers.
+
+A boundary register has two distinct aspects:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Aspect} & \textbf{Property} & \textbf{Fluctuation} \\
+\midrule
+Capacity (qubit count) & Geometric invariant & Deterministic, no fluctuation \\
+Content (qubit states) & Quantum, dynamical & Quantum fluctuations \\
+\bottomrule
+\end{tabular}
+\caption{Two aspects of boundary registers.}
+\end{table}
+
+\subsection{Boundary Register Temperature}
+
+Each horizon possesses a characteristic temperature:
+\begin{align}
+T_H &= \frac{\hbar c^3}{8\pi G M k_B} \quad \text{(Schwarzschild)} \\
+T_{dS} &= \frac{\hbar H}{2\pi k_B c} \quad \text{(de Sitter)}
+\end{align}
+
+We make a key identification:
+\begin{equation}
+\boxed{T_{\text{register}} = T_{\text{Hawking}}}
+\end{equation}
+
+The boundary register is in a thermal state at the Hawking temperature of its horizon. From this single identification follow:
+\begin{itemize}[leftmargin=*]
+\item Hawking radiation rate (Boltzmann factor)
+\item Bekenstein-Hawking entropy formula
+\item Black-body spectrum of Hawking radiation
+\item Thermal flow between hierarchical horizons
+\end{itemize}
+
+\section{Particle Hierarchy from Qubit Structures}
+\label{sec:hierarchy}
+
+\subsection{Classification by Qubit Count}
+
+We propose the following identification of particles with qubit structures:
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lllll}
+\toprule
+\textbf{Structure} & \textbf{State} & \textbf{Particle} & \textbf{Color} & \textbf{Size} \\
+\midrule
+1 qubit & free & gauge boson ($\gamma$, $g$) & gluon only & undefined \\
+2 qubits & closed (Bell) & Dark Matter & none & boundary area \\
+2 qubits & open type A & charged lepton ($e$, $\mu$, $\tau$) & structurally impossible & undefined (point-like) \\
+2 qubits & open type B & neutrino ($\nu$) & structurally impossible & undefined (point-like) \\
+3 qubits & open (triangle) & quark & exposed & cannot exist alone \\
+3 qubits & bulk-projected & W, Z bosons & none & short-range \\
+6 qubits & $3 + \bar{3}$ & meson & singlet & hadron-scale \\
+\textbf{9 qubits} & \textbf{trinity (Shor-isomorphic)} & \textbf{baryon} & \textbf{singlet} & \textbf{proton-scale} \\
+many qubits & hierarchical & nuclei, atoms, molecules & singlet & various \\
+\bottomrule
+\end{tabular}
+\caption{Particle hierarchy from qubit structures.}
+\label{tab:hierarchy}
+\end{table}
+
+\subsection{Lepton/Quark Asymmetry as Structural Necessity}
+
+The Standard Model's long-standing puzzle---\textit{why do quarks alone carry color?}---admits a structural answer:
+\begin{quote}
+\textit{Leptons are 2-qubit structures; quarks are 3-qubit structures. The difference $2 \neq 3$ directly produces the presence or absence of color.}
+\end{quote}
+
+Specifically, color charge is carried by 3-qubit triangle structures. Since 2-qubit structures contain no triangle, leptons are \emph{structurally incapable} of carrying color charge or participating in strong interactions. This elevates SU(3) non-coupling for leptons from a phenomenological fact to a structural necessity.
+
+\subsection{The 9-Qubit Trinity = Baryon}
+
+The mechanism by which 3-qubit quarks combine into 9-qubit baryons follows from quantum-information principles. Five independent considerations converge on the same conclusion:
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+\textbf{Perspective} & \textbf{Single 3-qubit (unstable)} & \textbf{9-qubit trinity (stable)} \\
+\midrule
+Topology & open disk ($\chi = 1$) & closed sphere ($\chi = 2$) \\
+Entanglement saturation & 3 exposed edges & all 21 edges shared \\
+Statistics & forced anyon collapse & complex consistency \\
+Quantum information & Shor-block extraction forbidden & complete Shor code \\
+AME hierarchy & blocked at AME(4,2) & pure volumetric realization \\
+\bottomrule
+\end{tabular}
+\caption{Five-fold convergence on 9-qubit trinity stability.}
+\end{table}
+
+\paragraph{Shor-code isomorphism.}
+The Shor 9-qubit quantum error-correcting code~\cite{Shor1995} has the structure
+\begin{align}
+|\bar{0}\rangle &= \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle + |111\rangle)_i \\
+|\bar{1}\rangle &= \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle - |111\rangle)_i
+\end{align}
+which is the hierarchical composition of three GHZ-like states (each on 3 qubits).
+
+\paragraph{Color confinement from no-cloning.}
+A crucial consequence: extracting a single 3-qubit block from a Shor-encoded state corresponds to extracting partial information from a quantum error-correcting code, which is forbidden by the no-cloning theorem~\cite{Wootters1982}. Therefore:
+\begin{quote}
+\textit{Color confinement is structurally derivable from the no-cloning theorem.}
+\end{quote}
+
+The geometric realization is the \emph{triaugmented triangular prism}: 9 vertices, 21 edges, 14 triangular faces, Euler characteristic $\chi = 2$, with every edge shared between exactly two faces (complete saturation).
+
+\subsection{Open 2-Qubit Pair = Lepton}
+
+An open 2-qubit pair (with partial internal entanglement and external entanglement capacity) is identified with a lepton.
+
+\paragraph{Size-undefined nature of the electron.}
+Three considerations give the electron's apparent point-like nature ($r_e < 10^{-18}$ m experimentally) a structural origin:
+\begin{enumerate}[leftmargin=*]
+\item \textbf{No closed surface}: a 2-qubit structure has no closed bounding surface in 3D.
+\item \textbf{Not boundary-adhered}: unlike Bell pairs, open 2-qubit pairs float in bulk.
+\item \textbf{Dynamical entanglement}: continuous environmental re-entanglement precludes a fixed shape.
+\end{enumerate}
+
+The electron is thus not ``a point-like particle'' but ``a structure to which the concept of size does not apply.''
+
+\paragraph{Five observed properties.}
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Observation} & \textbf{Structural origin} \\
+\midrule
+Spin-$\tfrac{1}{2}$ & open 2-qubit minimal half-integer spin carrier \\
+Electric charge & residual U(1) coupling from monogamy excess \\
+Mass $m_e \ll m_{\rm DM}$ & partial internal vibration $<$ complete vibration \\
+No color & absence of triangle structure \\
+Weak coupling & dynamical coupling to 3-qubit (W, Z) structures \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Dimensional Emergence}
+\label{sec:dimensions}
+
+\subsection{The Qubit Ladder}
+
+The dimensionality of spacetime emerges in stages corresponding to qubit count:
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lllll}
+\toprule
+\textbf{Qubits} & \textbf{Simplex} & \textbf{Shape} & \textbf{Dimension emerged} & \textbf{BH stage} \\
+\midrule
+1 & 0-simplex & point & 0D & --- \\
+2 & 1-simplex & edge & 1D = pre-spatial & proto-BH (DM) \\
+3 & 2-simplex & triangle & 2D = boundary surface & semi-complete BH \\
+4 & 3-simplex & tetrahedron & 3D, but blocked by AME$(4,2)$ & --- \\
+\textbf{9} & \textbf{trinity} & \textbf{triaug. prism} & \textbf{3D (volume)} & \textbf{minimal complete BH} \\
+\bottomrule
+\end{tabular}
+\caption{Dimensional emergence through qubit ladder.}
+\end{table}
+
+\subsection{The AME$(4,2)$ Obstruction}
+
+The Higuchi-Sudbery theorem~\cite{Higuchi2000} establishes that no Absolutely Maximally Entangled state on 4 qubits in dimension 2 exists. This implies:
+\begin{itemize}[leftmargin=*]
+\item ``Perfect 4-qubit tetrahedra'' are mathematically forbidden.
+\item 3D volume cannot be perfectly realized at 4-qubit scale.
+\item This obstruction provides an intrinsic origin for quantum-gravitational noise in 3D space.
+\end{itemize}
+
+The AME$(n,2)$ existence pattern for small $n$:
+\begin{center}
+\begin{tabular}{ccccccc}
+\toprule
+$n$ & 2 & 3 & \textbf{4} & 5 & 6 & 7 \\
+\midrule
+AME exists & \checkmark & \checkmark & $\boldsymbol{\times}$ & \checkmark & \checkmark & $\times$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The framework requires skipping over $n=4$ to $n=5$ (open 2+3 composite, intermediate states) or $n=9$ (3:3:3 trinity, primary route).
+
+\subsection{Two-Stage Activation of the Pauli Exclusion Principle}
+
+Corresponding to dimensional emergence, the Pauli exclusion principle activates in two stages:
+
+\begin{description}
+\item[Phase 3-2 (3-qubit triangle, 2D): proto-exclusion] Antisymmetric components in Young-tableau decomposition; anyonic statistics permitted.
+\item[Phase 3-3 (9-qubit trinity, 3D volume): standard Pauli exclusion] Spin-statistics theorem holds; fermion/boson dichotomy fixed.
+\end{description}
+
+The roots of the exclusion principle reside in the qubit layer itself:
+\begin{enumerate}[leftmargin=*]
+\item Entanglement monogamy (CKW inequality)
+\item AME$(4,2)$ non-existence
+\item Singlet antisymmetry under exchange
+\end{enumerate}
+
+These pre-existing repulsion structures are projected onto spacetime as the observed Pauli exclusion principle.
+
+\section{Dynamics}
+\label{sec:dynamics}
+
+\subsection{Reaction Cascade}
+
+The central dynamics consist of three hierarchical reactions:
+\begin{align}
+\text{Stage 1:} \quad & 2\text{-qubit} + 1\text{-qubit} \rightleftharpoons 3\text{-qubit} \quad (T_c \sim 10^{16}~\text{GeV}) \\
+\text{Stage 2:} \quad & 3 \times 3\text{-qubit} \rightleftharpoons 9\text{-qubit trinity} \quad (T_{\rm QCD} \sim 200~\text{MeV}) \\
+\text{Stage 3:} \quad & 3\text{-qubit} \rightleftharpoons 2\text{-qubit} + 1\text{-qubit} \quad \text{(strongly suppressed)}
+\end{align}
+
+Temperature freeze-out of these reactions determines cosmological density ratios $\Omega_{\rm DM}$, $\Omega_b$, $\Omega_\gamma$.
+
+\subsection{Topological Boundary Transitions}
+
+Open$\leftrightarrow$closed transitions of qubit pairs are subject to a special constraint:
+\begin{quote}
+\textit{Open$\leftrightarrow$closed qubit-pair transitions are forbidden in bulk; they must proceed via the boundary.}
+\end{quote}
+
+This implies that closed Bell pairs (DM) cannot appear directly as products of bulk reactions; their formation requires boundary mediation.
+
+\subsection{Boundary-Bulk Qubit Exchange}
+
+Major matter-related processes are described as qubit exchanges between boundary registers and bulk:
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Process} & \textbf{Qubit pathway} \\
+\midrule
+Matter formation & boundary register $\to$ bulk projection \\
+Pair annihilation & bulk particle qubits $\to$ boundary register + photons \\
+Pair creation & boundary register activation + photon absorption $\to$ bulk \\
+BH formation & bulk matter qubits $\to$ horizon register \\
+Hawking radiation & horizon register $\to$ bulk emission \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In all processes, the total qubit number is strictly conserved.
+
+\section{Cosmology}
+\label{sec:cosmology}
+
+\subsection{Cosmic History Scenario}
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Phase 1 (pre-spatial):} Only qubit structures exist; no space, time, or symmetry.
+\item \textbf{Phase 2 (dynamic equilibrium):} Stage-1 reaction in dynamic equilibrium at Planck energies.
+\item \textbf{Phase 3-1 (2D emergence)} at $T_c \sim 10^{16}$ GeV: 3-qubit dominance; 2D boundary surface emerges; proto-exclusion activates.
+\item \textbf{Phase 3-2 (``2D era''):} Tessellation by 3-qubit triangles completes the holographic boundary. This phase is consistent with CDT dimensional reduction observations~\cite{Ambjorn2005}.
+\item \textbf{Phase 3-3 (3D emergence):} 9-qubit trinity formation freezes Stage 2; true 3D volume; standard Pauli exclusion fixed.
+\item \textbf{Phase 4 (vibrational inflation):} Distance-dependent exclusion pressure drives oscillatory inflation; cumulative expansion $\sim$60 e-folds; oscillation damping = reheating.
+\item \textbf{Phase 5 (vacuum structure established):} Boundary register settles; multi-qubit structures (baryons, nuclei) form from successful Stage-1 transitions; failed transitions remain as DM-precursor Bell pairs.
+\item \textbf{Phase 6 (matter-dominated era):} Hot DM clusters form; Bell-pair register fluctuations observed as cold DM.
+\item \textbf{Phase 7 (dark-energy era / present):} $\Omega_{\rm DE} \approx 0.68$ from Bell-pair register average density; $\Omega_{\rm DM} \approx 0.27$ from fluctuations and excited clusters.
+\item \textbf{Phase 8 (BH formation / matter consumption):} Falling matter and pair annihilation introduce qubits to boundary registers.
+\item \textbf{Phase 9 (de Sitter asymptote):} All matter incorporated into boundary registers; only registers remain.
+\end{enumerate}
+
+\subsection{Vibrational Inflation}
+
+Pressure from distance-dependent exclusion (Fermi-gas-like):
+\begin{equation}
+P = \frac{2}{5} n E_F, \quad E_F \propto n^{2/3}, \quad P_{\rm internal} \propto n^{5/3}
+\end{equation}
+
+The effective pressure $P_{\rm eff} = P_{\rm internal} - P_{\rm external}$ changes sign with density, driving oscillation:
+\begin{itemize}[leftmargin=*]
+\item Phase 4a: high density, strong positive pressure $\to$ rapid expansion
+\item Phase 4b: inertial overshoot of equilibrium distance
+\item Phase 4c: negative pressure $\to$ recoil contraction
+\item Phase 4d: damped oscillation; energy dissipation per cycle
+\item Phase 4e: oscillation termination = reheating
+\end{itemize}
+
+This picture has thematic affinity with bouncing/cyclic cosmology~\cite{Steinhardt2002,LQC} but proceeds via discrete oscillation rather than continuous bounce.
+
+\subsection{Unified Description of the Dark Sector}
+
+The boundary register in different states gives rise to all ``dark'' phenomena:
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Register state} & \textbf{Observed phenomenon} & \textbf{Contribution} \\
+\midrule
+Uniform ground state & Dark Energy (DE) & $\Omega_{\rm DE} \approx 0.68$ \\
+Ground-state local fluctuations & cold DM (axion-like) & part of $\Omega_{\rm DM}$ \\
+Excited clusters & hot DM & galactic halos \\
+Collective vibrational modes & Higgs boson & mass attribution \\
+Sync with register & particle masses & $mc^2 = \hbar\omega_{\rm sync}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Resolution of the Cosmological Constant Problem}
+
+The standard QFT prediction
+\begin{equation}
+\rho_{\rm vac}^{\rm QFT} \sim M_{\rm Planck}^4 \sim 10^{120} \rho_{\rm DE}^{\rm obs}
+\end{equation}
+assumes \emph{independent} contributions from each fundamental field. In our framework:
+\begin{quote}
+\textit{All ``fields'' are emergent excitation modes of the single qubit register. Zero-point energies cannot be summed independently; the total is given by a single sum over the register, naturally yielding a small value.}
+\end{quote}
+
+A complementary thermal explanation: the cosmological horizon temperature $T_{dS} \sim 10^{-30}$ K places the boundary register essentially in its ground state, with Boltzmann-suppressed excitations. Therefore $\rho_{\rm DE}$ is naturally small.
+
+\section{Black Holes and Information}
+\label{sec:bh}
+
+\subsection{Black Hole as Condensed Boundary Register}
+
+A black hole is interpreted as a region where bulk matter has been incorporated into a boundary register:
+\begin{itemize}[leftmargin=*]
+\item BH formation = quantization of falling matter into horizon register at the event horizon.
+\item BH ``interior'' is materially absent; the horizon is everything.
+\item Singularities do not form (no matter reaches them).
+\item Quantum gravity is unnecessary (spacetime terminates at the horizon level).
+\end{itemize}
+
+This aligns with AMPS firewall considerations~\cite{AMPS2013}, Mathur's fuzzball proposal~\cite{Mathur2005}, and the broader emergent-gravity program.
+
+\subsection{Hawking Radiation as Qubit Ejection}
+
+In our framework, Hawking radiation is described as discrete events at the horizon:
+\begin{enumerate}[leftmargin=*]
+\item Two adjacent horizon qubits, both in ground state.
+\item Local qubit-qubit interaction excites both.
+\item Asymmetric energy distribution: one qubit returns to ground state (releasing energy); the other absorbs and exceeds horizon binding.
+\item Result: one qubit remains on horizon, one ejects to bulk as a single-qubit photon. Horizon area decreases by one Planck plaquette.
+\end{enumerate}
+
+This is equivalent to the standard QFT virtual-pair picture but recasts ``negative-energy partner'' as ``qubit returning to ground state,'' avoiding philosophical issues with negative-energy particles.
+
+\subsection{Automatic Resolution of the Information Paradox}
+
+Each ejected qubit was previously entangled with remaining horizon qubits. As evaporation progresses, entanglement is transferred outward. The Page curve~\cite{Page1993} arises automatically: radiation entanglement entropy peaks at half-evaporation. By complete evaporation, all original information has been transferred to the external Hawking radiation.
+
+\begin{quote}
+\textit{Hawking radiation = stepwise readout of black-hole information.}
+\end{quote}
+
+No firewall is required; no information is lost; unitarity is preserved by construction.
+
+\subsection{Unification of Four Major Processes}
+
+The framework unifies four processes under a single mechanism (boundary-bulk qubit exchange):
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Process} & \textbf{Direction} & \textbf{Pathway} \\
+\midrule
+BH formation & bulk $\to$ horizon & matter qubits absorbed by register \\
+Hawking radiation & horizon $\to$ bulk & register qubits ejected \\
+Pair annihilation & bulk $\to$ boundary & particle qubits absorbed + photons emitted \\
+Pair creation & boundary $\to$ bulk & register activated + photons absorbed \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All processes preserve total qubit number, total energy, and unitarity by construction.
+
+\subsection{Hawking Thermodynamics from Register Statistics}
+
+The identification $T_{\rm register} = T_{\rm Hawking}$ yields:
+
+\paragraph{Hawking radiation rate (Boltzmann-suppressed):}
+\begin{equation}
+\text{rate} \propto \exp(-E_{\rm eject}/k_B T_H)
+\end{equation}
+
+\paragraph{Black-body spectrum:} Register at $T_H$ in thermal equilibrium $\to$ thermal spectrum of ejected qubits.
+
+\paragraph{Bekenstein-Hawking entropy:}
+\begin{equation}
+S_{\rm BH} = \frac{A}{4\ell_P^2}
+\end{equation}
+arises as thermal entropy of the register at $T_H$.
+
+\paragraph{Inter-horizon thermal flow:} Temperature difference between BH horizon ($T_H \sim 10^{-7}$ K for stellar mass) and cosmological horizon ($T_{dS} \sim 10^{-30}$ K) drives Hawking radiation as heat flow from high-temperature to low-temperature register.
+
+\section{Testable Predictions}
+\label{sec:predictions}
+
+\subsection{Quantitative Predictions}
+
+\begin{longtable}{p{4.5cm}p{3.5cm}p{4cm}p{2cm}}
+\toprule
+\textbf{Observable} & \textbf{Predicted value} & \textbf{Verification} & \textbf{Timeline} \\
+\midrule
+Inflation temperature $T_c$ & $\sim 10^{16}$ GeV & CMB B-mode, primordial GW & 2032+ \\
+Tensor-to-scalar ratio $r$ & 0.001--0.01 & LiteBIRD & 2032+ \\
+CMB $\mu$-distortion & $\sim 10^{-7}$ & PIXIE/PRISM-class missions & proposed \\
+Primordial GW peak frequency & $10^{-9}$--$10^{-7}$ Hz & PTA (NANOGrav, etc.) & ongoing \\
+CMB power-spectrum oscillations & specific peaks/dips & Planck + successors & verifiable \\
+Primordial GW oscillation traces & discrete frequency structure & NANOGrav, LISA & ongoing \\
+$\Omega_{\rm DM} \approx 0.27$ & cascade freeze-out & Planck, DESI consistency & existing \\
+$\Omega_{\rm DE} \approx 0.68$ & register ground state density & Planck, DESI & existing \\
+DM/baryon $\approx 5.4$ & freeze-out residual ratio & same as above & existing \\
+DM mass distribution & bimodal (hot + cold DM) & direct-detection mass scans & long-term \\
+511 keV photon total energy & $1022$ keV with $< 1$ eV deviation & topological transition test & existing apparatus \\
+Galactic-center DM density & micro-enhancement proportional to annihilation rate & gamma-ray excess observations & ongoing \\
+GZK-cutoff anomaly & partial explanation via qubit ejection & cosmic-ray observatories & ongoing \\
+\bottomrule
+\caption{Quantitative testable predictions.}
+\end{longtable}
+
+\subsection{Qualitative Predictions}
+
+\begin{enumerate}[leftmargin=*]
+\item Direct DM detection will remain perpetually null (boundary adherence).
+\item DM halo shape correlates with rotation (boundary Kerr-like rotation).
+\item Large-scale structure exhibits subtle anisotropy (3-qubit transition initial conditions).
+\item Quantum gravity research is misdirected (no spacetime exists at Planck scale).
+\item No matter reaches BH interior (qubit-ization at horizon, no singularity).
+\item Gravitational-wave B-mode shows characteristic spectral tilt (oscillatory transition).
+\item All interactions describable in entanglement-mode language (consistent with Wen's string-net framework).
+\item Leptons cannot acquire color charge (structural).
+\item Quarks cannot be isolated (Shor-block extraction = no-cloning violation).
+\item Pair annihilation isomorphic to micro-scale BH formation/evaporation.
+\item Bullet Cluster constraint automatically satisfied (2+2 volume formation forbidden $\to$ DM self-interaction zero).
+\item Qubit-ejection effects at high energy are Boltzmann-suppressed at all currently accessible energies.
+\item Hawking radiation automatically preserves information (Page curve, no firewall).
+\end{enumerate}
+
+\subsection{Verification Strategy: Gravitational Probes of Pre-Inflationary Physics}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Channel} & \textbf{Probe} & \textbf{Era explored} \\
+\midrule
+Primordial GW (B-mode) & LiteBIRD (2032), CMB-S4 & end of inflation \\
+Stochastic GW background & PTA, LISA (2035), DECIGO & post-inflation reheating \\
+CMB spectral distortion & PIXIE/PRISM & $z \approx 10^6$ \\
+Cosmic neutrino background & PTOLEMY etc. & $z \approx 10^9$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+CMB $\mu$-distortion at $z \approx 10^6$ is particularly powerful as a direct probe of the end of inflation.
+
+\section{Internal Consistency}
+
+\subsection{Five-Path Convergence on the Quantum Matter Scale}
+
+The proton size ($\sim 10^{-15}$ m) emerges from five independent paths within the framework:
+\begin{itemize}[leftmargin=*]
+\item \textbf{Path A}: holographic degree-of-freedom volumization
+\item \textbf{Path B}: exclusion-principle action range
+\item \textbf{Path C}: exclusion equilibrium distance = volume/area ratio
+\item \textbf{Path D}: triaugmented prism size of 9-qubit trinity
+\item \textbf{Path E}: Bell-pair register local fluctuation wavelength
+\end{itemize}
+
+The convergence is taken as evidence of internal consistency.
+
+\subsection{Five-Perspective Convergence on Trinity Stability}
+
+As detailed in Section~\ref{sec:hierarchy}, five perspectives (topology, entanglement saturation, statistics, quantum information, AME hierarchy) all converge on the conclusion that single 3-qubit structures are unstable while 9-qubit trinities are stable.
+
+\section{Comparison with Existing Frameworks}
+\label{sec:related}
+
+This work draws on and extends several existing programs:
+
+\paragraph{Field-theoretic DM candidates.} Sterino model~\cite{Krolikowski2007}, Cooper-pair DM~\cite{Alexander2024}, neutrino superfluidity~\cite{Kapusta2004}, singlet scalar DM~\cite{Burgess2001}.
+
+\paragraph{Holographic DM origins.} Holographic DM~\cite{Fichet2026}, bulk-BH cosmological DM~\cite{Bulk2022}, emergent DM on holographic screens~\cite{Emergent2017}, DM from holography via CKN bound~\cite{Holo2025}.
+
+\paragraph{Quantum-information spacetime emergence.} Szangolies~\cite{Szangolies2025}, Wen's string-net liquid~\cite{Wen2017}, Van Raamsdonk's entanglement-spacetime correspondence~\cite{VanRaamsdonk2010}, ER=EPR~\cite{Maldacena2013}, CKN bound~\cite{Cohen1999}.
+
+\paragraph{Emergent gravity / quantum gravity rejection.} Verlinde~\cite{Verlinde2010,Verlinde2016}, Jacobson~\cite{Jacobson1995}, Padmanabhan~\cite{Padmanabhan2010}, Sakharov~\cite{Sakharov1967}, AMPS firewall paradox~\cite{AMPS2013}, Mathur fuzzball~\cite{Mathur2005}.
+
+\paragraph{Bouncing/cyclic cosmology.} Ekpyrotic/cyclic universe~\cite{Steinhardt2002}, loop quantum cosmology~\cite{LQC}, matter-bounce inflation, quintessential inflation.
+
+\paragraph{Quantum error correction and physics.} Shor code~\cite{Shor1995}, holographic codes (HaPPY)~\cite{Pastawski2015}.
+
+The novelty of the present work is the \emph{integrated synthesis}: not the individual elements (most of which exist in the literature), but the unified framework that organizes them under a single qubit-only ontology.
+
+\section{Open Problems and Future Work}
+\label{sec:open}
+
+\subsection{Quantitative Challenges}
+
+The following derivations remain incomplete:
+\begin{itemize}[leftmargin=*]
+\item Cascade equilibrium constants and the physical determination of each $\Delta E$.
+\item Thermal-relic-style calculation of $\Omega_{\rm DM}$, $\Omega_{\rm DE}$, $\Omega_b$.
+\item DM/baryon ratio from freeze-out temperatures.
+\item Determination of vibration amplitude and period in inflation.
+\item Three-generation lepton mass ratios from open-2-qubit mode hierarchy.
+\item Quantitative qubit-ejection rate and its energy dependence.
+\item Higgs vev (246 GeV) from register vibrational coupling scale.
+\end{itemize}
+
+\subsection{Internal Consistency Issues}
+
+\begin{itemize}[leftmargin=*]
+\item Mathematical formalism of the boundary register (Hilbert space construction, Hamiltonian).
+\item Uniqueness of the triaugmented prism realization for the 9-qubit trinity.
+\item Mathematical formulation of three-generation discrete mode hierarchy.
+\item Mechanism for excited-Bell-pair generation and decay.
+\end{itemize}
+
+\subsection{Observational Consistency}
+
+\begin{itemize}[leftmargin=*]
+\item $r < 0.036$ constraint excludes Planck-scale direct inflation (consistent with $T_c \sim 10^{16}$ GeV).
+\item $N_{\rm eff}$ and structure-formation impacts require detailed computation.
+\item CMB power-spectrum oscillation predictions need preliminary verification against existing Planck data.
+\item 511 keV photon energy at $<$ eV precision: feasibility of direct test of topological transition rule.
+\end{itemize}
+
+\subsection{Literature}
+
+A thorough review of recent works (Szangolies 2025, Fichet 2026, Cooper-pair DM 2024, holographic codes) is needed to refine the boundary between this work and existing literature.
+
+\section{Discussion}
+
+\subsection{Philosophical Position}
+
+If the framework is correct, the following holds:
+\begin{quote}
+\textit{Physics is the organization of information.}
+\end{quote}
+
+This is a radicalization of Wheeler's ``It from Bit'': not only do informational principles underlie physics, but \emph{nothing exists except information patterns}. There is some affinity to Leibniz's monadology, but recast in modern quantum-information terms.
+
+\subsection{Position Relative to Mainstream Physics}
+
+This framework does not contradict standard physics; rather, it proposes that standard QFT is the \emph{effective field theory} of the underlying qubit register. Specifically:
+\begin{itemize}[leftmargin=*]
+\item All standard-model predictions follow automatically as low-energy consequences.
+\item Deviations would appear only at extreme energies (Planck-scale) or in cosmological observations.
+\item The cosmological constant problem and the BH information paradox are resolved structurally rather than via additional fine-tuning or new physics.
+\end{itemize}
+
+The framework is therefore positioned as a \emph{complement} to mainstream physics, not a replacement.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have presented a programmatic conjecture for cosmology and particle physics based on a strict qubit-only ontology. The framework:
+
+\begin{enumerate}[leftmargin=*]
+\item Identifies dark matter, dark energy, Higgs phenomenology, and particle masses as different states of a unified Bell-pair boundary register.
+\item Derives lepton/quark asymmetry, color confinement, and the Pauli exclusion principle from quantum-information principles.
+\item Recasts Hawking radiation as discrete qubit-ejection events, automatically resolving the information paradox.
+\item Proposes structural resolutions to the cosmological constant problem and several open issues in $\Lambda$CDM.
+\item Yields approximately thirteen testable quantitative predictions and many qualitative ones.
+\end{enumerate}
+
+The framework is not a completed theory. Quantitative derivations and rigorous mathematical formulations remain open. We submit this document as a dated archive of conceptual structure, for evaluation, refinement, refutation, or extension by the broader research community.
+
+We expect that observations on a 5--15 year timescale---LiteBIRD, LISA, PIXIE-class missions, ongoing PTA campaigns, the Vera C. Rubin Observatory, and high-precision pair-annihilation measurements---will provide opportunities to test specific predictions of this framework.
+
+\section*{Acknowledgments}
+
+The author gratefully acknowledges extensive conceptual development through dialogue with Claude Opus 4.7 (Anthropic, San Francisco, CA, USA). The AI system served as a sparring partner for hypothesis refinement, literature cross-referencing, and structural consistency checks. All scientific claims, errors, and final positions are the author's responsibility.
+
+\section*{Statement of Purpose}
+
+The author is an independent researcher without formal academic affiliation. This document is submitted as a programmatic conjecture rather than a claim of completed theory. The aim is to seed ideas for community development, not to establish authorial priority. The author welcomes refinement, refutation, and extension by the broader research community.
+
+\section*{License}
+
+This document is released under Creative Commons Attribution 4.0 International (CC-BY 4.0). Free use, modification, and distribution are permitted with attribution.
+
+\begin{thebibliography}{99}
+
+\bibitem{Wheeler1990} J.~A.~Wheeler, ``Information, physics, quantum: The search for links,'' in \emph{Complexity, Entropy, and the Physics of Information} (1990).
+
+\bibitem{Bekenstein1973} J.~D.~Bekenstein, ``Black holes and entropy,'' Phys. Rev. D \textbf{7}, 2333 (1973).
+
+\bibitem{Hawking1975} S.~W.~Hawking, ``Particle creation by black holes,'' Commun. Math. Phys. \textbf{43}, 199 (1975).
+
+\bibitem{tHooft1993} G.~'t Hooft, ``Dimensional reduction in quantum gravity,'' arXiv:gr-qc/9310026 (1993).
+
+\bibitem{Susskind1995} L.~Susskind, ``The world as a hologram,'' J. Math. Phys. \textbf{36}, 6377 (1995).
+
+\bibitem{Maldacena1997} J.~Maldacena, ``The large N limit of superconformal field theories and supergravity,'' Adv. Theor. Math. Phys. \textbf{2}, 231 (1998).
+
+\bibitem{Page1993} D.~N.~Page, ``Information in black hole radiation,'' Phys. Rev. Lett. \textbf{71}, 3743 (1993).
+
+\bibitem{Shor1995} P.~W.~Shor, ``Scheme for reducing decoherence in quantum computer memory,'' Phys. Rev. A \textbf{52}, 2493 (1995).
+
+\bibitem{Wootters1982} W.~K.~Wootters and W.~H.~Zurek, ``A single quantum cannot be cloned,'' Nature \textbf{299}, 802 (1982).
+
+\bibitem{CKW2000} V.~Coffman, J.~Kundu, and W.~K.~Wootters, ``Distributed entanglement,'' Phys. Rev. A \textbf{61}, 052306 (2000).
+
+\bibitem{Higuchi2000} A.~Higuchi and A.~Sudbery, ``How entangled can two couples get?'' Phys. Lett. A \textbf{273}, 213 (2000).
+
+\bibitem{Verlinde2010} E.~Verlinde, ``On the origin of gravity and the laws of Newton,'' JHEP \textbf{04}, 029 (2011).
+
+\bibitem{Verlinde2016} E.~Verlinde, ``Emergent gravity and the dark universe,'' SciPost Phys. \textbf{2}, 016 (2017).
+
+\bibitem{Wen2017} X.-G.~Wen, ``A theory of 2+1D bosonic topological orders,'' arXiv:1709.03824.
+
+\bibitem{Szangolies2025} J.~Szangolies, ``Spacetime and standard model from qubits,'' Entropy \textbf{27}, 569 (2025); arXiv:2512.17328.
+
+\bibitem{Jacobson1995} T.~Jacobson, ``Thermodynamics of spacetime: The Einstein equation of state,'' Phys. Rev. Lett. \textbf{75}, 1260 (1995).
+
+\bibitem{Padmanabhan2010} T.~Padmanabhan, ``Thermodynamical aspects of gravity: New insights,'' Rep. Prog. Phys. \textbf{73}, 046901 (2010).
+
+\bibitem{Sakharov1967} A.~D.~Sakharov, ``Vacuum quantum fluctuations in curved space and the theory of gravitation,'' Sov. Phys. Dokl. \textbf{12}, 1040 (1968).
+
+\bibitem{AMPS2013} A.~Almheiri, D.~Marolf, J.~Polchinski, and J.~Sully, ``Black holes: Complementarity or firewalls?'' JHEP \textbf{02}, 062 (2013).
+
+\bibitem{Mathur2005} S.~D.~Mathur, ``The fuzzball proposal for black holes: An elementary review,'' Fortsch. Phys. \textbf{53}, 793 (2005).
+
+\bibitem{Maldacena2013} J.~Maldacena and L.~Susskind, ``Cool horizons for entangled black holes,'' Fortsch. Phys. \textbf{61}, 781 (2013).
+
+\bibitem{VanRaamsdonk2010} M.~Van Raamsdonk, ``Building up spacetime with quantum entanglement,'' Gen. Rel. Grav. \textbf{42}, 2323 (2010).
+
+\bibitem{Cohen1999} A.~G.~Cohen, D.~B.~Kaplan, and A.~E.~Nelson, ``Effective field theory, black holes, and the cosmological constant,'' Phys. Rev. Lett. \textbf{82}, 4971 (1999).
+
+\bibitem{Pastawski2015} F.~Pastawski, B.~Yoshida, D.~Harlow, and J.~Preskill, ``Holographic quantum error-correcting codes,'' JHEP \textbf{06}, 149 (2015).
+
+\bibitem{Fichet2026} S.~Fichet, E.~Megías, and M.~Quirós, ``Holographic dark matter,'' arXiv:2602.13393.
+
+\bibitem{Bulk2022} (anonymous), ``Cosmological dark matter from a bulk black hole,'' arXiv:2212.13268.
+
+\bibitem{Emergent2017} (anonymous), ``Emergent dark matter on the holographic screen,'' arXiv:1712.09326.
+
+\bibitem{Holo2025} (anonymous), ``Dark matter from holography,'' arXiv:2511.10617.
+
+\bibitem{Krolikowski2007} W.~Królikowski, ``Sterino as cold dark matter and its hot lepton counterpart,'' arXiv:0712.0937.
+
+\bibitem{Alexander2024} S.~Alexander, R.~Bernardo, and A.~Gilmer, ``Cooper-pair dark matter,'' arXiv:2405.08874.
+
+\bibitem{Kapusta2004} J.~Kapusta, ``Neutrino superfluidity,'' Phys. Rev. Lett. \textbf{93}, 251801 (2004).
+
+\bibitem{Burgess2001} C.~P.~Burgess, M.~Pospelov, and T.~ter Veldhuis, ``The minimal model of nonbaryonic dark matter: A singlet scalar,'' Nucl. Phys. B \textbf{619}, 709 (2001).
+
+\bibitem{Steinhardt2002} P.~J.~Steinhardt and N.~Turok, ``A cyclic model of the universe,'' Science \textbf{296}, 1436 (2002).
+
+\bibitem{LQC} A.~Ashtekar, T.~Pawlowski, and P.~Singh, ``Quantum nature of the big bang,'' Phys. Rev. Lett. \textbf{96}, 141301 (2006).
+
+\bibitem{Ambjorn2005} J.~Ambj{\o}rn, J.~Jurkiewicz, and R.~Loll, ``Spectral dimension of the universe,'' Phys. Rev. Lett. \textbf{95}, 171301 (2005).
+
+\bibitem{Riess2022} A.~G.~Riess et al., ``A comprehensive measurement of the local value of the Hubble constant,'' Astrophys. J. \textbf{934}, L7 (2022).
+
+\bibitem{Planck2020} Planck Collaboration, ``Planck 2018 results. VI. Cosmological parameters,'' A\&A \textbf{641}, A6 (2020).
+
+\bibitem{DESI2024} DESI Collaboration, ``DESI 2024 VI: Cosmological constraints from the measurements of baryon acoustic oscillations,'' arXiv:2404.03002.
+
+\bibitem{Boylan2023} C.~Boylan-Kolchin, ``Stress testing $\Lambda$CDM with high-redshift galaxy candidates,'' Nat. Astron. \textbf{7}, 731 (2023).
+
+\bibitem{LUX2017} LUX Collaboration, ``Results from a search for dark matter in the complete LUX exposure,'' Phys. Rev. Lett. \textbf{118}, 021303 (2017).
+
+\bibitem{XENON2023} XENON Collaboration, ``First dark matter search with nuclear recoils from the XENONnT experiment,'' Phys. Rev. Lett. \textbf{131}, 041003 (2023).
+
+\end{thebibliography}
+
+\end{document}
