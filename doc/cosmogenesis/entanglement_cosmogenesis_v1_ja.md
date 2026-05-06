@@ -1,5 +1,13 @@
-# Bell対ダークマターから始まるエンタングル宇宙創生論
-## プログラム的予想と検証可能予言
+---
+layout: post
+title:  Bell対ダークマターから始まるエンタングル宇宙創生論
+description:
+   プログラム的予想と検証可能予言
+comments: true
+use_math: true
+tags:
+   -宇宙
+---
 
 **著者：** ekicyou¹  
 **所属：** ¹ Independent Researcher, Japan  
