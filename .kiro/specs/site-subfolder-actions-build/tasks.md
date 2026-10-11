@@ -43,7 +43,7 @@
   - _Boundary: DependabotConfig, Cleanup_
   - _Requirements: 6.1, 6.3, 6.4_
 
-- [ ] 3. 文書と完了の手順を新しい姿に合わせる
+- [x] 3. 文書と完了の手順を新しい姿に合わせる
 - [x] 3.1 steering と案内の文書を書き直す
   - `design.md` の「ProjectDocs」の表のうち、`tech.md`・`structure.md`・`roadmap.md`・`CLAUDE.md`・`README.md` を直す。
   - `tech.md` に、公式アクションを使う理由と、戻し方 R1・R2(`design.md` の「Migration Strategy」)を書く。順番を誤ると `/site/...` の下に公開されることも書く。
@@ -62,7 +62,7 @@
   - _Boundary: ProjectDocs_
   - _Requirements: 4.8, 5.5, 7.2, 7.3, 7.4_
 
-- [ ] 3.3 完了の手順(`kiro-complete`)を新しい配置に合わせる
+- [x] 3.3 完了の手順(`kiro-complete`)を新しい配置に合わせる
   - そのブランチの PR が既にあるときは、作らずにそれを使うようにする(下書きなら公開の状態にし、題名と本文を差し替える)。
   - 「検証の後の変更が公開物の外にあること」の判定を、「`site/` と `.github/` を含まないこと」に改める。
   - 冒頭の棚卸しにある「依存(`Gemfile`)」を、「ビルドに使うアクションの版」に改める。
@@ -115,3 +115,6 @@
 - 3.2: マージの後の確かめは、`gh run list … --limit 1` だけだと 1 つ前の(成功した)実行を拾い得る。`headSha` を `git rev-parse origin/master` と突き合わせてから待つ形にした(レビューの差し戻しで直した)。
 - 3.2: 4.1 で実地に見ること。`build` が pass・`deploy` が skipped のときの `gh pr checks --watch` の終了コード(0 のはず)、PR を作った直後の `no checks reported`(終了コード 1)、終わった実行への `gh run watch --exit-status`、`gh run watch` が今の認証で動くこと、`--json databaseId,headSha,status,conclusion` の出力。
 - 3.2: 「検証」節は、確認と代表パスの対象を「レイアウト・配置・設定・ビルド方式」に揃えた(設計の「配置・設定・ビルド方式」より少し広い)。
+- 3.3: 設計に無い追加が 2 つ。(i) `kiro-complete` のステップ7 で、マージの前に公開方式の設定が `workflow` であることを確かめる(`legacy` のままのマージ=禁じる遷移を機械的に止める)。(ii) 5-2 で、開発者が中身を承知して完了を承認しているなら、その承認が「マージの前の 1 度の確認」を兼ねる。
+- 3.3: **この spec の `/kiro-complete` で気を付けること**。ステップ0-3 は衝突のときだけ `master` を取り込む。タスク 5 の後に `master` のルートへ記事が push されると、衝突せず、マージの後もルートに残って公開から漏れる。`git log HEAD..origin/master` が空でなければ、衝突が無くても取り込み、ルートに現れた原稿を `site/` へ移し、PR のビルド(原稿が変わったなら 4.2 も)をやり直してから進む。
+- 3.3(範囲外の気づき): マージ済みの PR #2 のブランチ `claude/site-migration-prep-a289c7` がリモートに残っている。`kiro-complete` の「リモートブランチは API で削除済み」という一文が正しいか、別件で確かめる価値がある。

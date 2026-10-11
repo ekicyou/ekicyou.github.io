@@ -99,7 +99,7 @@ curl -s -o /dev/null -w '%{http_code}\n' https://ekicyou.github.io/about.html
 3. spec フォルダを `.kiro/specs/completed/` へ移し、その後で `spec.json` の `phase` を `completed` にする。
 4. 上の「検証」のうち、手元で確かめられること（front matter、リンクと画像のパス）を確かめる。
 5. steering とこの文書を、変更に合わせて直す。
-6. PR を作り、PR の `build` の成功を確かめてから squash マージする。マージの後、「検証」のとおりに `master` の実行の成否と、求められていれば代表パスを確かめ、結果を開発者に報告する。
+6. PR を作り（そのブランチの PR が既にあれば、作らずにそれを使う）、PR の `build` の成功を確かめてから squash マージする。マージの後、「検証」のとおりに `master` の実行の成否と、求められていれば代表パスを確かめ、結果を開発者に報告する。
 
 ## 道具の扱い
 
