@@ -94,7 +94,7 @@ spec.json や requirements.md に「繰り返し」「repeatable」「定期実�
 
 1. **`{remote}`**: `git remote` を実行する。`origin` があれば `origin`。無くてリモートがちょうど 1 つならそれ。それ以外は none（リモート操作はすべてスキップし、一度だけ警告する）。
 2. **`{default-branch}`**: `{remote}` があれば `git symbolic-ref --quiet --short refs/remotes/{remote}/HEAD` から `"{remote}/"` を除いた名前。空ならローカルの `main`、無ければ `master`、どちらも無ければ現在のブランチ。
-3. **既定ブランチとの差を確かめる**: `git fetch {remote}` のあと `git log --oneline HEAD..{remote}/{default-branch}` が空でなければ既定ブランチが先へ進んでいる。`git merge-tree --write-tree HEAD {remote}/{default-branch}` が衝突を報告するなら、**検証（ステップ5）より前に**取り込む（ハーネスのワークツリーなら `sync_with_base_branch`、それ以外は `git merge`）。
+3. **既定ブランチとの差を確かめる**: `git fetch {remote}` のあと `git log --oneline HEAD..{remote}/{default-branch}` が空でなければ既定ブランチが先へ進んでいる。`git merge-tree --write-tree HEAD {remote}/{default-branch}` が衝突を報告するなら、**検証（ステップ5）より前に**取り込む（ハーネスのワークツリーなら `sync_with_base_branch`。それ以外と、`sync_with_base_branch` が断るとき（リモートの URL にユーザー名が含まれていると断られる）は `git merge`）。
 
 > リモート URL に資格情報が含まれることがある。`git remote -v` や fetch の出力を報告へ写すときは伏せる。
 
