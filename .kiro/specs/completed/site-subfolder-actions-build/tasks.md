@@ -1,0 +1,138 @@
+# Implementation Plan
+
+> 進め方の注意
+>
+> - タスクは上から順に行う。並行できる印 `(P)` は付けていない(どのタスクも同じワークツリーでコミットするため)。
+> - **4.1 と 5 は、開発者の許しが要る**。下請け(サブエージェント)に任せず、主セッションが開発者に確かめてから行う。
+> - **マージと、マージの後の確かめはここに無い**。`/kiro-complete` が、3.2 で書き直す `workflow.md` の「検証」節に従って行う(要件 4.8、5.3)。
+> - 細かい値(ファイルの一覧、ワークフローの権限、代表パス、戻し方)は `design.md` にある。
+
+- [x] 1. 原稿を `site/` へまとめる
+- [x] 1.1 原稿を、内容を変えずに `site/` へ移す
+  - `design.md` の「Moved Files」にある 5 ファイルと 8 フォルダ(計 55 ファイル)を、`git mv` で `site/` の下へ移す。相対配置は変えない。
+  - `README.md`、`CLAUDE.md`、`.claude/`、`.kiro/`、`.vscode/`、ドット始まりの設定ファイルは移さない。
+  - spec の文書(`.kiro/specs/`、`roadmap.md`)がまだコミットされていなければ、先に別のコミットにする。
+  - 移動だけのコミットを 1 つ作る。内容の直しを混ぜない。ステージするのは移動の分だけにする(`git add -A` を使わない)。
+  - 完了の姿: コミットの前に `git diff --cached -M --stat` が 55 件すべてを名前の変更として示し、変更行が 0 である。ルート直下の追跡ファイルは `.editorconfig`・`.gitattributes`・`.gitignore`・`.travis.yml`・`CLAUDE.md`・`README.md` だけになる(`.travis.yml` は 2.2 で消す)。
+  - _Boundary: SiteSource_
+  - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.6, 4.3_
+
+- [x] 1.2 置き場に依存する設定を直す
+  - 移した先のサイト設定の `exclude` から `CLAUDE.md` を外し、その上のコメントを今の事情に合わせる。`Gemfile` などほかの行は残す。
+  - `.gitignore`・`.editorconfig`・`.gitattributes`・`.vscode/settings.json` を読み、置き場に依存する指定が無いことを確かめる。あれば直す。
+  - 完了の姿: サイト設定の差分が `exclude` の周りだけである。ほかの原稿に差分が無い。確かめた結果(直し不要、または直した点)がコミットの文面に残っている。
+  - _Boundary: SiteSource_
+  - _Requirements: 1.2, 1.3_
+
+- [x] 2. ビルドと公開の仕組みを足す
+- [x] 2.1 ビルドと公開のワークフローを足す
+  - `design.md` の「PagesWorkflow」の契約どおりに、1 ファイル・2 ジョブ(`build`・`deploy`)のワークフローを書く。
+  - きっかけは、`master` への push、`master` 向けの PR、手動の実行の 3 つ。
+  - `build` は `site/` を原稿にしてビルドし、成果物 `github-pages` を保存する。`deploy` は `build` の成功の後、PR 以外かつ `master` のときだけ動き、環境 `github-pages` を通して公開する。
+  - 権限はジョブごとに明示する(`build` は読み取りだけ、書き込みは `deploy` だけ)。全体の既定は読み取りにする。
+  - 同時実行の組を、PR ごとと公開用とで分ける。公開用は進行中の実行を打ち切らない。
+  - 使うアクションは `design.md` の「Technology Stack」の 4 つだけ。版を指定する。
+  - 完了の姿: ワークフローのファイルが YAML として読める。定義を読み合わせて、`deploy` が `build` に依存していること、PR では `deploy` の条件が偽になること、公開用の組が `cancel-in-progress: false` であることを確かめてある。
+  - _Boundary: PagesWorkflow_
+  - _Requirements: 1.5, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 3.1, 3.2, 3.3, 3.4, 3.5, 6.2_
+
+- [x] 2.2 版上げの提案を設定し、古い CI の設定を消す
+  - Dependabot に、GitHub Actions の版上げを月 1 回、PR で提案させる設定を足す。自動マージは設定しない。
+  - `.travis.yml` を消す。
+  - 完了の姿: 設定ファイルが YAML として読め、対象が `github-actions`、置き場が `/` である。`.travis.yml` が追跡から外れている。
+  - _Boundary: DependabotConfig, Cleanup_
+  - _Requirements: 6.1, 6.3, 6.4_
+
+- [x] 3. 文書と完了の手順を新しい姿に合わせる
+- [x] 3.1 steering と案内の文書を書き直す
+  - `design.md` の「ProjectDocs」の表のうち、`tech.md`・`structure.md`・`roadmap.md`・`CLAUDE.md`・`README.md` を直す。
+  - `tech.md` に、公式アクションを使う理由と、戻し方 R1・R2(`design.md` の「Migration Strategy」)を書く。順番を誤ると `/site/...` の下に公開されることも書く。
+  - `structure.md` は、すべての置き場を `site/` 起点にし、「ルートに置くのは開発用だけ。`site/` の外は公開されない」と書く。
+  - 完了の姿: これらの文書を `旧来`・`legacy`・`pages/builds`・`exclude`・`.travis` で検索し、旧来方式を前提にした記述が残っていない(`roadmap.md` の経緯の説明は除く)。`tech.md` に戻し方の節がある。
+  - _Boundary: ProjectDocs_
+  - _Requirements: 5.6, 7.1, 7.4, 7.5_
+
+- [x] 3.2 検証の手順を書き直す
+  - `workflow.md` の「検証」節を書き直す。マージの前は「PR の上の `build` が成功していること」。マージの後は「`master` の実行が成功し、公開されたこと」。
+  - 配置・設定・ビルド方式に触れた変更では、マージの後に代表パスも確かめ、結果を開発者に報告する、と書く。代表パスの一覧(応答するはずのもの、しないはずのもの)は、`design.md` の「Cutover」から `workflow.md` へ**直接写す**(spec の文書は完了後に `completed/` へ移るので、参照にしない)。
+  - マージの後の確かめで公開物が崩れていたら、その場で開発者に報告し、`tech.md` の戻し方(前へ直す PR、または R2)を示す、と書く。
+  - 節の末尾にある「切り替えたら書き換える」の一文を消す。「完了時のアクション」の 6 を、新しい確かめ方に合わせる。
+  - 載せるコマンドは `gh pr checks`、`gh run list`、`gh run watch` など、実際に使うものにする。4.1 で試して、動かなければここを直す。
+  - 完了の姿: 「検証」節に、マージの前と後それぞれの確かめ方がコマンド付きで書いてあり、代表パスの一覧が節の中にある。旧来方式の確かめ方(`pages/builds/latest`)が残っていない。
+  - _Boundary: ProjectDocs_
+  - _Requirements: 4.8, 5.5, 7.2, 7.3, 7.4_
+
+- [x] 3.3 完了の手順(`kiro-complete`)を新しい配置に合わせる
+  - そのブランチの PR が既にあるときは、作らずにそれを使うようにする(下書きなら公開の状態にし、題名と本文を差し替える)。
+  - 「検証の後の変更が公開物の外にあること」の判定を、「`site/` と `.github/` を含まないこと」に改める。
+  - 冒頭の棚卸しにある「依存(`Gemfile`)」を、「ビルドに使うアクションの版」に改める。
+  - マージの後に、`workflow.md` の「検証」節が定める確かめ(`master` の実行の成否、求められていれば代表パス)を行い、結果を開発者に報告する手順を足す。完了のチェックリストにも、その行を足す。
+  - 完了の姿: スキルの文書を読んで、下書き PR がある状態から、マージ、マージの後の確かめと報告まで進める道筋が書いてある。旧来の配置を前提にした判定が残っていない。
+  - _Boundary: ProjectDocs_
+  - _Requirements: 4.8, 7.4_
+
+- [x] 4. 下書き PR の上で確かめる
+- [x] 4.1 下書き PR を開き、PR の上のビルドを確かめる
+  - **開発者の許しを得てから行う**(ブランチの push と PR の作成)。
+  - 先に `master` の進みを取り込む(`git merge`。ハーネスの `sync_with_base_branch` は使えない)。取り込みでルートに新しい原稿が現れたら、`site/` へ移す。
+  - ブランチを push し、`master` 向けの下書き PR を開く。
+  - PR の実行で、`build` が成功し、`deploy` が「skipped」であることを確かめる。成果物 `github-pages` を取り出せることを確かめる。
+  - 3.2 で `workflow.md` に載せたコマンドを、この PR の実行で実際に試す。マージの前の確かめ方(`gh pr checks` など)に加えて、マージの後に使う実行の見方(`gh run list --workflow …`、`gh run watch`)も、PR の実行を相手に動かしてみる。動かなければ 3.2 の記述を直す。
+  - 完了の姿: PR のチェックに `build` が成功として出ている。`deploy` は動いていない。公開中のサイトは変わっていない。
+  - _Depends: 1.2, 2.1, 2.2, 3.1, 3.2, 3.3_
+  - _Requirements: 2.3, 3.1, 3.2, 3.3, 3.4, 3.5, 7.2, 7.3_
+
+- [x] 4.2 切り替え前の公開物と、新しいビルドの成果物を突き合わせる
+  - `design.md` の「ParityCheck」のとおりに行う。道具と取り出したファイルは scratchpad に置き、リポジトリには残さない。
+  - 基準は、`master` の最新の旧来ビルドの成果物を優先する(保存は 1 日)。失効していたら、公開中のサイトを基準にする。
+  - パスの一覧と、各ファイルの中身の両方を比べる。結果を「一致」「意図した差」「既知の揺れ」「意図しない差」に分ける。
+  - 非公開の記事 3 本が一覧に無いこと、`site/` で始まるパス・`CLAUDE.md`・`Gemfile` が新しい一覧に無いこと、記事ページにコメント欄の部品があること、フィードと SNS 向けの絶対 URL が `https://ekicyou.github.io` で始まることを確かめる。
+  - 意図しない差が出たら、原因を直して PR のビルドからやり直すか、開発者の判断を仰ぐ。そのまま 5 へ進まない。
+  - 完了の姿: 差の一覧を開発者に示してある。差は「`README.md` が無くなる」と「`feed.xml` の更新時刻」だけである(それ以外は、開発者が通すと決めたものに限る)。
+  - _Boundary: ParityCheck_
+  - _Requirements: 4.1, 4.2, 4.4, 4.5, 4.6, 4.7_
+
+- [x] 5. 公開方式の設定を GitHub Actions に切り替える
+  - **開発者の明示の許しを得てから行う**。切り替えからマージまでの間は `master` へ push しても公開されないことを、前もって伝える。
+  - 4.2 が通っていること、PR の `build` が最新のコミットで成功していることを、切り替えの前に確かめる。
+  - `git fetch` して、`master` が 4.1 の取り込みの後に進んでいないことを確かめる。進んでいたら取り込み、ルートに現れた原稿を `site/` へ移し、4.1 と 4.2 をやり直してから切り替える(ルートに足された記事は衝突を起こさないので、見落とすと公開から漏れる)。
+  - `design.md` の「Cutover」の S0 → S1 を行う。API で通らなければ、開発者に画面での操作を頼む。
+  - 直後に、設定が `workflow` になったことと、3.2 で `workflow.md` に写した代表パスが今までどおり応答することを確かめる。この時点では原稿がまだルートにあるので、`/README.md` は 200 のままでよい(404 になるのはマージの後)。応答しなければ、その場で開発者に報告し、戻し方 R1 を示す。
+  - **マージは行わない**。切り替えが済んだことを報告し、開発者の完了の承認(`/kiro-complete`)を待つ。承認があれば、続けて `/kiro-complete` がマージと、マージの後の確かめを行う。
+  - 完了の姿: 公開方式の設定が `workflow` である。公開中のサイトは切り替えの前と同じに応答している。開発者に、次は `/kiro-complete` であることを伝えてある。
+  - _Boundary: Cutover_
+  - _Depends: 4.2_
+  - _Requirements: 4.7, 5.1, 5.2, 5.3, 5.4, 5.5_
+
+## Implementation Notes
+
+- 2.1: 同時実行の組を 3 つに分けた(PR ごと / 公開用 `pages-deploy` / `master` 以外での手動の実行はブランチごと)。設計の初版は「PR 以外はすべて公開用の組」だったが、`master` 以外での手動の実行が、待っている公開を押しのける穴があった。`design.md` の表も直してある。
+- 2.1: 公開用の組で押しのけられた待ちの実行は、Actions の一覧に「cancelled」として残る(失敗ではない)。`gh run list --workflow pages.yml --branch master --limit 1` がそれを拾うことがあるので、3.2 の「検証」節に読み方を添える。
+- 2.1: `site/Gemfile` があるため、ビルドの記録に `bundle check` の警告が出るかもしれない(失敗にはならない)。4.1 で見えたら既知の挙動。
+- 3.1: `product.md` も 2 か所直した(`doc/` → `site/doc/`、`_drafts/` → `site/_drafts/`)。`design.md` の「Modified Files」には無いが、置き場がルート起点のままだった(要件 7.4)。
+- 3.1: `tech.md` の「出力が切り替え前と同じになる」は、4.2 の突き合わせの前に書いた。4.2 で意図しない差が出たら、この行も直す。
+- 3.1: 戻し方 R2 に、設計に無い一文を足した(移動の後に `site/` へ足した原稿は、打ち消しだけでは戻り切らない)。レビューが使い捨てのリポジトリで確かめた。
+- 3.2: マージの後の確かめは、`gh run list … --limit 1` だけだと 1 つ前の(成功した)実行を拾い得る。`headSha` を `git rev-parse origin/master` と突き合わせてから待つ形にした(レビューの差し戻しで直した)。
+- 3.2: 4.1 で実地に見ること。`build` が pass・`deploy` が skipped のときの `gh pr checks --watch` の終了コード(0 のはず)、PR を作った直後の `no checks reported`(終了コード 1)、終わった実行への `gh run watch --exit-status`、`gh run watch` が今の認証で動くこと、`--json databaseId,headSha,status,conclusion` の出力。
+- 3.2: 「検証」節は、確認と代表パスの対象を「レイアウト・配置・設定・ビルド方式」に揃えた(設計の「配置・設定・ビルド方式」より少し広い)。
+- 3.3: 設計に無い追加が 2 つ。(i) `kiro-complete` のステップ7 で、マージの前に公開方式の設定が `workflow` であることを確かめる(`legacy` のままのマージ=禁じる遷移を機械的に止める)。(ii) 5-2 で、開発者が中身を承知して完了を承認しているなら、その承認が「マージの前の 1 度の確認」を兼ねる。
+- 3.3: **この spec の `/kiro-complete` で気を付けること**。ステップ0-3 は衝突のときだけ `master` を取り込む。タスク 5 の後に `master` のルートへ記事が push されると、衝突せず、マージの後もルートに残って公開から漏れる。`git log HEAD..origin/master` が空でなければ、衝突が無くても取り込み、ルートに現れた原稿を `site/` へ移し、PR のビルド(原稿が変わったなら 4.2 も)をやり直してから進む。
+- 3.3(範囲外の気づき): マージ済みの PR #2 のブランチ `claude/site-migration-prep-a289c7` がリモートに残っている。`kiro-complete` の「リモートブランチは API で削除済み」という一文が正しいか、別件で確かめる価値がある。
+- 4.1: 下書き PR は #3。PR の実行 `38178769365` で `build` が成功、`deploy` が skipped、成果物 `github-pages`(1,423,070 バイト)を取り出せた。ビルドの記録は「The Gemfile's dependencies are satisfied」で、警告は出なかった。
+- 4.1: `workflow.md` のコマンドを実地に試した。`gh pr checks --watch` は `build pass`・`deploy skipping` で終了コード 0。終わった実行への `gh run watch <ID> --exit-status` は「has already completed with 'success'」で終了コード 0。`gh run list … --json databaseId,headSha,status,conclusion` は 4 つの欄を返す。`--branch master` は、`master` の実行がまだ無いので `[]`。PR を作った直後の素の `gh pr checks` は、`no checks reported` ではなく `build pending`(終了コード 8)だった。記述は直していない(`--watch` 付きで「ことがある」と書いてあり、誤りではない)。
+- 4.1: PR のビルドは、先頭のコミットではなくマージの結果(`refs/pull/3/merge`)を対象にする。`master` が進んでいなければ、木はブランチの先頭と同じ。
+- 4.2: 基準は旧来ビルドの実行 `38144045597`(`master` の `3b9477d`)の成果物。公開中のサイトと 54 ファイルすべてがバイト一致。新しい成果物との差は、`README.md` が無くなること(意図した差)と、`feed.xml` の先頭の `<updated>` の時刻(既知の揺れ)だけ。意図しない差は 0 件。独立のレビューが tar を直接読んで再現した。
+- 4.2 の後: `site/` か `.github/` に触れるコミットを積んだら、4.1 と 4.2 をやり直す。`.kiro/` だけの push でも PR の実行は走るので、切り替えの前に最新のコミットで `build` の成功を確かめ直す。
+- 5: 開発者の許しを得て、`gh api -X PUT repos/ekicyou/ekicyou.github.io/pages -f build_type=workflow` で切り替えた(API で通った)。直前に、`master` が `3b9477d` のまま進んでいないこと、PR の `build` が先頭のコミット `00cd12b` で成功していることを確かめた。
+- 5: 切り替えの直後(S1)、設定は `workflow`。代表パスは今までどおり(200 が 7 本と `/404.html`・`/README.md`、404 が `/site/`・`/CLAUDE.md`・`/Gemfile`)。公開中の 54 ファイルすべてが、切り替え前の基準とバイト一致。設計で「未確認」としていた「S1 では S0 の公開物が残る」は、確かめられた。切り替えで新しい実行は起きなかった。
+- 5: 戻し方 R1 の 2 つのコマンドは、使う場面が無かったので未確認のまま。
+- 5 の後: `master` へ push しても公開されない状態。`/kiro-complete` でマージするまで続く。
+- 最終検証(`/kiro-validate-impl`、2026-10-12): GO。要件 41 項のうち、今確かめられたもの 27、定義の読み合わせ 10、設計どおりマージの後に確かめるもの 4(2.1・4.3・4.8・5.3)、抜け 0。`deploy` ジョブは PR では動かないので、実地の初回はマージの後になる。
+- `/kiro-complete` への申し送り: (1) マージの直前にも `git fetch` して `git log HEAD..origin/master` を見る(上の 3.3 の注意)。取り込みは `git merge`(`sync_with_base_branch` はこのリポジトリで使えない)。(2) PR は #3(下書き)。作り直さない。(3) マージの後、`/README.md` は CDN のため最長 10 分ほど 200 が返り得る。待って確かめ直す。
+- 範囲外の気づき(起票の候補): (a) マージ済みの PR #2 のリモートブランチが残っている件と、`kiro-complete` の「リモートブランチは API で削除済み」の真偽(リポジトリは `delete_branch_on_merge: false`)。(b) `kiro-complete` のステップ0-3 が `sync_with_base_branch` を案内するが、このリポジトリでは使えない。(c) Dependabot の最初の PR で、読み取り専用のトークンのままビルドが通ることの確認。(d) `site-astro-redesign` で、`workflow.md` の代表パス(`/assets/main.css`、`/Gemfile`)を見直すこと。(e) `tech.md` の Common Commands と `workflow.md` のオプションの不揃い。
+- 設計に未反映のまま残した逸脱(契約は変えていない。運用の正本は steering とスキル): `product.md` の直し、`kiro-complete` の追加 2 点、検証の対象の「レイアウト」への拡げ、R2 の一文。
+- 完了時にその場で解決(1): `tech.md` の Common Commands を `workflow.md` の「検証」節と同じオプションに揃え、Dependabot の最初の PR で確かめる点を `tech.md` に記した(範囲外の気づき (c)(e))。
+- 完了時にその場で解決(2): `kiro-complete` のステップ0-3 に、`sync_with_base_branch` が断るときは `git merge` を使う、と記した(範囲外の気づき (b))。
+- 完了時に起票(1): 代表パスの見直しを `site-astro-redesign/brief.md` の Scope に足した(範囲外の気づき (d))。
+- 完了時に起票(2): マージ済みのブランチの片付けと、スキルの一文の確かめを `roadmap.md` の「Direct Implementation Candidates」に足した(範囲外の気づき (a))。どちらも小さく、行き先がはっきりしているので、`/kiro-discovery` の対話は開かず、discovery が管理するファイル(brief と roadmap)へ直接書いた。
+- 完了時に閉じたもの(直さない): 戻し方 R1 のコマンドが未確認であること(`tech.md` に明記済み)。設計に未反映の逸脱 4 件(契約は変えていない。運用の正本は steering とスキル)。

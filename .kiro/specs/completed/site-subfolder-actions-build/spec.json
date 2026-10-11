@@ -1,0 +1,22 @@
+{
+  "feature_name": "site-subfolder-actions-build",
+  "created_at": "2026-10-11T14:08:41Z",
+  "updated_at": "2026-10-11T22:23:42Z",
+  "language": "ja",
+  "phase": "completed",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": true,
+      "approved": true
+    },
+    "tasks": {
+      "generated": true,
+      "approved": true
+    }
+  },
+  "ready_for_implementation": true
+}
