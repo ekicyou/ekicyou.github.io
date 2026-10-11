@@ -1,0 +1,9 @@
+# ワークフローが使うアクションの新しい版を、月 1 回、PR で提案させる。
+# 自動マージは設定しない。取り込むかどうかは開発者が決める。
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

@@ -24,7 +24,7 @@
   - _Boundary: SiteSource_
   - _Requirements: 1.2, 1.3_
 
-- [ ] 2. ビルドと公開の仕組みを足す
+- [x] 2. ビルドと公開の仕組みを足す
 - [x] 2.1 ビルドと公開のワークフローを足す
   - `design.md` の「PagesWorkflow」の契約どおりに、1 ファイル・2 ジョブ(`build`・`deploy`)のワークフローを書く。
   - きっかけは、`master` への push、`master` 向けの PR、手動の実行の 3 つ。
@@ -36,7 +36,7 @@
   - _Boundary: PagesWorkflow_
   - _Requirements: 1.5, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 3.1, 3.2, 3.3, 3.4, 3.5, 6.2_
 
-- [ ] 2.2 版上げの提案を設定し、古い CI の設定を消す
+- [x] 2.2 版上げの提案を設定し、古い CI の設定を消す
   - Dependabot に、GitHub Actions の版上げを月 1 回、PR で提案させる設定を足す。自動マージは設定しない。
   - `.travis.yml` を消す。
   - 完了の姿: 設定ファイルが YAML として読め、対象が `github-actions`、置き場が `/` である。`.travis.yml` が追跡から外れている。
