@@ -127,3 +127,7 @@
 - 5: 切り替えの直後(S1)、設定は `workflow`。代表パスは今までどおり(200 が 7 本と `/404.html`・`/README.md`、404 が `/site/`・`/CLAUDE.md`・`/Gemfile`)。公開中の 54 ファイルすべてが、切り替え前の基準とバイト一致。設計で「未確認」としていた「S1 では S0 の公開物が残る」は、確かめられた。切り替えで新しい実行は起きなかった。
 - 5: 戻し方 R1 の 2 つのコマンドは、使う場面が無かったので未確認のまま。
 - 5 の後: `master` へ push しても公開されない状態。`/kiro-complete` でマージするまで続く。
+- 最終検証(`/kiro-validate-impl`、2026-10-12): GO。要件 41 項のうち、今確かめられたもの 27、定義の読み合わせ 10、設計どおりマージの後に確かめるもの 4(2.1・4.3・4.8・5.3)、抜け 0。`deploy` ジョブは PR では動かないので、実地の初回はマージの後になる。
+- `/kiro-complete` への申し送り: (1) マージの直前にも `git fetch` して `git log HEAD..origin/master` を見る(上の 3.3 の注意)。取り込みは `git merge`(`sync_with_base_branch` はこのリポジトリで使えない)。(2) PR は #3(下書き)。作り直さない。(3) マージの後、`/README.md` は CDN のため最長 10 分ほど 200 が返り得る。待って確かめ直す。
+- 範囲外の気づき(起票の候補): (a) マージ済みの PR #2 のリモートブランチが残っている件と、`kiro-complete` の「リモートブランチは API で削除済み」の真偽(リポジトリは `delete_branch_on_merge: false`)。(b) `kiro-complete` のステップ0-3 が `sync_with_base_branch` を案内するが、このリポジトリでは使えない。(c) Dependabot の最初の PR で、読み取り専用のトークンのままビルドが通ることの確認。(d) `site-astro-redesign` で、`workflow.md` の代表パス(`/assets/main.css`、`/Gemfile`)を見直すこと。(e) `tech.md` の Common Commands と `workflow.md` のオプションの不揃い。
+- 設計に未反映のまま残した逸脱(契約は変えていない。運用の正本は steering とスキル): `product.md` の直し、`kiro-complete` の追加 2 点、検証の対象の「レイアウト」への拡げ、R2 の一文。
