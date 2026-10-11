@@ -26,10 +26,10 @@ Kiro-style Spec-Driven Development on an agentic SDLC
 - 詳しくは `.kiro/steering/`（`product.md`・`tech.md`・`structure.md`・`workflow.md`）。
 
 ## Branch & Merge Strategy (PR-based)
-- **Merge into `master` happens only via Pull Request.** Never push directly to the default branch.
+- **Spec work merges into `master` only via Pull Request.** Claude sessions never push directly to the default branch. (No branch protection is set: the developer may push posts to `master` by hand.)
 - **1 feature = 1 branch = 1 PR**: a spec's whole lifecycle (requirements → design → tasks → implementation) runs on a single Claude Code (harness) worktree branch; integration is one squash-merged PR at completion.
 - **Branches come from the harness worktree** — skills do NOT create/switch/delete branches. `/kiro-start` (entry) and `/kiro-complete` (exit) operate on the supplied worktree branch.
-- Writing or fixing a post needs no spec: do it on the worktree branch and integrate by PR.
+- Writing or fixing a post needs no spec. A Claude session does it on the worktree branch and integrates by PR.
 - Authority: `.kiro/steering/workflow.md` (branch strategy, verification, completion procedure).
 
 ## Minimal Workflow
