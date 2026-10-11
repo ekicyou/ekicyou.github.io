@@ -1,0 +1,2 @@
+# 改行は LF に揃える（.editorconfig と同じ）。画像や PDF は git が自動でバイナリと判定する。
+* text=auto eol=lf
