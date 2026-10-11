@@ -45,3 +45,12 @@ plugins:
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-remote-theme
+
+# 公開しないファイル。Jekyll 3 系では exclude を書くと既定の一覧が置き換わるので、
+# 既定の Gemfile 類もここに並べる。
+exclude:
+- Gemfile
+- Gemfile.lock
+- node_modules
+- vendor
+- CLAUDE.md
