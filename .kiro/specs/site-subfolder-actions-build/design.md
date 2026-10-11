@@ -409,7 +409,7 @@ sequenceDiagram
 | 状態 | 公開方式の設定 | `master` の中身 | 公開されるもの | 戻し方 |
 |---|---|---|---|---|
 | S0 切り替え前 | `legacy` | 原稿はルート | 旧来ビルドの出力 | — |
-| S1 切り替え後・マージ前 | `workflow` | 原稿はルート、ワークフロー無し | S0 の公開物が残る見込み(未確認。直後に確かめる) | R1 |
+| S1 切り替え後・マージ前 | `workflow` | 原稿はルート、ワークフロー無し | S0 の公開物が残る(2026-10-12 の切り替えの直後に、54 ファイルのバイト一致で確かめた) | R1 |
 | S2 マージ後 | `workflow` | 原稿は `site/`、ワークフローあり | Actions の出力 | R2 |
 
 - **S0 → S1**: `gh api -X PUT repos/ekicyou/ekicyou.github.io/pages -f build_type=workflow`。API が通らなければ、開発者に画面(Settings → Pages → Source → GitHub Actions)での操作を頼む。直後に、設定が `workflow` になったことと、代表パスが応答することを確かめる(5.4)。
