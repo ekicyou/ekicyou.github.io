@@ -54,11 +54,11 @@ Jekyll による静的サイト。原稿は `site/` にあり、GitHub Actions �
 # 公開方式の設定を見る（workflow と出る）
 gh api repos/ekicyou/ekicyou.github.io/pages --jq .build_type
 # 今のブランチの PR で、ビルドの成否を見る
-gh pr checks
+gh pr checks --watch
 # master の直近の実行を見る
 gh run list --workflow pages.yml --branch master --limit 1
 # 実行が終わるまで待つ
-gh run watch <実行の ID>
+gh run watch <実行の ID> --exit-status
 # 実行の成果物を取り出す
 gh run download <実行の ID> --name github-pages --dir <取り出し先>
 # 失敗した実行をやり直す
@@ -71,7 +71,7 @@ gh run rerun <実行の ID>
 - **push で公開**の手触りを保つ。別の置き場（Cloudflare Pages、Netlify など）へは移さない。
 - **ビルドと公開は GitHub の公式アクション 4 つだけで組む**（`actions/checkout`、`actions/jekyll-build-pages`、`actions/upload-pages-artifact`、`actions/deploy-pages`）。`jekyll-build-pages` は、切り替え前の旧来方式が中で動かしていたのと同じコンテナなので、出力が切り替え前と同じになる。Ruby を自分で入れる組み方はしない。
 - **`jekyll-build-pages` は細かい版まで指定する**（`v1.0.13`）。Jekyll とプラグインの版、つまり出力を決める部品だからである。ほかの 3 つはメジャー版の指定（`@v7`、`@v5`）。
-- **版上げは Dependabot に提案させ、取り込みは開発者が決める**。`.github/dependabot.yml` が月 1 回、アクションの新しい版を PR で提案する。自動マージは設定しない。`jekyll-build-pages` の版上げは出力が変わり得るので、Astro への乗り換え（`site-astro-redesign`）が済むまでは見送ってよい。
+- **版上げは Dependabot に提案させ、取り込みは開発者が決める**。`.github/dependabot.yml` が月 1 回、アクションの新しい版を PR で提案する。自動マージは設定しない。`jekyll-build-pages` の版上げは出力が変わり得るので、Astro への乗り換え（`site-astro-redesign`）が済むまでは見送ってよい。 Dependabot の PR ではトークンが読み取り専用になる。`build` は読み取りの権限だけで動く見込みだが、最初の提案 PR でビルドが通ることを確かめる（未確認）。
 
 ## 戻し方
 
