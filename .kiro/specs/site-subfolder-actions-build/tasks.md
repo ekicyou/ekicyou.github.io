@@ -25,7 +25,7 @@
   - _Requirements: 1.2, 1.3_
 
 - [ ] 2. ビルドと公開の仕組みを足す
-- [ ] 2.1 ビルドと公開のワークフローを足す
+- [x] 2.1 ビルドと公開のワークフローを足す
   - `design.md` の「PagesWorkflow」の契約どおりに、1 ファイル・2 ジョブ(`build`・`deploy`)のワークフローを書く。
   - きっかけは、`master` への push、`master` 向けの PR、手動の実行の 3 つ。
   - `build` は `site/` を原稿にしてビルドし、成果物 `github-pages` を保存する。`deploy` は `build` の成功の後、PR 以外かつ `master` のときだけ動き、環境 `github-pages` を通して公開する。
@@ -103,3 +103,9 @@
   - _Boundary: Cutover_
   - _Depends: 4.2_
   - _Requirements: 4.7, 5.1, 5.2, 5.3, 5.4, 5.5_
+
+## Implementation Notes
+
+- 2.1: 同時実行の組を 3 つに分けた(PR ごと / 公開用 `pages-deploy` / `master` 以外での手動の実行はブランチごと)。設計の初版は「PR 以外はすべて公開用の組」だったが、`master` 以外での手動の実行が、待っている公開を押しのける穴があった。`design.md` の表も直してある。
+- 2.1: 公開用の組で押しのけられた待ちの実行は、Actions の一覧に「cancelled」として残る(失敗ではない)。`gh run list --workflow pages.yml --branch master --limit 1` がそれを拾うことがあるので、3.2 の「検証」節に読み方を添える。
+- 2.1: `site/Gemfile` があるため、ビルドの記録に `bundle check` の警告が出るかもしれない(失敗にはならない)。4.1 で見えたら既知の挙動。

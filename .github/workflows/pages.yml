@@ -1,0 +1,55 @@
+# site/ の原稿からサイトをビルドし、master のときだけ GitHub Pages へ公開する。
+# PR ではビルドだけを行い、公開しない。
+name: pages
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+# 既定は読み取りだけ。要る権限はジョブごとに足す。
+permissions:
+  contents: read
+
+# 公開まで進む実行(PR 以外で master)は、公開用の 1 つの組に入れる。
+# 進行中の公開を打ち切らないので、待っている実行のうち最新の 1 つが後から公開される。
+# 公開しない実行(PR、master 以外での手動の実行)は別の組に入れ、古い実行は捨てる。
+# 公開用の組に混ぜると、待っている公開を押しのけてしまう。
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('pages-pr-{0}', github.event.pull_request.number) || github.ref == 'refs/heads/master' && 'pages-deploy' || format('pages-{0}', github.ref) }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' || github.ref != 'refs/heads/master' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # Jekyll がビルド中に Pages の API を読んで site.url を決める。
+      pages: read
+    steps:
+      - uses: actions/checkout@v7
+      # 出力を決める部品なので、細かい版まで指定する。
+      - uses: actions/jekyll-build-pages@v1.0.13
+        with:
+          source: ./site
+          destination: ./_site
+      # 成果物の名前は既定の github-pages。deploy はこの名前で受け取る。
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
