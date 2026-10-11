@@ -12,7 +12,7 @@ updated_at: 2026-10-11
 ## Core Capabilities
 
 - **記事の公開**: Markdown で書いた記事を日付付きで残す。数式（MathJax）、コード、画像、コメント欄（giscus）を使える。
-- **文書の保管**: 記事に添える長文や PDF、TeX の原稿を `doc/` に置き、タイムスタンプ付きの記録として残す。
+- **文書の保管**: 記事に添える長文や PDF、TeX の原稿を `site/doc/` に置き、タイムスタンプ付きの記録として残す。
 - **開発物への入口**: About ページから、別リポジトリで公開している配布物（ゴースト、過去作）へ案内する。
 - **フィードと SNS 向けの情報**: RSS フィードと、記事ごとの説明文・画像（OGP）を出す。
 
@@ -32,7 +32,7 @@ updated_at: 2026-10-11
 
 - 公開済みの URL を壊さない。構成を変えるときは、変える前と後で公開されるパスが同じであることを確かめる。
 - 同じ `ekicyou.github.io` の下で、別リポジトリのページも公開されている（`/ghost_dev/`、`/nyan-pu-puu/`、`/zzz-pasta/`、`/old/` など）。このリポジトリに同じ名前のトップ階層を作らない。
-- 既定ブランチへのマージはそのまま公開になる。下書きは `_drafts/` か `published: false` で隠す。
+- 既定ブランチへのマージはそのまま公開になる。下書きは `site/_drafts/` か `published: false` で隠す。
 
 ---
 _Focus on patterns and purpose, not exhaustive feature lists_

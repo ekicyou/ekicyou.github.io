@@ -44,7 +44,7 @@
   - _Requirements: 6.1, 6.3, 6.4_
 
 - [ ] 3. 文書と完了の手順を新しい姿に合わせる
-- [ ] 3.1 steering と案内の文書を書き直す
+- [x] 3.1 steering と案内の文書を書き直す
   - `design.md` の「ProjectDocs」の表のうち、`tech.md`・`structure.md`・`roadmap.md`・`CLAUDE.md`・`README.md` を直す。
   - `tech.md` に、公式アクションを使う理由と、戻し方 R1・R2(`design.md` の「Migration Strategy」)を書く。順番を誤ると `/site/...` の下に公開されることも書く。
   - `structure.md` は、すべての置き場を `site/` 起点にし、「ルートに置くのは開発用だけ。`site/` の外は公開されない」と書く。
@@ -109,3 +109,6 @@
 - 2.1: 同時実行の組を 3 つに分けた(PR ごと / 公開用 `pages-deploy` / `master` 以外での手動の実行はブランチごと)。設計の初版は「PR 以外はすべて公開用の組」だったが、`master` 以外での手動の実行が、待っている公開を押しのける穴があった。`design.md` の表も直してある。
 - 2.1: 公開用の組で押しのけられた待ちの実行は、Actions の一覧に「cancelled」として残る(失敗ではない)。`gh run list --workflow pages.yml --branch master --limit 1` がそれを拾うことがあるので、3.2 の「検証」節に読み方を添える。
 - 2.1: `site/Gemfile` があるため、ビルドの記録に `bundle check` の警告が出るかもしれない(失敗にはならない)。4.1 で見えたら既知の挙動。
+- 3.1: `product.md` も 2 か所直した(`doc/` → `site/doc/`、`_drafts/` → `site/_drafts/`)。`design.md` の「Modified Files」には無いが、置き場がルート起点のままだった(要件 7.4)。
+- 3.1: `tech.md` の「出力が切り替え前と同じになる」は、4.2 の突き合わせの前に書いた。4.2 で意図しない差が出たら、この行も直す。
+- 3.1: 戻し方 R2 に、設計に無い一文を足した(移動の後に `site/` へ足した原稿は、打ち消しだけでは戻り切らない)。レビューが使い捨てのリポジトリで確かめた。

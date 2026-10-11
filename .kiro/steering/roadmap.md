@@ -14,13 +14,13 @@ updated_at: 2026-10-11
 ## Approach Decision
 
 - **Chosen**: GitHub Pages + GitHub Actions のまま、2 段で進める。
-  1. 1 本目は Jekyll のまま。公式アクション `actions/jekyll-build-pages`(今の旧来ビルドと同じコンテナ)に `source: ./site` を渡す。
+  1. 1 本目は Jekyll のまま。公式アクション `actions/jekyll-build-pages`(切り替え前の旧来ビルドと同じコンテナ)に `source: ./site` を渡す。
   2. 2 本目で Astro に乗り換え、レイアウトとスタイルを一から作る。
 - **Why**:
   - 開発者の条件(2026-10-11)は 4 つ。デザイン変更の自由度が高いこと。技術文書サイトなので Markdown を持って行ければよいこと(記事は少ない)。フィードは形式が変わってよいこと(たぶん誰も見ていない)。コメントは付けられたほうがよいこと。Astro はどれも満たす。
   - 記事と `doc/` の Markdown に Jekyll 専用の書き方(`{% %}`、`{: }`)は 1 つも無い。Jekyll に縛られているのは見た目の部品(`_layouts/`・`_includes/`・`_sass/`)だけで、そこは一から作り直すので捨てる部分である。
   - 手元に Node.js は入っているが Ruby は無い。Astro なら手元で `npm run dev` を動かし、画面を見ながら直せる。
-  - 1 本目に公式アクションを使うのは、今の旧来ビルドと同じコンテナ(v1.0.13、`github-pages` gem 232)で出力が確実に同じになり、Ruby への投資が要らないため。Jekyll の原稿は 2 本目で捨てるので、1 本目は小さく済ませる。
+  - 1 本目に公式アクションを使うのは、切り替え前の旧来ビルドと同じコンテナ(v1.0.13、`github-pages` gem 232)で出力が確実に同じになり、Ruby への投資が要らないため。Jekyll の原稿は 2 本目で捨てるので、1 本目は小さく済ませる。
 - **Rejected alternatives**:
   - Jekyll に留まり、`ruby/setup-ruby` で Jekyll 4 へ進む案(最初の起票ではこれを選んだ)。手元で見るのに Ruby か Docker が要り、新しい作りへの道具立てが弱い。
   - Eleventy。Jekyll に最も近く堅いが、部品ごとに HTML と CSS をまとめる仕組みが無く、一から作るデザインでは Astro のほうが扱いやすい。次点。
@@ -55,5 +55,5 @@ updated_at: 2026-10-11
 
 ## Specs (dependency order)
 
-- [ ] site-subfolder-actions-build -- Jekyll のまま原稿を `site/` へ 1 階層下げ、ビルドと公開を GitHub Actions に切り替える(見た目は変えない)。Dependencies: none
+- [x] site-subfolder-actions-build -- Jekyll のまま原稿を `site/` へ 1 階層下げ、ビルドと公開を GitHub Actions に切り替える(見た目は変えない)。Dependencies: none
 - [ ] site-astro-redesign -- 生成ツールを Astro へ乗り換え、デザインを一から作り直す(URL は変えない)。Dependencies: site-subfolder-actions-build
