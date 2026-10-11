@@ -53,6 +53,12 @@ updated_at: 2026-10-11
   - `workflow.md` の「検証」節: 1 本目で「PR 上の CI が緑」に書き換える。2 本目で手元での確かめ方を足す。
   - steering の `tech.md`・`structure.md`: 2 本とも書き換える。
 
+## Direct Implementation Candidates
+
+spec を起こすほどでもない手直し。1 本目(`site-subfolder-actions-build`)の完了の棚卸しで見つけた。
+
+- [ ] merged-branch-cleanup -- マージ済みの PR #2 のブランチ `claude/site-migration-prep-a289c7` がリモートに残っている。消してよいかを開発者に確かめて消す。あわせて、`kiro-complete` スキルの「リモートブランチは API で削除済み」という一文が正しいかを確かめ、違っていれば直す(リポジトリの設定は `delete_branch_on_merge: false`。1 本目の PR #3 のマージの後にブランチが残ったかどうかが手掛かりになる)。
+
 ## Specs (dependency order)
 
 - [x] site-subfolder-actions-build -- Jekyll のまま原稿を `site/` へ 1 階層下げ、ビルドと公開を GitHub Actions に切り替える(見た目は変えない)。Dependencies: none

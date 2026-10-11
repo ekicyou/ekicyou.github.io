@@ -131,3 +131,8 @@
 - `/kiro-complete` への申し送り: (1) マージの直前にも `git fetch` して `git log HEAD..origin/master` を見る(上の 3.3 の注意)。取り込みは `git merge`(`sync_with_base_branch` はこのリポジトリで使えない)。(2) PR は #3(下書き)。作り直さない。(3) マージの後、`/README.md` は CDN のため最長 10 分ほど 200 が返り得る。待って確かめ直す。
 - 範囲外の気づき(起票の候補): (a) マージ済みの PR #2 のリモートブランチが残っている件と、`kiro-complete` の「リモートブランチは API で削除済み」の真偽(リポジトリは `delete_branch_on_merge: false`)。(b) `kiro-complete` のステップ0-3 が `sync_with_base_branch` を案内するが、このリポジトリでは使えない。(c) Dependabot の最初の PR で、読み取り専用のトークンのままビルドが通ることの確認。(d) `site-astro-redesign` で、`workflow.md` の代表パス(`/assets/main.css`、`/Gemfile`)を見直すこと。(e) `tech.md` の Common Commands と `workflow.md` のオプションの不揃い。
 - 設計に未反映のまま残した逸脱(契約は変えていない。運用の正本は steering とスキル): `product.md` の直し、`kiro-complete` の追加 2 点、検証の対象の「レイアウト」への拡げ、R2 の一文。
+- 完了時にその場で解決(1): `tech.md` の Common Commands を `workflow.md` の「検証」節と同じオプションに揃え、Dependabot の最初の PR で確かめる点を `tech.md` に記した(範囲外の気づき (c)(e))。
+- 完了時にその場で解決(2): `kiro-complete` のステップ0-3 に、`sync_with_base_branch` が断るときは `git merge` を使う、と記した(範囲外の気づき (b))。
+- 完了時に起票(1): 代表パスの見直しを `site-astro-redesign/brief.md` の Scope に足した(範囲外の気づき (d))。
+- 完了時に起票(2): マージ済みのブランチの片付けと、スキルの一文の確かめを `roadmap.md` の「Direct Implementation Candidates」に足した(範囲外の気づき (a))。どちらも小さく、行き先がはっきりしているので、`/kiro-discovery` の対話は開かず、discovery が管理するファイル(brief と roadmap)へ直接書いた。
+- 完了時に閉じたもの(直さない): 戻し方 R1 のコマンドが未確認であること(`tech.md` に明記済み)。設計に未反映の逸脱 4 件(契約は変えていない。運用の正本は steering とスキル)。
