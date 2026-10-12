@@ -1,0 +1,21 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import HeadMeta, { type PageMeta } from '../components/HeadMeta.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+type Props = PageMeta;
+const meta = Astro.props;
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <HeadMeta {...meta} />
+  </head>
+  <body>
+    <SiteHeader />
+    <main class="page"><slot /></main>
+    <SiteFooter />
+  </body>
+</html>
