@@ -1,0 +1,37 @@
+---
+// About のページ。`pages` コレクションの `about`(`src/content/pages/about.md`)を、`/about.html` に出す。
+// About は記事ではない。front matter の `date` を日付として出さず、目次と前後の記事も出さない。
+// レイアウトへ `dateText`・`headings`・`older`・`newer` を渡さなければ、出ない。
+// 正規の URL は、このページの公開パスから組み立てる。
+import { getEntry, render } from 'astro:content';
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { SITE } from '../consts.ts';
+import { describe, hasMath } from '../lib/summary.ts';
+
+const ABOUT_PATH = '/about.html';
+const ABOUT_SOURCE = 'src/content/pages/about.md';
+
+const entry = await getEntry('pages', 'about');
+// `/about.html` は保つパスで、メニューからも指している。
+// 原稿が無い、または非公開のときは、黙って進めずにビルドを止める。
+if (!entry) throw new Error(`About の原稿が無い: ${ABOUT_SOURCE}`);
+if (entry.data.published === false) {
+  throw new Error(`About は非公開にできない(${ABOUT_PATH} は保つパス): ${ABOUT_SOURCE}`);
+}
+const { data } = entry;
+
+const { Content } = await render(entry);
+// 数式の有無は、描いた後の本文から決める。
+// 説明には、本文の最初の段落を使わない。front matter の `description` が無ければ、サイトの説明文になる。
+const html = entry.rendered?.html;
+---
+<ArticleLayout
+  title={data.title}
+  description={describe({ description: data.description }, SITE.description)}
+  path={ABOUT_PATH}
+  image={data.image}
+  math={hasMath(html)}
+  comments={data.comments !== false}
+>
+  <Content />
+</ArticleLayout>

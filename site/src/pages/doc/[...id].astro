@@ -1,0 +1,42 @@
+---
+// 文書のページ。公開中の文書 1 本につき 1 ページを、`/doc/<題材>/<名前>.html` に出す。
+// 識別子(`<題材>/<名前>`)と公開パスは、`publishedDocs()` が返す値をそのまま使う。ここでは組み立てない。
+// `published: false` の文書は `publishedDocs()` に含まれないので、ページにならない。
+// 文書には、日付と前後の記事が無い。レイアウトへ `dateText`・`older`・`newer` を渡さなければ、出ない。
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import { render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { SITE } from '../../consts.ts';
+import { publishedDocs } from '../../lib/docs.ts';
+import { describe, hasMath } from '../../lib/summary.ts';
+
+export const getStaticPaths = (async () => {
+  const docs = await publishedDocs();
+  return docs.map((doc) => ({
+    // 識別子は `/` を含むので、残りのパスをまとめて受ける形(`[...id]`)で渡す。
+    params: { id: doc.entry.id },
+    props: { doc },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { doc } = Astro.props;
+const { entry } = doc;
+const { data } = entry;
+
+const { Content, headings } = await render(entry);
+// 説明と数式の有無は、描いた後の本文から決める。front matter の `use_math` は見ない。
+const html = entry.rendered?.html;
+---
+<ArticleLayout
+  title={data.title}
+  description={describe({ description: data.description, html }, SITE.description)}
+  path={doc.path}
+  image={data.image}
+  math={hasMath(html)}
+  tags={data.tags}
+  headings={headings}
+  comments={data.comments !== false}
+>
+  <Content />
+</ArticleLayout>
