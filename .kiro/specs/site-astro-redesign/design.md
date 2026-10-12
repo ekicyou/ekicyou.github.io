@@ -692,7 +692,7 @@ interface ArticleProps extends PageMeta {
   - `<title>`(`<題名> | えちょのざんがい`。題名が無いページはサイト名だけ)、`<meta name="description">`
   - `<link rel="canonical">`、`og:url`(どちらも `https://ekicyou.github.io` で始まる絶対 URL。4.8)
   - `og:title`、`og:description`、`og:site_name`、`og:type`(記事は `article`、ほかは `website`)、`og:locale`(`ja_JP`)
-  - `og:image`(絶対 URL)と `twitter:card`。`image` があれば、その画像と `summary_large_image`。無ければ、アイコン絵と `summary`(4.15)
+  - `og:image`(絶対 URL)と `twitter:card`。`image` があれば、その画像と `summary_large_image`。無ければ、アイコン絵と `summary`(4.15)。トップページ・About・404 は `image` を持たないので、アイコン絵(`https://ekicyou.github.io/img/alto0044_400x400.png`)になる。トップページの SNS 向けの画像をアイコン絵にすることは、開発者が設計ディスカッションで名指しで求めた(2026-10-12)
   - `<link rel="alternate" type="application/rss+xml">`(4.11)、`<link rel="icon">`(3.26)
   - 書体のスタイルシート(`fontsHref` があるとき。`preconnect` を添える)
   - KaTeX のスタイルシート(`math` が真のときだけ。`katex/dist/katex.min.css` を URL として読み込み、`<link>` で指す)
@@ -824,6 +824,7 @@ interface ArticleProps extends PageMeta {
 | 誤り | すべてのパスが、認める形のどれかに合う: `/index.html`・`/about.html`・`/404.html`・`/feed.xml`、`/YYYY/MM/DD/<名前>.html`、`/doc/…`、`/img/…`、`/_astro/…` | 1.4, 1.5, 1.6, 1.7 |
 | 誤り | どの HTML にも `mailto:` が無い | 3.25 |
 | 誤り | どの HTML にも、`lang="ja"`、絶対 URL の正規の URL、フィードの場所、favicon の指定がある | 3.5, 3.26, 4.8, 4.11 |
+| 誤り | トップページ(`index.html`)の `og:image` が、アイコン絵の絶対 URL である | 4.15 |
 | 警告 | `/` で始まるリンクと画像の先が、`dist/` にある(別リポジトリのページ `/ghost_dev/`・`/nyan-pu-puu/`・`/zzz-pasta/`・`/old/` を除く) | 2.7 |
 | 誤り | 非公開の記事(原稿の置き場で `published: false` と書かれた記事)のパスが `dist/` に無く、`index.html` と `feed.xml` にも出ていない | 2.11 |
 | 警告 | KaTeX が読めなかった数式(`katex-error`)が無い | 4.4 |
@@ -968,6 +969,7 @@ interface ArticleProps extends PageMeta {
 - 保つ 28 個のパスが、すべて出る(1.1)。認めない形のパス(`/site/…`、サイトマップ、別リポジトリと同じトップ階層)が出ない(1.4、1.5、1.7)。
 - 非公開の 3 本(`/2016/08/17/GODZILLA.html`、`/2016/07/08/dcomp.html`、`/2019/08/31/IMM_API.html`)が出ない(2.11)。認めるパスの形には合うので、成果物の検査が、原稿の `published: false` と突き合わせて、ビルドのたびに確かめる。
 - どの HTML にも `mailto:` が無く、`lang`・正規の URL・フィードの場所・favicon がある(3.5、3.25、3.26、4.8、4.11)。
+- トップページ(`index.html`)の `og:image` が、アイコン絵の絶対 URL である(4.15)。成果物の検査が、誤りとして確かめる。
 - サイト内のリンクと画像の警告が 0 件である(2.7。移行のとき)。
 
 ### 1 回きりの確かめ(移行のとき。結果を移行の記録に残す)
