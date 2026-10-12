@@ -1,0 +1,46 @@
+---
+// 記事のページ。公開中の記事 1 本につき 1 ページを、`/YYYY/MM/DD/<名前>.html` に出す。
+// 年・月・日・名前と公開パスは、`publishedPosts()` が返す値(`parsePostId()` の結果)をそのまま使う。ここでは組み立てない。
+// `published: false` の記事は `publishedPosts()` に含まれないので、ページにならない。
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import { render } from 'astro:content';
+import ArticleLayout from '../../../../layouts/ArticleLayout.astro';
+import { SITE } from '../../../../consts.ts';
+import { adjacentPosts, publishedPosts } from '../../../../lib/posts.ts';
+import { describe, hasMath } from '../../../../lib/summary.ts';
+
+export const getStaticPaths = (async () => {
+  const posts = await publishedPosts();
+  return posts.map((post) => ({
+    params: { year: post.year, month: post.month, day: post.day, name: post.name },
+    // 前後の記事は、公開中の記事の並びから決める。端では片方だけになる。
+    props: { post, adjacent: adjacentPosts(posts, post) },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { post, adjacent } = Astro.props;
+const { entry } = post;
+const { data } = entry;
+
+const { Content, headings } = await render(entry);
+// 説明と数式の有無は、描いた後の本文から決める。front matter の `use_math` と `date` は見ない。
+const html = entry.rendered?.html;
+const { older, newer } = adjacent;
+---
+<ArticleLayout
+  title={data.title}
+  description={describe({ description: data.description, html }, SITE.description)}
+  path={post.path}
+  image={data.image}
+  type="article"
+  math={hasMath(html)}
+  dateText={post.dateText}
+  tags={data.tags}
+  headings={headings}
+  comments={data.comments !== false}
+  older={older && { title: older.entry.data.title, path: older.path }}
+  newer={newer && { title: newer.entry.data.title, path: newer.path }}
+>
+  <Content />
+</ArticleLayout>
