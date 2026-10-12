@@ -888,7 +888,7 @@ interface ArticleProps extends PageMeta {
 | 書体 | 見出し・サイト名・日付・タグ・コピーのボタン: `DotGothic16`。本文: `M PLUS 1p`(400・500・700)。コード: OS の等幅の書体(`ui-monospace`、`Cascadia Mono`、`Consolas`、`BIZ UDGothic`、`MS Gothic`)。Google Fonts の URL は `https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+1p:wght@400;500;700&display=swap` |
 | 面と枠 | 枠は 2px の実線、角丸 12px、影は右下へ 4px ずらした影(ぼかし無し。暗い配色では黒)。ヘッダーとフッターの境は 3px の点線 |
 | リンク | 下線を 2px の点線にする |
-| 画像の飾り | 角丸 18px、3px の点線の枠、差し色の影を右下へ 6px(ぼかし無し)、白の地、内側の余白 8px |
+| 画像の飾り | 角丸 18px、3px の点線の枠、右下へ 6px ずらした影(ぼかし無し)、白の地、内側の余白 8px。影の色は、差し色を 3 割だけ、細い線の色に混ぜた色(`color-mix(in srgb, var(--color-accent) 30%, var(--color-line))`。明るい配色で、くすんだ朱 `#d3957d` ほど)。初めは差し色そのままの赤だったが、開発者が「真っ赤な影はきつすぎる。方眼の背景に合わせて緩めてほしい」と求めた |
 | 飾らない画像の一覧 | 空(個別に外す画像は無い)。仕組みで外れるもの(SVG、`align` か `style` つき、`class="plain"`)だけが外れる |
 | コードの配色 | Shiki の `vitesse-light` と `vitesse-dark`。コードの地の色は、Shiki の配色ではなく、トークン(`--color-code-bg`)で決める |
 | 囲み | 面の色に囲みの色を 1 割混ぜた地、左に 5px の色の線、まわりに 2px の枠。見出しの言葉は「NOTE」「IMPORTANT」のまま、囲みの色で出す |
