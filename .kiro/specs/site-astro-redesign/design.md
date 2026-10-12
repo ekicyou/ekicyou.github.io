@@ -65,7 +65,7 @@
 
 - 記事の URL の決まり、原稿の置き場、front matter の定義。
 - Markdown の処理系(従来の処理系 → Sätteri)、数式の描画の方式。
-- Astro の主版、Node.js の版。
+- Astro の主版、Node.js の主版。
 - `pages.yml` のジョブ名、成果物の名前、PR と `master` の振り分け。
 - giscus の「ページとの対応の取り方」(`pathname`)。
 - 成果物の検査が認めるパスの形(新しいトップ階層を足すとき)。
@@ -128,7 +128,7 @@ graph LR
 | 利用状況の送信 | 止める | 送る理由が無い。ワークフローでは環境変数 `ASTRO_TELEMETRY_DISABLED` を置く。手元では、最初の 1 回だけ `npx astro telemetry disable` を実行する(PC ごとの設定)。手順に書く |
 | `lang` の値 | `ja` | 地域を区別する必要が無く、言語だけの指定が標準の書き方である。giscus の `data-lang` も `ja`。`og:locale` は `ja_JP` のまま |
 | 画像の飾りから外す決まり | 既定は「本文の画像はすべて飾る」。外すのは、SVG、原稿が HTML で `align` か `style` を指定した画像、`class="plain"` を付けた画像、スタイルシートの「飾らない画像」の一覧に挙げた画像 | 透過かどうかは CSS では分からず、ビルド時に調べる手も、別リポジトリの画像には届かない。仕組みで決まる分と、個別に挙げる分に分ける。個別の一覧は、画面の案を見て開発者が決める(下の「画面の案」) |
-| Node.js の版 | `site/.node-version` に細かい版まで書く(`26.8.1`)。ワークフローはこのファイルを読む | 手元と同じ版でビルドする。Astro が求めるのは 22.12 以上 |
+| Node.js の版 | `site/.node-version` に、主版だけを書く(`26`)。ワークフローはこのファイルを読み、その主版の一番新しい版を用意する。主版を上げるかどうかは、Astro の主版の版上げを取り込むときに、あわせて見直す(開発者の決め、2026-10-12) | 開発者の言葉: 「年に数回しか更新しないサイトなので、そのくらい緩くてよい」。Node.js の版上げは Dependabot が提案できないので、細かい版まで固定すると、誰も上げないまま古びる。主版だけなら、細かい版と安全上の直しは、何もしなくても入る。出力を決めるのは Astro と依存の版であり、こちらは細かい版まで固定する。Astro が求めるのは 22.12 以上。手元の Node.js は 26.8.1 で、同じ主版である |
 | Linux での `npm ci` | 切り替えの PR を出す前に、ブランチを push して手動の実行で確かめる | 手動の実行はビルドだけで、公開しない(1 本目の作り)。ロックファイルは Windows で作るので、早めに確かめる |
 | Dependabot の npm | 置き場 `/site`、月 1 回。小さい版上げ(minor・patch)は 1 つの PR にまとめ、主版の版上げは 1 つずつ | 提案の数を抑えつつ、壊れやすい主版は 1 つずつ確かめる |
 | コードの配色 | Shiki に配色を 2 つ渡し(`themes` に `light` と `dark`)、色を CSS の変数として出させる。どちらを使うかはスタイルシートが決める | 明暗の両方に対応する、Astro の文書どおりの方法。試作で動いた。配色の名前は画面の案で決める |
@@ -140,7 +140,7 @@ graph LR
 | 本文のメールアドレス | 文書 `entanglement_cosmogenesis_v1_ja.md` の「連絡：」の行にあるメールアドレスは、原稿を直さず、今と同じく文字のまま出す。自動でリンク(`mailto:`)になるのを、`astro.config.mjs` の中の小さな部品(`rehypeNoMailto`)で止める(開発者の決め、2026-10-12) | 新しい処理系は、地の文のアドレスを自動でリンクにする。リンクは文字より拾われやすく、フッターからアドレスを外した狙い(3.25)と逆を向く。連絡先を載せたのは原稿の意図なので、本文は書き換えない(2.2)。そのまま置く TeX と PDF にも同じアドレスがあるが、中身を変えない決まり(1.3)により据え置く(今も公開中のもの)。確かめ済み: 部品を入れると、どのページにも `mailto:` が出ず、アドレスは文字として残る |
 | favicon の置き場 | `/favicon.ico` は置かない。各ページの `<link rel="icon">` で指す。新しい絵柄を作るときは `/_astro/` の下に出す | 保つべきパスを増やさない。今の `/img/favicon.ico`・`/img/favicon.png` は公開し続ける |
 
-**要件との差が 1 つある**: Node.js の版上げは、Dependabot が提案できない(版を書いたファイルに対応していない)。7.3 のうち実行環境の分は、提案ではなく手順で補う。Astro の版上げの PR が新しい Node.js を求めたときは、その PR のビルドが失敗して気付ける。`tech.md` に、Node.js の版を見直す手順を書く。生成ツールとその依存の版上げは、Dependabot が提案する。
+**Node.js の版上げの扱い**: Node.js の版上げは、Dependabot が提案できない(版を書いたファイルに対応していない)。初めの要件(7.3)は実行環境の版上げも PR で提案させるとしていたが、設計ディスカッションで要件を直した(7.1〜7.3)。Node.js は主版だけを固定し、主版の版上げは提案を求めず、手順で見直す。Astro の版上げの PR が新しい Node.js を求めたときは、その PR のビルドが失敗して気付ける。`tech.md` に、見直す手順(Astro の主版を上げるときに、Node.js の主版も確かめる)を書く。生成ツールとその依存の版上げは、Dependabot が提案する。
 
 ### Technology Stack
 
@@ -158,7 +158,7 @@ graph LR
 | スタイル | 素の CSS(CSS の変数、`prefers-color-scheme`) | デザインのトークン、本文のスタイル | |
 | 書体 | Google Fonts(`<link>` で読む) | 本文の書体 | 具体の書体は画面の案で決める。読めないときは OS のゴシック体になる |
 | コメント欄 | giscus(今と同じ設定) | 記事と文書のコメント欄 | |
-| 実行環境 | Node.js 26.8.1、npm(Node.js に付いてくるもの) | ビルドと手元の表示 | `site/.node-version` |
+| 実行環境 | Node.js 26(主版だけを固定)、npm(Node.js に付いてくるもの) | ビルドと手元の表示 | `site/.node-version`。確かめに使った版は 26.8.1 |
 | CI | `actions/checkout@v7`、`actions/setup-node@v7`、`actions/upload-pages-artifact@v5`、`actions/deploy-pages@v5` | ビルドと公開 | ランナーは `ubuntu-latest` |
 
 `package.json` には、版を範囲ではなく、そのままの数字で書く。版は、試作と設計の確かめで動かしたものである。
@@ -171,7 +171,7 @@ graph LR
 site/
 ├── package.json                 # 依存と npm のスクリプト(dev・build・preview・check・test・verify)
 ├── package-lock.json            # 版の固定(管理下に置く)
-├── .node-version                # Node.js の版(26.8.1)
+├── .node-version                # Node.js の主版(26)
 ├── astro.config.mjs             # サイトの設定、Markdown の処理系とプラグイン、Shiki の配色
 ├── tsconfig.json                # astro/tsconfigs/strict を継ぐ。tests・scripts・dist は検査から外す
 ├── public/                      # そのまま置くファイル(中身を変えずに公開される)
@@ -450,7 +450,7 @@ graph TB
 | `npm run verify` | `node scripts/verify-dist.mjs` | 成果物の検査 |
 
 - どれも `site/` の中で実行する。
-- 版は、`package.json` にそのままの数字で書き、`package-lock.json` を管理下に置く。Node.js の版は `site/.node-version` に書く。
+- 版は、`package.json` にそのままの数字で書き、`package-lock.json` を管理下に置く。Node.js は、主版だけを `site/.node-version` に書く。
 
 ### 中身
 
@@ -773,7 +773,7 @@ interface ArticleProps extends PageMeta {
 
 - Integration: `deploy` ジョブ、`on`、`concurrency`、ワークフロー全体の `permissions` には触れない(6.4)。
 - Validation: キャッシュは使わない(`npm ci` は十数秒で済み、壊れ方を 1 つ減らせる)。
-- Risks: Windows で作ったロックファイルで、Linux の `npm ci` が通るか。OS ごとの部品の Linux 用は、ロックファイルに載っている。切り替えの PR の前に、手動の実行で確かめる(「Migration Strategy」)。
+- Risks: `site/.node-version` に主版だけ(`26`)を書いて、`actions/setup-node` がその主版の新しい版を用意するか。切り替えの PR の前の手動の実行で確かめる。通らなければ、ワークフローに `node-version: 26` と直に書く。Windows で作ったロックファイルで、Linux の `npm ci` が通るか。OS ごとの部品の Linux 用は、ロックファイルに載っている。切り替えの PR の前に、手動の実行で確かめる(「Migration Strategy」)。
 
 #### DependabotConfig
 
