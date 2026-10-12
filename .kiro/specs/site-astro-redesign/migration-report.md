@@ -105,6 +105,43 @@ v1 の「4.1 qubit 階段」の表の、「BH段階」の列である。「—�
 
 - 約物に接した太字(5 か所)と `\lambdabar`(1 か所)は、原稿を直さず、仕組みの側で受け止める(Requirement 2 の 13)。
 
+## コメント欄の設定の突き合わせ
+
+タスク 4.3 で確かめた(2026-10-12)。giscus の埋め込みが、切り替えの前と同じ値で出ることを、属性を 1 つずつ突き合わせた(Requirement 4 の 1、3)。
+
+出どころのファイル(`site/_includes/giscus_comments.html`)は、タスク 7.1 で消える。消えた後は、この表が、値が同じだったことの記録になる。
+
+突き合わせたのは、次の 3 つである。
+
+- **前(部品)**: `site/_includes/giscus_comments.html`(コミット `acd4563` の時点)。
+- **前(公開中)**: `https://ekicyou.github.io/2026/03/26/emo2.html` を、2026-10-12 に取ったもの。
+- **後**: `npm run build` が出した `site/dist/2026/03/26/emo2.html`。値は `site/src/consts.ts` の `SITE.giscus`、埋め込みは `site/src/components/Comments.astro`。
+
+| 属性 | 値 | 前(部品) | 前(公開中) | 後 |
+|---|---|---|---|---|
+| `src` | `https://giscus.app/client.js` | 同じ | 同じ | 同じ |
+| `data-repo` | `ekicyou/ekicyou.github.io` | 同じ | 同じ | 同じ |
+| `data-repo-id` | `MDEwOlJlcG9zaXRvcnk2OTMzMzcz` | 同じ | 同じ | 同じ |
+| `data-category` | `Announcements` | 同じ | 同じ | 同じ |
+| `data-category-id` | `DIC_kwDOAGnLfc4CzVb5` | 同じ | 同じ | 同じ |
+| `data-mapping` | `pathname` | 同じ | 同じ | 同じ |
+| `data-strict` | `0` | 同じ | 同じ | 同じ |
+| `data-reactions-enabled` | `1` | 同じ | 同じ | 同じ |
+| `data-emit-metadata` | `0` | 同じ | 同じ | 同じ |
+| `data-input-position` | `bottom` | 同じ | 同じ | 同じ |
+| `data-theme` | `preferred_color_scheme` | 同じ | 同じ | 同じ |
+| `data-lang` | `ja` | 同じ | 同じ | 同じ |
+| `data-loading` | `lazy` | 同じ | 同じ | 同じ |
+| `crossorigin` | `anonymous` | 同じ | 同じ | 同じ |
+| `async` | (値なし) | 同じ | 同じ | 同じ |
+
+- 属性は 15 個(`src`、`data-*` が 12 個、`crossorigin`、`async`)。3 つとも同じ 15 個で、過不足も、値の違いも無い。
+- **コメントとの対応**: 対応の取り方は `pathname`(ページのパスから拡張子を除いた文字)のままである。手元の表示で `/2026/03/26/emo2.html` を開くと、giscus の `<iframe>` は `term=2026/03/26/emo2` で作られた。記事 12 本のパスは、公開中のサイトと成果物とで同じである(12 本とも、公開中は 200 を返して埋め込みを 1 つ持ち、成果物も同じパスに埋め込みを 1 つ持つ)。リポジトリ、カテゴリ、対応の取り方、パスの 4 つが変わらないので、ページとディスカッションの対応は切れない。なお、ページに結び付いたディスカッションは、まだ 1 つも無い(`research.md` の §2.3 の i)。
+- **埋め込みの周りの違い**(対応には響かない): 前は、スクリプトの前に空の `<div id="giscus_thread">` を置き、本番のビルドのときだけ出していた。後は、`<section class="comments" aria-label="コメント">` で包み、手元の表示でも出す(`design.md` の「設計で決めた点」)。コメント欄は、後でも、スクリプトの直後(`<section>` の中)に作られる。
+- **出るページ**: 成果物の HTML 13 個のうち、埋め込みを持つのは記事の 12 個。`/404.html` には無い。公開中のサイトも、`/`、`/about.html`、`/404.html` には無い。文書の 2 ページと About・トップは、まだルートが無い(タスク 5.1、5.2)。文書も同じ部品(`Comments.astro`)を通る。
+- **`comments: false`**(Requirement 4 の 2): 記事 1 本(`2016-02-16-code.md`)を仮に `comments: false` にしてビルドすると、そのページだけ埋め込みが消えた(12 個 → 11 個)。確かめた後、原稿はバイト一致で戻した。
+- **配色**(Requirement 3 の 15): 手元の表示(`/2026/01/06/syuzo-to.html`)で、ブラウザの配色を明るい・暗いに切り替えて見た。コメント欄は、明るい配色では明るく、暗い配色では暗く出た。`<iframe>` の `theme` は、どちらも `preferred_color_scheme`。ログインも投稿もしていない。
+
 ## 数式の確かめ
 
 (タスク 6.2 で書く。文書ごとの結果。)
