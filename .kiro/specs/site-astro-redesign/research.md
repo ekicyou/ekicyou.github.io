@@ -513,6 +513,153 @@ KaTeX のスタイルシートとフォントを外部の配布元(CDN)から読
 
 設計で決める点として残ったもの: §7 の 15(数式の描画の方式)、17(Markdown の処理系)、21、23、24、25 と、§5 の軸 4、§8 の調べもの。
 
+## 11. 設計フェーズの記録(2026-10-12 追記)
+
+設計(`/kiro-spec-design`)で調べたことと、決めたことの理由を残す。決めた中身の正本は `design.md` である。
+
+- **Discovery の種類**: full(Complex Integration)。ギャップ分析(§1〜§9)の続きとして、§8 の調べものと、要件ディスカッションで足された求め(明暗の両対応、コピーのボタン、目次など)を調べた。
+- **結論**: 行き止まりは無い。`design.md` の置き場とルートの形でも、28 個のパスが今と同じに出た。
+
+### 11.1 確かめに使った仮のプロジェクト
+
+- **置き場**: `C:\Users\maz-o\AppData\Local\Temp\claude\C--home-maz-git-my-site--claude-worktrees-kiro-site-astro-redesign-2ed957\4c1490fc-b27a-4de8-bcb8-71aeaa28f4f7\scratchpad\design-check`(リポジトリの外。試作 `astro-proto` には手を入れていない)。
+- **中身**: `design.md` の置き場(`src/content/posts/`・`src/content/doc/`・`src/content/pages/`・`public/`)とルート(`[year]/[month]/[day]/[name].astro`・`doc/[...id].astro`)で組んだ、飾りの無い最小のプロジェクト。記事 15 本、文書 2 本(数式を揃え直した写し)、`about.md`、そのまま置くファイル 10 個を流し込んである。
+- **使い方**: `npm run dev`(手元の表示)、`npm run build`、`npm run check`、`npm test`。画面の案(Requirement 3 の 12)の下敷きに使ってよい。
+- 確かめのために動かした手元の表示は、止めてある。
+
+### 11.2 調べたこと
+
+| 題目 | 調べ方 | 分かったこと | 設計への効き目 |
+|---|---|---|---|
+| 新しい置き場とルートの形 | `design-check` でビルドと手元の表示 | 28 個のパスがすべて出た。手元の表示でも、`/2026/03/26/emo2.html`・`/about.html`・文書・フィード・PDF が 200、非公開の記事と無いパスが 404 | 記事のルートを `[year]/[month]/[day]/[name].astro` にする(試作の `[...path].astro` より、URL の決まりがファイル名から読める) |
+| Shiki の配色 2 つ | `markdown.shikiConfig` に `themes: { light, dark }` と `defaultColor: false` | 従来の処理系(`unified()`)と一緒に使える。`<pre class="astro-code astro-code-themes …" style="--shiki-light:…;--shiki-dark:…;--shiki-light-bg:…;--shiki-dark-bg:…">` と、色が CSS の変数で出る | 明暗の切り替えは、スタイルシートの `prefers-color-scheme` で行う。`shikiConfig` は廃止予定ではない(廃止予定は `remarkPlugins` など) |
+| KaTeX のスタイルシートを、数式のあるページだけに | `import url from 'katex/dist/katex.min.css?url'` と、条件つきの `<link>` | 数式のあるページだけに `<link rel="stylesheet" href="/_astro/katex.min.….css">` が出た。記事とトップには出ない。手元の表示でも働く | HeadMeta が `math` のときだけ出す |
+| KaTeX のフォントを `woff2` だけに | スタイルシートから `woff`・`ttf` の指定を落とす小さな Vite のプラグイン(`transform`) | `/_astro/` が 60 個・1.2 MB から、20 個・328 KB になった(スタイルシート 1、`woff2` 19。小さいフォント 1 つはスタイルシートに埋め込まれる)。`katex` に付いてくる SCSS の設定(`$use-woff` など)を使う手もあるが、Sass が要る | Vite の変換を採る。効かなくなっても、余分なファイルが出るだけで崩れない |
+| 描いた後の本文 | `entry.rendered` を出力に書いて見た | `entry.rendered.html`(HTML の文字)と `entry.rendered.metadata`(`headings`・`frontmatter`・`imagePaths` など)がある | 数式の有無と、最初の段落の文字は、`entry.rendered.html` から決める。プラグインを自作しない |
+| 名前が `index` の記事、サブフォルダの記事 | 仮のファイルを置いてビルド | `parsePostId()` が投げた文(「記事の名前に index は使えない: 2099-01-01-index」など)がそのまま出て、終了コード 1 で止まる | 仕組みで防げる |
+| front matter の厳しい検査 | `z.strictObject` | 今の 18 本は通る。`publised: false` と書いた仮の記事は「posts → 2099-01-03-typo … Unrecognized key: "publised"」で止まる | 定義に無い項目でビルドを止める |
+| 型の検査 | `@astrojs/check` 0.9.10 と `typescript` 6.0.3 を入れて `astro check` | Windows + Node.js 26.8.1 で動いた。`node:test` を使うテストのファイルは、Node.js の型定義が無いと誤りになる | `tests/` を型の検査から外す(テストは実行して確かめる)。`@types/node` は足さない |
+| 単体テスト | `node --test tests/` で `.ts` のテスト | 依存を足さずに動いた(Node.js が型の注釈を読み飛ばす)。テストする関数は、`astro:content` を読み込まないファイルに分ける必要がある | `lib/post-path.ts` と `lib/summary.ts` を、`astro` に依らない形にする |
+| 囲みのプラグインの設定 | 型定義と出力 | 設定は `legacyTitle`・`tagName`・`classNames` の 3 つだけ。見出しの言葉(「NOTE」)を変える設定は無い。出力は `<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon">…</svg>NOTE</p>…` | 言葉を変えたいときは、スタイルシートで置き換える。付属の `alert.css` は使わない |
+| Markdown の処理系の位置づけ | Astro の文書 | 「Sätteri is the default Markdown processor since Astro v7」「Unified is the processor used by older versions of Astro」。従来の処理系は公式の選択肢で、廃止の予告は無い。別に入れる必要がある | 従来の処理系を選んでよい。版上げのたびに位置づけを見直す |
+| Astro のフォントの機能 | Astro の文書、型定義 | `fonts` の設定がある。ビルド時にフォントを取りに行き、`_astro/fonts` に出す(自分の公開物として配る) | 採らない(§11.3 の「書体の配り方」) |
+| Astro 公式の公開の手引き | Astro の文書 | 例は `withastro/action@v6`(Node.js の既定は 24)。`.nojekyll` の指示は無い | 自前で並べる案(W1)のまま。`/_astro/` は、Actions 方式の公開ではそのまま配られる見込み。公開後に確かめる |
+| Astro の置き場の決まり | Astro の文書 | 決まっているのは `src/pages/` だけ。`src/components`・`src/layouts`・`src/styles` は慣わし。コレクションの原稿の置き場に決まりは無く、`content.config.ts` は `src/` に置く | `src/content/<コレクション>/` に置く |
+| `actions/setup-node` | GitHub のリリースの一覧 | 最新は v7.1.0(2026-10-08)。v5 で、`package.json` に `packageManager` があると自動でキャッシュするようになった(`package-manager-cache: false` で止められる)。v7.0.0 は、内部の作り替えで、挙げられた破壊的な変更は無い | `@v7`。キャッシュは使わない |
+| Dependabot と Node.js の版 | GitHub の文書、検索 | Dependabot が、Node.js の版を書いたファイル(`.node-version`・`.nvmrc`)を更新するという記述は見つからなかった。`github-actions` の項目は、ワークフローのコンテナの画像を更新しない。対応を明記している npm は v11 まで | Node.js の版上げは、提案ではなく手順で補う。npm 12 で作ったロックファイル(形式 3)を Dependabot が扱えるかは、最初の提案 PR で確かめる |
+| 見出しの段の分布 | 原稿を数えた | 記事と文書で、使っている段がまちまち(`mascot_requirements` は h1 が 1・h2 が 6・h3 が 47・h4 が 27、v7 は h1 が 16・h2 が 75、v1 は h2 が 18・h3 が 43) | 目次は「本文に現れる一番浅い段から数えて N 段」にする(段を固定しない)。原稿は直さない |
+| 本文の画像 | 原稿を検索した | 6 か所。Markdown の画像が 5(リンクつき 4。うち 3 つは別リポジトリの画像)、HTML の `<img align="left" style="…">` が 1(SVG)。`/img/2020-08-10-emo.png` と `/img/EmbeddedImage.png` は、透過の情報(アルファ)を持つ PNG。別リポジトリの画像が透過かどうかは見ていない | 画像の飾りから外す決まり(`design.md` の「画像の飾りの決まり」) |
+| 最初の段落 | `description` の無い 5 本の書き出しを見た | 4 本は文で始まる。`2026-02-06-pasta.md` は `<img>` だけの段落で始まる(今はサイトの説明文になっている) | 最初の `<p>` に文字が無ければ、サイトの説明文にする(今と同じ) |
+
+### 11.3 決めたことと、退けた案
+
+**Markdown の処理系**
+
+- 背景: Astro 7 の既定は Sätteri。数式・囲み・日本語の太字は、従来の処理系にプラグインがある。
+- 案: (1) 従来の処理系と既存のプラグイン。(2) Sätteri と自作の部品。
+- 選んだもの: (1)。原稿は、どちらの処理系でも同じに読める形に直す(要件で決まっている)。
+- 引き換え: 既定でない側を使う。別のパッケージが 1 つ増える。Astro の主版が上がるたびに、位置づけを見直す。
+- 後で見ること: Sätteri の側に、数式の描画・囲み・日本語の太字の部品がそろったら、移ることを考える。
+
+**数式の描画**
+
+- 案: (1) KaTeX(ビルド時)。(2) MathJax(ビルド時、SVG)。(3) KaTeX の MathML だけの出力(スタイルシートもフォントも要らない)。(4) KaTeX のスタイルシートとフォントを外部の配布元から読む。
+- 選んだもの: (1)。スタイルシートとフォントは、自分の公開物として配る。
+- 理由: (2) はページが 2.5 倍になり、数式が図形になる。(3) は、ブラウザと OS のフォントによって組み上がりが変わる。(4) は、HTML を作った `katex` の版とスタイルシートの版がずれる恐れがあり、今の MathJax と同じく配布元に頼る。
+- 引き換え: `/_astro/` に 20 個のパスが増える。
+
+**数式のあるページの見分け方**
+
+- 案: (1) front matter の `use_math`。(2) 出力の HTML に数式があるか。
+- 選んだもの: (2)。数式の読み取り(`remark-math`)は、すべての原稿に効く。`use_math` を書き忘れた原稿でも数式は描かれるので、スタイルシートだけが抜けて崩れる。(2) なら崩れない。
+- 引き換え: 文の中の `$` が数式として読まれることがある(今の原稿には無い)。書き方の決まりに、数式でない `$` は `\$` と書く、と書く。
+
+**書体の配り方**
+
+- 案: (1) Google Fonts を `<link>` で読む。(2) Astro のフォントの機能で、自分の公開物として配る。(3) npm のフォントのパッケージを束ねる。(4) OS の書体だけを使う。
+- 選んだもの: (1)(具体の書体は画面の案で決める。OS の書体を選んだときは、読み込み自体が要らない)。
+- 理由: (2) は、ビルドのたびに外部へフォントを取りに行くので、「長く放置しても同じようにビルドできる」(Requirement 7)に合わない。(2) と (3) は、フォントのファイルが自分の公開物に加わる。日本語の書体は細かく分割されたファイルで配られるので、公開されるパスが大きく増える見込みである(数は確かめていない)。(1) は、読めないときに OS のゴシック体で表示されるだけで、ビルドには効かない。
+- 引き換え: 閲覧者の IP アドレスが Google に伝わる(giscus と同じ種類の話)。開発者は、強固な外部の配信元の利用を認めている(Requirement 7 の 5)。
+
+**明るい配色と暗い配色の仕組み**
+
+- 案: (1) CSS の変数を、`prefers-color-scheme` のメディアクエリで上書きする。(2) `color-scheme` と `light-dark()` 関数。
+- 選んだもの: (1)。
+- 理由: (2) は 2024 年からの機能で、古い iOS(17.5 より前)では色の指定がすべて効かなくなる。(1) は、Shiki の配色 2 つの使い方(Astro の文書)とも揃う。
+- 引き換え: 手動の切り替えを後で足すときは、暗い配色の変数を、メディアクエリのほかに、属性の指定でも当てる書き足しが要る。
+
+**画像の飾りから外す決まり**
+
+- 案: (1) スタイルシートのセレクタだけで決める。(2) ビルド時に画像を読んで、透過かどうかを調べる。(3) Markdown の画像に目印を付けるプラグインを自作する。
+- 選んだもの: (1)。
+- 理由: (2) は、別リポジトリの画像(3 か所)を読めない。透過の情報を持つ PNG が、見た目にも透過とは限らない。(3) は、部品が増える割に、(1) と同じことしかできない。
+
+**成果物の検査を CI に入れる**
+
+- 背景: プロダクトの最優先は、公開済みの URL を壊さないこと(`product.md`)。今は、人が突き合わせて確かめている。
+- 選んだもの: 保つパスの一覧(28 個)と、認めるパスの形を、ビルドのたびに検査する。誤りがあれば、公開しない。リンク切れと読めない数式は、警告に留める。
+- 理由: 記事のファイル名を変える、置き場を間違える、といった事故が、公開の前に止まる。リンク切れまで誤りにすると、記事を push しても公開されない場面が増え、手触りが変わる。
+- 退けた案: テストの枠組み(Vitest など)を入れる。依存が増える。Node.js の標準の機能で足りる。
+
+**Node.js の版**
+
+- 案: (1) 細かい版まで固定する。(2) 主版だけを指定する(`26`)。
+- 選んだもの: (1)。手元と同じ版でビルドでき、Requirement 7 の 1・2 に合う。
+- 引き換え: Dependabot が版上げを提案できない。手順で補う(`design.md` の「要件との差」)。(2) でも、主版の版上げは提案されない。
+
+**手元の表示でのコメント欄**
+
+- 案: (1) 出す。(2) 本番のビルドだけで出す(今と同じ)。
+- 選んだもの: (1)。暗い配色でのコメント欄を、手元で見られる。部品に、環境による分かれ道が要らない。
+- 引き換え: 手元から投稿すると、本番のページのコメントになる。手順に書く。
+
+**文書の置き場の名前**
+
+- 案: (1) `src/content/doc/`。(2) `src/content/docs/`(複数形)。
+- 選んだもの: (1)。公開パス(`/doc/`)と `public/doc/` に揃える。Markdown と PDF が別のフォルダに分かれるので、名前が 1 文字違うと、`public/docs/` に置いてしまう間違いが起きやすい。
+
+**画面の案の切り替え方**
+
+- 案: (1) 起動のときの環境変数で案を選び、案ごとに別のポートで動かす。(2) 画面の上の切り替えボタン。
+- 選んだもの: (1)。切り替えの仕組みが、ページの HTML とスタイルに入り込まない。決まった後に、消すものが無い。
+
+### 11.4 まとめ直し(Synthesis)
+
+- **1 つにまとめたもの**:
+  - 記事の URL を決める場所を、`lib/post-path.ts` の 1 つにした。ルート・一覧・フィード・前後の記事・検査が、同じ値を使う。
+  - 説明の決まり(`description` → 最初の段落 → サイトの説明文)を、`lib/summary.ts` の 1 つにした。SNS 向けの情報・一覧・フィードが、同じ関数を使う。
+  - 記事・文書・About のページの枠を、`ArticleLayout` の 1 つにした。違いは、渡す値(日付、目次、前後の記事)だけである。
+  - 明暗の切り替えと、画面の案の違いを、同じ仕組み(CSS の変数)に載せた。
+- **借りるものと作るもの**:
+  - 借りる: 数式(`remark-math`・`rehype-katex`)、囲み(`remark-github-blockquote-alert`)、日本語の太字(`remark-cjk-friendly`)、色付け(Shiki)、フィード(`@astrojs/rss`)、コメント欄(giscus)、型の検査(`astro check`)、単体テスト(Node.js の標準)。
+  - 作る(どれも小さい): 成果物の検査、コピーのボタン、目次、前後の記事、KaTeX のフォントを絞る変換。
+  - 借りない: 既製テーマ、CSS の枠組み、テストの枠組み、サイトマップ、Astro のフォントの機能、`withastro/action`。
+- **削ったもの**: スクリプトで開閉するメニュー(項目が少ない)。配色の手動の切り替え。タグごとの一覧ページ。構造化データ(JSON-LD)。表を包むためのプラグイン(スタイルシートで足りる)。`npm ci` のキャッシュ。画面の案を切り替える仕組みを、リポジトリに入れること。
+
+### 11.5 参考にしたスキル
+
+- `engineering:architecture` — 決めごとを「背景・案・選んだもの・引き換え・後で見ること」の形で残す書き方(§11.3)。
+- `engineering:testing-strategy` — 確かめを、数の多い速いもの(単体テスト)、つなぎ目のもの(ビルドの結果の検査)、数の少ない通しのもの(画面の確かめ)に分ける考え方。力を入れる場所を、事業の要(ここでは、公開済みの URL)に置くこと(`design.md` の「Testing Strategy」)。
+- Web のデザインやアクセシビリティを専門にするスキルは、このリポジトリには無い。見た目は、画面の案を開発者が見て決める。
+
+### 11.6 危うさと備え
+
+- **Linux での `npm ci`** — ロックファイルは Windows で作る。切り替えの PR の前に、ブランチを push して手動の実行で確かめる。通らなければ、ロックファイルを作り直す。
+- **手元の npm(12)と、ランナーの npm の版の違い** — ランナーの npm は、Node.js 26.8.1 に付いてくるもの。ロックファイルの形式(3)は、npm 7 以降が読める。上と同じ実行で確かめる。
+- **Dependabot と npm 12** — 最初の提案 PR で確かめる。
+- **Astro の主版の上がり方が速い** — 版を固定しているので、放置してもビルドは通る。上げるときは、主版ごとの PR で、型の検査・単体テスト・ビルド・成果物の検査が受け止める。
+- **従来の処理系が既定でない側である** — Astro の主版の PR のたびに、位置づけを見直す。原稿は、どちらの処理系でも読める形にしてある。
+- **`\lambdabar` の字形** — マクロで補う。出来は、数式の確かめで画面を見る。
+- **見出しの id** — 270 個のうち 1 個(数式を含む見出し)が変わる。原稿の中に、ページ内リンクは無い。
+- **狭い画面での表** — スタイルシートだけで横に送る。画面の案で、実際の見え方を確かめる。
+- **`/_astro/` の配られ方** — Actions 方式の公開では、`_` で始まるフォルダもそのまま配られる見込み。公開後の代表パスで確かめる。
+
+### 11.7 設計ディスカッションへの申し送り
+
+- **見た目**: 配色、背景、書体、画像の飾り、飾らない画像の一覧、コードの配色、囲みの見せ方、トップページの組み方、目次の置き場所と段の数、本文の幅の上限、favicon の絵柄、メニューの項目。どれも、画面の案を見てから決める(`design.md` の「画面の案」の表)。
+- **Node.js の版上げの提案**: Dependabot が提案できない。Requirement 7 の 3 を、実行環境については手順で補う、という読み方でよいかを確かめる。
+- **`design.md` の長さ**: 約 1,030 行。雛形が目安とする 1,000 行を少し超える。要件が 10 個・受け入れ基準が 100 個あり、切り替えが 1 回きりなので、spec を分けていない。
+
 ## References
 
 - `astro` 7.3.8 の型定義(`node_modules/astro/dist/types/public/config.d.ts`)— `build.format`、`markdown.processor`、廃止予定の `markdown.remarkPlugins` など
@@ -523,3 +670,14 @@ KaTeX のスタイルシートとフォントを外部の配布元(CDN)から読
 - [MathJax: cdn.mathjax.org の終了](https://www.mathjax.org/cdn-shutting-down/) — 今のサイトが読み込んでいる配布元
 - 公開中のサイト `https://ekicyou.github.io/`(2026-10-12 に読むだけで確かめた。パスの応答、`<head>`、`/feed.xml`、文書のページの数式)
 - `.kiro/specs/completed/site-subfolder-actions-build/`(`research.md`・`tasks.md`)— 公開物 54 ファイルの記録と、突き合わせの手順
+
+設計フェーズで足したもの(2026-10-12):
+
+- [Astro: Markdown の内容](https://docs.astro.build/en/guides/markdown-content/) — 処理系の位置づけ(Sätteri が既定、従来の処理系は別に入れる)、見出しの id
+- [Astro: コードの色付け](https://docs.astro.build/en/guides/syntax-highlighting/) — Shiki に配色を 2 つ渡す設定と、暗い配色のためのスタイル
+- [Astro: フォント](https://docs.astro.build/en/guides/fonts/) — フォントの機能(ビルド時に取りに行き、`_astro/fonts` に出す)
+- [Astro: プロジェクトの構成](https://docs.astro.build/en/basics/project-structure/) — 決まっている置き場は `src/pages/` だけ
+- [Astro: GitHub Pages への公開](https://docs.astro.build/en/guides/deploy/github/) — `withastro/action@v6` の例
+- [actions/setup-node のリリース](https://github.com/actions/setup-node/releases) — v7.1.0 が最新。v5 からの自動キャッシュ
+- [Dependabot が対応する仕組み](https://docs.github.com/en/code-security/dependabot/ecosystems-supported-by-dependabot/supported-ecosystems-and-repositories) — npm は v11 まで。Node.js の版を書いたファイルの項目は無い
+- `astro` 7.3.8 の型定義(`markdown.shikiConfig`・`fonts`)、`remark-github-blockquote-alert` 2.1.0 の型定義(設定の 3 項目)、`katex` 0.16.47 の `dist/katex.min.css` と `src/styles/fonts.scss`(フォントの指定の形)
