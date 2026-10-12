@@ -152,10 +152,14 @@ E_total = Σ_i E_i = const
 ## 2.1 情報は地平線に住む
 
 Bekenstein-Hawking：
-$$S_{BH} = \frac{A}{4\ell_P^2}$$
+$$
+S_{BH} = \frac{A}{4\ell_P^2}
+$$
 
 qubit 数として再解釈：
-$$N_{qubit} = \frac{A}{4\ell_P^2 \ln 2}$$
+$$
+N_{qubit} = \frac{A}{4\ell_P^2 \ln 2}
+$$
 
 各境界の保持する qubit 数は、その境界の幾何学的面積によって決定論的に固定される。
 
@@ -261,8 +265,12 @@ qubit が境界上で「どこに住むか」は基底依存。
 |AME階層|AME(4,2) 障害|純粋 volumetric 達成|
 
 **Shor 符号同型性**：
-$$|\bar{0}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle + |111\rangle)_i$$
-$$|\bar{1}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle - |111\rangle)_i$$
+$$
+|\bar{0}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle + |111\rangle)_i
+$$
+$$
+|\bar{1}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle - |111\rangle)_i
+$$
 
 > **単独 3qubit 取出 = no-cloning 定理違反**
 > 故に色閉じ込めが量子情報原理から直接導出される
@@ -280,10 +288,14 @@ Shor 符号の決定的性質：
 電荷の量子演算的表現：
 
 各クォーク GHZ ブロックに作用する U(1) 生成子：
-$$\hat{Q} = \sum_{i=1}^{3} \frac{q_i}{2}\, Z_{\text{block}}^{(i)}$$
+$$
+\hat{Q} = \sum_{i=1}^{3} \frac{q_i}{2}\, Z_{\text{block}}^{(i)}
+$$
 
 陽子 (uud) の場合：
-$$\hat{Q}_{\text{proton}} = \tfrac{2}{3}Z_L^{(1)} + \tfrac{2}{3}Z_L^{(2)} - \tfrac{1}{3}Z_L^{(3)} = +1 \cdot Z_L$$
+$$
+\hat{Q}_{\text{proton}} = \tfrac{2}{3}Z_L^{(1)} + \tfrac{2}{3}Z_L^{(2)} - \tfrac{1}{3}Z_L^{(3)} = +1 \cdot Z_L
+$$
 
 固有値 +1。
 
@@ -301,7 +313,9 @@ $$\hat{Q}_{\text{proton}} = \tfrac{2}{3}Z_L^{(1)} + \tfrac{2}{3}Z_L^{(2)} - \tfr
 
 これが photon との entanglement amplitude を**普遍化**する：
 
-$$|\gamma\rangle \otimes |q_{\text{ext}}\rangle \xrightarrow{\hat H_{\text{int}}} \alpha\text{ で entangle}$$
+$$
+|\gamma\rangle \otimes |q_{\text{ext}}\rangle \xrightarrow{\hat H_{\text{int}}} \alpha\text{ で entangle}
+$$
 
 **Dirac の謎の解消**：
 
@@ -408,7 +422,9 @@ qubit 階段の Phase 3-2 では、宇宙は本質的に 2 次元的な段階を
 
 電磁気の U(1) ゲージ対称性は外部添加された対称性じゃなく、
 
-$$U(1)_{\text{gauge}} = SO(2)_{\text{horizon tangent plane}}$$
+$$
+U(1)_{\text{gauge}} = SO(2)_{\text{horizon tangent plane}}
+$$
 
 **(2) 光子ヘリシティ = 凍結された平面回転**
 
@@ -462,11 +478,15 @@ Stage 3: 3qubit ⇌ 2qubit + 1qubit       (decay, 抑制大)
 
 電磁相互作用 Hamiltonian を qubit 言語で：
 
-$$\hat H_{\text{int}} = g\left(\hat a^\dagger_\gamma \otimes \hat X_Q + \text{h.c.}\right)$$
+$$
+\hat H_{\text{int}} = g\left(\hat a^\dagger_\gamma \otimes \hat X_Q + \text{h.c.}\right)
+$$
 
 電荷 $q$ の粒子に対し、光子放出/吸収の遷移振幅：
 
-$$\langle\gamma, p'|\hat H_{\text{int}}|p\rangle \propto q$$
+$$
+\langle\gamma, p'|\hat H_{\text{int}}|p\rangle \propto q
+$$
 
 確率（断面積）∝ $q^2$。
 
@@ -536,7 +556,9 @@ $$\langle\gamma, p'|\hat H_{\text{int}}|p\rangle \propto q$$
 ## 6.2 振動的インフレーション
 
 排他律の距離依存圧力（フェルミ気体的）：
-$$P = \frac{2}{5} n E_F, \quad E_F \propto n^{2/3}, \quad P_{\text{internal}} \propto n^{5/3}$$
+$$
+P = \frac{2}{5} n E_F, \quad E_F \propto n^{2/3}, \quad P_{\text{internal}} \propto n^{5/3}
+$$
 
 実効圧力の符号反転で振動駆動。
 
@@ -553,7 +575,9 @@ $$P = \frac{2}{5} n E_F, \quad E_F \propto n^{2/3}, \quad P_{\text{internal}} \p
 ## 6.4 宇宙定数問題への構造的解決
 
 標準QFT の問題：
-$$\rho_{\text{vac}}^{\text{QFT}} \sim M_{\text{Planck}}^4 \sim 10^{120} \times \rho_{DE}^{\text{obs}}$$
+$$
+\rho_{\text{vac}}^{\text{QFT}} \sim M_{\text{Planck}}^4 \sim 10^{120} \times \rho_{DE}^{\text{obs}}
+$$
 
 **本仮説の解決**：
 - すべての「場」は qubit register の異なる励起モード
@@ -569,7 +593,9 @@ $$\rho_{\text{vac}}^{\text{QFT}} \sim M_{\text{Planck}}^4 \sim 10^{120} \times \
 
 **重要な構造的発見**：
 
-$$\boxed{M_{\text{universe}}^{\text{observable}} = M_{dS,\text{Schwarzschild}}}$$
+$$
+\boxed{M_{\text{universe}}^{\text{observable}} = M_{dS,\text{Schwarzschild}}}
+$$
 
 数値検証（Planck 2018 + 計算）：
 
@@ -598,13 +624,19 @@ baryon (trinity)      : 4.93%   ← 内部 coupling 1 + 外部 α
 
 de Sitter horizon の qubit 容量から量子スケールが導出される：
 
-$$L_{\text{qubit}}^3 = \frac{V_{dS}}{N_{\text{qubit}}} = \frac{R_{dS}^3}{(R_{dS}/\ell_P)^2} = R_{dS} \cdot \ell_P^2$$
+$$
+L_{\text{qubit}}^3 = \frac{V_{dS}}{N_{\text{qubit}}} = \frac{R_{dS}^3}{(R_{dS}/\ell_P)^2} = R_{dS} \cdot \ell_P^2
+$$
 
-$$\boxed{L_{\text{qubit}} = \left(R_{dS} \cdot \ell_P^2\right)^{1/3}}$$
+$$
+\boxed{L_{\text{qubit}} = \left(R_{dS} \cdot \ell_P^2\right)^{1/3}}
+$$
 
 数値検証：
 
-$$L_{\text{qubit}} \approx 3.3 \times 10^{-15}\,\text{m}$$
+$$
+L_{\text{qubit}} \approx 3.3 \times 10^{-15}\,\text{m}
+$$
 
 陽子サイズ $\sim 10^{-15}$ m と order 一致（係数 ~4 のズレ）。
 
@@ -616,7 +648,9 @@ $$L_{\text{qubit}} \approx 3.3 \times 10^{-15}\,\text{m}$$
 
 α は基礎定数ではなく、holographic 帯域の確率的調整値：
 
-$$\alpha = \frac{B_{\text{boundary}}}{R_{\text{bulk}}} = \frac{\text{境界の情報書込帯域}}{\text{bulk からの entangle 要求 rate}}$$
+$$
+\alpha = \frac{B_{\text{boundary}}}{R_{\text{bulk}}} = \frac{\text{境界の情報書込帯域}}{\text{bulk からの entangle 要求 rate}}
+$$
 
 各 photon-charge 相互作用 event は binary：
 - **成功**：entangle（確率 $\alpha$）
@@ -648,7 +682,9 @@ $$\alpha = \frac{B_{\text{boundary}}}{R_{\text{bulk}}} = \frac{\text{境界の�
 
 これにより：
 
-$$\frac{1}{\alpha} = \frac{a_0}{\lambdabar_C^{(e)}} = \frac{\text{Pauli 排除距離}}{\text{固有 qubit スケール}} \approx 137$$
+$$
+\frac{1}{\alpha} = \frac{a_0}{\lambdabar_C^{(e)}} = \frac{\text{Pauli 排除距離}}{\text{固有 qubit スケール}} \approx 137
+$$
 
 Sommerfeld の 1916 年関係に構造的解釈が与えられる。
 
@@ -980,11 +1016,13 @@ T_BellPair = T_Hawking 同定から自動的に成立：
 7. **五本柱体系 (I)〜(V) の整理**（v7）
 
 **ホログラフィック構造部 (#8-#10)**：
+
 8. 境界レジスタ温度 = Hawking 温度の同定
 9. **qubit の position basis vs mode basis 双対性**（v7）
 10. **3 レベルの「速度制限」区別**（v7）
 
 **粒子分類部 (#11-#20)**：
+
 11. レプトン = 開2qubit対
 12. クォーク = 3qubit triangle
 13. **バリオン = 9qubit trinity = triaugmented triangular prism (J51)**（v7 で精密化）
@@ -997,6 +1035,7 @@ T_BellPair = T_Hawking 同定から自動的に成立：
 20. **電荷量子化の logical qubit 由来**（v7）
 
 **動力学部 (#21-#27)**：
+
 21. 反応カスケード
 22. 位相的境界遷移
 23. 排他律 = モノガミー + AME障害 + singlet
@@ -1006,6 +1045,7 @@ T_BellPair = T_Hawking 同定から自動的に成立：
 27. **電荷の 3 重表現整合**（v7）
 
 **次元と回転部 (#28-#33)**：
+
 28. 次元の段階的創発（1D → 2D → 3D）
 29. 「2次元時代」の予言
 30. **回転対称性の段階的創発（U(1) → SU(2) → SO(3)）**（v7）
@@ -1014,6 +1054,7 @@ T_BellPair = T_Hawking 同定から自動的に成立：
 33. **U(1) ゲージ = horizon tangent SO(2) の同定**（v7）
 
 **宇宙論部 (#34-#43)**：
+
 34. DM の境界張り付き性
 35. DM 二系統（熱+冷）
 36. DE/DM/Higgs/質量起源の register による統一
@@ -1026,6 +1067,7 @@ T_BellPair = T_Hawking 同定から自動的に成立：
 43. **Pauli 排除 → 距離 → coupling 階層的因果**（v7）
 
 **BH 部 (#44-#49)**：
+
 44. Hawking 放射 = qubit ejection
 45. 情報パラドックスの自動解消
 46. 形成・蒸発・対消滅・対生成の統一
@@ -1034,6 +1076,7 @@ T_BellPair = T_Hawking 同定から自動的に成立：
 49. 落下物体の地平線 qubit 化
 
 **観測予言部 (#50-#56)**：
+
 50. Bullet Cluster 制約自動充足
 51. 対消滅光子精密測定の予言
 52. 銀河中心 ガンマ線過剰の代替説明
@@ -1043,6 +1086,7 @@ T_BellPair = T_Hawking 同定から自動的に成立：
 56. **α の時間進化予言**（v7）
 
 **メタ部 (#57-#60)**：
+
 57. すべてを単一の qubit-only 言語で記述
 58. 標準 QFT を effective field theory として包含
 59. **Mach 原理の qubit-only 拡張**（v7）

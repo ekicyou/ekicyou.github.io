@@ -97,10 +97,14 @@ tags:
 ### 2.2 三厳密保存則
 
 **保存則A（qubit 数）：**
-$$N_\text{total} = \frac{A_\text{cosmic}}{4\ell_P^2 \ln 2} = \text{const}$$
+$$
+N_\text{total} = \frac{A_\text{cosmic}}{4\ell_P^2 \ln 2} = \text{const}
+$$
 
 **保存則B（総エネルギー）：**
-$$E_\text{total} = \sum_i E_i = \text{const}$$
+$$
+E_\text{total} = \sum_i E_i = \text{const}
+$$
 
 **保存則C（エンタングル構造）：**
 全モノガミー制約の総和は不変。
@@ -139,7 +143,9 @@ $$E_\text{total} = \sum_i E_i = \text{const}$$
 - de Sitter：$T_{dS} = \hbar H / (2\pi k_B c)$
 
 **鍵となる同定：**
-$$\boxed{T_\text{register} = T_\text{Hawking}}$$
+$$
+\boxed{T_\text{register} = T_\text{Hawking}}
+$$
 
 これから自動的に：
 - Hawking 放射率（Boltzmann 因子）
@@ -186,8 +192,12 @@ $$\boxed{T_\text{register} = T_\text{Hawking}}$$
 
 **Shor 符号同型性：**
 
-$$|\bar{0}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle + |111\rangle)_i$$
-$$|\bar{1}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle - |111\rangle)_i$$
+$$
+|\bar{0}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle + |111\rangle)_i
+$$
+$$
+|\bar{1}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle - |111\rangle)_i
+$$
 
 これは3つの GHZ 状態の階層的合成。
 
@@ -224,10 +234,10 @@ $$|\bar{1}\rangle = \frac{1}{2\sqrt{2}}\bigotimes_{i=1}^{3}(|000\rangle - |111\r
 
 | qubit数 | 単体次元 | 形 | 創発する次元 | BH段階 |
 |---|---|---|---|---|
-| 1 | 0-simplex | 点 | 0D | --- |
+| 1 | 0-simplex | 点 | 0D | — |
 | 2 | 1-simplex | 線分 | 1D = 前空間 | proto-BH（DM） |
 | 3 | 2-simplex | 三角形 | 2D = 境界面 | 半完成BH |
-| 4 | 3-simplex | 四面体 | 3D（だが AME(4,2) 障害） | --- |
+| 4 | 3-simplex | 四面体 | 3D（だが AME(4,2) 障害） | — |
 | **9** | **trinity** | **triaug. prism** | **3D（体積）** | **最小完備BH** |
 
 ### 4.2 AME(4,2) 障害
@@ -302,7 +312,9 @@ Stage 3: 3qubit ⇌ 2qubit + 1qubit          (decay, 強く抑制)
 ### 6.2 振動的インフレ
 
 距離依存圧力：
-$$P = \frac{2}{5} n E_F, \quad E_F \propto n^{2/3}$$
+$$
+P = \frac{2}{5} n E_F, \quad E_F \propto n^{2/3}
+$$
 
 実効圧力 $P_\text{eff} = P_\text{internal} - P_\text{external}$ の符号反転で振動駆動。
 
