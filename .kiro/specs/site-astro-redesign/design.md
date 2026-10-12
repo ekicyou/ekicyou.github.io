@@ -137,6 +137,7 @@ graph LR
 | `build` ジョブの権限 | `contents: read` だけにする。`pages: read` を外す | `pages: read` は Jekyll が Pages の API を読むための権限だった |
 | 型の検査 | 入れる(`astro check`) | 版上げの PR で、ビルドでは見つからない型の食い違いを見つける。版を固定しているので、記事を足すだけの push では結果が変わらない |
 | front matter の定義に無い項目 | ビルドを止める | `published` の打ち間違いで、非公開の記事が公開されるのを防ぐ。今の 18 本は、この定義で通る(確かめ済み) |
+| 本文のメールアドレス | 文書 `entanglement_cosmogenesis_v1_ja.md` の「連絡：」の行にあるメールアドレスは、原稿を直さず、今と同じく文字のまま出す。自動でリンク(`mailto:`)になるのを、`astro.config.mjs` の中の小さな部品(`rehypeNoMailto`)で止める(開発者の決め、2026-10-12) | 新しい処理系は、地の文のアドレスを自動でリンクにする。リンクは文字より拾われやすく、フッターからアドレスを外した狙い(3.25)と逆を向く。連絡先を載せたのは原稿の意図なので、本文は書き換えない(2.2)。そのまま置く TeX と PDF にも同じアドレスがあるが、中身を変えない決まり(1.3)により据え置く(今も公開中のもの)。確かめ済み: 部品を入れると、どのページにも `mailto:` が出ず、アドレスは文字として残る |
 | favicon の置き場 | `/favicon.ico` は置かない。各ページの `<link rel="icon">` で指す。新しい絵柄を作るときは `/_astro/` の下に出す | 保つべきパスを増やさない。今の `/img/favicon.ico`・`/img/favicon.png` は公開し続ける |
 
 **要件との差が 1 つある**: Node.js の版上げは、Dependabot が提案できない(版を書いたファイルに対応していない)。7.3 のうち実行環境の分は、提案ではなく手順で補う。Astro の版上げの PR が新しい Node.js を求めたときは、その PR のビルドが失敗して気付ける。`tech.md` に、Node.js の版を見直す手順を書く。生成ツールとその依存の版上げは、Dependabot が提案する。
@@ -418,7 +419,7 @@ graph TB
 |---|---|---|
 | `markdown.processor` | `unified({ remarkPlugins, rehypePlugins })` | 従来の処理系を使う。プラグインはここへ渡す(`markdown.remarkPlugins` は廃止予定) |
 | `remarkPlugins`(順番どおり) | `remark-cjk-friendly`、`remark-math`、`remarkAlert` | 約物に接した太字(2.13)、数式の読み取り(4.4)、囲み(2.6) |
-| `rehypePlugins` | `rehype-katex`(`strict: false`、`macros` に `\lambdabar` の定義) | 数式をビルド時に描く。`\lambdabar` を記号として出す(2.13) |
+| `rehypePlugins` | `rehypeNoMailto`(このファイルの中に書く、十数行の部品)、`rehype-katex`(`strict: false`、`macros` に `\lambdabar` の定義) | `href` が `mailto:` で始まるリンクを、中の文字に戻す(3.25)。数式をビルド時に描く。`\lambdabar` を記号として出す(2.13) |
 | `markdown.shikiConfig` | `themes: { light, dark }`、`defaultColor: false` | 色を `--shiki-light`・`--shiki-dark` などの CSS の変数として出す。配色の名前は画面の案で決める |
 | `vite.plugins` | KaTeX のスタイルシートから `woff` と `ttf` の指定を落とす、小さな変換 | 公開物に出るフォントを `woff2` だけにする(1.6) |
 
@@ -610,7 +611,7 @@ interface SiteConfig {
 ```
 
 - giscus の値は、今の `site/_includes/giscus_comments.html` と同じ 12 項目にする(`research.md` の §2.3 の i の表)。要になるのは、リポジトリ `ekicyou/ekicyou.github.io`(`MDEwOlJlcG9zaXRvcnk2OTMzMzcz`)、カテゴリ `Announcements`(`DIC_kwDOAGnLfc4CzVb5`)、対応の取り方 `pathname`、配色 `preferred_color_scheme` である。
-- メールアドレスの項目は持たない(3.25)。`site/_config.yml` を消すことで、リポジトリの `site/` からもメールアドレスが消える。
+- メールアドレスの項目は持たない(3.25)。`site/_config.yml` を消すことで、サイトの設定からメールアドレスが消える。文書 1 本の本文と、そのまま置く TeX・PDF には残る(「設計で決めた点」の「本文のメールアドレス」)。
 
 ### ルート
 
@@ -822,7 +823,7 @@ interface ArticleProps extends PageMeta {
 |---|---|---|
 | 誤り | `tests/kept-paths.txt` のパスが、綴りも同じで、すべてある | 1.1, 1.2 |
 | 誤り | すべてのパスが、認める形のどれかに合う: `/index.html`・`/about.html`・`/404.html`・`/feed.xml`、`/YYYY/MM/DD/<名前>.html`、`/doc/…`、`/img/…`、`/_astro/…` | 1.4, 1.5, 1.6, 1.7 |
-| 誤り | どの HTML にも `mailto:` が無い | 3.25 |
+| 誤り | どの HTML にも、メールのリンク(`href="mailto:`)が無い。文字としての `mailto:`(コードの例など)は誤りにしない | 3.25 |
 | 誤り | どの HTML にも、`lang="ja"`、絶対 URL の正規の URL、フィードの場所、favicon の指定がある | 3.5, 3.26, 4.8, 4.11 |
 | 誤り | トップページ(`index.html`)の `og:image` が、アイコン絵の絶対 URL である | 4.15 |
 | 警告 | `/` で始まるリンクと画像の先が、`dist/` にある(別リポジトリのページ `/ghost_dev/`・`/nyan-pu-puu/`・`/zzz-pasta/`・`/old/` を除く) | 2.7 |
@@ -940,7 +941,7 @@ interface ArticleProps extends PageMeta {
 | `title` が無い、型が違う、知らない項目がある | ContentCollections | ビルドを止める | コレクション名、識別子、項目名、ファイルの場所 |
 | 記事のファイル名が決まりに合わない(形、日付、`index`、サブフォルダ) | PostPath | ビルドを止める | 理由と識別子 |
 | 保つパスが消えた、認めない形のパスが出た | DistVerifier | ビルドを止める | 消えたパス、または想定外のパス |
-| `mailto:` が出た、`<head>` の決まった項目が欠けた | DistVerifier | ビルドを止める | 該当の HTML |
+| メールのリンク(`href="mailto:`)が出た、`<head>` の決まった項目が欠けた | DistVerifier | ビルドを止める | 該当の HTML |
 | サイト内のリンクや画像の先が無い | DistVerifier | 警告だけ | リンク元とリンク先 |
 | KaTeX が読めない数式 | `rehype-katex`、DistVerifier | 警告だけ(その数式は TeX の文字のまま、目立つ色で出る) | 該当の HTML |
 | 知らない言語名のコード | Shiki | 警告だけ(色付けなしで出る) | ビルドの記録 |
@@ -968,14 +969,14 @@ interface ArticleProps extends PageMeta {
 
 - 保つ 28 個のパスが、すべて出る(1.1)。認めない形のパス(`/site/…`、サイトマップ、別リポジトリと同じトップ階層)が出ない(1.4、1.5、1.7)。
 - 非公開の 3 本(`/2016/08/17/GODZILLA.html`、`/2016/07/08/dcomp.html`、`/2019/08/31/IMM_API.html`)が出ない(2.11)。認めるパスの形には合うので、成果物の検査が、原稿の `published: false` と突き合わせて、ビルドのたびに確かめる。
-- どの HTML にも `mailto:` が無く、`lang`・正規の URL・フィードの場所・favicon がある(3.5、3.25、3.26、4.8、4.11)。
+- どの HTML にもメールのリンク(`href="mailto:`)が無く、`lang`・正規の URL・フィードの場所・favicon がある(3.5、3.25、3.26、4.8、4.11)。
 - トップページ(`index.html`)の `og:image` が、アイコン絵の絶対 URL である(4.15)。成果物の検査が、誤りとして確かめる。
 - サイト内のリンクと画像の警告が 0 件である(2.7。移行のとき)。
 
 ### 1 回きりの確かめ(移行のとき。結果を移行の記録に残す)
 
 - **検査が働くこと**: `title` を消した記事、知らない項目を足した記事、名前が `index` の記事を仮に置き、ビルドがファイルを示して止まることを確かめる。確かめたら消す(2.4)。
-- **成果物の検査が働くこと**: 次のそれぞれで、`npm run verify` が終了コード 1 で止まることを確かめる。確かめたら元に戻す。保つパスの一覧の 1 行を、無いパスに替える。`dist/old/` にファイルを置く。`dist/` の HTML に検査が誤りとするものを書き足す。非公開の記事のパス(`dist/2016/08/17/GODZILLA.html`)にファイルを置く。何でも通す検査は、通っている限り気付けないためである。
+- **成果物の検査が働くこと**: 次のそれぞれで、`npm run verify` が終了コード 1 で止まることを確かめる。確かめたら元に戻す。保つパスの一覧の 1 行を、無いパスに替える。`dist/old/` にファイルを置く。`dist/` の HTML に `href="mailto:` を書き足す。非公開の記事のパス(`dist/2016/08/17/GODZILLA.html`)にファイルを置く。何でも通す検査は、通っている限り気付けないためである。
 - **`katex` の版**: `npm ls katex` が、1 つの版だけを返す(直に入れた `katex` と、`rehype-katex` が使う `katex` が同じ)。版上げの PR でも、ここを見る。ずれると、数式の HTML とスタイルシートが別の版になる。
 - **記事を足す流れ**: 決まりどおりの記事を 1 本仮に置き、公開パス・一覧・フィードに出ることを確かめる。`published: false` にすると、どこにも出ないことを確かめる。確かめたら消す(2.9、2.11)。
 - **フィード**: `/feed.xml` に、公開中の記事がすべて、新しい順に載っている。項目に、題名・絶対 URL・日付・説明がある。本文の全文が無い(4.10)。
@@ -999,7 +1000,7 @@ interface ArticleProps extends PageMeta {
 ## Security Considerations
 
 - **外部の読み込み**: 閲覧者のブラウザが読みに行く外部は、giscus(GitHub のディスカッション)と Google Fonts だけである。どちらも、閲覧者の IP アドレスが相手に伝わる。giscus は今も同じである。
-- **個人の情報**: メールアドレスを、ページにも、`site/` の設定にも置かない。成果物の検査が `mailto:` を誤りにする。
+- **個人の情報**: メールアドレスを、サイトの枠(ヘッダー、フッター)と設定に置かない。メールのリンク(`mailto:`)は、どのページにも出さない。成果物の検査が `href="mailto:` を誤りにする。文書 1 本の本文には、原稿の意図どおり、文字として残る(今と同じ見え方)。そのまま置く TeX と PDF にも残る(今も公開中)。
 - **権限**: `build` ジョブは `contents: read` だけで動く。書き込みの権限は、今のまま `deploy` だけが持つ。Dependabot の PR の読み取り専用のトークンでも、ビルドは動く。
 - **依存の弱点の報告**: `npm audit` は、数式の部品の系統(`katex`)で報告を出すことがある。ビルド時に、自分の原稿を処理するだけの部品であり、閲覧者の入力は通らない。版上げは Dependabot の提案で受ける。
 - **原稿の中の HTML**: 原稿の HTML は、そのまま出る(今と同じ)。原稿を書くのは開発者だけである。
