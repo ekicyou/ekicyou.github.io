@@ -1,4 +1,4 @@
-# site/ の原稿からサイトをビルドし、master のときだけ GitHub Pages へ公開する。
+# site/ の Astro のプロジェクトからサイトをビルドし、master のときだけ GitHub Pages へ公開する。
 # PR ではビルドだけを行い、公開しない。
 name: pages
 
@@ -26,19 +26,33 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      # Jekyll がビルド中に Pages の API を読んで site.url を決める。
-      pages: read
+    # Astro の利用状況の送信を止める。送る理由が無い。
+    env:
+      ASTRO_TELEMETRY_DISABLED: 1
+    # run の手順は site/ で動かす。uses の手順には効かないので、そちらのパスはリポジトリの根から書く。
+    defaults:
+      run:
+        working-directory: site
     steps:
       - uses: actions/checkout@v7
-      # 出力を決める部品なので、細かい版まで指定する。
-      - uses: actions/jekyll-build-pages@v1.0.13
+      # 版のファイルには主版だけを書いてあり、その主版の中の版が入る(ランナーに入っている版が先に使われる)。
+      # キャッシュは使わない。npm ci は短く済み、壊れ方を 1 つ減らせる。
+      - uses: actions/setup-node@v7
         with:
-          source: ./site
-          destination: ./_site
+          node-version-file: site/.node-version
+          package-manager-cache: false
+      # ロックファイルどおりに入れる。新しい版を勝手に取り込まない。
+      - run: npm ci
+      # 型の検査 → 単体テスト → ビルド → 成果物の検査。
+      # どれかが落ちれば成果物を保存せず、公開もしない。
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+      - run: npm run verify
       # 成果物の名前は既定の github-pages。deploy はこの名前で受け取る。
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: ./_site
+          path: site/dist
 
   deploy:
     needs: build
