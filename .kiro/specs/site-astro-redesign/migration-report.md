@@ -182,7 +182,7 @@ v1 の「4.1 qubit 階段」の表の、「BH段階」の列である。「—�
 - 属性は 15 個(`src`、`data-*` が 12 個、`crossorigin`、`async`)。3 つとも同じ 15 個で、過不足も、値の違いも無い。
 - **コメントとの対応**: 対応の取り方は `pathname`(ページのパスから拡張子を除いた文字)のままである。手元の表示で `/2026/03/26/emo2.html` を開くと、giscus の `<iframe>` は `term=2026/03/26/emo2` で作られた。記事 12 本のパスは、公開中のサイトと成果物とで同じである(12 本とも、公開中は 200 を返して埋め込みを 1 つ持ち、成果物も同じパスに埋め込みを 1 つ持つ)。リポジトリ、カテゴリ、対応の取り方、パスの 4 つが変わらないので、ページとディスカッションの対応は切れない。なお、ページに結び付いたディスカッションは、まだ 1 つも無い(`research.md` の §2.3 の i)。
 - **埋め込みの周りの違い**(対応には響かない): 前は、スクリプトの前に空の `<div id="giscus_thread">` を置き、本番のビルドのときだけ出していた。後は、`<section class="comments" aria-label="コメント">` で包み、手元の表示でも出す(`design.md` の「設計で決めた点」)。コメント欄は、後でも、スクリプトの直後(`<section>` の中)に作られる。
-- **出るページ**: 成果物の HTML 13 個のうち、埋め込みを持つのは記事の 12 個。`/404.html` には無い。公開中のサイトも、`/`、`/about.html`、`/404.html` には無い。文書の 2 ページと About・トップは、まだルートが無い(タスク 5.1、5.2)。文書も同じ部品(`Comments.astro`)を通る。
+- **出るページ**: 成果物の HTML 13 個のうち、埋め込みを持つのは記事の 12 個。`/404.html` には無い。公開中のサイトも、`/`、`/about.html`、`/404.html` には無い。文書の 2 ページと About・トップは、まだルートが無い(タスク 5.1、5.2)。文書も同じ部品(`Comments.astro`)を通る。その後、タスク 8.4 のビルド(HTML 17 本、2026-10-15)で数え直すと、埋め込みを持つのは記事 12 本と文書 2 本の 14 個で、About・トップ・404 には無い。
 - **`comments: false`**(Requirement 4 の 2): 記事 1 本(`2016-02-16-code.md`)を仮に `comments: false` にしてビルドすると、そのページだけ埋め込みが消えた(12 個 → 11 個)。確かめた後、原稿はバイト一致で戻した。
 - **配色**(Requirement 3 の 15): 手元の表示(`/2026/01/06/syuzo-to.html`)で、ブラウザの配色を明るい・暗いに切り替えて見た。コメント欄は、明るい配色では明るく、暗い配色では暗く出た。`<iframe>` の `theme` は、どちらも `preferred_color_scheme`。ログインも投稿もしていない。
 
@@ -556,17 +556,160 @@ v1 の「4.1 qubit 階段」の表の、「BH段階」の列である。「—�
   - 成果物の保存: `github-pages`(1,367,393 バイト)。
 - `deploy` ジョブは動いていない(skipped)。`master` 以外の手動の実行なので、公開はしていない。
 
+## 要件と設計の段で済んだ確かめの在り処
+
+次の 2 つは、実装の前(要件と設計の段)に済ませた。実装では、その結果を使った。
+
+- **画面の案を作って見比べること**(Requirement 3 の 12): 案の作り方、用意した案(A〜D の 4 つ)、見たページと条件(明暗、広い幅と狭い幅)、決まった値は、`design.md` の「画面の案」の節にある(決まった値は「決まった見た目(2026-10-12)」の表)。開発者が選んだ案 D「どっと方眼」の実物は `.kiro/specs/site-astro-redesign/look/`(スタイル 3 つ、レイアウト 2 つ、部品 11 個、`README.md`)にある。案そのものは、リポジトリの外に作り、コミットしていない(Requirement 9 の 8)。
+- **試作**(Requirement 9 の 6、7): 置き場と作り・使った版・確かめた結果(a〜i)・要件と設計への含みは、`research.md` の §2(§2.1〜§2.4)にある。Requirement 9 の 6 の 3 つは、§2.3 の a(URL)、c と d(数式とコード)、g(Windows と手元の Node.js での手元の表示)。結果を要件ディスカッションへ持ち込んで決めたことは、`requirements.md` の「要件ディスカッションの結果」にある。試作も、リポジトリの外に作り、コミットしていない(Requirement 9 の 8)。
+
 ## パスの突き合わせ
 
-(タスク 8.4 で書く。消えるパスと、増えるパス。)
+タスク 8.4 で確かめた(2026-10-15)。切り替えの前の公開物と、新しいビルドの成果物とを、公開されるパスの一覧で突き合わせた(Requirement 9 の 1、2)。
+
+**基準が今も正しいこと**(`design.md` の「Migration Strategy」の B):
+
+- 2026-10-15 07:59(日本時間)に `git fetch origin` を行い、`git rev-parse origin/master` を見た。結果は `da322dd7da2eb1d0ed878de55813eb837350f1d8` で、基準を取ったコミットと同じである。`master` は動いていない。足された記事も、作り直す一覧も無い。
+- このブランチと `origin/master` の分かれ目(`git merge-base HEAD origin/master`)も `da322dd` である。
+
+**突き合わせ方**: ブランチの先頭 `ad9aca2` の作業ツリーで、`site/` から `npm run build`(17 ページ、終了コード 0)を行い、続けて `node scripts/verify-dist.mjs --baseline ../.kiro/specs/site-astro-redesign/baseline-paths.txt`(終了コード 0)を行った。
+
+- 基準: 53 個。成果物: 49 個。両方にあるパス: 28 個(記事 12、文書 2、About、トップ、404、フィード、文書に添えるファイル 3、画像 7)。
+- 検査の仕掛けの出力の最後の行は「参考: /assets/ の外で消えるパス 0 個、/_astro/ の外で増えるパス 0 個」。
+- **自分の手での照合**: `node scripts/verify-dist.mjs --list`(49 行)と基準の一覧を、それぞれ並べ替えて `comm` で比べた。消えるパス 25 個(うち `/assets/` の外は 0 個)、増えるパス 21 個(うち `/_astro/` の外は 0 個)、両方にあるパス 28 個で、仕掛けの出力と一致した。`dist/` のファイルの数(`find dist -type f`)も 49 個である。
+
+**消えるパス(25 個。どれも `/assets/` の下)**: Jekyll の見た目(minima)の出力で、設計の「消えてよいパス」と同じである。
+
+- `/assets/css/style.css`
+- `/assets/fonts/Noto-Sans-700/Noto-Sans-700.{eot,svg,ttf,woff,woff2}`(5 個)
+- `/assets/fonts/Noto-Sans-700italic/Noto-Sans-700italic.{eot,svg,ttf,woff,woff2}`(5 個)
+- `/assets/fonts/Noto-Sans-italic/Noto-Sans-italic.{eot,svg,ttf,woff,woff2}`(5 個)
+- `/assets/fonts/Noto-Sans-regular/Noto-Sans-regular.{eot,svg,ttf,woff,woff2}`(5 個)
+- `/assets/img/logo.png`
+- `/assets/js/scale.fix.js`
+- `/assets/main.css`
+- `/assets/minima-social-icons.svg`
+
+**増えるパス(21 個。どれも `/_astro/` の下)**: スタイルシート 2 個と、数式のフォント(`woff2`)19 個である。名前の中の印はビルドの中身で変わるので、数と種類だけを見る。
+
+- スタイルシート: `/_astro/BaseLayout.BMO6HV9o.css`、`/_astro/katex.min.BYkPozyE.css`
+- 数式のフォント: `/_astro/KaTeX_AMS-Regular.BQhdFMY1.woff2`、`/_astro/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2`、`/_astro/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2`、`/_astro/KaTeX_Fraktur-Bold.CL6g_b3V.woff2`、`/_astro/KaTeX_Fraktur-Regular.CTYiF6lA.woff2`、`/_astro/KaTeX_Main-Bold.Cx986IdX.woff2`、`/_astro/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2`、`/_astro/KaTeX_Main-Italic.NWA7e6Wa.woff2`、`/_astro/KaTeX_Main-Regular.B22Nviop.woff2`、`/_astro/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2`、`/_astro/KaTeX_Math-Italic.t53AETM-.woff2`、`/_astro/KaTeX_SansSerif-Bold.D1sUS0GD.woff2`、`/_astro/KaTeX_SansSerif-Italic.C3H0VqGB.woff2`、`/_astro/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2`、`/_astro/KaTeX_Script-Regular.D3wIWfF6.woff2`、`/_astro/KaTeX_Size1-Regular.mCD8mA8B.woff2`、`/_astro/KaTeX_Size2-Regular.Dy4dx90m.woff2`、`/_astro/KaTeX_Size4-Regular.Dl5lxZxV.woff2`、`/_astro/KaTeX_Typewriter-Regular.CO6r4hn1.woff2`
+
+**判定**: 差は、消える `/assets/` の 25 個と、増える `/_astro/` の 21 個だけである。意図しない差は無い。マージを止める差は無い(Requirement 9 の 2)。この結果は、タスク 8.5 で開発者に示す(Requirement 9 の 1)。
 
 ## 履歴
 
-(タスク 8.4 で書く。移した原稿の履歴が、移す前まで辿れること。)
+タスク 8.4 で確かめた(2026-10-15)。移した原稿 18 本(記事 15、文書 2、About 1)の履歴が、移す前まで辿れることを見た(Requirement 2 の 16)。
+
+**このブランチの上で**: 移動のコミットは `1181eeb`(タスク 2.1。28 個すべてが `R100`、中身は同じ)。18 本それぞれに `git log --follow -- <新しいパス>` を打ち、`1181eeb` より古いコミットまで出ることを見た。18 本とも、移動の前の履歴まで辿れた。
+
+| 新しいパス(`site/src/content/` の下) | 出たコミット | うち移動より古いもの | 一番古いコミット(そのときのパス) |
+|---|---|---|---|
+| `doc/cosmogenesis/entanglement_cosmogenesis_v1_ja.md` | 6 | 4 | `1a31013` 2026-05-06(`doc/cosmogenesis/entanglement_cosmogenesis_v1_ja.md`) |
+| `doc/cosmogenesis/entanglement_cosmogenesis_v7_ja.md` | 5 | 2 | `31a85d4` 2026-05-10(`doc/cosmogenesis/entanglement_cosmogenesis_v7_ja.md`) |
+| `pages/about.md` | 12 | 11 | `e116822` 2018-08-26(`about.md`) |
+| `posts/2014-10-04-pasta.md` | 4 | 3 | `1be61f1` 2018-08-26(`_posts/2014-10-04-pasta.md`) |
+| `posts/2016-02-16-code.md` | 3 | 2 | `1be61f1` 2018-08-26(`_posts/2016-02-16-code.md`) |
+| `posts/2016-06-18-sun.md` | 3 | 2 | `1be61f1` 2018-08-26(`_posts/2016-06-18-sun.md`) |
+| `posts/2016-07-08-dcomp.md` | 4 | 3 | `1be61f1` 2018-08-26(`_posts/2016-07-08-dcomp.md`) |
+| `posts/2016-08-17-GODZILLA.md` | 3 | 2 | `1be61f1` 2018-08-26(`_posts/2016-08-17-GODZILLA.md`) |
+| `posts/2018-08-26-new_site.md` | 6 | 5 | `8a1db3d` 2018-08-26(`_posts/2018-08-26-new_site.md`) |
+| `posts/2019-08-31-IMM_API.md` | 4 | 3 | `c9c5203` 2019-08-27(`_posts/2019-08-31-IMM_API.md`) |
+| `posts/2020-08-10-emo.md` | 17 | 16 | `c552f91` 2020-08-10(`_posts/2020-08-10.md`) |
+| `posts/2024-01-01-nyan_pu_puu.md` | 10 | 9 | `c639de4` 2024-01-01(`_posts/2024-01-01-nyan-pu-puu.md`) |
+| `posts/2024-12-23-nyan_pu_puu_word.md` | 35 | 34 | `c639de4` 2024-01-01(`_posts/2024-01-01-nyan-pu-puu.md`) |
+| `posts/2025-12-06-mascot_requirements.md` | 43 | 42 | `c639de4` 2024-01-01(`_posts/2024-01-01-nyan-pu-puu.md`) |
+| `posts/2026-01-06-syuzo-to.md` | 12 | 11 | `d9d57cb` 2026-01-06(`_posts/2026-01-06-syuzo.md`) |
+| `posts/2026-02-06-pasta.md` | 9 | 7 | `63c8574` 2026-02-06(`2026-02-06-pasta.md`) |
+| `posts/2026-03-26-emo2.md` | 4 | 3 | `f99dd63` 2026-03-26(`_posts/2026-03-26-emo2.md`) |
+| `posts/2026-05-06-cosmogenesis.md` | 7 | 6 | `1a31013` 2026-05-06(`_posts/2026-05-06-cosmogenesis.md`) |
+
+- 移動の 1 つ前のコミットは、どれも `da322dd`(1 本目の spec。ルートから `site/` へ移した)で、そこから先も名前の変更として辿れた。例: `2026-02-06-pasta.md` は `fa03dbd`(直し) → `1181eeb`(`R100`) → `da322dd`(`R100`) → `4151d6c`・`7056d6d`(`_posts/` での書き換え) → `049a3ce`(`R100`、ルートから `_posts/` へ)。
+- `2024-12-23-nyan_pu_puu_word.md` と `2025-12-06-mascot_requirements.md` の一番古いコミットが `2024-01-01-nyan-pu-puu.md` になるのは、`--follow` が昔の似た中身の記事を元と見たためで、この移行とは関わらない(移行の前の `master` でも同じに出る)。
+
+**squash の後も辿れるか**: この spec は 1 つの PR の squash で `master` に入るので、移動と直しのコミットは 1 つにまとまる(`design.md` の「移行の記録に残すもの」)。支えになるのは、git の名前変更の検出(中身の似かたが 50% 以上)である。
+
+- `git diff -M --name-status origin/master HEAD -- site/` で、squash のコミットが持つ差を見た。移した 28 個は、どれも `R`(名前の変更)と出た。直した 3 本の似かたは、v1 が 97%(`R097`)、v7 が 96%(`R096`)、`2026-02-06-pasta.md` が 93%(`R093`)で、ほかの 25 個は 100%。
+- squash の姿を、ref を動かさずに確かめた。`git commit-tree 'HEAD^{tree}' -p origin/master` で、`origin/master` の上に今のツリーを載せたコミットの物(`5c26560`)を作り、どのブランチにも付けずに、18 本それぞれに `git log --follow 5c26560 -- <新しいパス>` を打った。18 本とも、そのコミットが `R093`〜`R100` の名前の変更として出て、その先に、上の表の「移動より古いもの」と同じ数のコミットが続いた(例: About は 1 + 11 = 12、pasta は 1 + 7 = 8、v7 は 1 + 2 = 3)。squash でマージしても、移す前の履歴まで辿れる見込みである。作った物はどの ref からも指されず、git の掃除で消える。
+- マージの後に、`master` の上で 1 本だけ `git log --follow` を打って、同じことを確かめるとよい(下の「公開後の確かめ」の 6)。
 
 ## 公開後の確かめ
 
-(欄はタスク 8.4 で作る。結果は、公開の後に `/kiro-complete` が書く。)
+欄はタスク 8.4 で作った(2026-10-15)。結果は、マージと公開の後に `/kiro-complete` が書く(Requirement 9 の 4、5)。崩れていたら、その場で開発者に報告し、`tech.md` の「戻し方」(まず前へ直す PR、見た目が崩れたまま公開されたなら R3)を示す。戻す操作は、開発者の許しを得るまで行わない。
+
+- 確かめた日時: 公開後に書く
+- 公開した `master` のコミットと、`pages.yml` の実行の番号と成否: 公開後に書く
+- 判定は状態コードで行う(無いパスにも 404 ページの中身が返る)。公開の直後は、CDN が最長 10 分ほど前の応答を返すことがあるので、期待と違ったら少し待って確かめ直す。コマンドは `workflow.md` の「代表パス」にある。
+
+**1. 応答するはず(200)**: `workflow.md` の「代表パス」と同じ 8 つ。
+
+| パス | 期待 | 結果 |
+|---|---|---|
+| `/` | 200 | 公開後に書く |
+| `/about.html` | 200 | 公開後に書く |
+| `/feed.xml` | 200 | 公開後に書く |
+| `/2026/03/26/emo2.html` | 200 | 公開後に書く |
+| `/doc/cosmogenesis/entanglement_cosmogenesis_v1_ja.html` | 200 | 公開後に書く |
+| `/doc/cosmogenesis/entanglement_cosmogenesis_v1.pdf` | 200 | 公開後に書く |
+| `/img/alto0044_400x400.png` | 200 | 公開後に書く |
+| トップページの HTML が指す `/_astro/…css`(名前は HTML から読み取り、ここに書く。空なら崩れ) | 200 | 公開後に書く |
+
+**2. 応答しないはず(404)**: `workflow.md` の「代表パス」と同じ 7 つ。
+
+| パス | 期待 | 結果 |
+|---|---|---|
+| `/site/` | 404 | 公開後に書く |
+| `/CLAUDE.md` | 404 | 公開後に書く |
+| `/README.md` | 404 | 公開後に書く |
+| `/package.json` | 404 | 公開後に書く |
+| `/src/content/posts/2026-03-26-emo2.md` | 404 | 公開後に書く |
+| `/sitemap.xml` | 404 | 公開後に書く |
+| `/assets/main.css`(切り替えで消えたパス) | 404 | 公開後に書く |
+
+**3. 別リポジトリの画像の飾り**: 手元の表示では 404 で見られなかった 3 つを、公開中のサイトのブラウザで見る(「画面の確かめ」の「別リポジトリの画像」)。画像が出ること、本文の画像の飾り(角丸、3px の点線の枠、影など。「画面の確かめ」の「決まった見た目の表との突き合わせ」の「画像の飾り」と同じ)が当たって崩れていないことを、明るい配色と暗い配色で見る。
+
+| 記事 | 画像 | 画像が出るか | 飾りの見え方 |
+|---|---|---|---|
+| `/2024/01/01/nyan_pu_puu.html` | `/nyan-pu-puu/images/surface0.png` | 公開後に書く | 公開後に書く |
+| `/2026/03/26/emo2.html` | `/ghost_dev/emo2/images/5.png` | 公開後に書く | 公開後に書く |
+| `/2026/03/26/emo2.html` | `/ghost_dev/emo2/images/code.png` | 公開後に書く | 公開後に書く |
+
+- 透過の絵などで飾りが合わないものは、スタイルシートの「飾らない画像」の一覧に挙げるかを、開発者が決める(`design.md` の「画像の飾りから外す決まり」)。
+
+**4. コメント欄が付いたままか**: 公開中の `/2026/03/26/emo2.html` を開き、giscus の `<iframe>` が `term=2026/03/26/emo2`(対応の取り方 `pathname`)で作られることを見る(「コメント欄の設定の突き合わせ」)。投稿はしない。
+
+- 結果: 公開後に書く
+
+**5. フィード**: `/feed.xml` が 200 で、RSS 2.0 として読め、12 項目のリンクが `https://ekicyou.github.io` + 公開パス(`.html` つき)であることを見る(「検査の確かめ」の 5)。
+
+- 結果: 公開後に書く
+
+**6. `master` の上の履歴**: マージの後の `master` で、1 本(例: `site/src/content/posts/2026-02-06-pasta.md`)に `git log --follow` を打ち、squash のコミットの先に、移す前のコミット(`049a3ce` など)が出ることを見る(上の「履歴」)。
+
+- 結果: 公開後に書く
+
+**判定**: 公開後に書く(崩れが無い、または、崩れの中身と開発者への報告)
+
+## 記録の欄のそろい
+
+タスク 8.4 で、`tasks.md` の 8.4 が挙げる欄がそろっていることを見た(2026-10-15)。
+
+| 欄 | 在り処 | 状態 |
+|---|---|---|
+| 直した箇所の一覧 | 「直した箇所の一覧」(タスク 2.2、6.2) | 済み |
+| 数式の確かめ | 「数式の確かめ」(タスク 6.2) | 済み |
+| 検査の確かめ: 成果物の検査の仕掛け | 「検査の確かめ」の 1(タスク 6.3) | 済み |
+| 検査の確かめ: front matter | 「検査の確かめ」の 2 | 済み |
+| 検査の確かめ: 記事を足す流れ | 「検査の確かめ」の 3 | 済み |
+| 検査の確かめ: バイト一致 | 「検査の確かめ」の 4 | 済み |
+| 検査の確かめ: フィード、`katex` の版 | 「検査の確かめ」の 5 | 済み |
+| `look/` との差分 | 「`look/` との差分」(タスク 8.1) | 済み |
+| Linux の確かめ | 「Linux の確かめ」(タスク 7.4) | 済み |
+| パスの突き合わせ | 「パスの突き合わせ」(タスク 8.4) | 済み |
+| 履歴 | 「履歴」(タスク 8.4) | 済み |
+| 要件と設計の段で済んだ確かめの在り処 | 「要件と設計の段で済んだ確かめの在り処」(タスク 8.4) | 済み |
+| 公開後の確かめ | 「公開後の確かめ」(欄はタスク 8.4) | 結果は公開後に `/kiro-complete` が書く |
+| 開発者の許し | 「開発者の許し」 | タスク 8.5 で書く |
 
 ## 開発者の許し
 
