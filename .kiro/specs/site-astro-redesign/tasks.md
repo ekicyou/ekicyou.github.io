@@ -193,7 +193,7 @@
   - 完了の姿: 3 つのファイルに、Jekyll を前提にした記述が残っていない(`Jekyll`・`_posts`・`Gemfile`・`MathJax` を探して、経緯の説明のほかに出ない)。
   - _Boundary: tech.md, structure.md, product.md_
   - _Requirements: 5.1, 10.1, 10.2, 10.5, 10.6_
-- [ ] 8.3 (P) `workflow.md` の「検証」節と、`CLAUDE.md`・`README.md`・`roadmap.md` を、新しい姿に合わせる
+- [x] 8.3 (P) `workflow.md` の「検証」節と、`CLAUDE.md`・`README.md`・`roadmap.md` を、新しい姿に合わせる
   - 「検証」節: 手元の表示の始め方、マージの前の確かめ(型の検査・単体テスト・ビルド・成果物の検査、PR のビルド)、新しい代表パス(応答するはずのものと、しないはずのもの)、手元からコメント欄に投稿しないこと、公開後に崩れていたときの報告と戻し方への案内。
   - `CLAUDE.md`・`README.md`・`roadmap.md`: 生成ツールと置き場の記述。
   - 完了の姿: 「検証」節の代表パスに、Jekyll の出力を前提にしたパスが、「応答しないはず」のほかに残っていない。`CLAUDE.md` と `README.md` が、Astro と新しい置き場を書いている。
@@ -217,6 +217,8 @@
 ## Implementation Notes
 
 - 1.1: `npm audit` が low を 4 件出す(`katex` 0.11.0〜0.18.1 への勧告 GHSA-238p-pmpm-9mq7 と、その波及)。直る版は `katex` 0.19.0 だが、`rehype-katex` 7.0.1 が `katex ^0.16.0` を求めるので、上げると版が 2 つになる。設計の固定(0.16.47)のまま据え置いた。数式はビルド時に自分の原稿だけを描く。受け入れるかは開発者の判断(完了の報告で伝える)。
+- 8.3: **完了時の棚卸しへ(範囲外)**: `workflow.md` の「完了時のアクション」の手順 4 に、古い括弧書き「(front matter、リンクと画像のパス)」が残っている。新しい「検証」節(npm の 5 つのコマンド)とずれる。front matter の `updated_at` も 2026-10-11 のまま。手順 4 は「検証」節を正本として指すので、動きの上の食い違いは無い。8.3 の範囲は「検証」節だけなので、`/kiro-complete` の棚卸しで直す。
+- 8.3: `roadmap.md` で、この spec を `[x]` にした(1 本目の spec と同じく、マージの前に付ける。`kiro-complete` は `roadmap.md` を直さない)。8.5 で切り替えの許しが出なければ、この印を戻す。
 - 7.3: Dependabot の npm の項目は、組 `minor-and-patch`(`patterns: ["*"]` と `update-types: [minor, patch]`)で小さい版上げを 1 つの PR にまとめる。主版の版上げは、どの組にも当たらないので 1 つずつの PR になる。Dependabot が公式に扱う npm は 11 までで、ロックファイルは npm 12 で作った。最初の提案の PR で、ロックファイルが正しく直るかを見る(設計のリスクのとおり)。
 - 7.2: `build` ジョブは、`defaults.run.working-directory: site` で `run` の手順を `site/` で動かす(`uses` の手順には効かないので、`site/.node-version`・`site/dist` とリポジトリの根から書く)。`actions/setup-node@v7` に `package-manager-cache: false` を渡す(今の `package.json` には `packageManager` が無いので、渡さなくてもキャッシュは働かないが、後で足されたときの備え)。`actionlint` は、この PC に入っていて、誤り 0 件。
 - 7.2: setup-node は、主版だけの `.node-version`(`26`)を読める(説明書に載っている)。`check-latest` は既定のまま(偽)なので、ランナーに Node.js 26 が入っていればそれを使い、無ければ取ってくる。実物の確かめは 7.4。

@@ -43,10 +43,29 @@ discovery → start(requirements) → design → tasks → implementation → co
 
 > `/kiro-complete` が、マージの前と後の確かめの正本として読む節。検証手段が変わったら、ここを書き換える。
 
-手元ではサイトをビルドしない。ビルドと公開は GitHub Actions（`.github/workflows/pages.yml`）が行うので、ビルドの成否は手元では確かめられず、PR の上の実行で確かめる。PR では `build` だけが動き、`master` では `build` の後に `deploy` が公開する。
+サイトは Astro のプロジェクト（`site/`）で、手元でも CI と同じ段でビルドして確かめられる。コマンドはどれも `site/` で動かす（Node.js 26。道具と版は `tech.md`）。PR では GitHub Actions（`.github/workflows/pages.yml`）の `build` が同じ段（型の検査 → 単体テスト → ビルド → 成果物の検査）を走らせ、`master` では `build` の後に `deploy` が公開する。
+
+### 手元の表示
+
+- `site/` で `npm ci` → `npm run dev`。ブラウザで `http://localhost:4321/` を開く。記事・文書・単独のページは、公開と同じパスで見える。原稿やスタイルを書き換えると、作り直しの操作なしに画面に映る。
+- `127.0.0.1` では繋がらないことがある（`[::1]:4321` だけで待ち受けるため）。`localhost` で開く。
+- 手元の表示でもコメント欄（giscus）が出る。ここから投稿すると本番のページのコメントになるので、**手元からは投稿しない**。
+- `npm run dev`・`npm run build`・`npm run check` を、同時に 2 つ動かさない（作業フォルダを取り合う）。背景で動かした `npm run dev` を止めたら、ポート 4321 が空いたことを確かめる（Windows では子の `node` が残ることがある）。
 
 ### マージの前
 
+- 手元で、`site/` で次を順に通す。どれも終了コードが 0 なら成功。0 以外なら、原因を直してやり直す。
+
+  ```bash
+  npm ci
+  npm run check
+  npm test
+  npm run build
+  npm run verify
+  ```
+
+  `npm ci` は依存をロックファイルどおりに入れ直す（動いている `npm run dev` は先に止める）。`npm run build` は front matter の検査を兼ね、`title` が無い、型が違う、知らない項目がある、記事のファイル名が決まりに合わない、のどれでも止まる。`npm run verify` は成果物の検査で、保つパスが欠けた、認めない形のパスやメールのリンクが出た、非公開の記事が出た、などで止まる。
+- `npm run verify` の警告（`警告:` で始まる行。サイト内のリンクと画像の先が無い、KaTeX が読めなかった数式がある）は終了コードに響かないので、出力を読む。追加・変更したリンク・画像・数式に警告が出ていないこと（別リポジトリのページ `/ghost_dev/`・`/nyan-pu-puu/`・`/zzz-pasta/`・`/old/` を指すものは検査しない）。今の原稿では、最後の行が `成果物の検査: 誤り 0 件、警告 0 件` で始まる。
 - PR の `build` ジョブが成功していること。`deploy` は PR では動かず、「skipped」と出る。
 
   ```bash
@@ -54,9 +73,7 @@ discovery → start(requirements) → design → tasks → implementation → co
   ```
 
   終了コードが 0 で、`build` が pass と出ていれば成功。失敗なら、原因を直して push する。失敗のままマージしない。PR を作った直後や push の直後は、`no checks reported` と出て、待たずに終了コード 1 で終わることがある。失敗ではないので、数秒待ってやり直す。
-- 記事の front matter が YAML として読めること、`layout` と `title` があること。
-- 追加・変更したリンクと画像のパスが、`site/` の下に実在すること（別リポジトリのページを指すものを除く）。
-- レイアウト・配置・設定・ビルド方式に触れる変更は、マージの前に開発者へ 1 度だけ確認する（公開中のサイトに効くため）。
+- レイアウト・配置・設定・ビルド方式に触れる変更は、マージの前に開発者へ 1 度だけ確認する（公開中のサイトに効くため）。見た目に触れる変更なら、手元の表示で画面を見てもらう。
 
 ### マージの後
 
@@ -79,16 +96,27 @@ discovery → start(requirements) → design → tasks → implementation → co
 
 レイアウト・配置・設定・ビルド方式に触れた変更では、マージの後に、公開中のサイトで次のパスも確かめ、結果を開発者に報告する。
 
-- 応答するはず（200）: `/`、`/about.html`、`/feed.xml`、`/assets/main.css`、`/2026/03/26/emo2.html`、`/doc/cosmogenesis/entanglement_cosmogenesis_v1_ja.html`、`/img/alto0044_400x400.png`
-- 応答しないはず（404）: `/site/`、`/CLAUDE.md`、`/Gemfile`、`/README.md`
+- 応答するはず（200）: `/`、`/about.html`、`/feed.xml`、`/2026/03/26/emo2.html`、`/doc/cosmogenesis/entanglement_cosmogenesis_v1_ja.html`、`/doc/cosmogenesis/entanglement_cosmogenesis_v1.pdf`、`/img/alto0044_400x400.png`、トップページの HTML が指している `/_astro/` の下のスタイルシート（名前はビルドごとに変わるので、HTML から読み取る）
+- 応答しないはず（404）: `/site/`、`/CLAUDE.md`、`/README.md`、`/package.json`、`/src/content/posts/2026-03-26-emo2.md`、`/sitemap.xml`、`/assets/main.css`（生成ツールの切り替えで消えた、切り替え前の出力）
 
 ```bash
-curl -s -o /dev/null -w '%{http_code}\n' https://ekicyou.github.io/about.html
+base=https://ekicyou.github.io
+# トップページが指している /_astro/ のスタイルシート。空なら、トップページがスタイルシートを指していない（崩れ）
+css=$(curl -s "$base/" | grep -o '/_astro/[^"]*\.css' | head -n 1); echo "css: $css"
+[ -n "$css" ] || echo "崩れ: トップページが /_astro/ のスタイルシートを指していない"
+# 200 のはず
+for p in / /about.html /feed.xml /2026/03/26/emo2.html /doc/cosmogenesis/entanglement_cosmogenesis_v1_ja.html /doc/cosmogenesis/entanglement_cosmogenesis_v1.pdf /img/alto0044_400x400.png "$css"; do
+  echo "$(curl -s -o /dev/null -w '%{http_code}' "$base$p") $p"
+done
+# 404 のはず
+for p in /site/ /CLAUDE.md /README.md /package.json /src/content/posts/2026-03-26-emo2.md /sitemap.xml /assets/main.css; do
+  echo "$(curl -s -o /dev/null -w '%{http_code}' "$base$p") $p"
+done
 ```
 
-判定は状態コードで行う（存在しないパスにも、404 ページの中身は返る）。公開の直後は、CDN が最長 10 分ほど前の応答を返すことがあるので、期待と違ったら少し待って確かめ直す。
+判定は状態コードで行う（存在しないパスにも、404 ページの中身は返る）。`css:` が空のときは、ループの最後の行が `/` を確かめ直すだけになるので、200 と出ても成功と数えない。公開の直後は、CDN が最長 10 分ほど前の応答を返すことがあるので、期待と違ったら少し待って確かめ直す。
 
-公開物が崩れていたら（200 のはずのパスが応答しない、404 のはずのパスが応答する、など）、その場で開発者に報告し、`tech.md` の「戻し方」（前へ直す PR、または R2）を示す。
+公開物が崩れていたら（200 のはずのパスが応答しない、404 のはずのパスが応答する、など）、その場で開発者に報告し、`tech.md` の「戻し方」（まず前へ直す PR、見た目が崩れたまま公開されたなら R3）を示す。戻す操作も公開中のサイトに効くので、開発者の許しを得るまで行わない。
 
 ## 完了時のアクション
 
