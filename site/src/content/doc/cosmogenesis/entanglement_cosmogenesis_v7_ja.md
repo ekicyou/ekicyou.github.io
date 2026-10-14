@@ -644,7 +644,7 @@ $$
 
 含意：**量子スケールが宇宙論パラメータから降ってくる**。
 
-## 6.7 Holographic Throttling と $\alpha$（v7 新規）
+## 6.7 Holographic Throttling と α（v7 新規）
 
 α は基礎定数ではなく、holographic 帯域の確率的調整値：
 
