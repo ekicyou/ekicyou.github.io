@@ -351,7 +351,18 @@ v1 の「4.1 qubit 階段」の表の、「BH段階」の列である。「—�
 
 ## Linux の確かめ
 
-(タスク 7.4 で書く。手動の実行の番号と結果。)
+2026-10-15 に、開発者に確かめてから、ブランチ `claude/kiro-site-astro-redesign-2ed957` を push した(先頭は `39c7b03`)。push の前に `git fetch origin` で `origin/master` の先頭を見て、基準を取ったコミット `da322dd` のままであることを確かめた。そのうえで `pages.yml` を手動で実行した(`gh workflow run pages.yml --ref claude/kiro-site-astro-redesign-2ed957`)。
+
+- 実行: 38645104903(`workflow_dispatch`、ランナーは `ubuntu-latest`)。結果は成功。
+- `build` ジョブの段は、すべて成功した。
+  - Node.js の用意: 主版だけを書いた `site/.node-version`(`26`)を読み、v26.11.1 を取ってきた。ワークフローに主版を直に書く手当ては要らなかった。
+  - `npm ci`: 410 個を入れた。Windows で作ったロックファイルのまま、Linux で通った。
+  - `npm run check`: 誤り 0 件。
+  - `npm test`: 59 件すべて成功。
+  - `npm run build`: 17 ページ。
+  - `npm run verify`: 誤り 0 件、警告 0 件(ファイル 49 個、HTML 17 本、非公開の記事 3 本)。
+  - 成果物の保存: `github-pages`(1,367,393 バイト)。
+- `deploy` ジョブは動いていない(skipped)。`master` 以外の手動の実行なので、公開はしていない。
 
 ## パスの突き合わせ
 
