@@ -164,7 +164,7 @@
   - `deploy` ジョブ、起動の条件、`concurrency`、ワークフロー全体の権限は、1 字も変えない。
   - 完了の姿: ワークフローの差分が、`build` ジョブと先頭の説明だけである。YAML として読める。
   - _Requirements: 1.5, 6.1, 6.2, 6.3, 6.4, 6.5, 7.2_
-- [ ] 7.3 (P) 版上げの提案に、npm の依存を足す
+- [x] 7.3 (P) 版上げの提案に、npm の依存を足す
   - 今のアクションの項目は残す。npm の項目を足す(置き場は `site`、月 1 回。小さい版上げは 1 つの PR にまとめ、主版の版上げは 1 つずつ)。自動マージは設定しない。
   - 完了の姿: 設定のファイルに項目が 2 つあり、YAML として読める。
   - _Boundary: DependabotConfig_
@@ -217,6 +217,7 @@
 ## Implementation Notes
 
 - 1.1: `npm audit` が low を 4 件出す(`katex` 0.11.0〜0.18.1 への勧告 GHSA-238p-pmpm-9mq7 と、その波及)。直る版は `katex` 0.19.0 だが、`rehype-katex` 7.0.1 が `katex ^0.16.0` を求めるので、上げると版が 2 つになる。設計の固定(0.16.47)のまま据え置いた。数式はビルド時に自分の原稿だけを描く。受け入れるかは開発者の判断(完了の報告で伝える)。
+- 7.3: Dependabot の npm の項目は、組 `minor-and-patch`(`patterns: ["*"]` と `update-types: [minor, patch]`)で小さい版上げを 1 つの PR にまとめる。主版の版上げは、どの組にも当たらないので 1 つずつの PR になる。Dependabot が公式に扱う npm は 11 までで、ロックファイルは npm 12 で作った。最初の提案の PR で、ロックファイルが正しく直るかを見る(設計のリスクのとおり)。
 - 7.2: `build` ジョブは、`defaults.run.working-directory: site` で `run` の手順を `site/` で動かす(`uses` の手順には効かないので、`site/.node-version`・`site/dist` とリポジトリの根から書く)。`actions/setup-node@v7` に `package-manager-cache: false` を渡す(今の `package.json` には `packageManager` が無いので、渡さなくてもキャッシュは働かないが、後で足されたときの備え)。`actionlint` は、この PC に入っていて、誤り 0 件。
 - 7.2: setup-node は、主版だけの `.node-version`(`26`)を読める(説明書に載っている)。`check-latest` は既定のまま(偽)なので、ランナーに Node.js 26 が入っていればそれを使い、無ければ取ってくる。実物の確かめは 7.4。
 - 7.1: Jekyll の 27 ファイルを消した(設計の「消すファイル」とちょうど同じ)。`site/404.html` が無くなったので、手元の表示でも `/404.html` は新しい 404 になる(4.1 の癖は解けた)。`/index.md` も返らなくなった。手元の表示は、この PC では `[::1]:4321` だけで待ち受けることがある(`127.0.0.1` では繋がらない。`localhost` を使う)。

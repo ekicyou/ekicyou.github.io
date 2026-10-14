@@ -1,4 +1,6 @@
-# ワークフローが使うアクションの新しい版を、月 1 回、PR で提案させる。
+# 新しい版を、月 1 回、PR で提案させる。対象は 2 つ。
+# ワークフローが使うアクションと、site/ の npm の依存。
+# npm の小さい版上げ(minor・patch)は 1 つの PR にまとめ、主版の版上げは 1 つずつ PR にする。
 # 自動マージは設定しない。取り込むかどうかは開発者が決める。
 version: 2
 
@@ -7,3 +9,15 @@ updates:
     directory: /
     schedule:
       interval: monthly
+
+  - package-ecosystem: npm
+    directory: /site
+    schedule:
+      interval: monthly
+    groups:
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
