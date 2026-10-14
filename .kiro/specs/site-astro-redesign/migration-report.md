@@ -148,7 +148,88 @@ v1 の「4.1 qubit 階段」の表の、「BH段階」の列である。「—�
 
 ## 検査の確かめ
 
-(タスク 6.3 で書く。成果物の検査の仕掛け、front matter、記事を足す流れ、フィード、`katex` の版、バイト一致。)
+タスク 6.3 で確かめた(2026-10-15)。検査と、記事を足す流れが働くことを、1 回きりの仕掛けで見た(`design.md` の「Testing Strategy」の「1 回きりの確かめ」)。
+
+- 仕掛けは、どれも 1 つずつ置き、確かめたらすぐに消した。コマンドは、どれも `site/` で打った。
+- 始める前と終えた後に、冷えた状態(`site/node_modules/.astro/data-store.json` を消した状態)で `npm run build` を行った。どちらも 17 ページで、`npm run verify` は誤り 0 件・警告 0 件(ファイル 49 個、HTML 17 本、非公開の記事 3 本)だった。
+- 書き換えた管理下のファイルは `site/tests/kept-paths.txt` の 1 つだけで、戻した後の SHA-256 は書き換える前と同じ(`48f7d980…`)。足した原稿は、どれも消した。
+
+### 1. 成果物の検査の仕掛け(Requirement 1 の 1、4、Requirement 3 の 25、Requirement 2 の 11)
+
+4 つの仕掛けとも、`npm run verify` が終了コード 1 で止まった。
+
+| 仕掛け | 置いたもの | 終了コード | 出た誤り |
+|---|---|---|---|
+| 保つパスを、無いパスに替える | `tests/kept-paths.txt` の `/about.html` を `/about-missing.html` に替えた | 1 | `/about-missing.html: 保つパスが無い(tests/kept-paths.txt)`(誤り 1 件) |
+| 別リポジトリと同じ名前のフォルダ | `dist/old/x.txt` | 1 | `/old/x.txt: 別リポジトリのページと同じ名前のトップ階層(/old/)に出ている`(誤り 1 件) |
+| メールのリンク | `dist/about.html` の末尾に `<a href="mailto:someone@example.invalid">x</a>` を書き足した | 1 | `/about.html: メールのリンク(href="mailto:…")がある`(誤り 1 件) |
+| 非公開の記事のパス | `dist/2016/08/17/GODZILLA.html`(中身は `dist/2016/02/16/code.html` の写し) | 1 | `/2016/08/17/GODZILLA.html: 非公開の記事(src/content/posts/2016-08-17-GODZILLA.md)のページが出ている`(誤り 1 件) |
+
+- 別リポジトリの名前は、ほかに `dist/old/index.html` と `dist/nyan-pu-puu/x.html` も置いた。どちらも終了コード 1 で、トップ階層の誤りが出た。中身が `<p>x</p>` だけの HTML なので、`lang="ja"`・正規の URL・フィードの場所・favicon が無い誤りも 4 件ずつ並んだ(誤り 5 件)。
+- 非公開の記事のパスも、初めは中身が `<p>x</p>` だけの HTML で置いた。このときも終了コード 1 で、非公開の記事の誤りに、上の 4 件が並んだ(誤り 5 件)。表は、整ったページの写しで、非公開の記事の誤りだけが出ることを見たときのものである。
+- 戻すたびに `npm run verify` を行い、誤り 0 件・警告 0 件に戻ることを見た。`dist/about.html` は写しから戻し、SHA-256 が書き足す前と同じ(`d659be74…`)であることを見た。
+
+### 2. front matter と記事の名前の検査(Requirement 2 の 4)
+
+仮の記事を 1 本ずつ置き、冷えた状態で `npm run build` を行った。3 つとも終了コード 1 で止まった。2 つはファイルのパスを、名前が `index` のものは識別子(ファイル名から `.md` を除いたもの)を示した。
+
+| 置いた記事 | 中身 | 終了コード | 出た誤り |
+|---|---|---|---|
+| `src/content/posts/2099-01-01-notitle.md` | `title` が無い(`description` と `tags` だけ) | 1 | `[InvalidContentEntryDataError] posts → 2099-01-01-notitle data does not match collection schema.`、`title: Required`。`Location:` に、このファイルの絶対パス |
+| `src/content/posts/2099-01-02-unknown.md` | 知らない項目 `publised: false`(`published` の打ち間違い) | 1 | `[InvalidContentEntryDataError] posts → 2099-01-02-unknown data does not match collection schema.`、`Unrecognized key: "publised"`。`Location:` に、このファイルの絶対パス |
+| `src/content/posts/2099-01-03-index.md` | front matter は決まりどおり。名前が `index` | 1 | `` 記事のファイル名が決まりに合わない: "2099-01-03-index"。名前に `index` は使えない。 ``(静的なルートを作る段で止まる) |
+
+- 前の 2 本は、原稿を読む段(`[content] Syncing content`)で止まる。名前が `index` の記事は、front matter の検査を通り、記事のルートを作る段で止まる。誤りの文は識別子を示し、`Location:` は Astro の内部のファイルを指す(識別子がそのままファイル名なので、原稿は 1 本に決まる)。
+
+### 3. 記事を足す流れ(Requirement 2 の 9、11)
+
+`src/content/posts/2099-12-31-trial.md` を、決まりどおりの front matter(`title`・`description`・`tags`)で仮に置いた。
+
+- **公開のとき**: `npm run build` は終了コード 0、18 ページ。`dist/2099/12/31/trial.html` が出て、正規の URL は `https://ekicyou.github.io/2099/12/31/trial.html` だった。トップページの記事の一覧では、13 本の先頭に出た。フィードは 13 項目になり、先頭の項目が `https://ekicyou.github.io/2099/12/31/trial.html`(題名、説明、`Wed, 30 Dec 2099 15:00:00 GMT`、カテゴリ「確かめ」)だった。1 つ古い記事 `/2026/05/06/cosmogenesis.html` は、この記事を指すリンクを持った。`npm run verify` は誤り 0 件・警告 0 件(ファイル 50 個、HTML 18 本)。保つパスの一覧は替えずに通る(記事の形のパスなので、増えても誤りにならない)。
+- **`published: false` のとき**: 同じ記事に `published: false` を足し、冷えた状態でビルドした。終了コード 0、17 ページ。`dist/2099/` は無く、`dist/` のどのファイルにも、この記事の名前と題名は出なかった(トップページの一覧にも、フィードにも無い。フィードは 12 項目)。`npm run verify` は誤り 0 件・警告 0 件で、非公開の記事を 4 本と数えた。
+- 確かめた後、記事を消し、冷えた状態でビルドし直した(17 ページ、誤り 0 件・警告 0 件、非公開の記事 3 本)。
+
+### 4. そのまま置くファイルのバイト一致(Requirement 1 の 3)
+
+成果物の PDF・TeX・画像の 10 個を、移動のコミット(`1181eeb`)の 1 つ前のコミットの中身(`git cat-file -p 1181eeb^:site/<パス>`)と、SHA-256 で比べた。10 個とも一致した。`site/public/` の同じファイルも、10 個とも同じ値である。
+
+| 成果物のパス | 大きさ(バイト) | SHA-256(先頭 16 字) | 結果 |
+|---|---|---|---|
+| `/doc/cosmogenesis/entanglement_cosmogenesis_v1.pdf` | 329413 | `03625478fedeecd6` | 一致 |
+| `/doc/cosmogenesis/entanglement_cosmogenesis_v1.tex` | 43679 | `e3611174fcaabf90` | 一致 |
+| `/doc/cosmogenesis/space_cat.jpg` | 28445 | `df7481b8aacc3bee` | 一致 |
+| `/img/2020-08-10-emo.png` | 253117 | `5a73c9b9597080dc` | 一致 |
+| `/img/2026-02-06-pasta.png` | 288393 | `e04e50d652271283` | 一致 |
+| `/img/EmbeddedImage.png` | 4989 | `84b3666dd61257bb` | 一致 |
+| `/img/alto0044_400x400.png` | 137883 | `ef9f67c5933d7879` | 一致 |
+| `/img/favicon.ico` | 9662 | `47e7899437ab6a32` | 一致 |
+| `/img/favicon.png` | 184 | `1861eca1d57dc3e8` | 一致 |
+| `/img/pasta.svg` | 4124 | `63c85578878205d5` | 一致 |
+
+`dist/doc/cosmogenesis/` と `dist/img/` にあるファイルは、この 10 個と、文書の HTML 2 本だけである。
+
+### 5. フィードと `katex` の版(Requirement 4 の 10)
+
+**フィード**: `dist/feed.xml`(RSS 2.0、5,889 バイト)を読んで確かめた。
+
+- 項目は 12 個で、公開中の記事 12 本と同じ並び(新しい順。`/2026/05/06/cosmogenesis.html` から `/2014/10/04/pasta.html` まで)だった。非公開の 3 本は無い。
+- 12 項目とも、題名、絶対 URL の `<link>`(`https://ekicyou.github.io/YYYY/MM/DD/<名前>.html`)、同じ URL の `<guid>`、日付の `<pubDate>`、説明の `<description>` を持つ。`<pubDate>` は、どれもファイル名の日付の日本時間 0 時(GMT の表記で前の日の 15:00)で、前の項目より新しいものは無い。
+- 全文の要素(`content:encoded`)は無い。説明は最も長いもので 131 字である。`lastBuildDate` も無い。
+
+**切り替えの前後の違い**(タスク 5.3 で見た事実。公開中のフィードは、2026-10-15 に取り直して同じであることを見た):
+
+| | 切り替えの前(公開中) | 切り替えの後 |
+|---|---|---|
+| 形式 | Atom(Jekyll の部品が出す) | RSS 2.0 |
+| 項目の数 | 10 | 12(公開中の記事すべて) |
+| 大きさ | 約 153 KB(取り直すたびに数バイト違う) | 約 6 KB(5,889 バイト) |
+| 全文 | あり(`<content>` が 10 個) | なし |
+| 項目の識別子 | `.html` なし(例 `https://ekicyou.github.io/2026/05/06/cosmogenesis`) | `.html` つき(`<guid>` が記事の URL) |
+
+- 増えるのは古い 2 本(`/2016/02/16/code.html`、`/2014/10/04/pasta.html`)である。
+- 形式と識別子が変わることは、要件の「Adjacent expectations」が受け入れている(開発者の判断、2026-10-12)。
+
+**`katex` の版**: `npm ls katex` は 0.16.47 の 1 つだけを返した。直に入れた `katex@0.16.47` に、`rehype-katex@7.0.1` と `remark-math@6.0.0`(`micromark-extension-math@3.1.0` を通る)の使う `katex` が `deduped` で重なる。
 
 ## `look/` との差分
 
