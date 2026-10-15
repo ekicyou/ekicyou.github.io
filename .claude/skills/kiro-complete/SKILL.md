@@ -7,7 +7,7 @@ argument-hint: <feature-name>
 
 # Kiro Spec 完了ワークフロー
 
-> 由来: areka の `kiro-complete` を my-site（Jekyll の個人ブログ）向けに薄くしたもの。cargo・ライセンス検査・ロードマップ台帳・kiro-watch の調停は持ち込んでいない。
+> 由来: areka の `kiro-complete` を my-site（Astro の個人ブログ）向けに薄くしたもの。cargo・ライセンス検査・ロードマップ台帳・kiro-watch の調停は持ち込んでいない。
 
 ## 発動条件（必須）
 
