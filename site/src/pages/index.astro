@@ -1,0 +1,23 @@
+---
+// トップページ。顔、記事の一覧、文書の欄を、この順に置く。
+// 一覧に出すのは、`publishedPosts()`(新しい順)と `publishedDocs()`(公開パスの昇順)が返すものだけである。
+// `published: false` の原稿は、どちらにも含まれないので、出ない。About へは、ヘッダーのメニューから辿る。
+// 題名と説明は渡さない。題名はサイト名だけ、説明はサイトの説明文、SNS 向けの画像はアイコン絵になる。
+// 正規の URL は、このページの公開パスから組み立てる。
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import PostList from '../components/PostList.astro';
+import DocList from '../components/DocList.astro';
+import { publishedDocs } from '../lib/docs.ts';
+import { publishedPosts } from '../lib/posts.ts';
+
+const posts = await publishedPosts();
+const docs = await publishedDocs();
+---
+<BaseLayout path="/">
+  <Hero />
+  <div class="home">
+    <PostList posts={posts} />
+    <DocList docs={docs} />
+  </div>
+</BaseLayout>

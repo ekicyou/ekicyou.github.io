@@ -21,7 +21,8 @@ Kiro-style Spec-Driven Development on an agentic SDLC
 - Think in English, generate responses in Japanese. All Markdown content written to project files (e.g., requirements.md, design.md, tasks.md, research.md, validation reports) MUST be written in the target language configured for this specification (see spec.json.language).
 
 ## このリポジトリについて
-- 個人ブログ「えちょのざんがい」（`https://ekicyou.github.io/`）の原稿。Jekyll で書き、原稿は `site/` に置く。ルートに置くのは開発用のファイルだけで、`site/` の外は公開されない。
+- 個人ブログ「えちょのざんがい」（`https://ekicyou.github.io/`）の原稿。生成ツールは Astro で、原稿と仕組みは `site/`（Astro のプロジェクト）に置く。記事は `site/src/content/posts/`、文書は `site/src/content/doc/`、画像などそのまま公開するファイルは `site/public/`。ルートに置くのは開発用のファイルだけで、`site/` の外は公開されない。
+- 手元では `site/` で `npm ci` → `npm run dev` で表示を確かめられる。マージの前の確かめ（`npm run check`・`npm test`・`npm run build`・`npm run verify`）は `workflow.md` の「検証」節。
 - 既定ブランチ `master` へ push すると、GitHub Actions（`.github/workflows/pages.yml`）が `site/` をビルドして GitHub Pages へ公開する。PR ではビルドだけを行い、公開しない。
 - **`master` へのマージはそのまま公開になる。** 公開済みの URL を壊さない。
 - 詳しくは `.kiro/steering/`（`product.md`・`tech.md`・`structure.md`・`workflow.md`）。

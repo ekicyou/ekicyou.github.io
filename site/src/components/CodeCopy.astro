@@ -1,0 +1,31 @@
+<script>
+  const LABEL = { idle: 'コピー', done: 'コピーしました', fail: 'コピーできません' };
+  for (const pre of document.querySelectorAll<HTMLPreElement>('.prose pre')) {
+    const wrap = document.createElement('div');
+    wrap.className = 'code-block';
+    pre.before(wrap);
+    wrap.append(pre);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'code-copy';
+    button.textContent = LABEL.idle;
+    button.setAttribute('aria-live', 'polite');
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    button.addEventListener('click', async () => {
+      let state: 'done' | 'fail' = 'done';
+      try {
+        await navigator.clipboard.writeText(pre.querySelector('code')?.textContent ?? '');
+      } catch {
+        state = 'fail';
+      }
+      button.textContent = LABEL[state];
+      button.dataset.state = state;
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        button.textContent = LABEL.idle;
+        delete button.dataset.state;
+      }, 2000);
+    });
+    wrap.append(button);
+  }
+</script>

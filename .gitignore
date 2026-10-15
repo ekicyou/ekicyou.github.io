@@ -1,5 +1,8 @@
-.bundle
-.sass-cache
-Gemfile.lock
-_site
-*.gem
+# 依存(npm ci が site/ に入れる)
+node_modules/
+
+# ビルドの成果物(astro build が site/ に出す)
+dist/
+
+# Astro の作業フォルダ(型の定義やキャッシュ)
+.astro/

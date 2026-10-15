@@ -1,0 +1,36 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+export interface TocItem {
+  slug: string;
+  text: string;
+  level: 1 | 2;
+}
+// 本文に現れる一番浅い段から数えて、2 段までを載せる。
+export function tocItems(headings: readonly MarkdownHeading[]): TocItem[] {
+  if (headings.length === 0) return [];
+  const top = Math.min(...headings.map((h) => h.depth));
+  return headings
+    .filter((h) => h.depth <= top + 1)
+    .map((h) => ({ slug: h.slug, text: h.text, level: h.depth === top ? 1 : 2 }));
+}
+
+interface Props {
+  items: readonly TocItem[];
+}
+const { items } = Astro.props;
+---
+<aside class="toc">
+  <nav class="toc-wide" aria-label="目次">
+    <p class="toc-heading">目次</p>
+    <ol>
+      {items.map((i) => <li class={`toc-l${i.level}`}><a href={`#${i.slug}`}>{i.text}</a></li>)}
+    </ol>
+  </nav>
+  <details class="toc-narrow">
+    <summary>目次</summary>
+    <ol>
+      {items.map((i) => <li class={`toc-l${i.level}`}><a href={`#${i.slug}`}>{i.text}</a></li>)}
+    </ol>
+  </details>
+</aside>

@@ -1,0 +1,28 @@
+---
+import { SITE } from '../consts.ts';
+import type { Post } from '../lib/posts.ts';
+import { describe } from '../lib/summary.ts';
+import TagList from './TagList.astro';
+
+interface Props {
+  posts: readonly Post[];
+}
+const { posts } = Astro.props;
+---
+<section class="home-section home-posts">
+  <h2 class="home-heading">記事</h2>
+  <ul class="post-list post-list-rows">
+    {posts.map((p) => (
+      <li class="post-item">
+        <div class="post-item-body">
+          <time datetime={p.dateText}>{p.dateText}</time>
+          <a class="post-item-title" href={p.path}>{p.entry.data.title}</a>
+          <p class="post-item-desc">
+            {describe({ description: p.entry.data.description, html: p.entry.rendered?.html }, SITE.description)}
+          </p>
+          {p.entry.data.tags && <TagList tags={p.entry.data.tags} />}
+        </div>
+      </li>
+    ))}
+  </ul>
+</section>

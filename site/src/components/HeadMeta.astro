@@ -1,0 +1,40 @@
+---
+import katexCssUrl from 'katex/dist/katex.min.css?url';
+import { SITE } from '../consts.ts';
+
+export interface PageMeta {
+  title?: string | undefined;
+  description?: string | undefined;
+  path: string;
+  image?: string | undefined;
+  type?: 'website' | 'article' | undefined;
+  math?: boolean | undefined;
+}
+type Props = PageMeta;
+const { title, description = SITE.description, path, image, type = 'website', math = false } = Astro.props;
+const abs = (p: string) => new URL(p, SITE.url).href;
+const fullTitle = title ? `${title} | ${SITE.title}` : SITE.title;
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={abs(path)} />
+<meta property="og:url" content={abs(path)} />
+<meta property="og:title" content={title ?? SITE.title} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={SITE.title} />
+<meta property="og:type" content={type} />
+<meta property="og:locale" content={SITE.ogLocale} />
+<meta property="og:image" content={abs(image ?? SITE.icon)} />
+<meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+<link rel="alternate" type="application/rss+xml" title={SITE.title} href={SITE.feedPath} />
+<link rel="icon" href={SITE.favicon} />
+{SITE.fontsHref && (
+  <>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href={SITE.fontsHref} />
+  </>
+)}
+{math && <link rel="stylesheet" href={katexCssUrl} />}

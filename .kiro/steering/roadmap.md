@@ -1,6 +1,6 @@
 ---
 inclusion: always
-updated_at: 2026-10-11
+updated_at: 2026-10-15
 ---
 
 # Roadmap
@@ -10,6 +10,8 @@ updated_at: 2026-10-11
 「えちょのざんがい」(`ekicyou/ekicyou.github.io`) を、Claude が手伝いやすく、PR の上でビルドを確かめられるリポジトリに作り替える。公開先は GitHub Pages のまま、URL `https://ekicyou.github.io/` と公開済みの記事・文書・画像のパスは変えない。
 
 進め方は 2 段。まず Jekyll のまま、見た目を一切変えずに、原稿を `site/` へ 1 階層下げ、ビルドと公開を GitHub Actions に切り替える。その後で、生成ツールを Jekyll から Astro へ乗り換え、デザインを一から作り直す。公開方式の切り替えと、生成ツール・デザインの入れ替えを分けるのは、切り替えの日に変わるものを 1 つにするためである。
+
+2 本とも済んだ。今は、`site/` に Astro のプロジェクトがあり、記事は `site/src/content/posts/`、文書は `site/src/content/doc/`、画像などそのまま公開するファイルは `site/public/` に置く。今の姿の正本は steering の `tech.md`・`structure.md`・`workflow.md` で、この文書は進め方と決めた理由の記録である。
 
 ## Approach Decision
 
@@ -62,4 +64,4 @@ spec を起こすほどでもない手直し。1 本目(`site-subfolder-actions-
 ## Specs (dependency order)
 
 - [x] site-subfolder-actions-build -- Jekyll のまま原稿を `site/` へ 1 階層下げ、ビルドと公開を GitHub Actions に切り替える(見た目は変えない)。Dependencies: none
-- [ ] site-astro-redesign -- 生成ツールを Astro へ乗り換え、デザインを一から作り直す(URL は変えない)。Dependencies: site-subfolder-actions-build
+- [x] site-astro-redesign -- 生成ツールを Astro へ乗り換え、デザインを一から作り直す(URL は変えない)。Dependencies: site-subfolder-actions-build

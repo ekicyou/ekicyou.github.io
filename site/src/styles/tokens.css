@@ -1,0 +1,60 @@
+/* デザインのトークン「どっと方眼」。生成りの紙に方眼、太い線、ずらした影、アイコン絵の赤。 */
+:root {
+  --color-bg: #f6f0e1;
+  --grid: rgba(70, 90, 140, 0.1);
+  --bg-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  --bg-size: 24px 24px;
+  --color-surface: #fffaf0;
+  --color-text: #22242c;
+  --color-text-muted: #5f5d66;
+  --color-accent: #e0322d;
+  --color-link: #b3231f;
+  --color-link-hover: #e0322d;
+  --color-border: #22242c;
+  --color-line: #cdbf9f;
+  --color-code-bg: #fffdf8;
+  --color-note: #1a66c2;
+  --color-important: #c21f70;
+
+  --font-body: 'M PLUS 1p', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', Meiryo, sans-serif;
+  --font-heading: 'DotGothic16', 'M PLUS 1p', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', Consolas, 'BIZ UDGothic', 'MS Gothic', monospace;
+
+  --radius: 12px;
+  --shadow: 4px 4px 0 var(--color-border);
+  --code-shadow: 4px 4px 0 var(--color-border);
+  --panel-border: 2px solid var(--color-border);
+  --image-radius: 18px;
+  --image-border: 3px dotted var(--color-border);
+  /* 画像の影: 真っ赤はきついので、差し色を 3 割だけ、紙の線の色に混ぜる */
+  --image-shadow: 6px 6px 0 color-mix(in srgb, var(--color-accent) 30%, var(--color-line));
+  --image-bg: #fff;
+  --image-padding: 8px;
+
+  --page-gutter: clamp(1rem, 4vw, 4.5rem);
+  --toc-width: 17rem;
+  --content-max: none;
+  --color-header-bg: var(--color-surface);
+  --header-border: 3px dotted var(--color-border);
+  --row-border: 2px dotted var(--color-line);
+  --alert-border: 2px solid var(--color-border);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1a2030;
+    --grid: rgba(190, 210, 255, 0.06);
+    --color-surface: #232b3f;
+    --color-text: #f0ede4;
+    --color-text-muted: #aaa69c;
+    --color-accent: #ff6a5c;
+    --color-link: #ff9d92;
+    --color-link-hover: #ffd0ca;
+    --color-border: #f0ede4;
+    --color-line: #3f4a66;
+    --color-code-bg: #141926;
+    --color-note: #74b3ff;
+    --color-important: #ff86c8;
+    --shadow: 4px 4px 0 #000;
+    --code-shadow: 4px 4px 0 #000;
+  }
+}
