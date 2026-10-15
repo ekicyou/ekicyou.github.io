@@ -135,7 +135,7 @@ gh run rerun <実行の ID>
 Node.js の版上げは、Dependabot が提案できない（版のファイルに対応していない）。そこで、Astro の主版の版上げの PR を取り込むときに、あわせて見直す。
 
 1. 新しい Astro が求める Node.js の版を確かめる（その PR のブランチで `npm ci` した後の `site/node_modules/astro/package.json` の `engines.node`。今の 7.3.8 は `>=22.12.0`）。
-2. `site/.node-version` の主版が、その範囲に入り、Node.js の保守期間の中にあるかを見る。外れていれば、同じ PR で `site/.node-version` を新しい主版に書き換える。
+2. `site/.node-version` の主版が、その範囲に入り、Node.js の保守期間の中にあるかを見る。あわせて、単体テストと成果物の検査は、Node.js に組み込みの型の取り除きで `.ts` を読むので、22.18 以上が要る(Astro の求める版より高い)。外れていれば、同じ PR で `site/.node-version` を新しい主版に書き換える。
 3. 手元の Node.js も同じ主版にそろえ、`site/` で `npm ci` → `npm run check` → `npm test` → `npm run build` → `npm run verify` を通す。
 4. PR の `build` ジョブが通ることを見てから取り込む。
 
