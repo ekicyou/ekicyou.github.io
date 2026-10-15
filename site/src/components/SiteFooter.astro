@@ -1,0 +1,17 @@
+---
+import { SITE } from '../consts.ts';
+---
+<footer class="site-footer">
+  <div class="page site-footer-inner">
+    <div class="site-footer-who">
+      <p class="site-footer-title">{SITE.title}</p>
+      <p>{SITE.author}</p>
+    </div>
+    <ul class="site-footer-links">
+      <li><a href={SITE.links.github}>GitHub</a></li>
+      <li><a href={SITE.links.mastodon} rel="me">Mastodon</a></li>
+      <li><a href={SITE.feedPath}>RSS</a></li>
+    </ul>
+    <p class="site-footer-desc">{SITE.description}</p>
+  </div>
+</footer>

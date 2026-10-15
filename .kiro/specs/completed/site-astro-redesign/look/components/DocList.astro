@@ -1,0 +1,23 @@
+---
+import { SITE } from '../consts.ts';
+import type { Doc } from '../lib/docs.ts';
+import { describe } from '../lib/summary.ts';
+
+interface Props {
+  docs: readonly Doc[];
+}
+const { docs } = Astro.props;
+---
+<section class="home-section home-docs">
+  <h2 class="home-heading">文書</h2>
+  <ul class="doc-list">
+    {docs.map((d) => (
+      <li class="doc-item">
+        <a class="post-item-title" href={d.path}>{d.entry.data.title}</a>
+        <p class="post-item-desc">
+          {describe({ description: d.entry.data.description, html: d.entry.rendered?.html }, SITE.description)}
+        </p>
+      </li>
+    ))}
+  </ul>
+</section>

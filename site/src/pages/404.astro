@@ -1,0 +1,14 @@
+---
+// 無いパスが求められたときに返るページ。GitHub Pages が、どのパスでも `/404.html` を返す。
+// 正規の URL は、このページの公開パスから組み立てる。説明は、サイトの説明文になる。
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts.ts';
+---
+<BaseLayout title="ページが見つかりません" path="/404.html">
+  <section class="not-found">
+    <img src={SITE.icon} alt="" width="160" height="160" />
+    <h1>404</h1>
+    <p>お探しのページは、エントロピーの彼方へ散っていったようです。</p>
+    <p><a href="/">トップへ戻る</a></p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+export interface NavLink {
+  title: string;
+  path: string;
+}
+interface Props {
+  older?: NavLink | undefined;
+  newer?: NavLink | undefined;
+}
+const { older, newer } = Astro.props;
+---
+<nav class="post-nav" aria-label="前後の記事">
+  {older ? (
+    <a class="post-nav-older" href={older.path}><span class="post-nav-label">← 前の記事</span><span>{older.title}</span></a>
+  ) : <span />}
+  {newer && (
+    <a class="post-nav-newer" href={newer.path}><span class="post-nav-label">次の記事 →</span><span>{newer.title}</span></a>
+  )}
+</nav>
