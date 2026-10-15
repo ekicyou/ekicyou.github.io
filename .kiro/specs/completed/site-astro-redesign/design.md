@@ -225,7 +225,7 @@ site/
 
 新しい絵柄の favicon を作ると決まったときだけ、`site/src/assets/` に置く(画面の案で決める)。
 
-`site/` の外に新しく作るファイルは、spec フォルダの中だけである: `.kiro/specs/site-astro-redesign/migration-report.md`(移行の記録。直した箇所、数式の確かめ、パスの突き合わせ、公開後の確かめの結果)。設計の時点で、`baseline-paths.txt`(突き合わせの基準)と `look/`(決まった見た目の実物)を置いてある。
+`site/` の外に新しく作るファイルは、spec フォルダの中だけである: `.kiro/specs/completed/site-astro-redesign/migration-report.md`(移行の記録。直した箇所、数式の確かめ、パスの突き合わせ、公開後の確かめの結果)。設計の時点で、`baseline-paths.txt`(突き合わせの基準)と `look/`(決まった見た目の実物)を置いてある。
 
 **部品の名前とファイルの対応**(下の節で使う名前のうち、ファイル名と違うもの):
 
@@ -239,9 +239,9 @@ site/
 | PagesWorkflow、DependabotConfig | `.github/workflows/pages.yml`、`.github/dependabot.yml` |
 | DistVerifier | `site/scripts/verify-dist.mjs`・`site/tests/kept-paths.txt` |
 | ManuscriptMigration | 下の「移すファイル」と、「原稿を直す範囲」の直し |
-| CutoverVerification | `.kiro/specs/site-astro-redesign/migration-report.md` |
+| CutoverVerification | `.kiro/specs/completed/site-astro-redesign/migration-report.md` |
 | ProjectDocs | 下の「Modified Files」の steering・`CLAUDE.md`・`README.md` |
-| ScreenProposals | 案そのものはリポジトリの外(「画面の案」の節)。決まった値は「決まった見た目」の表、決まった案の実物は `.kiro/specs/site-astro-redesign/look/` |
+| ScreenProposals | 案そのものはリポジトリの外(「画面の案」の節)。決まった値は「決まった見た目」の表、決まった案の実物は `.kiro/specs/completed/site-astro-redesign/look/` |
 
 ### 移すファイル(中身を変えず、`git mv` で移す)
 
@@ -875,7 +875,7 @@ interface ArticleProps extends PageMeta {
 - **見るページ**: トップ、見出しとコードと囲みの多い記事(`/2025/12/06/mascot_requirements.html`)、画像のある記事(`/2026/03/26/emo2.html`、`/2024/01/01/nyan_pu_puu.html`)、数式と表の多い文書(`/doc/cosmogenesis/entanglement_cosmogenesis_v7_ja.html`)、About、404。
 - **見る条件**: 明るい配色と暗い配色(OS の設定か、ブラウザの開発者ツールで切り替える)、広い幅(1280px 以上)と狭い幅(375px)。
 - **読みやすさの物差し**(3.7): 選んだ案は、本文の文字と背景、リンクと背景のコントラスト比が、明暗のどちらでも 4.5:1 以上であることを測って確かめる。足りない色は、決める前に直す。
-- **決まった後**: 決まった値を下の表に書き込む。あわせて、選ばれた案の実物(スタイル 3 つ、レイアウト 2 つ、部品 11 個。テキストだけ)を、1 つの案に絞った形で `.kiro/specs/site-astro-redesign/look/` に置く(開発者の決め、2026-10-12)。開発者が選んだのは値だけではなく、余白・見出しの飾り・吹き出しや窓の形を含めた画面の全体であり、一時の置き場はセッションが終わると消えるためである。**実装は、`look/` のファイルを `site/src/` の同じ名前の場所へ写して下敷きにしてよい**。写した後は `site/src/` が正本になり、`look/` は決めた時点の記録として直さない。`look/` は `.kiro/` の下なので、公開されない。試作(`research.md` の §9 の「試作のファイルを写さず、文書から起こす」)とは扱いが違う。画面の案は、この設計の置き場と部品で組んだものだからである。案を切り替える仕組み、選ばれなかった形のスタイル、別リポジトリの画像を読む設定は、`look/` にもリポジトリにも入れない(8.2)。手元の表示は、設計と実装のどちらの確かめの後も、止めておく。
+- **決まった後**: 決まった値を下の表に書き込む。あわせて、選ばれた案の実物(スタイル 3 つ、レイアウト 2 つ、部品 11 個。テキストだけ)を、1 つの案に絞った形で `.kiro/specs/completed/site-astro-redesign/look/` に置く(開発者の決め、2026-10-12)。開発者が選んだのは値だけではなく、余白・見出しの飾り・吹き出しや窓の形を含めた画面の全体であり、一時の置き場はセッションが終わると消えるためである。**実装は、`look/` のファイルを `site/src/` の同じ名前の場所へ写して下敷きにしてよい**。写した後は `site/src/` が正本になり、`look/` は決めた時点の記録として直さない。`look/` は `.kiro/` の下なので、公開されない。試作(`research.md` の §9 の「試作のファイルを写さず、文書から起こす」)とは扱いが違う。画面の案は、この設計の置き場と部品で組んだものだからである。案を切り替える仕組み、選ばれなかった形のスタイル、別リポジトリの画像を読む設定は、`look/` にもリポジトリにも入れない(8.2)。手元の表示は、設計と実装のどちらの確かめの後も、止めておく。
 
 ### 決まった見た目(2026-10-12)
 
@@ -1036,8 +1036,8 @@ graph TB
 
 - **A 見た目を決める**: 設計ディスカッションで行った(「画面の案」)。決まった値は「決まった見た目」の表に、実物は `look/` にある。
 - **G デザインを仕上げる**: `look/` を下敷きに写し、実際の原稿で仕上げる。開発者の許し(L)の前に、実装した画面が `look/` の画面とずれていないかを、トップページ・記事・文書で見比べる。
-- **B 基準を取る**: 基準のパスの一覧は、`.kiro/specs/site-astro-redesign/baseline-paths.txt` に置いてある(53 行。2026-10-12 に、`master` のコミット `da322dd7da2eb1d0ed878de55813eb837350f1d8` の実行 38180338038 の成果物 `github-pages` から取った。原稿から割り出した一覧と一致した)。成果物は 1 日で消えるので、後からは取り出せない。マージの直前に、`master` の先頭がこのコミットかを確かめる(`git fetch origin` → `git rev-parse origin/master`)。動いていたら、足された記事のパスを一覧に書き足す。記事のほかが変わっていたら、新しい push の実行の成果物を 1 日以内に取り出して、一覧を作り直す(`master` の実行のやり直しは、同じ中身をもう一度公開するので、開発者の許しを得てから行う)。
-- **C〜D 原稿**: 移動(`git mv`)と直しを、別のコミットにする。直した箇所(ファイルと行)を、移行の記録(`.kiro/specs/site-astro-redesign/migration-report.md`)に書く(2.14)。見出し行の無い表(`2026-02-06-pasta.md`)の直し方は、開発者が画面で確かめて決める。4 種類のほかに崩れを見つけたら、直す前に開発者に仰ぐ(2.15)。
+- **B 基準を取る**: 基準のパスの一覧は、`.kiro/specs/completed/site-astro-redesign/baseline-paths.txt` に置いてある(53 行。2026-10-12 に、`master` のコミット `da322dd7da2eb1d0ed878de55813eb837350f1d8` の実行 38180338038 の成果物 `github-pages` から取った。原稿から割り出した一覧と一致した)。成果物は 1 日で消えるので、後からは取り出せない。マージの直前に、`master` の先頭がこのコミットかを確かめる(`git fetch origin` → `git rev-parse origin/master`)。動いていたら、足された記事のパスを一覧に書き足す。記事のほかが変わっていたら、新しい push の実行の成果物を 1 日以内に取り出して、一覧を作り直す(`master` の実行のやり直しは、同じ中身をもう一度公開するので、開発者の許しを得てから行う)。
+- **C〜D 原稿**: 移動(`git mv`)と直しを、別のコミットにする。直した箇所(ファイルと行)を、移行の記録(`.kiro/specs/completed/site-astro-redesign/migration-report.md`)に書く(2.14)。見出し行の無い表(`2026-02-06-pasta.md`)の直し方は、開発者が画面で確かめて決める。4 種類のほかに崩れを見つけたら、直す前に開発者に仰ぐ(2.15)。
 - **F Linux の確かめ**: ブランチを push し、`pages.yml` を手動で実行する(`master` 以外の手動の実行は、ビルドだけで、公開しない)。`npm ci`・型の検査・単体テスト・ビルド・成果物の検査が通ることを見る。push の前に、開発者に 1 度だけ確かめる。
 - **I 突き合わせ**: `npm run build` の後、`node scripts/verify-dist.mjs --baseline <基準の一覧>` で、消えるパスと増えるパスを出し、開発者に示す(9.1)。消えてよいのは `/assets/` の下の 25 個だけ、増えてよいのは `/_astro/` の下だけである。ほかの差があれば、マージしない(9.2)。
 - **L 開発者の許し**: 開発者が、手元の表示で新しいデザインを確かめ、明示して許す(9.3)。

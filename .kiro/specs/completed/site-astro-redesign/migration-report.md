@@ -347,7 +347,7 @@ v1 の「4.1 qubit 階段」の表の、「BH段階」の列である。「—�
 
 ## `look/` との差分
 
-タスク 8.1 で確かめた(2026-10-15)。`diff -ru .kiro/specs/site-astro-redesign/look/ site/src/` で、スタイル・レイアウト・部品のすべてを突き合わせた。理由の無い差は無かったので、`site/src/` は直していない。画面の見比べの結果は、下の「画面の確かめ」にある。
+タスク 8.1 で確かめた(2026-10-15)。`diff -ru .kiro/specs/completed/site-astro-redesign/look/ site/src/` で、スタイル・レイアウト・部品のすべてを突き合わせた。理由の無い差は無かったので、`site/src/` は直していない。画面の見比べの結果は、下の「画面の確かめ」にある。
 
 ### 差のあるファイル
 
@@ -560,7 +560,7 @@ v1 の「4.1 qubit 階段」の表の、「BH段階」の列である。「—�
 
 次の 2 つは、実装の前(要件と設計の段)に済ませた。実装では、その結果を使った。
 
-- **画面の案を作って見比べること**(Requirement 3 の 12): 案の作り方、用意した案(A〜D の 4 つ)、見たページと条件(明暗、広い幅と狭い幅)、決まった値は、`design.md` の「画面の案」の節にある(決まった値は「決まった見た目(2026-10-12)」の表)。開発者が選んだ案 D「どっと方眼」の実物は `.kiro/specs/site-astro-redesign/look/`(スタイル 3 つ、レイアウト 2 つ、部品 11 個、`README.md`)にある。案そのものは、リポジトリの外に作り、コミットしていない(Requirement 9 の 8)。
+- **画面の案を作って見比べること**(Requirement 3 の 12): 案の作り方、用意した案(A〜D の 4 つ)、見たページと条件(明暗、広い幅と狭い幅)、決まった値は、`design.md` の「画面の案」の節にある(決まった値は「決まった見た目(2026-10-12)」の表)。開発者が選んだ案 D「どっと方眼」の実物は `.kiro/specs/completed/site-astro-redesign/look/`(スタイル 3 つ、レイアウト 2 つ、部品 11 個、`README.md`)にある。案そのものは、リポジトリの外に作り、コミットしていない(Requirement 9 の 8)。
 - **試作**(Requirement 9 の 6、7): 置き場と作り・使った版・確かめた結果(a〜i)・要件と設計への含みは、`research.md` の §2(§2.1〜§2.4)にある。Requirement 9 の 6 の 3 つは、§2.3 の a(URL)、c と d(数式とコード)、g(Windows と手元の Node.js での手元の表示)。結果を要件ディスカッションへ持ち込んで決めたことは、`requirements.md` の「要件ディスカッションの結果」にある。試作も、リポジトリの外に作り、コミットしていない(Requirement 9 の 8)。
 
 ## パスの突き合わせ
@@ -572,7 +572,7 @@ v1 の「4.1 qubit 階段」の表の、「BH段階」の列である。「—�
 - 2026-10-15 07:59(日本時間)に `git fetch origin` を行い、`git rev-parse origin/master` を見た。結果は `da322dd7da2eb1d0ed878de55813eb837350f1d8` で、基準を取ったコミットと同じである。`master` は動いていない。足された記事も、作り直す一覧も無い。
 - このブランチと `origin/master` の分かれ目(`git merge-base HEAD origin/master`)も `da322dd` である。
 
-**突き合わせ方**: ブランチの先頭 `ad9aca2` の作業ツリーで、`site/` から `npm run build`(17 ページ、終了コード 0)を行い、続けて `node scripts/verify-dist.mjs --baseline ../.kiro/specs/site-astro-redesign/baseline-paths.txt`(終了コード 0)を行った。
+**突き合わせ方**: ブランチの先頭 `ad9aca2` の作業ツリーで、`site/` から `npm run build`(17 ページ、終了コード 0)を行い、続けて `node scripts/verify-dist.mjs --baseline ../.kiro/specs/completed/site-astro-redesign/baseline-paths.txt`(終了コード 0)を行った。
 
 - 基準: 53 個。成果物: 49 個。両方にあるパス: 28 個(記事 12、文書 2、About、トップ、404、フィード、文書に添えるファイル 3、画像 7)。
 - 検査の仕掛けの出力の最後の行は「参考: /assets/ の外で消えるパス 0 個、/_astro/ の外で増えるパス 0 個」。

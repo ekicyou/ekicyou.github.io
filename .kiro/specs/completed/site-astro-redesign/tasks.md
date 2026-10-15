@@ -3,7 +3,7 @@
 進め方の決まり(`design.md` の「Migration Strategy」より):
 
 - 作業は、どれも `site/` の中と、`design.md` の「Modified Files」に挙げたファイルだけで行う。`pages.yml` の `deploy` ジョブ・起動の条件・`concurrency` には触れない。
-- 見た目の部品は、`.kiro/specs/site-astro-redesign/look/` の実物を、`site/src/` の同じ名前の場所へ写して下敷きにする。写した後は `site/src/` が正本で、`look/` は直さない。
+- 見た目の部品は、`.kiro/specs/completed/site-astro-redesign/look/` の実物を、`site/src/` の同じ名前の場所へ写して下敷きにする。写した後は `site/src/` が正本で、`look/` は直さない。
 - 原稿の移動と、原稿の直しは、別のコミットにする。
 - 開発者に仰ぐ、と書いたタスクは、答えを得るまで先へ進めない。
 - `(P)` の付いたタスクは、ファイルの編集を並べて進めてよい。ただし、`site/` でのビルド・型の検査・手元の表示は、同時に 2 つ動かさない(作業フォルダを取り合い、一覧が空になる)。完了の確かめは 1 つずつ行う。
