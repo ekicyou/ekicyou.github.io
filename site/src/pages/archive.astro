@@ -1,0 +1,14 @@
+---
+// 記事の一覧。トップページに載せきれない古い記事も、ここから辿れる。
+// 出すのは `publishedPosts()`(新しい順)が返すものだけで、`published: false` の原稿は出ない。
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+import { publishedPosts } from '../lib/posts.ts';
+
+const posts = await publishedPosts();
+---
+<BaseLayout title="記事の一覧" path="/archive.html">
+  <div class="home">
+    <PostList posts={posts} />
+  </div>
+</BaseLayout>
