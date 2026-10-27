@@ -2,7 +2,7 @@
 layout: post
 title: About
 comments: false
-date: 2024-01-01
+date: 2026-10-27
 ---
 
 # えちょの残骸
