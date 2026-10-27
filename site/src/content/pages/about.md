@@ -9,13 +9,15 @@ date: 2026-10-27
 
 新旧の開発物を、後世に残す場所。
 
-## ベースウェア
+## 配布物
+
+### ベースウェア
 + [あれか？＿](https://github.com/ekicyou/areka)
 
-## SHIORI
+### SHIORI
 + [pasta](https://github.com/ekicyou/pasta)
 
-## ゴースト
+### ゴースト
 + [えも？？](/ghost_dev/emo2/)
 + [窓際のぱすたさん](/ghost_dev/pasta-in-windows/)
 + [にゃんぷっぷー](/nyan-pu-puu/)
