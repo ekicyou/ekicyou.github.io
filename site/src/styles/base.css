@@ -499,6 +499,10 @@ a {
 .home-section li:last-child {
   border-bottom: 0;
 }
+.home-more {
+  margin: 0;
+  text-align: right;
+}
 
 /* 前後の記事: 触れると、影のぶんだけ沈む */
 .post-nav a {
