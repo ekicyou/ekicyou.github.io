@@ -9,11 +9,17 @@ date: 2024-01-01
 
 新旧の開発物を、後世に残す場所。
 
+## ベースウェア
++ [あれか？＿](https://github.com/ekicyou/areka)
+
+## SHIORI
++ [pasta](https://github.com/ekicyou/pasta)
+
+## ゴースト
 + [えも？？](/ghost_dev/emo2/)
++ [窓際のぱすたさん](/ghost_dev/pasta-in-windows/)
 + [にゃんぷっぷー](/nyan-pu-puu/)
 + [えも？](/2020/08/10/emo.html)
-+ [パスタさん](/zzz-pasta/index.html)
-  + →[testモード](/zzz-pasta/app/design.html)
 + どっとさくら
   + →[どっとさくら20%（ぼとるさくら）](/old/dot-sakura/download/nar/dot_sakura_020.nar)
   + →[どっとさくら](/old/dot-sakura/download/nar/dot_sakura.nar)
@@ -22,6 +28,10 @@ date: 2024-01-01
 このサイトは世界のエントロピーの上昇に貢献します。
 
 ## 更新
+
+### 2026-10-27
+
+最近の開発物を配置。
 
 ### 2024-01-01
 
