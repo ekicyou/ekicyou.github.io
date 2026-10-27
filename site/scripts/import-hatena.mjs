@@ -64,6 +64,23 @@ export const convert = (html, url) => {
   return { file: `${name}.md`, text: `${fm.join('\n')}\n\n${md}\n` };
 };
 
+// 自分のフォトライフの画像(はてなの画像置き場)を imgDir へ落とし、本文の URL を公開パスに替える。
+// 他所の画像(Amazon など)は触らない。
+const imgDir = arg('img', 'public/img/hatena');
+const imgUrl = arg('img-url', '/img/hatena');
+const localizeImages = async (text) => {
+  const urls = new Set(text.match(/https?:\/\/cdn-ak\.f\.st-hatena\.com\/images\/fotolife\/[^\s)"]+/g) ?? []);
+  for (const u of urls) {
+    const file = u.split('/').pop();
+    const res = await fetch(u);
+    if (!res.ok) throw new Error(`画像が取れない ${res.status} ${u}`);
+    await mkdir(imgDir, { recursive: true });
+    await writeFile(join(imgDir, file), Buffer.from(await res.arrayBuffer()));
+    text = text.replaceAll(u, `${imgUrl}/${file}`);
+  }
+  return text;
+};
+
 if (import.meta.url === new URL(process.argv[1], 'file:').href || process.argv[1]?.endsWith('import-hatena.mjs')) {
   const months = locs(await get(`${blog}/sitemap.xml`)).filter((u) => u.includes('sitemap_periodical') && (!year || u.includes(`year=${year}&`)));
   await mkdir(out, { recursive: true });
@@ -76,7 +93,7 @@ if (import.meta.url === new URL(process.argv[1], 'file:').href || process.argv[1
         const { file, text } = convert(await get(url), url);
         const dest = join(out, file);
         if (await access(dest).then(() => true, () => false)) { skipped++; continue; }
-        await writeFile(dest, text);
+        await writeFile(dest, await localizeImages(text));
         done++;
         console.log(`ok   ${file}`);
       } catch (e) {
