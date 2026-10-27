@@ -33,7 +33,7 @@ const OTHER_REPOS = new Set(['ghost_dev', 'nyan-pu-puu', 'zzz-pasta', 'old']);
 
 // 認めるパスの形。どれにも合わないパスは誤り。
 const ALLOWED_PATHS = [
-  /^\/(?:index|about|404)\.html$/,
+  /^\/(?:index|about|archive|404)\.html$/,
   /^\/feed\.xml$/,
   /^\/\d{4}\/\d{2}\/\d{2}\/[^/]+\.html$/, // 記事
   /^\/doc\/.+$/, // 文書と、文書に添えるファイル

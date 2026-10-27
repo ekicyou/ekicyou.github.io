@@ -1,5 +1,5 @@
 ---
-// トップページ。顔、記事の一覧、文書の欄を、この順に置く。
+// トップページ。顔、新しい記事、文書の欄を、この順に置く。記事は新しい RECENT 本まで。残りは `/archive.html` に回す。
 // 一覧に出すのは、`publishedPosts()`(新しい順)と `publishedDocs()`(公開パスの昇順)が返すものだけである。
 // `published: false` の原稿は、どちらにも含まれないので、出ない。About へは、ヘッダーのメニューから辿る。
 // 題名と説明は渡さない。題名はサイト名だけ、説明はサイトの説明文、SNS 向けの画像はアイコン絵になる。
@@ -11,13 +11,17 @@ import DocList from '../components/DocList.astro';
 import { publishedDocs } from '../lib/docs.ts';
 import { publishedPosts } from '../lib/posts.ts';
 
+const RECENT = 20;
 const posts = await publishedPosts();
 const docs = await publishedDocs();
 ---
 <BaseLayout path="/">
   <Hero />
   <div class="home">
-    <PostList posts={posts} />
+    <PostList posts={posts.slice(0, RECENT)} />
+    {posts.length > RECENT && (
+      <p class="home-more"><a href="/archive.html">これまでの記事をすべて見る({posts.length} 本)</a></p>
+    )}
     <DocList docs={docs} />
   </div>
 </BaseLayout>
