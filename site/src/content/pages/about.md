@@ -15,7 +15,7 @@ date: 2026-10-27
 + [あれか？＿](https://github.com/ekicyou/areka)
 
 ### SHIORI
-+ [pasta](https://github.com/ekicyou/pasta)
++ [pasta](https://ekicyou.github.io/pasta/)　→[github](https://github.com/ekicyou/pasta)
 
 ### ゴースト
 + [えも？？](/ghost_dev/emo2/)
