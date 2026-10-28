@@ -1,9 +1,9 @@
 // `src/lib/post-path.ts` の単体テスト。
-// 記事の識別子(拡張子を除いたファイル名)から、日付・名前・公開パスが決まることを確かめる。
+// 記事の識別子(置き場からのパス。フォルダを含んでよい)から、日付・名前・公開パスが決まることを確かめる。
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { parsePostId } from '../src/lib/post-path.ts';
+import { assertUniqueFileNames, parsePostId } from '../src/lib/post-path.ts';
 
 // 今ある記事 15 本の識別子と、公開パス。
 // 公開中の 12 本のパスは、切り替えの前のサイトが出していたものと同じ。
@@ -65,6 +65,22 @@ describe('parsePostId: 公開パス', () => {
       assert.equal(post.path, `/${post.year}/${post.month}/${post.day}/${post.name}.html`, id);
       assert.equal(post.dateText, `${post.year}-${post.month}-${post.day}`, id);
       assert.equal(`${post.dateText}-${post.name}`, id, id);
+    }
+  });
+});
+
+describe('parsePostId: フォルダつきの識別子', () => {
+  it('フォルダを読み飛ばし、直下と同じ結果になる(公開パスと名前にフォルダは入らない)', () => {
+    const bare = parsePostId('2004-05-01-foo');
+    assert.equal(bare.path, '/2004/05/01/foo.html');
+    for (const id of ['archive/2004-05-01-foo', 'a/b/2004-05-01-foo']) {
+      assert.deepEqual(parsePostId(id), bare, id);
+    }
+  });
+
+  it('今ある記事 15 本に `archive/` を付けても、同じパスになる', () => {
+    for (const [id, path] of currentPosts) {
+      assert.equal(parsePostId(`archive/${id}`).path, path, id);
     }
   });
 });
@@ -134,12 +150,6 @@ describe('parsePostId: 日付', () => {
 });
 
 describe('parsePostId: 決まりに合わない識別子', () => {
-  it('サブフォルダつきは、識別子を含む Error を投げる', () => {
-    for (const id of ['note/2016-07-08-dcomp', 'note/2016-08-17-GODZILLA', 'a/b/2026-03-26-emo2']) {
-      assertRejects(id, /サブフォルダ/);
-    }
-  });
-
   it('日付なしは、識別子を含む Error を投げる', () => {
     for (const id of ['emo2', 'about', 'index']) {
       assertRejects(id, /YYYY-MM-DD-<名前>/);
@@ -182,5 +192,71 @@ describe('parsePostId: 決まりに合わない識別子', () => {
 
   it('名前が `index` のものは、識別子を含む Error を投げる', () => {
     assertRejects('2026-01-01-index', /名前に `index` は使えない/);
+  });
+
+  it('フォルダつきでも、フォルダつきの識別子を含む Error を投げる', () => {
+    assertRejects('archive/emo2', /YYYY-MM-DD-<名前>/);
+    assertRejects('archive/2026-02-30-x', /日付として読めない/);
+    assertRejects('archive/2004-05-01-index', /名前に `index` は使えない/);
+  });
+});
+
+describe('assertUniqueFileNames: 同じファイル名の記事', () => {
+  // 投げられた誤りが、挙げた識別子をすべて文に含むことを確かめる。
+  function assertDuplicates(ids: readonly string[], expected: readonly string[]): void {
+    assert.throws(
+      () => assertUniqueFileNames(ids),
+      (error: unknown) => {
+        assert.ok(error instanceof Error, 'Error が投げられる');
+        assert.match(error.message, /同じファイル名の記事がある/);
+        for (const id of expected) {
+          assert.ok(error.message.includes(`"${id}"`), `誤りの文に "${id}" がある(${error.message})`);
+        }
+        return true;
+      },
+    );
+  }
+
+  it('重複が無ければ投げない(直下とフォルダの混在、空の並びも)', () => {
+    assertUniqueFileNames(['2004-05-01-foo', 'archive/2004-05-01-bar', 'archive/x/2004-05-02-foo']);
+    assertUniqueFileNames(currentPosts.map(([id]) => `archive/${id}`));
+    assertUniqueFileNames([]);
+  });
+
+  it('直下と `archive/` に同じファイル名があると、両方の識別子を挙げて投げる', () => {
+    assertDuplicates(['2004-05-01-foo', 'archive/2004-05-01-foo'], ['2004-05-01-foo', 'archive/2004-05-01-foo']);
+  });
+
+  it('違うフォルダ同士の重複も投げる', () => {
+    assertDuplicates(['archive/x/2004-05-01-foo', 'archive/y/2004-05-01-foo'], ['archive/x/2004-05-01-foo', 'archive/y/2004-05-01-foo']);
+  });
+
+  it('3 本の重複は、3 本すべての識別子を挙げる', () => {
+    const ids = ['2004-05-01-foo', 'archive/2004-05-01-foo', 'archive/old/2004-05-01-foo'];
+    assertDuplicates(ids, ids);
+  });
+
+  it('大文字・小文字だけが違うものも投げる', () => {
+    assertDuplicates(['2004-01-01-Foo', 'archive/2004-01-01-foo'], ['2004-01-01-Foo', 'archive/2004-01-01-foo']);
+  });
+
+  it('2 組の重複は、両方の組を、組の中も組同士も符号の順に並べて挙げる', () => {
+    assert.throws(
+      () =>
+        assertUniqueFileNames([
+          'archive/old/2005-02-02-bar',
+          'archive/2004-01-01-foo',
+          '2005-02-02-bar',
+          '2010-01-01-solo',
+          'archive/2005-02-02-bar',
+          '2004-01-01-Foo',
+        ]),
+      {
+        message:
+          '同じファイル名の記事がある(大文字・小文字の違いは区別しない)。1 本だけを残す: ' +
+          '"2004-01-01-Foo"、"archive/2004-01-01-foo" / ' +
+          '"2005-02-02-bar"、"archive/2005-02-02-bar"、"archive/old/2005-02-02-bar"',
+      },
+    );
   });
 });

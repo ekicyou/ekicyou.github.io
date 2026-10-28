@@ -1,0 +1,22 @@
+{
+  "feature_name": "posts-archive-folder",
+  "created_at": "2026-10-28T11:56:59Z",
+  "updated_at": "2026-10-28T12:57:32Z",
+  "language": "ja",
+  "phase": "completed",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": true,
+      "approved": true
+    },
+    "tasks": {
+      "generated": true,
+      "approved": true
+    }
+  },
+  "ready_for_implementation": true
+}

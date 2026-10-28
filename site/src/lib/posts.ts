@@ -1,7 +1,7 @@
 // 公開中の記事を、決まった順に返す。前後の記事を決める。
 // ページ・一覧・フィード・前後の記事は、どれもここの結果だけを使う。
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { parsePostId, type PostPath } from './post-path.ts';
+import { assertUniqueFileNames, parsePostId, type PostPath } from './post-path.ts';
 
 export interface Post extends PostPath {
   entry: CollectionEntry<'posts'>;
@@ -26,8 +26,9 @@ function newerFirst(a: Post, b: Post): number {
 export async function publishedPosts(): Promise<Post[]> {
   const entries = await getCollection('posts');
   // 非公開の記事も含めて、すべての識別子を検査に通す。
-  // 決まりに合わないファイルは、非公開でもここで Error になり、ビルドが止まる。
+  // 決まりに合わないファイルや、ファイル名の重複は、非公開でもここで Error になり、ビルドが止まる。
   const all = entries.map((entry): Post => ({ ...parsePostId(entry.id), entry }));
+  assertUniqueFileNames(entries.map((entry) => entry.id));
   return all.filter((post) => post.entry.data.published !== false).sort(newerFirst);
 }
 

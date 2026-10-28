@@ -27,7 +27,7 @@ const frontmatter = z.strictObject({
 const keepName = ({ entry }: { entry: string }) => entry.replace(/\.md$/, '');
 
 export const collections = {
-  // 記事。識別子は `YYYY-MM-DD-<名前>`。
+  // 記事。識別子は `[<フォルダ>/…]YYYY-MM-DD-<名前>`(フォルダを含みうる)。
   posts: defineCollection({
     loader: glob({ base: './src/content/posts', pattern: '**/*.md', generateId: keepName }),
     schema: frontmatter,
