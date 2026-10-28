@@ -3,7 +3,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { parsePostId } from '../src/lib/post-path.ts';
+import { assertUniqueFileNames, parsePostId } from '../src/lib/post-path.ts';
 
 // 今ある記事 15 本の識別子と、公開パス。
 // 公開中の 12 本のパスは、切り替えの前のサイトが出していたものと同じ。
@@ -198,5 +198,65 @@ describe('parsePostId: 決まりに合わない識別子', () => {
     assertRejects('archive/emo2', /YYYY-MM-DD-<名前>/);
     assertRejects('archive/2026-02-30-x', /日付として読めない/);
     assertRejects('archive/2004-05-01-index', /名前に `index` は使えない/);
+  });
+});
+
+describe('assertUniqueFileNames: 同じファイル名の記事', () => {
+  // 投げられた誤りが、挙げた識別子をすべて文に含むことを確かめる。
+  function assertDuplicates(ids: readonly string[], expected: readonly string[]): void {
+    assert.throws(
+      () => assertUniqueFileNames(ids),
+      (error: unknown) => {
+        assert.ok(error instanceof Error, 'Error が投げられる');
+        assert.match(error.message, /同じファイル名の記事がある/);
+        for (const id of expected) {
+          assert.ok(error.message.includes(`"${id}"`), `誤りの文に "${id}" がある(${error.message})`);
+        }
+        return true;
+      },
+    );
+  }
+
+  it('重複が無ければ投げない(直下とフォルダの混在、空の並びも)', () => {
+    assertUniqueFileNames(['2004-05-01-foo', 'archive/2004-05-01-bar', 'archive/x/2004-05-02-foo']);
+    assertUniqueFileNames(currentPosts.map(([id]) => `archive/${id}`));
+    assertUniqueFileNames([]);
+  });
+
+  it('直下と `archive/` に同じファイル名があると、両方の識別子を挙げて投げる', () => {
+    assertDuplicates(['2004-05-01-foo', 'archive/2004-05-01-foo'], ['2004-05-01-foo', 'archive/2004-05-01-foo']);
+  });
+
+  it('違うフォルダ同士の重複も投げる', () => {
+    assertDuplicates(['archive/x/2004-05-01-foo', 'archive/y/2004-05-01-foo'], ['archive/x/2004-05-01-foo', 'archive/y/2004-05-01-foo']);
+  });
+
+  it('3 本の重複は、3 本すべての識別子を挙げる', () => {
+    const ids = ['2004-05-01-foo', 'archive/2004-05-01-foo', 'archive/old/2004-05-01-foo'];
+    assertDuplicates(ids, ids);
+  });
+
+  it('大文字・小文字だけが違うものも投げる', () => {
+    assertDuplicates(['2004-01-01-Foo', 'archive/2004-01-01-foo'], ['2004-01-01-Foo', 'archive/2004-01-01-foo']);
+  });
+
+  it('2 組の重複は、両方の組を、組の中も組同士も符号の順に並べて挙げる', () => {
+    assert.throws(
+      () =>
+        assertUniqueFileNames([
+          'archive/old/2005-02-02-bar',
+          'archive/2004-01-01-foo',
+          '2005-02-02-bar',
+          '2010-01-01-solo',
+          'archive/2005-02-02-bar',
+          '2004-01-01-Foo',
+        ]),
+      {
+        message:
+          '同じファイル名の記事がある(大文字・小文字の違いは区別しない)。1 本だけを残す: ' +
+          '"2004-01-01-Foo"、"archive/2004-01-01-foo" / ' +
+          '"2005-02-02-bar"、"archive/2005-02-02-bar"、"archive/old/2005-02-02-bar"',
+      },
+    );
   });
 });
