@@ -1,4 +1,5 @@
-// 記事の識別子(拡張子を除いたファイル名)から、日付・名前・公開パスを作る。
+// 記事の識別子(置き場からのパス。フォルダを含んでよい)から、日付・名前・公開パスを作る。
+// フォルダの部分は読み飛ばし、ファイル名だけで決める。
 // 記事の URL を決める、ただ 1 つの場所。ルート・一覧・フィード・前後の記事は、ここが返す `path` を使う。
 // `astro` の機能に依らない(単体テストから直に呼ぶ)。
 
@@ -26,17 +27,16 @@ function invalid(id: string, reason: string): Error {
 // 決まりに合わないときは Error を投げる(ビルドが止まる)。
 // front matter の `date` は見ない。日付は、ファイル名だけで決まる。
 export function parsePostId(id: string): PostPath {
-  if (id.includes('/')) {
-    throw invalid(id, 'サブフォルダに置かない。記事は、置き場の直下に平らに置く。');
-  }
-  if (!POST_ID.test(id)) {
+  // 誤りの文には、フォルダを含む識別子をそのまま入れる(どこの原稿かが分かるように)。
+  const fileName = id.slice(id.lastIndexOf('/') + 1);
+  if (!POST_ID.test(fileName)) {
     throw invalid(id, '`YYYY-MM-DD-<名前>` の形にする。');
   }
 
-  const year = id.slice(0, 4);
-  const month = id.slice(5, 7);
-  const day = id.slice(8, 10);
-  const name = id.slice(11);
+  const year = fileName.slice(0, 4);
+  const month = fileName.slice(5, 7);
+  const day = fileName.slice(8, 10);
+  const name = fileName.slice(11);
   const dateText = `${year}-${month}-${day}`;
 
   // その日の UTC の 0 時を作り、年・月・日が元の数字のままかを見る。

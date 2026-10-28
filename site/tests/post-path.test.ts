@@ -1,5 +1,5 @@
 // `src/lib/post-path.ts` の単体テスト。
-// 記事の識別子(拡張子を除いたファイル名)から、日付・名前・公開パスが決まることを確かめる。
+// 記事の識別子(置き場からのパス。フォルダを含んでよい)から、日付・名前・公開パスが決まることを確かめる。
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
@@ -69,6 +69,22 @@ describe('parsePostId: 公開パス', () => {
   });
 });
 
+describe('parsePostId: フォルダつきの識別子', () => {
+  it('フォルダを読み飛ばし、直下と同じ結果になる(公開パスと名前にフォルダは入らない)', () => {
+    const bare = parsePostId('2004-05-01-foo');
+    assert.equal(bare.path, '/2004/05/01/foo.html');
+    for (const id of ['archive/2004-05-01-foo', 'a/b/2004-05-01-foo']) {
+      assert.deepEqual(parsePostId(id), bare, id);
+    }
+  });
+
+  it('今ある記事 15 本に `archive/` を付けても、同じパスになる', () => {
+    for (const [id, path] of currentPosts) {
+      assert.equal(parsePostId(`archive/${id}`).path, path, id);
+    }
+  });
+});
+
 describe('parsePostId: 名前の綴り', () => {
   it('大文字・小文字・記号を変えない', () => {
     const cases: ReadonlyArray<readonly [id: string, name: string, path: string]> = [
@@ -134,12 +150,6 @@ describe('parsePostId: 日付', () => {
 });
 
 describe('parsePostId: 決まりに合わない識別子', () => {
-  it('サブフォルダつきは、識別子を含む Error を投げる', () => {
-    for (const id of ['note/2016-07-08-dcomp', 'note/2016-08-17-GODZILLA', 'a/b/2026-03-26-emo2']) {
-      assertRejects(id, /サブフォルダ/);
-    }
-  });
-
   it('日付なしは、識別子を含む Error を投げる', () => {
     for (const id of ['emo2', 'about', 'index']) {
       assertRejects(id, /YYYY-MM-DD-<名前>/);
@@ -182,5 +192,11 @@ describe('parsePostId: 決まりに合わない識別子', () => {
 
   it('名前が `index` のものは、識別子を含む Error を投げる', () => {
     assertRejects('2026-01-01-index', /名前に `index` は使えない/);
+  });
+
+  it('フォルダつきでも、フォルダつきの識別子を含む Error を投げる', () => {
+    assertRejects('archive/emo2', /YYYY-MM-DD-<名前>/);
+    assertRejects('archive/2026-02-30-x', /日付として読めない/);
+    assertRejects('archive/2004-05-01-index', /名前に `index` は使えない/);
   });
 });
