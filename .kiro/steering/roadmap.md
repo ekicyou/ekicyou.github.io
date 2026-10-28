@@ -65,3 +65,7 @@ spec を起こすほどでもない手直し。1 本目(`site-subfolder-actions-
 
 - [x] site-subfolder-actions-build -- Jekyll のまま原稿を `site/` へ 1 階層下げ、ビルドと公開を GitHub Actions に切り替える(見た目は変えない)。Dependencies: none
 - [x] site-astro-redesign -- 生成ツールを Astro へ乗り換え、デザインを一から作り直す(URL は変えない)。Dependencies: site-subfolder-actions-build
+
+### 2026-10-28 追加
+
+- [ ] posts-archive-folder -- 記事を `posts/` の下のどのフォルダにも置けるようにし(URL はファイル名だけで決まる)、2010 年までの記事を `posts/archive/` へ移す。Dependencies: site-astro-redesign
