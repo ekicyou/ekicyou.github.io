@@ -151,3 +151,38 @@
 
 - 移す前と後で、`dist/` の HTML と `feed.xml` が文字の単位で同じになるか(`_astro/` のハッシュ名、`entry.id` に依る出力が無いか)。案 A では `entry.id` が変わるので、ページの中に `entry.id` が出ていないことを確かめる(今のコードでは `adjacentPosts()` の比較にしか使っていない)。
 - Astro のコンテンツの作業フォルダ(`site/.astro/`)に、移動の前の識別子が残って、手元の開発サーバーで古い記事が二重に見えることが無いか(ビルドの前に `.astro/` を消せば避けられる見込み)。
+
+## 8. 設計フェーズの記録(2026-10-28、`/kiro-spec-design -y`)
+
+### 8.1 発見の種別と調べたこと
+
+- 種別: 既存の仕組みの拡張(light discovery)。新しい依存は無いので、外の調べものは行わない。
+- 参照した skill: `kiro-spec-design`(その `rules/` の `design-discovery-light.md`・`design-synthesis.md`・`design-review-gate.md`)、ponytail(最小の変更を選ぶ)。
+- 2 章の調べに足したこと:
+  - `entry.id` を使うのは `posts.ts`(検査と `adjacentPosts()` の比較)だけで、ページの中には出ない。`feed.xml.ts` ほか `src/` に、ビルドの時刻を出す所(`new Date()`・`Date.now`)は無い。→ 移動の前後で、`dist/` はファイルの中身まで同じになる見込み(7 章の Research Needed の 1 つめに答える)。
+  - Astro 7.3.8 の `glob.js`(68・95・245 行)は、見つからなくなった識別子を作業の記録から消す。→ 移動の後に `site/.astro/` を消す手順は要らない(Research Needed の 2 つめに答える)。
+  - 記事の原稿に、相対パス(`./`・`../`)のリンクや画像は無い。→ フォルダが 1 段深くなっても本文のリンクは変わらない。
+
+### 8.2 7 章の申し送りへの答え
+
+| # | 決めたこと |
+|---|---|
+| 1 | 案 A。識別子はフォルダつきのまま。`content.config.ts` はコメントだけ直す |
+| 2 | 自前の検査だけ。`prerenderConflictBehavior` は変えない(案 C は採らない) |
+| 3 | `post-path.ts` に純粋な関数 `assertUniqueFileNames(ids)` を足し、`publishedPosts()` が全記事(非公開も)の識別子を渡す |
+| 4 | 要件の相談で決着済み(`toLowerCase()` で比べて止める) |
+| 5 | 比べる。基準の `dist/` を丸ごとリポジトリの外へ写し、`git diff --no-index` で比べる。公開パスの一覧は `--baseline` |
+| 6 | 要件 4.6 のとおり。PR のブランチで別のコミット、squash の後は 1 つでよい |
+| 7 | `verify-dist.mjs` に重複の検査は持たせない。コードも変えない |
+
+### 8.3 synthesis
+
+- 一般化: 「URL はファイル名だけで決まる」と「ファイル名は一意」は、同じ「ファイル名 = 記事の鍵」の 2 面である。両方を `post-path.ts` に置き、ファイル名の切り出し方(最後の `/` より後ろ)を揃える。
+- 作るか採るか: Astro の重複の検出(`prerenderConflictBehavior: 'error'`、glob ローダーの `DuplicateContentEntrySlugError`)は、非公開の記事を見ない・3 本以上を一度に挙げない・`npm test` で確かめられない・大文字小文字を同じとみなさない、のどれかで要件に合わない。自前の関数 1 つ(十数行)で作る。
+- 簡単にする: `verify-dist.mjs` の変更、新しいスクリプト、比べるための道具、設定の追加は、どれも要らない。基準の作り方は、既存の `--list`・`--baseline` と `git diff --no-index` で足りる。
+
+### 8.4 危険と手当て
+
+- 399 本の移動で公開パスを壊す → 仕組みを変える前のコミットで基準を作り、仕組みの変更の後と、移動の後の 2 回、パスの一覧と `dist/` の中身を突き合わせる。
+- `toLowerCase()` は ASCII の外で Windows の扱いと完全には一致しない → 今の原稿の名前は ASCII だけ。実装に `shortcut:` のコメントで残す。
+- `publishedPosts()` は `astro:content` に依るので、「非公開も数える」(要件 2.3)は単体テストに掛からない → 呼ぶ所が 1 行で、絞り込む前の `entries` を渡すことを、レビューで確かめる。
