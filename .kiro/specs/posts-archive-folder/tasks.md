@@ -84,4 +84,5 @@
 
 ## Implementation Notes
 - 範囲の外: `npm run verify` が、移す前の基準から `/about.html` の `https://ekicyou.github.io/pasta/` を「サイト内のリンクの先が無い」と警告する(この spec の変更とは関係が無い)。
+- 完了時にその場で解決: 上の警告の `/pasta/` は別リポジトリの公開中のページ(200)だったので、`verify-dist.mjs` の `OTHER_REPOS` と steering の一覧(`product.md`・`structure.md`・`workflow.md`)に `/pasta/` を足した。
 - 基準との突き合わせの `git diff --no-index` は、`-c core.autocrlf=false` を付け、標準エラーを捨てると改行の警告に埋もれない。

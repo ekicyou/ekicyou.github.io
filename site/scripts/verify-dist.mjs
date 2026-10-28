@@ -29,7 +29,7 @@ const ICON_URL = `${ORIGIN}/img/alto0044_400x400.png`;
 // フィードの場所。`/` 始まりと、絶対 URL のどちらでもよい。
 const FEED_HREFS = new Set(['/feed.xml', `${ORIGIN}/feed.xml`]);
 // 同じ github.io の下にある、別リポジトリのページのトップ階層。成果物に作らず、リンクの先も検査しない。
-const OTHER_REPOS = new Set(['ghost_dev', 'nyan-pu-puu', 'zzz-pasta', 'old']);
+const OTHER_REPOS = new Set(['ghost_dev', 'nyan-pu-puu', 'zzz-pasta', 'pasta', 'old']);
 
 // 認めるパスの形。どれにも合わないパスは誤り。
 const ALLOWED_PATHS = [
