@@ -19,7 +19,6 @@ date: 2026-10-27
 
 ### ゴースト
 + [えも？？](/ghost_dev/emo2/)
-+ [窓際のぱすたさん](/ghost_dev/pasta-in-windows/)
 + [にゃんぷっぷー](/nyan-pu-puu/)
 + [えも？](/2020/08/10/emo.html)
 + どっとさくら
